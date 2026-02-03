@@ -1,0 +1,387 @@
+{
+  "street_alexnet_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-09-28T02:36:41"
+  },
+  "street_alexnet_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-09-28T04:01:38"
+  },
+  "street_alexnet_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-09-28T05:16:18"
+  },
+  "street_vgg16_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-09-28T06:46:57"
+  },
+  "street_vgg16_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-09-28T09:38:44"
+  },
+  "street_vgg16_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-09-28T10:50:38"
+  },
+  "street_googlenet_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-09-28T11:40:04"
+  },
+  "street_googlenet_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-09-28T14:07:24"
+  },
+  "street_googlenet_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-09-28T15:01:36"
+  },
+  "street_vit_base_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-09-28T16:12:21"
+  },
+  "street_vit_base_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-09-28T18:56:17"
+  },
+  "street_vit_base_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-09-28T20:03:03"
+  },
+  "street_deit_base_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-09-28T21:54:01"
+  },
+  "street_deit_base_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-09-29T00:26:58"
+  },
+  "street_deit_base_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-09-29T04:32:36"
+  },
+  "street_swin_base_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-09-29T07:03:50"
+  },
+  "street_swin_base_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-09-29T10:00:45"
+  },
+  "street_swin_base_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-09-29T14:30:14"
+  },
+  "satellite_alexnet_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-09-29T19:43:06"
+  },
+  "satellite_alexnet_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-09-29T21:54:49"
+  },
+  "satellite_alexnet_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-09-29T23:56:26"
+  },
+  "satellite_vgg16_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-09-30T02:26:54"
+  },
+  "satellite_vgg16_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-09-30T04:54:02"
+  },
+  "satellite_vgg16_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-09-30T06:57:16"
+  },
+  "satellite_googlenet_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-09-30T09:27:53"
+  },
+  "satellite_googlenet_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-09-30T12:11:39"
+  },
+  "satellite_googlenet_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-09-30T15:53:49"
+  },
+  "satellite_vit_base_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-09-30T18:40:37"
+  },
+  "satellite_vit_base_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-09-30T21:00:52"
+  },
+  "satellite_vit_base_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-09-30T23:35:30"
+  },
+  "satellite_deit_base_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-01T01:50:37"
+  },
+  "satellite_deit_base_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-01T03:40:01"
+  },
+  "satellite_deit_base_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-01T05:34:50"
+  },
+  "satellite_swin_base_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-01T07:56:26"
+  },
+  "satellite_swin_base_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-01T10:12:59"
+  },
+  "satellite_swin_base_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-01T12:34:42"
+  },
+  "dual_alexnet_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-01T17:16:21"
+  },
+  "dual_alexnet_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-01T21:55:35"
+  },
+  "dual_alexnet_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-02T13:53:19"
+  },
+  "dual_vgg16_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-02T23:04:21"
+  },
+  "dual_vgg16_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-03T21:21:22"
+  },
+  "dual_vgg16_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-04T03:05:43"
+  },
+  "dual_googlenet_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-05T02:53:01",
+    "error": "<frozen ntpath>:236: unknown opcode 255"
+  },
+  "dual_googlenet_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-05T06:47:19"
+  },
+  "dual_googlenet_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-05T11:01:45"
+  },
+  "dual_vit_base_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-05T14:50:25"
+  },
+  "dual_vit_base_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-05T19:30:13"
+  },
+  "dual_vit_base_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-06T02:31:15"
+  },
+  "dual_deit_base_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-06T08:53:12"
+  },
+  "dual_deit_base_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-06T14:22:21"
+  },
+  "dual_deit_base_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-06T21:20:29"
+  },
+  "dual_swin_base_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-07T01:14:33"
+  },
+  "dual_swin_base_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-07T09:07:29"
+  },
+  "dual_swin_base_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-07T13:18:39"
+  },
+  "combined_alexnet_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-07T16:26:15"
+  },
+  "combined_alexnet_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-07T21:15:59"
+  },
+  "combined_alexnet_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-08T00:29:04"
+  },
+  "combined_vgg16_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-08T04:27:16"
+  },
+  "combined_vgg16_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-08T08:45:53"
+  },
+  "combined_vgg16_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-08T13:24:43"
+  },
+  "combined_googlenet_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-08T19:35:58"
+  },
+  "combined_googlenet_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-10T22:23:09"
+  },
+  "combined_googlenet_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-13T19:38:55"
+  },
+  "combined_vit_base_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-13T23:38:49"
+  },
+  "combined_vit_base_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-14T03:33:28"
+  },
+  "combined_vit_base_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-14T08:36:24"
+  },
+  "combined_deit_base_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-14T11:49:37"
+  },
+  "combined_deit_base_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-14T16:04:38"
+  },
+  "combined_deit_base_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-14T20:05:09"
+  },
+  "combined_swin_base_imagenet1k_CE_preaug": {
+    "status": "done",
+    "ts": "2025-10-15T00:59:53"
+  },
+  "combined_swin_base_imagenet1k_WCE_none": {
+    "status": "done",
+    "ts": "2025-10-15T17:43:49"
+  },
+  "combined_swin_base_imagenet1k_SCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-15T23:29:03"
+  },
+  "street_alexnet_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-23T23:27:41"
+  },
+  "street_vgg16_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-24T03:31:03"
+  },
+  "street_googlenet_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-24T07:55:10"
+  },
+  "street_vit_base_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-24T11:57:16"
+  },
+  "street_deit_base_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-24T14:06:48"
+  },
+  "street_swin_base_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-24T17:09:59"
+  },
+  "satellite_alexnet_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-24T21:59:21"
+  },
+  "satellite_vgg16_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-25T01:26:43"
+  },
+  "satellite_googlenet_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-25T04:39:41"
+  },
+  "satellite_vit_base_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-25T07:52:41"
+  },
+  "satellite_deit_base_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-25T11:18:50"
+  },
+  "satellite_swin_base_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-25T15:14:19"
+  },
+  "dual_alexnet_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-25T22:24:15"
+  },
+  "dual_vgg16_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-26T04:53:25"
+  },
+  "dual_googlenet_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-26T12:49:27"
+  },
+  "dual_vit_base_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-26T23:05:37"
+  },
+  "dual_deit_base_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-27T08:23:55"
+  },
+  "dual_swin_base_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-27T15:43:02"
+  },
+  "combined_alexnet_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-28T00:02:11"
+  },
+  "combined_vgg16_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-28T16:53:18"
+  },
+  "combined_googlenet_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-29T00:16:50"
+  },
+  "combined_vit_base_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-29T06:20:55"
+  },
+  "combined_deit_base_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-10-29T19:40:45"
+  },
+  "combined_swin_base_imagenet1k_WCE_preaug": {
+    "status": "done",
+    "ts": "2025-11-04T02:44:42"
+  }
+}
