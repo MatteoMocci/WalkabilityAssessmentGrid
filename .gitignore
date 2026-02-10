@@ -17,3 +17,7 @@ folds_cache.pkl
 input/
 output/
 results_meta/
+satellite/
+augmented-satellite/
+augmented-streetview/
+streetview/

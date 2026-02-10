@@ -29,7 +29,7 @@ The main workflow is a configurable grid in `main.py` with grouped cross-validat
 - `augmented-streetview/` (street augmented, optional depending on config)
 - `augmented-satellite/` (satellite augmented, optional depending on config)
 
-By default, the base directory is the current working directory where you run `main.py` (so if you run from the repo root, `<BASE>` is the repo root).  
+By default, the base directory is the repo root.  
 You can override it with:
 
 ```powershell
@@ -106,6 +106,15 @@ Optional flags:
 - `--skip-train` if `fold_metrics_full.csv` already exists
 - `--skip-glmm` to skip Table 2/Figure 8 outputs
 - `--reset-progress` to reset the training registry before running
+
+## Appendix tables A.1–A.4 (Mode-specific CV aggregates)
+
+The appendix tables are derived by aggregating cross-validation metrics per mode:
+
+- Mode = `street` -> Appendix Table A.1
+- Mode = `satellite` -> Appendix Table A.2
+- Mode = `combined` -> Appendix Table A.3
+- Mode = `dual` -> Appendix Table A.4
 
 ## Outputs
 

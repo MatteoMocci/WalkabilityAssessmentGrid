@@ -214,7 +214,7 @@ SEED = 42  # used in folds / loaders
 # ----------------------------
 # Paths & dataset definitions
 # ----------------------------
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 BASE_DIR = os.getenv("WALKCNN_BASE_DIR", PROJECT_ROOT)
 STREET_ORIG = os.path.join(BASE_DIR, "streetview")
 SAT_ORIG = os.path.join(BASE_DIR, "satellite")

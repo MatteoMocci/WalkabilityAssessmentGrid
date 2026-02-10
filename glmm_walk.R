@@ -57,6 +57,9 @@ df_noext <- df %>%
   anti_join(extreme_keys, by = c("mode","model","loss","fold"))
 
 # 2) Beta GLMM with random intercept on run (full data)
+# Table B.1: ANOVA on full data (use type-III tests if desired)
+# Example:
+#   car::Anova(fit_tmb, type = 3)
 fit_tmb <- glmmTMB(
   accuracy ~ mode * model * loss + (1 | run),
   family = beta_family(link = "logit"),
@@ -70,6 +73,9 @@ fit_tmb <- glmmTMB(
 summary(fit_tmb)
 
 # Same model after removing extreme outliers (used for Table 2 + Figure 8)
+# Table B.2: ANOVA on filtered (no-extreme-outliers) data
+# Example:
+#   car::Anova(fit_tmb_noext, type = 3)
 fit_tmb_noext <- glmmTMB(
   accuracy ~ mode * model * loss + (1 | run),
   family = beta_family(link = "logit"),

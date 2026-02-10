@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 # =========================
 # CONFIG (kept exactly as requested)
 # =========================
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent
 SV_ROOT = Path(os.getenv("WALKCNN_STREET_AUG_DIR", PROJECT_ROOT / "augmented-streetview"))  # contains class folders (e.g., 0..4)
 SAT_ROOT = Path(os.getenv("WALKCNN_SAT_AUG_DIR", PROJECT_ROOT / "augmented-satellite"))      # contains class folders (e.g., 0..4)
 CLASS_ID = "4"                                  # class folder to sample from

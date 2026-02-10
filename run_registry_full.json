@@ -289,8 +289,8 @@
     "ts": "2025-10-15T23:29:03"
   },
   "street_alexnet_imagenet1k_WCE_preaug": {
-    "status": "done",
-    "ts": "2025-10-23T23:27:41"
+    "status": "running",
+    "ts": "2026-02-10T16:49:20"
   },
   "street_vgg16_imagenet1k_WCE_preaug": {
     "status": "done",

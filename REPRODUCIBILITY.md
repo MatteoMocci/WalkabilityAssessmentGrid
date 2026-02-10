@@ -54,9 +54,8 @@ logic. The expected folder layout is:
     4/*.jpg
 ```
 
-Where `<BASE>` is the dataset root. By default, `<BASE>` is the **current working
-directory where you run the scripts**.
-To set a custom location, use a **relative path** (relative to your current working directory):
+Where `<BASE>` is the dataset root. By default, `<BASE>` is the **repo root**.
+To set a custom location, use a **relative path**:
 
 ```powershell
 $env:WALKCNN_BASE_DIR = "..\\data"
@@ -168,6 +167,12 @@ pairwise contrasts between modes, Holm-adjusted.
 python tools\\make_mode_loss_fold_metrics.py `
   --input fold_metrics_full.csv `
   --out output\\metrics_by_mode_loss_fold.csv
+```
+
+This step writes the file used for statistical analysis at:
+
+```
+output\\metrics_by_mode_loss_fold.csv
 ```
 
 2. Fit the GLMM and compute Table 2 contrasts:
