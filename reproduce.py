@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 
 
-REPO_ROOT = Path(__file__).resolve().parent
+REPO_ROOT = Path.cwd().resolve()
 PY = sys.executable
 
 

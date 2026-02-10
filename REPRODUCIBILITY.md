@@ -54,12 +54,16 @@ logic. The expected folder layout is:
     4/*.jpg
 ```
 
-Where `<BASE>` is the dataset root. By default, `<BASE>` is the **parent of this repo**.
-To set a custom location, use a **relative path**:
+Where `<BASE>` is the dataset root. By default, `<BASE>` is the **current working
+directory where you run the scripts**.
+To set a custom location, use a **relative path** (relative to your current working directory):
 
 ```powershell
 $env:WALKCNN_BASE_DIR = "..\\data"
 ```
+
+If you keep datasets outside the repo, update the paths in the commands below
+to match your chosen `<BASE>` (or reuse `$env:WALKCNN_BASE_DIR` when constructing paths).
 
 ### 2.1 Create Augmented Datasets (for WCE/SCE/CE runs)
 

@@ -29,7 +29,7 @@ The main workflow is a configurable grid in `main.py` with grouped cross-validat
 - `augmented-streetview/` (street augmented, optional depending on config)
 - `augmented-satellite/` (satellite augmented, optional depending on config)
 
-By default, the base directory is the parent of the repo.  
+By default, the base directory is the current working directory where you run `main.py` (so if you run from the repo root, `<BASE>` is the repo root).  
 You can override it with:
 
 ```powershell
