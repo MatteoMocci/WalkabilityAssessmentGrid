@@ -7,6 +7,9 @@ import torch.nn.functional as F
 
 class SCELoss(nn.Module):
     def __init__(self, alpha: float, beta: float, num_classes: int):
+        """
+        Initialize Symmetric Cross Entropy loss hyperparameters.
+        """
         super().__init__()
         self.alpha = alpha
         self.beta  = beta
@@ -14,6 +17,14 @@ class SCELoss(nn.Module):
         self.cross_entropy = nn.CrossEntropyLoss()
 
     def forward(self, pred: torch.Tensor, labels: torch.Tensor):
+        """
+        Compute SCE = alpha * CE + beta * RCE.
+
+        Steps:
+        1) Compute standard cross entropy.
+        2) Compute reverse cross entropy on one-hot labels.
+        3) Combine the two terms.
+        """
         ce = self.cross_entropy(pred, labels)
 
         # DO NOT use clamp_ on tensors that require grad
@@ -29,6 +40,14 @@ class SCELoss(nn.Module):
 
 
 def get_criterion(name: str, num_classes: int, class_weights: torch.Tensor | None = None) -> nn.Module:
+    """
+    Factory for loss functions (CE, WCE, SCE).
+
+    Steps:
+    1) Normalize the name.
+    2) Build the requested loss (with weights if needed).
+    3) Validate unsupported options.
+    """
     key = name.upper()
     if key == "CE":
         return nn.CrossEntropyLoss()

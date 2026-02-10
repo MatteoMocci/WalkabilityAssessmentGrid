@@ -11,6 +11,13 @@ class CombinedLateFusion(nn.Module):
     Forward expects named args: street=..., sat=...
     """
     def __init__(self, street_model: nn.Module, sat_model: nn.Module, num_classes: int):
+        """
+        Initialize late-fusion wrapper with two pretrained classifiers.
+
+        Steps:
+        1) Store street/satellite models.
+        2) Create a linear head over concatenated logits.
+        """
         super().__init__()
         self.street_model = street_model
         self.sat_model = sat_model
@@ -18,6 +25,14 @@ class CombinedLateFusion(nn.Module):
 
     @staticmethod
     def _to_logits(out):
+        """
+        Normalize model outputs into logits.
+
+        Steps:
+        1) Extract .logits if present.
+        2) Extract dict["logits"] if present.
+        3) Return raw output otherwise.
+        """
         if hasattr(out, "logits"):
             return out.logits
         if isinstance(out, dict) and "logits" in out:
@@ -25,6 +40,14 @@ class CombinedLateFusion(nn.Module):
         return out
 
     def forward(self, *, street: torch.Tensor, sat: torch.Tensor) -> torch.Tensor:
+        """
+        Forward pass: concatenate logits and apply the fusion head.
+
+        Steps:
+        1) Run street and satellite models.
+        2) Convert outputs to logits.
+        3) Concatenate and project to class logits.
+        """
         ls = self._to_logits(self.street_model(street))
         la = self._to_logits(self.sat_model(sat))
         return self.comb_head(torch.cat([ls, la], dim=1))

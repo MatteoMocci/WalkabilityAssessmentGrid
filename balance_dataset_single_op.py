@@ -21,18 +21,40 @@ op_names = list(aug_ops.keys())
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff"}
 
 def list_images(d: Path):
+    """
+    List image files in a directory, sorted by name.
+    """
     return sorted([p for p in d.iterdir() if p.suffix.lower() in IMG_EXTS])
 
 def copy_all(src: Path, dst: Path):
+    """
+    Copy a file to the destination, creating parent directories as needed.
+    """
     dst.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(src, dst)
 
 def augment_one(src_img: Path, dst_img: Path, op_name: str):
+    """
+    Apply a single augmentation op and write the augmented image.
+
+    Steps:
+    1) Load the source image.
+    2) Apply the chosen augmentation.
+    3) Save the result to disk.
+    """
     img = imageio.v2.imread(src_img)
     aug = aug_ops[op_name](image=img)
     imageio.imwrite(dst_img, aug)
 
 def main():
+    """
+    CLI entry point to balance classes via single-op augmentation.
+
+    Steps:
+    1) Parse CLI args and determine target class count.
+    2) Copy originals into the output tree.
+    3) Generate augmented images for minority classes.
+    """
     ap = argparse.ArgumentParser()
     ap.add_argument("--input_root", required=True)
     ap.add_argument("--output_root", required=True)

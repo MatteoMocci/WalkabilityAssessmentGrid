@@ -11,6 +11,14 @@ from sklearn.metrics import (
 )
 
 def _as_labels(x: Iterable) -> np.ndarray:
+    """
+    Convert input iterable to a 1D int64 NumPy array of labels.
+
+    Steps:
+    1) Convert to NumPy.
+    2) Flatten to 1D if needed.
+    3) Cast to int64.
+    """
     a = np.asarray(list(x))
     if a.ndim != 1:
         a = a.reshape(-1)
@@ -87,6 +95,14 @@ def compute_accuracy(preds: Iterable, refs: Iterable) -> float:
     return float(accuracy_score(y_true, y_pred))
 
 def confusion(y_true: Iterable, y_pred: Iterable, num_classes: Optional[int] = None) -> np.ndarray:
+    """
+    Compute a confusion matrix with optional fixed class labels.
+
+    Steps:
+    1) Normalize inputs to label arrays.
+    2) Build label list if num_classes provided.
+    3) Return sklearn confusion matrix.
+    """
     y_pred = _as_labels(y_pred)
     y_true = _as_labels(y_true)
     labels = list(range(num_classes)) if num_classes is not None else None

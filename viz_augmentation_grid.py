@@ -53,9 +53,11 @@ def extract_lat_lon(name: str) -> Optional[Tuple[float, float]]:
     return None
 
 def is_image(path: Path) -> bool:
+    """Return True if the path is an image file with a supported extension."""
     return path.is_file() and path.suffix.lower() in IMG_EXTS
 
 def looks_original(path: Path) -> bool:
+    """Return True if the filename does not appear to be augmented."""
     # prefer originals; skip any augmented files
     return "_aug" not in path.name.lower()
 
@@ -85,6 +87,14 @@ def build_coord_index(root: Path) -> Dict[Tuple[int, int], Dict[Tuple[float, flo
     return index
 
 def find_match_by_coords(target_path: Path, sat_index, tol: float) -> Optional[Path]:
+    """
+    Find a matching satellite image by coordinate proximity.
+
+    Steps:
+    1) Extract coordinates from target filename.
+    2) Search nearby coarse bins.
+    3) Expand tolerance until a match is found.
+    """
     ll = extract_lat_lon(target_path.name)
     if ll is None:
         return None
@@ -94,6 +104,9 @@ def find_match_by_coords(target_path: Path, sat_index, tol: float) -> Optional[P
                      for di in (-1, 0, 1) for dj in (-1, 0, 1)]
 
     def try_tol(t):
+        """
+        Try to find a match within a given tolerance value.
+        """
         best, best_d = None, float("inf")
         for k in neighbor_keys:
             bucket = sat_index.get(k, {})
@@ -114,41 +127,49 @@ def find_match_by_coords(target_path: Path, sat_index, tol: float) -> Optional[P
 # Augmentations (sample params explicitly so we can display them)
 # -----------------------
 def aug_original(img):
+    """Return the original image without modification."""
     return img, "original"
 
 def aug_brightness(img):
+    """Apply a random brightness adjustment and return label text."""
     Δ = random.randint(-30, 30)
     aug = iaa.AddToBrightness(add=Δ)
     return aug(image=img), f"brightness Δ={Δ}"
 
 def aug_contrast(img):
+    """Apply a random contrast adjustment and return label text."""
     α = round(random.uniform(0.5, 2.0), 2)
     aug = iaa.LinearContrast(alpha=α)
     return aug(image=img), f"contrast α={α}"
 
 def aug_scale(img):
+    """Apply a random scale transform and return label text."""
     x = round(random.uniform(0.8, 1.2), 2)
     y = round(random.uniform(0.8, 1.2), 2)
     aug = iaa.Affine(scale={"x": x, "y": y}, fit_output=False, cval=WHITE)
     return aug(image=img), f"scale x={x}, y={y}"
 
 def aug_perspective(img):
+    """Apply a random perspective transform and return label text."""
     λ = round(random.uniform(0.01, 0.15), 3)
     aug = iaa.PerspectiveTransform(scale=λ, keep_size=True, cval=WHITE)
     return aug(image=img), f"perspective λ={λ}"
 
 def aug_rotation(img):
+    """Apply a random rotation and return label text."""
     θ = round(random.uniform(-25, 25), 1)
     aug = iaa.Affine(rotate=θ, fit_output=False, cval=WHITE)
     return aug(image=img), f"rotation θ={θ}°"
 
 def aug_translation(img):
+    """Apply a random translation and return label text."""
     tx = round(random.uniform(-0.2, 0.2), 2)
     ty = round(random.uniform(-0.2, 0.2), 2)
     aug = iaa.Affine(translate_percent={"x": tx, "y": ty}, fit_output=False, cval=WHITE)
     return aug(image=img), f"translation x={tx}, y={ty}"
 
 def aug_shear(img):
+    """Apply a random shear and return label text."""
     φ = round(random.uniform(-15, 15), 1)
     aug = iaa.Affine(shear=φ, fit_output=False, cval=WHITE)
     return aug(image=img), f"shear φ={φ}°"
@@ -165,6 +186,13 @@ AUG_FUNCS = [
 ]  # 8 entries; 9th grid cell stays empty
 
 def apply_all_ops_with_params(img: np.ndarray):
+    """
+    Apply each augmentation op and collect images and titles.
+
+    Steps:
+    1) Run each augmentation function.
+    2) Collect the augmented image and label.
+    """
     images, titles = [], []
     for f in AUG_FUNCS:
         out, title = f(img)
@@ -176,6 +204,9 @@ def apply_all_ops_with_params(img: np.ndarray):
 # Plotting
 # -----------------------
 def plot_3x3(images, titles, header_text: str):
+    """
+    Plot a 3x3 grid with a header and per-cell titles.
+    """
     fig, axes = plt.subplots(3, 3, figsize=(12, 12))  # uniform cell size
     axes = axes.ravel()
 
@@ -198,6 +229,14 @@ def plot_3x3(images, titles, header_text: str):
 # Main
 # -----------------------
 def main():
+    """
+    CLI entry point to generate street/satellite augmentation grids.
+
+    Steps:
+    1) Pick a matched street/satellite pair by coordinates.
+    2) Apply all augmentations and plot 3x3 grids.
+    3) Save the output images.
+    """
     random.seed(SEED); np.random.seed(SEED)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 

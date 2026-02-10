@@ -5,6 +5,13 @@ import torch
 import torch.nn as nn
 
 def _flatten_if_needed(x):
+    """
+    Flatten spatial feature maps by global average if needed.
+
+    Steps:
+    1) Check for [B, C, H, W] tensors.
+    2) Average over H and W to produce [B, C].
+    """
     # Handles [B, C, H, W] -> [B, C] by global average if needed
     if x.dim() == 4:
         x = x.mean(dim=(2, 3))
@@ -16,16 +23,30 @@ def _flatten_if_needed(x):
 
 class _FeatureExtractor(nn.Module):
     def __init__(self, backbone: nn.Module, feat_dim: int):
+        """
+        Wrap a backbone and expose a standardized feature extractor.
+        """
         super().__init__()
         self.backbone = backbone
         self.feat_dim = feat_dim
 
     def forward(self, x):
+        """
+        Forward pass that returns extracted features.
+        """
         return self._features(self.backbone, x)
 
     # --- per-arch feature extraction ---
     @staticmethod
     def _features(m: nn.Module, x: torch.Tensor) -> torch.Tensor:
+        """
+        Extract features from different backbone families.
+
+        Steps:
+        1) Handle timm models via forward_features.
+        2) Handle torchvision CNNs (ResNet/AlexNet/VGG/GoogLeNet).
+        3) Fallback to model output/logits.
+        """
         name = type(m).__name__.lower()
 
         # timm-style models
@@ -87,6 +108,13 @@ class _FeatureExtractor(nn.Module):
 
     @staticmethod
     def feature_dim(backbone: nn.Module) -> int:
+        """
+        Infer feature dimension for a backbone model.
+
+        Steps:
+        1) Use model metadata (num_features/fc.in_features).
+        2) Fallback to a dummy forward pass.
+        """
         # timm common attribute
         if hasattr(backbone, "num_features"):
             return int(backbone.num_features)
@@ -115,6 +143,9 @@ class _FeatureExtractor(nn.Module):
 
 
 def make_feature_extractor(backbone: nn.Module) -> _FeatureExtractor:
+    """
+    Create a feature extractor wrapper for a backbone.
+    """
     return _FeatureExtractor(backbone, _FeatureExtractor.feature_dim(backbone))
 
 class DualFeatureConcat(nn.Module):
@@ -123,6 +154,9 @@ class DualFeatureConcat(nn.Module):
       f_street ⊕ f_sat -> 512 -> ReLU -> Dropout(0.3) -> logits
     """
     def __init__(self, street_backbone: nn.Module, sat_backbone: nn.Module, num_classes: int):
+        """
+        Initialize dual-encoder feature concatenation head.
+        """
         super().__init__()
         self.st_ex = make_feature_extractor(street_backbone)
         self.sa_ex = make_feature_extractor(sat_backbone)
@@ -139,6 +173,9 @@ class DualFeatureConcat(nn.Module):
         self.is_pair_input = True
 
     def forward(self, street, sat):
+        """
+        Forward pass: extract features from both views and classify.
+        """
         fs = self.st_ex(street)
         fa = self.sa_ex(sat)
         x = torch.cat([fs, fa], dim=1)
@@ -152,6 +189,9 @@ class CombinedFeatureConcat(torch.nn.Module):
     Uses generic feature extractors so it works with torchvision/timm backbones.
     """
     def __init__(self, street_model: nn.Module, sat_model: nn.Module, num_classes: int):
+        """
+        Initialize late-fusion feature concatenation head.
+        """
         super().__init__()
         self.st = street_model
         self.sa = sat_model
@@ -169,6 +209,9 @@ class CombinedFeatureConcat(torch.nn.Module):
         self.is_pair_input = True  # so routing uses (street, sat)
 
     def forward(self, street: torch.Tensor, sat: torch.Tensor):
+        """
+        Forward pass: extract features, concatenate, and classify.
+        """
         fs = self.st_ex(street)
         fa = self.sa_ex(sat)
         x = torch.cat([fs, fa], dim=1)
@@ -177,6 +220,13 @@ class CombinedFeatureConcat(torch.nn.Module):
 
 class CombinedLogitsFusion(torch.nn.Module):
     def __init__(self, street_model, sat_model, mode: str = "avg"):
+        """
+        Initialize logits-level fusion for two single-view models.
+
+        Steps:
+        1) Store models.
+        2) Set fusion mode (avg/sum/learned).
+        """
         super().__init__()
         self.st = street_model
         self.sa = sat_model
@@ -188,6 +238,13 @@ class CombinedLogitsFusion(torch.nn.Module):
             self.register_parameter("alpha", None)
 
     def forward(self, street, sat):
+        """
+        Forward pass: fuse logits from two models.
+
+        Steps:
+        1) Compute street and satellite logits.
+        2) Combine according to fusion mode.
+        """
         ls = self.st(street)
         la = self.sa(sat)
         if self.mode == "avg":

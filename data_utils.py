@@ -15,6 +15,14 @@ IMAGENET_MEAN = [0.485, 0.456, 0.406]
 IMAGENET_STD  = [0.229, 0.224, 0.225]
 
 def _build_eval_tf(img_size: int):
+    """
+    Build the evaluation transform pipeline for input images.
+
+    Steps:
+    1) Resize to square.
+    2) Convert to tensor.
+    3) Normalize with ImageNet stats.
+    """
     return transforms.Compose([
         transforms.Resize((img_size, img_size)),
         transforms.ToTensor(),
@@ -81,6 +89,14 @@ class PairDiskDataset(Dataset):
                  img_size: int, split: str,
                  policy: str, preaug_strategy: str = "sample_one",
                  logger=None):
+        """
+        Initialize a paired dataset with optional pre-augmented sampling.
+
+        Steps:
+        1) Store roots, view, and transform.
+        2) Build augmentation indexes when needed.
+        3) Expand pairs based on strategy (use_all vs sample_one).
+        """
         self.view   = view
         self.split  = split
         self.policy = policy
@@ -120,18 +136,34 @@ class PairDiskDataset(Dataset):
 
         self.labels = [int(y) for _, _, y in self.pairs]
 
-    def __len__(self): return len(self.pairs)
+    def __len__(self):
+        """Return the number of paired samples in the dataset."""
+        return len(self.pairs)
 
     def _as_fullpath(self, rel: str, use_train_root: bool, is_street: bool):
+        """
+        Resolve a relative path to the correct street/satellite root.
+        """
         root = (self.street_root_tr if is_street else self.sat_root_tr) if use_train_root \
                else (self.street_root_vl if is_street else self.sat_root_vl)
         return os.path.join(root, rel)
 
     def _load_img(self, fp: str):
+        """
+        Load an image from disk and apply the evaluation transform.
+        """
         img = Image.open(fp).convert("RGB")
         return self.tf(img)
 
     def __getitem__(self, i):
+        """
+        Fetch a single sample, returning view-specific tensors and label.
+
+        Steps:
+        1) Resolve paired paths (with augmentation strategy if enabled).
+        2) Load required image(s).
+        3) Return tensors and integer label.
+        """
         st_rel, sa_rel, y = self.pairs[i]
         if self.split == "train" and self.policy == "preaug" and self.strategy == "sample_one":
             # we will not use this path now, since strategy is use_all, left here for completeness
@@ -150,6 +182,14 @@ class PairDiskDataset(Dataset):
         return (self._load_img(st_fp), self._load_img(sa_fp)), int(y)
 
 def _make_balanced_sampler(labels):
+    """
+    Create a weighted sampler to balance class frequencies.
+
+    Steps:
+    1) Count samples per class.
+    2) Invert counts to get weights.
+    3) Build a WeightedRandomSampler.
+    """
     labels = torch.as_tensor(labels, dtype=torch.long)
     class_sample_count = torch.bincount(labels).clamp(min=1)
     weights = 1.0 / class_sample_count[labels].float()
@@ -162,6 +202,14 @@ def make_loaders_from_roots(train_pairs, test_pairs, view,
                             batch_size: int, num_workers: int,
                             preaug_strategy: str = "sample_one",
                             logger=None):
+    """
+    Build train/val dataloaders for paired street/satellite datasets.
+
+    Steps:
+    1) Create PairDiskDataset instances for train/val.
+    2) Optionally create a balanced sampler.
+    3) Return DataLoader objects.
+    """
     tr_ds = PairDiskDataset(train_pairs, view, street_root_tr, sat_root_tr,
                             street_root_vl, sat_root_vl,
                             img_size, split="train", policy=policy,

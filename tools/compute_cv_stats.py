@@ -55,6 +55,14 @@ def read_fold_metrics(path: str):
 
 
 def compute_stats(rows):
+    """
+    Aggregate per-fold metrics into per-run mean/std summaries.
+
+    Steps:
+    1) Group metric values by run.
+    2) Compute mean and population std across folds for each metric.
+    3) Return a stable, run-sorted list of summary dicts.
+    """
     by_run = defaultdict(lambda: defaultdict(list))
     for r in rows:
         run = r["run"]
@@ -74,6 +82,14 @@ def compute_stats(rows):
 
 
 def write_stats(path_out: str, stats):
+    """
+    Write the per-run mean/std summaries to a CSV file.
+
+    Steps:
+    1) Define output field order.
+    2) Format floats to 3 decimals and preserve run/n_folds.
+    3) Write the header and rows to disk.
+    """
     fieldnames = [
         "run",
         "accuracy_mean",
@@ -119,6 +135,14 @@ def write_stats(path_out: str, stats):
 
 
 def main():
+    """
+    CLI entry point for computing CV mean/std summaries.
+
+    Steps:
+    1) Parse CLI args for input and output paths.
+    2) Read fold-level metrics from CSV.
+    3) Compute per-run mean/std and write the output CSV.
+    """
     p = argparse.ArgumentParser(description="Compute CV mean/std from per-fold metrics")
     p.add_argument(
         "--fold-metrics",

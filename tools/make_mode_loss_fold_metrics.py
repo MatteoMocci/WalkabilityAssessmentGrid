@@ -56,6 +56,14 @@ def parse_run_key(run_key: str) -> tuple[str, str, str, str, str]:
 
 
 def read_fold_metrics(path: str):
+    """
+    Read fold metrics CSV rows, skipping headers and malformed lines.
+
+    Steps:
+    1) Iterate rows and skip headers/empty rows.
+    2) Enforce minimum column count.
+    3) Return raw rows for downstream parsing.
+    """
     rows = []
     with open(path, "r", newline="", encoding="utf-8") as f:
         r = csv.reader(f)
@@ -72,6 +80,14 @@ def read_fold_metrics(path: str):
 
 
 def write_mode_loss_metrics(rows, out_path: str):
+    """
+    Reshape fold metrics into mode/model/loss columns and write to CSV.
+
+    Steps:
+    1) Parse run key into mode/model/loss.
+    2) Format numeric metrics to 3 decimals.
+    3) Write the transformed rows to the output file.
+    """
     with open(out_path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=OUT_FIELDS)
         w.writeheader()
@@ -81,6 +97,9 @@ def write_mode_loss_metrics(rows, out_path: str):
             mode, model, _pre, loss, _aug = parse_run_key(run_key)
             # format metrics to 3 decimals
             def fmt(x: str) -> str:
+                """
+                Format a numeric string to 3 decimals; pass through on failure.
+                """
                 try:
                     v = float(x)
                     return f"{v:.3f}"
@@ -104,6 +123,14 @@ def write_mode_loss_metrics(rows, out_path: str):
 
 
 def main():
+    """
+    CLI entry point to generate mode/model/loss fold metrics.
+
+    Steps:
+    1) Parse CLI args for input/output paths.
+    2) Read fold metrics from CSV.
+    3) Write reshaped metrics CSV.
+    """
     p = argparse.ArgumentParser(description="Make per-fold metrics with mode and loss")
     p.add_argument(
         "--input",

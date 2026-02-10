@@ -26,6 +26,9 @@ if certifi is not None:
 # ------------------------------------------------------------------------------------
 
 def _load_cvt_hf(num_classes: int, variant: str = "microsoft/cvt-13"):
+    """
+    Load a CvT model from HuggingFace with a resized classifier head.
+    """
     if CvtForImageClassification is None:
         raise RuntimeError("Transformers is required for CvT. pip install transformers")
     # create model with a head sized for your labels; ignore_mismatched_sizes lets us replace the classifier cleanly
@@ -132,6 +135,9 @@ HEAD_DROPOUT = 0.3
 TF_DROPOUT = 0.1
 
 def _disable_googlenet_aux(m):
+    """
+    Disable GoogLeNet auxiliary heads so forward returns only main logits.
+    """
     # ensure forward returns only main logits
     if hasattr(m, "aux_logits"):
         m.aux_logits = False
@@ -158,8 +164,17 @@ _MODEL_FACTORIES = {
 }
 
 def replace_head(model, num_classes: int):
+    """
+    Replace the classifier head of a backbone with a new num_classes head.
+
+    Steps:
+    1) Detect model family (timm vs torchvision).
+    2) Replace the appropriate classifier layer.
+    3) Keep the new head on the model's device.
+    """
     # keep the new layer on the same device as existing params
     def _dev(m):
+        """Return the device of the first parameter, or CPU if none."""
         try:
             return next(m.parameters()).device
         except StopIteration:
@@ -217,6 +232,14 @@ def replace_head(model, num_classes: int):
     raise TypeError(f"replace_head: unsupported model type {type(model)}")
 
 def load_model(name: str, pretrained_source: str, num_classes: int | None):
+    """
+    Load a backbone model and optionally replace its classifier head.
+
+    Steps:
+    1) Validate pretraining source and model name.
+    2) Load the pretrained backbone.
+    3) Replace the head if num_classes is provided.
+    """
     key = name.lower()
 
     if pretrained_source.lower() != "imagenet1k":
@@ -236,5 +259,8 @@ def load_model(name: str, pretrained_source: str, num_classes: int | None):
     return model
 
 def is_cnn_model(model: nn.Module) -> bool:
+    """
+    Return True if the model looks like a CNN (vs transformer).
+    """
     name = type(model).__name__.lower()
     return any(k in name for k in ("resnet", "alexnet", "vgg", "googlenet"))

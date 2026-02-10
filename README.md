@@ -93,6 +93,20 @@ Reset progress markers/registry:
 python main.py --reset-progress
 ```
 
+## One-command reproducibility
+
+To reproduce the full pipeline (training/eval + Table 1 + Table 2 + Figure 8) in one go:
+
+```bash
+python reproduce.py
+```
+
+Optional flags:
+
+- `--skip-train` if `fold_metrics_full.csv` already exists
+- `--skip-glmm` to skip Table 2/Figure 8 outputs
+- `--reset-progress` to reset the training registry before running
+
 ## Outputs
 
 Main artifacts produced in the repository root:

@@ -49,6 +49,7 @@ PROGRESS = {"ts": time.monotonic()}
 
 
 def timestamp():
+    """Return a short wall-clock timestamp string for log messages."""
     return time.strftime("%H:%M:%S")
 
 
@@ -59,6 +60,14 @@ def note_progress():
 
 @contextmanager
 def progress_span(tag: str):
+    """
+    Context manager that marks progress before/after a long step.
+
+    Steps:
+    1) Mark progress at entry.
+    2) Yield to the caller.
+    3) Mark progress and log completion.
+    """
     # tell the watchdog we’re starting a long step
     note_progress()
     try:
@@ -79,6 +88,9 @@ def start_stall_watchdog(
     """
 
     def _dump_threads():
+        """
+        Collect stack traces for all active threads.
+        """
         out = []
         for thr in threading.enumerate():
             out.append(f"--- thread: {thr.name} (daemon={thr.daemon}) ---")
@@ -90,6 +102,9 @@ def start_stall_watchdog(
     stop_evt = threading.Event()
 
     def _watch():
+        """
+        Watchdog loop that exits if no progress is recorded.
+        """
         last_log = 0.0
         while not stop_evt.wait(check_every):
             idle = time.monotonic() - PROGRESS["ts"]
@@ -127,6 +142,9 @@ def start_stall_watchdog(
 
 
 def gpu_mem_gb():
+    """
+    Return CUDA allocated and reserved memory in GB (0,0 if no GPU).
+    """
     if not torch.cuda.is_available():
         return 0.0, 0.0
     a = torch.cuda.memory_allocated() / (1024**3)
@@ -135,6 +153,14 @@ def gpu_mem_gb():
 
 
 def free_cuda(logger=None, tag=""):
+    """
+    Best-effort CUDA cleanup and memory reporting.
+
+    Steps:
+    1) Empty CUDA cache and run GC.
+    2) Sleep briefly for driver.
+    3) Log memory usage if logger provided.
+    """
     try:
         torch.cuda.empty_cache()
         gc.collect()
@@ -150,6 +176,14 @@ def free_cuda(logger=None, tag=""):
 
 # streaming confusion matrix & metrics for eval to avoid retaining tensors
 def _update_cm(cm, y_true_cpu, y_pred_cpu, num_classes):
+    """
+    Update a confusion matrix in-place from CPU tensors.
+
+    Steps:
+    1) Flatten (true, pred) pairs to indices.
+    2) Bincount into a KxK matrix.
+    3) Add into the running confusion matrix.
+    """
     with torch.no_grad():
         k = num_classes
         idx = y_true_cpu.to(torch.int64) * k + y_pred_cpu.to(torch.int64)
@@ -159,6 +193,13 @@ def _update_cm(cm, y_true_cpu, y_pred_cpu, num_classes):
 
 
 def _metrics_from_cm(cm):
+    """
+    Compute accuracy and macro-F1 from a confusion matrix.
+
+    Steps:
+    1) Compute TP/FP/FN.
+    2) Derive accuracy and macro F1.
+    """
     tp = cm.diag().float()
     total = cm.sum().clamp_min(1).float()
     acc = tp.sum() / total
@@ -190,6 +231,9 @@ FOLDS_PER_VIEW = {
     "combined": 10,
 }
 def _atomic_replace(src, dst):
+    """
+    Atomically replace a target file with a source file.
+    """
     if os.path.exists(dst):
         os.replace(src, dst)
     else:
@@ -197,6 +241,13 @@ def _atomic_replace(src, dst):
 
 
 def _write_bytes_atomic(payload_bytes: bytes, path: str):
+    """
+    Atomically write bytes to a file path.
+
+    Steps:
+    1) Write to a temp file in the same directory.
+    2) Replace the target path atomically.
+    """
     d = os.path.dirname(path) or "."
     os.makedirs(d, exist_ok=True)
     with tempfile.NamedTemporaryFile(dir=d, delete=False) as tmp:
@@ -206,6 +257,9 @@ def _write_bytes_atomic(payload_bytes: bytes, path: str):
 
 
 def _write_json_atomic(path: str, obj: dict):
+    """
+    Atomically write a JSON object to disk.
+    """
     d = os.path.dirname(path) or "."
     os.makedirs(d, exist_ok=True)
     tmp = path + ".tmp"
@@ -215,6 +269,7 @@ def _write_json_atomic(path: str, obj: dict):
 
 
 def _done_marker_path(run_key: str) -> str:
+    """Return the path of the done marker for a given run key."""
     return os.path.join(CHECKPOINT_DIR, f"{run_key}_done.json")
 
 
@@ -278,6 +333,9 @@ def dump_torch_state_to_bytes(state: dict) -> bytes:
     If torch’s pickler trips on Windows, fall back to a tiny JSON meta.
     """
     def _assert_cpu_only(x):
+        """
+        Assert that a nested structure contains no CUDA tensors.
+        """
         if torch.is_tensor(x):
             assert not x.is_cuda
         elif isinstance(x, dict):
@@ -302,6 +360,14 @@ def dump_torch_state_to_bytes(state: dict) -> bytes:
 
 
 def save_best_async(model, path: str, logger=None):
+    """
+    Save model weights asynchronously as a best-checkpoint.
+
+    Steps:
+    1) Move weights to CPU.
+    2) Serialize to bytes.
+    3) Save in a background thread/process.
+    """
     if torch.cuda.is_available():
         torch.cuda.synchronize()
     cpu_state = {k: v.detach().cpu() for k, v in model.state_dict().items()}
@@ -314,6 +380,14 @@ def save_best_async(model, path: str, logger=None):
 def save_state_async(
     epoch, model, optimizer, meta: dict, path: str, *, save_optimizer: bool, logger=None
 ):
+    """
+    Save a full training state asynchronously.
+
+    Steps:
+    1) Package model and optimizer state.
+    2) Serialize to bytes.
+    3) Save in a background thread/process.
+    """
     if torch.cuda.is_available():
         torch.cuda.synchronize()
     state = {
@@ -363,7 +437,18 @@ def _forward_for_view(model, batch, device, view: str):
 def build_model_for_view(
     view: str, model_name: str, pretrain: str, num_classes: int, device
 ):
+    """
+    Build a model for a specific view (street/satellite/dual/combined).
+
+    Steps:
+    1) Create a backbone (single-view).
+    2) Wrap dual/combined fusion heads if needed.
+    3) Move the model to the target device.
+    """
     def _single_backbone(*, replace_classifier: bool):
+        """
+        Build a single-view backbone and optionally replace the classifier.
+        """
         # Decide replacement here
         cls = num_classes if replace_classifier else None
         m = load_model(
@@ -464,6 +549,7 @@ def compute_class_weights_from_loader(loader, num_classes=None, eps=1e-8):
 
 
 def is_transformer(obj) -> bool:
+    """Return True if the model name/type suggests a transformer."""
     name = obj.lower() if isinstance(obj, str) else type(obj).__name__.lower()
     tf_markers = (
         "vit",
@@ -481,10 +567,14 @@ def is_transformer(obj) -> bool:
 
 
 def is_cnn(obj) -> bool:
+    """Return True if the model name/type suggests a CNN."""
     return not is_transformer(obj)
 
 
 def pick_epochs_for_model(model_or_name) -> int:
+    """
+    Choose the default epoch count based on model family.
+    """
     return 30 if is_cnn(model_or_name) else 20
 
 
@@ -699,6 +789,9 @@ def validate_data_roots_or_exit(logger) -> None:
 
 
 def _load_registry(path: str) -> dict:
+    """
+    Load a JSON run registry from disk (best-effort).
+    """
     try:
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -707,6 +800,9 @@ def _load_registry(path: str) -> dict:
 
 
 def _save_registry(path: str, data: dict) -> None:
+    """
+    Save the run registry to disk atomically.
+    """
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
@@ -716,6 +812,9 @@ def _save_registry(path: str, data: dict) -> None:
 def mark_run_status(
     reg: dict, run_key: str, status: str, extra: dict | None = None
 ) -> dict:
+    """
+    Update a run's status entry with timestamp and optional metadata.
+    """
     entry = reg.get(run_key, {})
     entry["status"] = status  # "planned" | "running" | "done" | "failed"
     if extra:
@@ -732,6 +831,14 @@ def reset_registry_status(
     clear_done_markers: bool = True,
     logger=None,
 ) -> tuple[dict, bool]:
+    """
+    Reset registry status for a list of run keys.
+
+    Steps:
+    1) Clear error/best fields.
+    2) Set status back to planned.
+    3) Optionally remove done markers on disk.
+    """
     changed = False
     for rk in run_keys:
         entry = reg.get(rk)
@@ -766,6 +873,9 @@ def reset_registry_status(
 
 
 def first_unfinished(planned: list[str], reg: dict) -> str | None:
+    """
+    Return the first planned run key that is not marked as done.
+    """
     for rk in planned:
         st = reg.get(rk, {}).get("status", "planned")
         if st not in ("done",):
@@ -774,9 +884,19 @@ def first_unfinished(planned: list[str], reg: dict) -> str | None:
 
 
 def start_heartbeat(path: str, interval_sec: int, logger):
+    """
+    Start a background heartbeat writer to a file.
+
+    Steps:
+    1) Spawn a daemon thread.
+    2) Periodically write a timestamp to the file.
+    """
     stop_evt = threading.Event()
 
     def _beat():
+        """
+        Heartbeat loop that writes timestamps until stopped.
+        """
         while not stop_evt.wait(interval_sec):
             try:
                 with open(path, "w", encoding="utf-8") as f:
@@ -821,6 +941,9 @@ def build_aug_catalog(root_dir: str):
 
 
 def pick_batch_size(model_name: str) -> int:
+    """
+    Choose a batch size based on model family heuristics.
+    """
     name = model_name.lower()
     if any(h in name for h in TRANSFORMER_HINTS):
         return 16
@@ -828,11 +951,17 @@ def pick_batch_size(model_name: str) -> int:
 
 
 def pick_lr_and_wd(model_name: str) -> Tuple[float, float]:
+    """
+    Choose learning rate and weight decay based on model family.
+    """
     # use our local string-based is_cnn()
     return (CNN_LR, CNN_WD) if is_cnn(model_name) else (TF_LR, TF_WD)
 
 
 def pick_img_size_for_model(model_name: str, base: int) -> int:
+    """
+    Choose image size for a model, overriding base for transformers.
+    """
     # many transformers expect 224
     return 224 if any(h in model_name.lower() for h in TRANSFORMER_HINTS) else base
 
@@ -869,6 +998,14 @@ _float_re = re.compile(r"-?\d+\.\d+")
 
 
 def _coords_from_name(name: str) -> Optional[Tuple[Float, Float]]:
+    """
+    Extract (lat, lon) from a filename containing float tokens.
+
+    Steps:
+    1) Parse floats from the basename.
+    2) Use the second/third numbers when present.
+    3) Fallback to first two numbers.
+    """
     # filenames like: id_lat_lon_*.jpg  (e.g., 2060.0_40.590713_8.349011_1.jpg)
     nums = [float(x) for x in _float_re.findall(os.path.basename(name))]
     if len(nums) >= 3:
@@ -881,6 +1018,9 @@ def _coords_from_name(name: str) -> Optional[Tuple[Float, Float]]:
 
 
 def _key_latlon(lat: Float, lon: Float) -> Tuple[int, int]:
+    """
+    Quantize lat/lon into an integer grid key for grouping.
+    """
     return (int(round(lat / TOL_DEG)), int(round(lon / TOL_DEG)))
 
 
@@ -939,6 +1079,14 @@ def ensure_pairs_and_groups(
 
 
 def kfold_on_groups(groups: List[str], n_splits: int, logger):
+    """
+    Build GroupKFold splits from a list of group identifiers.
+
+    Steps:
+    1) Run GroupKFold over group indices.
+    2) Map indices back to group ids.
+    3) Return a list of train/test group sets.
+    """
     gkf = GroupKFold(n_splits=n_splits)
     group_indices = np.arange(len(groups))
     # identity mapping group idx -> group id string
@@ -974,6 +1122,14 @@ def evaluate_one_epoch(
     limit_batches: int | None = None,
     logger=None,
 ):
+    """
+    Run a single evaluation epoch and compute metrics.
+
+    Steps:
+    1) Forward batches and accumulate confusion matrix.
+    2) Track loss and sample count.
+    3) Return metrics and optional predictions.
+    """
     model.eval()
     cm = torch.zeros(num_classes, num_classes, device="cpu")
     running_loss = 0.0
@@ -1106,6 +1262,14 @@ def train_one_epoch(
     logger=None,
     scaler=None,
 ):
+    """
+    Run one training epoch over the loader.
+
+    Steps:
+    1) Forward batches and compute loss.
+    2) Backpropagate (with optional AMP).
+    3) Step optimizer and return average loss.
+    """
     model.train()
     running_loss = 0.0
     n_seen = 0
@@ -1113,6 +1277,14 @@ def train_one_epoch(
 
     # inner forward that also moves tensors to device
     def _forward_for_batch(model, batch, view):
+        """
+        Prepare inputs and run the forward pass for a single batch.
+
+        Steps:
+        1) Move tensors to device and unpack batch.
+        2) Route to single-view or pair-view forward.
+        3) Return logits and labels.
+        """
         st = sa = x = labels = None
         if isinstance(batch, dict):
             labels = batch["label"].to(device, non_blocking=True)
@@ -1433,6 +1605,14 @@ def build_loaders_with_guard(
 
 
 def main(*, reset_progress: bool = False):
+    """
+    Main experiment entry point for grid training and evaluation.
+
+    Steps:
+    1) Read config and validate data roots.
+    2) Prepare run grid and resume/registry state.
+    3) Train/evaluate folds and write metrics.
+    """
     logger = get_logger()
     view_fold_times = defaultdict(list)  # view -> list of fold durations in seconds
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

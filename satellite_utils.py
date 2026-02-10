@@ -44,6 +44,14 @@ LAYER_HINT = "orto"            # bias layer auto pick
 # small helpers
 # -----------------------------
 def fetch_capabilities() -> Tuple[str, etree._Element]:
+    """
+    Try each WMS GetCapabilities endpoint and return the first that succeeds.
+
+    Steps:
+    1) Iterate candidate URLs.
+    2) Fetch and parse XML.
+    3) Raise if all fail.
+    """
     last_err = None
     for url in CAPABILITIES_CANDIDATES:
         try:
@@ -55,6 +63,14 @@ def fetch_capabilities() -> Tuple[str, etree._Element]:
     raise SystemExit(f"Could not fetch WMS Capabilities. Last error: {last_err}")
 
 def pick_layer_and_crs(xml: etree._Element) -> Tuple[str, str, str]:
+    """
+    Choose the best imagery layer and supported CRS from WMS capabilities.
+
+    Steps:
+    1) Extract named layers.
+    2) Score layers by keywords and CRS support.
+    3) Pick the top-scoring layer and a preferred CRS.
+    """
     ns = {"wms": "http://www.opengis.net/wms", "xlink": "http://www.w3.org/1999/xlink"}
     version = xml.get("version", "1.3.0")
     is_130 = version.startswith("1.3")
@@ -64,10 +80,12 @@ def pick_layer_and_crs(xml: etree._Element) -> Tuple[str, str, str]:
         raise SystemExit("No named layers found in this WMS capabilities.")
 
     def text(el, qname):
+        """Get stripped text for a qualified XML element, or empty string."""
         node = el.find(qname, namespaces=ns)
         return node.text.strip() if node is not None and node.text else ""
 
     def supports_crs(el, code: str) -> bool:
+        """Return True if the layer advertises support for a CRS/SRS code."""
         tag = "CRS" if is_130 else "SRS"
         for crs in el.findall(f"wms:{tag}", namespaces=ns):
             if crs.text and code.upper() in crs.text.upper():
@@ -75,6 +93,10 @@ def pick_layer_and_crs(xml: etree._Element) -> Tuple[str, str, str]:
         return False
 
     def score_layer(el) -> float:
+        """
+        Score a layer using keyword hints and CRS support.
+        Higher score indicates a better imagery candidate.
+        """
         name = text(el, "wms:Name")
         title = text(el, "wms:Title")
         abstract = text(el, "wms:Abstract")
@@ -110,6 +132,14 @@ def pick_layer_and_crs(xml: etree._Element) -> Tuple[str, str, str]:
     return version, layer_name, chosen_crs
 
 def build_bbox(lat: float, lon: float, crs: str, ground_width_m: float) -> Tuple[float,float,float,float]:
+    """
+    Build a square bounding box around a center in a target CRS.
+
+    Steps:
+    1) Convert to target CRS if needed.
+    2) Compute half-width in CRS units.
+    3) Return minx, miny, maxx, maxy.
+    """
     to_target = Transformer.from_crs("EPSG:4326", crs, always_xy=True)
     if crs == "EPSG:4326":
         meters_per_deg_lat = 111_320.0
@@ -126,6 +156,14 @@ def build_bbox(lat: float, lon: float, crs: str, ground_width_m: float) -> Tuple
 
 def getmap_png(base_capabilities_url: str, version: str, layer: str, crs: str,
                bbox: Tuple[float,float,float,float], width: int, height: int) -> Image.Image:
+    """
+    Request a WMS GetMap PNG for a bbox and return it as a PIL image.
+
+    Steps:
+    1) Build request parameters (CRS/SRS and bbox ordering).
+    2) Execute HTTP request.
+    3) Raise on XML error responses.
+    """
     is_130 = version.startswith("1.3")
     base = base_capabilities_url.split("?")[0]
     params = {
@@ -157,6 +195,9 @@ def getmap_png(base_capabilities_url: str, version: str, layer: str, crs: str,
     return Image.open(BytesIO(r.content))
 
 def center_crop(img: Image.Image, size: int) -> Image.Image:
+    """
+    Center-crop a square region from an image.
+    """
     w, h = img.size
     left = (w - size) // 2
     top = (h - size) // 2
@@ -181,6 +222,14 @@ def offset_point(lat: float, lon: float, heading_deg: float, dx_m: float, dy_m: 
 # main
 # -----------------------------
 def main():
+    """
+    CLI entry point to download WMS cutouts for each CSV point.
+
+    Steps:
+    1) Fetch WMS capabilities and select layer/CRS.
+    2) Read input CSV and iterate points.
+    3) Download, crop, and save cutouts (and optional pano).
+    """
     out_dir = Path(OUTPUT_DIR)
     out_dir.mkdir(parents=True, exist_ok=True)
 

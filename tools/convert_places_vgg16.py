@@ -22,11 +22,27 @@ ONNXP = W / "vgg16_places365.onnx"
 PTP   = W / "vgg16_places365.pth"
 
 def dl(url, out):
+    """
+    Download a file only if it does not already exist.
+
+    Steps:
+    1) Check output path.
+    2) Fetch from URL if missing.
+    """
     if not out.exists():
         print("download ->", out)
         urllib.request.urlretrieve(url, out)
 
 def main():
+    """
+    Convert Places365 VGG16 Caffe weights into a PyTorch checkpoint.
+
+    Steps:
+    1) Verify caffe2onnx is installed.
+    2) Download prototxt and caffemodel if needed.
+    3) Convert Caffe -> ONNX -> PyTorch.
+    4) Save the PyTorch model.
+    """
     # make sure caffe2onnx is importable
     try:
         importlib.import_module("caffe2onnx")

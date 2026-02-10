@@ -10,11 +10,31 @@ from torchvision.transforms import AutoAugment, AutoAugmentPolicy, RandAugment
 from tqdm import tqdm
 
 def _sha(s: str) -> str:
+    """
+    Return a short SHA1 hash for a string key.
+
+    Steps:
+    1) Encode as UTF-8.
+    2) Compute SHA1.
+    3) Return the first 16 hex chars.
+    """
     return hashlib.sha1(s.encode("utf-8")).hexdigest()[:16]
 
-def _ensure_dir(p): os.makedirs(p, exist_ok=True)
+def _ensure_dir(p):
+    """
+    Create a directory (and parents) if it does not exist.
+    """
+    os.makedirs(p, exist_ok=True)
 
 def _base_tf(img_size: int):
+    """
+    Build the base image transform pipeline.
+
+    Steps:
+    1) Resize and center crop.
+    2) Convert to tensor.
+    3) Normalize with ImageNet stats.
+    """
     return transforms.Compose([
         transforms.Resize(img_size + 32),
         transforms.CenterCrop(img_size),
@@ -23,6 +43,14 @@ def _base_tf(img_size: int):
     ])
 
 def _policy_tf(name: str, img_size: int):
+    """
+    Build an augmentation policy transform (auto or rand).
+
+    Steps:
+    1) Build base transforms.
+    2) Prepend the selected augmentation policy.
+    3) Return a composed transform.
+    """
     base = _base_tf(img_size)
     if name == "auto":
         return transforms.Compose([AutoAugment(policy=AutoAugmentPolicy.IMAGENET), *base.transforms])
@@ -31,13 +59,26 @@ def _policy_tf(name: str, img_size: int):
     raise ValueError("policy must be auto or rand")
 
 def _save_tensor(t: torch.Tensor, path: str):
+    """
+    Save a tensor to disk in half precision to reduce size.
+    """
     # store half precision to cut size by 2; convert back to float32 when loading
     torch.save(t.half(), path)
 
 def _load_tensor(path: str) -> torch.Tensor:
+    """
+    Load a saved tensor from disk and cast to float32.
+    """
     return torch.load(path).float()
 
 def _write_json(path: str, obj: Dict):
+    """
+    Atomically write a JSON file to disk.
+
+    Steps:
+    1) Write to a temporary file.
+    2) Replace the target path.
+    """
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(obj, f)
@@ -145,18 +186,46 @@ class _LazyCache(dict):
       cache["street"][relpath] -> torch.FloatTensor [3,H,W]
     """
     def __init__(self, index_path: str, data_dir: str):
+        """
+        Initialize a lazy cache from an index JSON and data directory.
+
+        Steps:
+        1) Load the index mapping from JSON.
+        2) Store the data directory for lazy reads.
+        """
         super().__init__()
         self._dir = data_dir
         self._idx = json.load(open(index_path, "r", encoding="utf-8"))
 
-    def __contains__(self, k): return k in self._idx
-    def __len__(self): return len(self._idx)
+    def __contains__(self, k):
+        """Return True if the key exists in the cache index."""
+        return k in self._idx
+
+    def __len__(self):
+        """Return the number of indexed items in the cache."""
+        return len(self._idx)
+
     def __getitem__(self, k):
+        """
+        Load the cached tensor for a given key on demand.
+
+        Steps:
+        1) Resolve the hashed filename from the index.
+        2) Load the tensor from disk.
+        """
         key = self._idx[k]
         path = os.path.join(self._dir, key + ".pt")
         return _load_tensor(path)
 
 def load_aug_cache(policy: str, cache_root="./aug_cache"):
+    """
+    Load the augmentation cache indexes and return lazy loaders.
+
+    Steps:
+    1) Resolve index and data directories.
+    2) Validate required files exist.
+    3) Return dict of lazy cache views by view name.
+    """
     pol_dir = os.path.join(cache_root, policy)
     st_idx_path = os.path.join(pol_dir, "index_street.json")
     sa_idx_path = os.path.join(pol_dir, "index_satellite.json")

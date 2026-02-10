@@ -6,6 +6,13 @@ from logging import handlers
 class AsciiSanitizer(logging.Filter):
     """Ensure messages contain only ASCII; replace non-ASCII with escapes."""
     def filter(self, record: logging.LogRecord) -> bool:
+        """
+        Sanitize log message to ASCII-safe text.
+
+        Steps:
+        1) Encode with backslash replacement.
+        2) Decode back to ASCII string.
+        """
         try:
             record.msg = str(record.msg).encode("ascii", "backslashreplace").decode("ascii")
         except Exception:
@@ -13,6 +20,14 @@ class AsciiSanitizer(logging.Filter):
         return True
 
 def get_logger(name="WalkCNN", level=logging.INFO, log_file="walkcnn.log"):
+    """
+    Build a console + rotating-file logger with ASCII sanitization.
+
+    Steps:
+    1) Create/get logger and set base level.
+    2) Configure console handler.
+    3) Configure rotating file handler.
+    """
     logger = logging.getLogger(name)
     if logger.handlers:
         return logger
