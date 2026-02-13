@@ -18,8 +18,8 @@ install.packages(c("tidyverse", "glmmTMB", "performance", "car", "DHARMa", "rsta
 ```
 
 4. Download datasets:
-- Streetview images: `https://github.com/gatrunfio/AAPW`
-- Satellite and augmented datasets: `https://figshare.com/s/2753c0fc785521d63636?file=61611229`
+- Streetview pictures: `https://anonymous.4open.science/r/Streetview180-7357/`
+- Generated aerial views and augmented dataset: `https://figshare.com/s/2753c0fc785521d63636?file=61611229`
 
 5. Arrange folders as:
 

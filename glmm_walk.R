@@ -34,6 +34,16 @@ assumption_summary <- list()
 # create run id for random intercept
 df$run <- interaction(df$model, df$loss, df$fold, sep=":")
 
+# Ensure categorical predictors are factors with dropped unused levels
+df <- df %>%
+  mutate(
+    mode = factor(mode),
+    model = factor(model),
+    loss = factor(loss),
+    run = factor(run)
+  ) %>%
+  droplevels()
+
 # --- Outlier detection (by condition) ---------------------------------------
 # Detect outliers within each mode x model x loss group
 out_tbl <- df %>%
@@ -54,14 +64,23 @@ assumption_summary$outliers <- list(
 
 # Remove extreme outliers from df (keeps everything else)
 df_noext <- df %>%
-  anti_join(extreme_keys, by = c("mode","model","loss","fold"))
+  anti_join(extreme_keys, by = c("mode","model","loss","fold")) %>%
+  droplevels()
+
+# Build fixed-effects formula dynamically to avoid single-level factor crashes
+candidate_terms <- c("mode", "model", "loss")
+valid_terms <- candidate_terms[sapply(df_noext[candidate_terms], function(x) nlevels(factor(x)) >= 2)]
+fixed_rhs <- if (length(valid_terms) == 0) "1" else paste(valid_terms, collapse = " * ")
+model_formula <- as.formula(paste("accuracy ~", fixed_rhs, "+ (1 | run)"))
+
+message("Using fixed effects: ", fixed_rhs)
 
 # 2) Beta GLMM with random intercept on run (full data)
 # Table B.1: ANOVA on full data (use type-III tests if desired)
 # Example:
 #   car::Anova(fit_tmb, type = 3)
 fit_tmb <- glmmTMB(
-  accuracy ~ mode * model * loss + (1 | run),
+  model_formula,
   family = beta_family(link = "logit"),
   data = df,
   control = glmmTMBControl(
@@ -77,7 +96,7 @@ summary(fit_tmb)
 # Example:
 #   car::Anova(fit_tmb_noext, type = 3)
 fit_tmb_noext <- glmmTMB(
-  accuracy ~ mode * model * loss + (1 | run),
+  model_formula,
   family = beta_family(link = "logit"),
   data = df_noext,
   control = glmmTMBControl(
@@ -186,30 +205,32 @@ par(mfrow = c(1,1))
 # 9) Table 2: Holm-adjusted pairwise contrasts on accuracy
 # ============================================================
 
-# Map mode names to manuscript terminology for reporting
-df_noext_tbl2 <- df_noext %>%
-  mutate(
-    mode = recode(
-      mode,
-      satellite = "aerial",
-      combined = "late fusion",
-      dual = "dual encoder",
-      .default = mode
-    )
-  )
-
 emm_tbl2 <- emmeans(fit_tmb_noext, ~ mode, type = "response")
 contr_tbl2 <- pairs(emm_tbl2, adjust = "holm")
 sum_tbl2 <- summary(contr_tbl2, infer = c(TRUE, TRUE), type = "response")
 
-table2_out <- as.data.frame(sum_tbl2) %>%
+sum_tbl2_df <- as.data.frame(sum_tbl2)
+est_col <- if ("estimate" %in% names(sum_tbl2_df)) "estimate" else "odds.ratio"
+z_col <- if ("z.ratio" %in% names(sum_tbl2_df)) "z.ratio" else "t.ratio"
+
+table2_out <- sum_tbl2_df %>%
   transmute(
-    contrast = contrast,
-    estimate = estimate,
-    SE = SE,
-    df = df,
-    z = z.ratio,
-    p_adj = p.value
+    contrast = as.character(contrast),
+    estimate = .data[[est_col]],
+    SE = .data[["SE"]],
+    df = if ("df" %in% names(sum_tbl2_df)) .data[["df"]] else Inf,
+    z = .data[[z_col]],
+    p_adj = .data[["p.value"]]
+  ) %>%
+  mutate(
+    contrast = str_replace_all(
+      contrast,
+      c(
+        "satellite" = "aerial",
+        "combined" = "late fusion",
+        "dual" = "dual encoder"
+      )
+    )
   )
 
 write_csv(table2_out, out_table2_csv)
@@ -220,39 +241,73 @@ message("Wrote Table 2 contrasts to: ", out_table2_csv)
 # ============================================================
 
 # EMMs on logit scale for odds ratios
-emm_fig8 <- emmeans(fit_tmb_noext, ~ mode | model * loss, type = "link")
+by_vars <- intersect(c("model", "loss"), valid_terms)
+emm_formula <- if (length(by_vars) > 0) {
+  as.formula(paste("~ mode |", paste(by_vars, collapse = " * ")))
+} else {
+  ~ mode
+}
+emm_fig8 <- emmeans(fit_tmb_noext, emm_formula, type = "link")
 
-# Contrasts: late fusion vs street, dual encoder vs street
+# Contrasts: late fusion vs street, dual encoder vs street (if levels exist)
+mode_levels <- levels(droplevels(df_noext$mode))
+contrast_method <- list()
+if (all(c("street", "combined") %in% mode_levels)) {
+  w <- setNames(rep(0, length(mode_levels)), mode_levels)
+  w["street"] <- -1; w["combined"] <- 1
+  contrast_method[["late_vs_street"]] <- unname(w)
+}
+if (all(c("street", "dual") %in% mode_levels)) {
+  w <- setNames(rep(0, length(mode_levels)), mode_levels)
+  w["street"] <- -1; w["dual"] <- 1
+  contrast_method[["dual_vs_street"]] <- unname(w)
+}
+if (length(contrast_method) == 0) {
+  stop("Figure 8 contrasts require mode levels including 'street' and at least one of {'combined','dual'}.")
+}
+
 contr_fig8 <- contrast(
   emm_fig8,
-  method = list(
-    "late_vs_street" = c(-1, 0, 1, 0),
-    "dual_vs_street" = c(-1, 0, 0, 1)
-  ),
-  by = c("model", "loss"),
+  method = contrast_method,
+  by = by_vars,
   adjust = "none"
 )
 
 sum_fig8 <- as.data.frame(summary(contr_fig8, infer = c(TRUE, TRUE)))
+ci_low_col <- if ("lower.CL" %in% names(sum_fig8)) "lower.CL" else "asymp.LCL"
+ci_high_col <- if ("upper.CL" %in% names(sum_fig8)) "upper.CL" else "asymp.UCL"
 
-# Holm adjustment within each model x loss cell
-sum_fig8 <- sum_fig8 %>%
-  group_by(model, loss) %>%
-  mutate(p_adj = p.adjust(p.value, method = "holm")) %>%
-  ungroup()
+# Holm adjustment within each conditioning cell (if any)
+if (length(by_vars) > 0) {
+  sum_fig8 <- sum_fig8 %>%
+    group_by(across(all_of(by_vars))) %>%
+    mutate(p_adj = p.adjust(p.value, method = "holm")) %>%
+    ungroup()
+} else {
+  sum_fig8 <- sum_fig8 %>%
+    mutate(p_adj = p.adjust(p.value, method = "holm"))
+}
 
 plot_df <- sum_fig8 %>%
   mutate(
     odds_ratio = exp(estimate),
-    or_low = exp(lower.CL),
-    or_high = exp(upper.CL),
+    or_low = exp(.data[[ci_low_col]]),
+    or_high = exp(.data[[ci_high_col]]),
     significant = p_adj < 0.05,
-    contrast_label = recode(
+    contrast_label = dplyr::recode(
       contrast,
       "late_vs_street" = "late fusion vs street",
       "dual_vs_street" = "dual encoder vs street"
     ),
-    cell = paste(model, loss, sep = " / ")
+    cell = if (all(c("model", "loss") %in% names(sum_fig8))) {
+      paste(model, loss, sep = " / ")
+    } else if ("model" %in% names(sum_fig8)) {
+      as.character(model)
+    } else if ("loss" %in% names(sum_fig8)) {
+      as.character(loss)
+    } else {
+      "all data"
+    }
   )
 
 g <- ggplot(plot_df, aes(x = odds_ratio, y = cell)) +

@@ -21,3 +21,6 @@ satellite/
 augmented-satellite/
 augmented-streetview/
 streetview/
+checkpoints/
+Rplots.pdf
+run_registry_full.json.tmp

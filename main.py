@@ -230,12 +230,30 @@ FOLDS_PER_VIEW = {
     "dual": 10,
     "combined": 10,
 }
+def _replace_with_retry(src: str, dst: str, retries: int = 20, delay_s: float = 0.15):
+    """
+    Replace dst with src, retrying on transient Windows file locks.
+    """
+    last_exc = None
+    for i in range(retries):
+        try:
+            os.replace(src, dst)
+            return
+        except PermissionError as e:
+            last_exc = e
+            if i == retries - 1:
+                break
+            time.sleep(delay_s * (i + 1))
+    if last_exc is not None:
+        raise last_exc
+
+
 def _atomic_replace(src, dst):
     """
     Atomically replace a target file with a source file.
     """
     if os.path.exists(dst):
-        os.replace(src, dst)
+        _replace_with_retry(src, dst)
     else:
         shutil.move(src, dst)
 
@@ -262,10 +280,22 @@ def _write_json_atomic(path: str, obj: dict):
     """
     d = os.path.dirname(path) or "."
     os.makedirs(d, exist_ok=True)
-    tmp = path + ".tmp"
-    with open(tmp, "w", encoding="utf-8") as f:
-        json.dump(obj, f, indent=2)
-    os.replace(tmp, path)
+    tmp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w", encoding="utf-8", dir=d, delete=False
+        ) as tmp:
+            json.dump(obj, tmp, indent=2)
+            tmp.flush()
+            os.fsync(tmp.fileno())
+            tmp_path = tmp.name
+        _replace_with_retry(tmp_path, path)
+    finally:
+        if tmp_path and os.path.exists(tmp_path):
+            try:
+                os.remove(tmp_path)
+            except Exception:
+                pass
 
 
 def _done_marker_path(run_key: str) -> str:
@@ -598,11 +628,11 @@ os.makedirs(PRED_DIR, exist_ok=True)
 VIEWS = ["street", "satellite", "dual", "combined"]
 MODELS = ["alexnet", "vgg16", "googlenet", "vit_base", "deit_base", "swin_base"]
 PRETRAINING_BY_MODEL = {m: ["imagenet1k"] for m in MODELS}
-LOSSES = ["WCE"]  # restrict grid to WCE-only rerun
+LOSSES = ["CE", "SCE", "WCE"]
 AUGS_FOR_LOSS = {
     "CE": ["preaug"],  # only augmented
     "SCE": ["preaug"],  # only augmented
-    "WCE": ["preaug"],  # rerun WCE using augmented dataset
+    "WCE": ["preaug"],  # only augmented
 }
 AUG_POLICIES = ["none", "preaug"]
 PREAUG_STRATEGY = "use_all"  # use all augmented variants for each training image
@@ -803,10 +833,7 @@ def _save_registry(path: str, data: dict) -> None:
     """
     Save the run registry to disk atomically.
     """
-    tmp = path + ".tmp"
-    with open(tmp, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
-    os.replace(tmp, path)
+    _write_json_atomic(path, data)
 
 
 def mark_run_status(
