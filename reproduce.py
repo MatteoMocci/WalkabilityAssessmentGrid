@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -43,6 +44,52 @@ def _ensure_file(path: Path, hint: str) -> None:
     """
     if not path.exists():
         raise SystemExit(f"Missing required file: {path}\nHint: {hint}")
+
+
+def _resolve_rscript() -> str:
+    """
+    Resolve an executable path for Rscript.
+
+    Resolution order:
+    1) Environment override via RSCRIPT_BIN.
+    2) PATH lookup.
+    3) Common Windows install locations under Program Files.
+    """
+    env_bin = os.getenv("RSCRIPT_BIN", "").strip()
+    if env_bin:
+        if os.path.isfile(env_bin):
+            return env_bin
+        raise SystemExit(
+            f"RSCRIPT_BIN is set but not found: {env_bin}\n"
+            "Hint: set RSCRIPT_BIN to a valid Rscript executable path."
+        )
+
+    in_path = shutil.which("Rscript")
+    if in_path:
+        return in_path
+
+    candidates: list[Path] = []
+    for env_name in ("ProgramFiles", "ProgramFiles(x86)"):
+        root = os.getenv(env_name, "")
+        if not root:
+            continue
+        r_root = Path(root) / "R"
+        if not r_root.exists():
+            continue
+        # Typical layouts: C:\\Program Files\\R\\R-x.y.z\\bin\\Rscript.exe
+        candidates.extend(r_root.glob("R-*\\bin\\Rscript.exe"))
+        candidates.extend(r_root.glob("R-*\\bin\\x64\\Rscript.exe"))
+
+    if candidates:
+        # Pick latest version by path sort (R-4.3.3 > R-4.2.0, etc.).
+        return str(sorted(candidates)[-1])
+
+    raise SystemExit(
+        "Rscript was not found.\n"
+        "Install R and ensure Rscript is on PATH, or set RSCRIPT_BIN explicitly.\n"
+        "PowerShell example:\n"
+        '$env:RSCRIPT_BIN = "C:\\Program Files\\R\\R-4.5.1\\bin\\Rscript.exe"'
+    )
 
 
 def main() -> int:
@@ -120,7 +167,8 @@ def main() -> int:
     _ensure_file(mode_loss_metrics, "Expected output/metrics_by_mode_loss_fold.csv to be created.")
 
     if not args.skip_glmm:
-        _run(["Rscript", "glmm_walk.R"], cwd=REPO_ROOT, label="GLMM + Figure 8")
+        rscript = _resolve_rscript()
+        _run([rscript, "glmm_walk.R"], cwd=REPO_ROOT, label="GLMM + Figure 8")
 
     print("[reproduce] Done.")
     return 0
