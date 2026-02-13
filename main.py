@@ -215,7 +215,7 @@ SEED = 42  # used in folds / loaders
 # Paths & dataset definitions
 # ----------------------------
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
-BASE_DIR = os.getenv("WALKCNN_BASE_DIR", PROJECT_ROOT)
+BASE_DIR = os.getenv("WALKCNN_BASE_DIR", os.getcwd())
 STREET_ORIG = os.path.join(BASE_DIR, "streetview")
 SAT_ORIG = os.path.join(BASE_DIR, "satellite")
 STREET_AUG = os.path.join(BASE_DIR, "augmented-streetview")
@@ -1604,7 +1604,7 @@ def build_loaders_with_guard(
 
 
 
-def main(*, reset_progress: bool = False):
+def main(*, reset_progress: bool = False, zero_shot: bool = False):
     """
     Main experiment entry point for grid training and evaluation.
 
@@ -1622,6 +1622,7 @@ def main(*, reset_progress: bool = False):
     base_bs = cfg["BATCH_SIZE"]
     n_splits = cfg["N_SPLITS"]
     logger.info(f"RUN_MODE={RUN_MODE}  device={device}")
+    logger.info(f"ZERO_SHOT={zero_shot}")
     logger.info(
         f"IMG_SIZE={base_img_size}  BATCH_SIZE={base_bs}  EPOCHS={base_epochs}  N_SPLITS={n_splits}"
     )
@@ -2118,27 +2119,6 @@ def main(*, reset_progress: bool = False):
                     logger.info(
                         f"[model] built {type(model).__name__} pair_input={pair_flag} view={view}"
                     )
-                    # Optimizer and loss
-                    lr, wd = pick_lr_and_wd(model_name)
-                    optimizer = (optim.SGD if is_cnn(model_name) else optim.AdamW)(
-                        model.parameters(),
-                        lr=lr,
-                        weight_decay=wd,
-                        **({"momentum": CNN_MOMENTUM} if is_cnn(model_name) else {}),
-                    )
-                    if loss_name == "CE":
-                        criterion = get_criterion("CE", num_classes).to(device)
-                    elif loss_name == "SCE":
-                        criterion = get_criterion("SCE", num_classes).to(device)
-                    elif loss_name == "WCE":
-                        class_weights = compute_class_weights_from_loader(tr_loader).to(
-                            device
-                        )
-                        criterion = get_criterion(
-                            "WCE", num_classes=num_classes, class_weights=class_weights
-                        ).to(device)
-                    else:
-                        raise RuntimeError(f"Unknown loss {loss_name}")
                     # Early stopping, resume, and checkpointing per fold
                     epochs = pick_epochs_for_model(model_name)
                     rk_fold = f"{run_key}_fold{fold_idx}"
@@ -2198,6 +2178,61 @@ def main(*, reset_progress: bool = False):
                         )
                         free_cuda(logger, tag=f"after-fold {fold_idx}")
                         continue
+                    if zero_shot:
+                        logger.info(
+                            f"[zero-shot] {rk_fold}: evaluating without any training step"
+                        )
+                        preds, refs = eval_model(
+                            model,
+                            vl_loader,
+                            device,
+                            view=view,
+                            limit_batches=RUN_CFG[RUN_MODE]["VAL_BATCHES"],
+                            logger=logger,
+                        )
+                        m = compute_metrics(preds, refs)
+                        fold_metrics.append(m)
+                        fold_w.writerow(
+                            {
+                                "run": run_key,
+                                "fold": fold_idx,
+                                "accuracy": m.get("accuracy", 0.0),
+                                "precision": m.get("precision", 0.0),
+                                "recall": m.get("recall", 0.0),
+                                "f1": m.get("f1", 0.0),
+                                "mean_absolute_error": m.get(
+                                    "mean_absolute_error", 0.0
+                                ),
+                                "one_off_accuracy": m.get("one_off_accuracy", 0.0),
+                            }
+                        )
+                        fold_f.flush()
+                        logger.info(
+                            f"val  accuracy={m.get('accuracy',0):.4f}  f1={m.get('f1',0):.4f}"
+                        )
+                        free_cuda(logger, tag=f"after-fold {fold_idx}")
+                        continue
+                    # Optimizer and loss
+                    lr, wd = pick_lr_and_wd(model_name)
+                    optimizer = (optim.SGD if is_cnn(model_name) else optim.AdamW)(
+                        model.parameters(),
+                        lr=lr,
+                        weight_decay=wd,
+                        **({"momentum": CNN_MOMENTUM} if is_cnn(model_name) else {}),
+                    )
+                    if loss_name == "CE":
+                        criterion = get_criterion("CE", num_classes).to(device)
+                    elif loss_name == "SCE":
+                        criterion = get_criterion("SCE", num_classes).to(device)
+                    elif loss_name == "WCE":
+                        class_weights = compute_class_weights_from_loader(tr_loader).to(
+                            device
+                        )
+                        criterion = get_criterion(
+                            "WCE", num_classes=num_classes, class_weights=class_weights
+                        ).to(device)
+                    else:
+                        raise RuntimeError(f"Unknown loss {loss_name}")
                     train_limit = RUN_CFG[RUN_MODE]["TRAIN_BATCHES"]
                     val_limit = RUN_CFG[RUN_MODE]["VAL_BATCHES"]
                     best_metrics, best_epoch = train_with_early_stopping(
@@ -2306,6 +2341,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument("--reset-progress", action="store_true")
     parser.add_argument("--supervise", action="store_true")
+    parser.add_argument("--zero-shot", action="store_true")
     parser.add_argument("--backoff", type=float, default=5.0)  # seconds
     # parse only our wrapper flags; pass the rest to the child unchanged
     known, unknown = parser.parse_known_args()
@@ -2316,6 +2352,8 @@ if __name__ == "__main__":
             cmd = [sys.executable, __file__]
             if known.reset_progress:
                 cmd.append("--reset-progress")
+            if known.zero_shot:
+                cmd.append("--zero-shot")
             cmd += [arg for arg in unknown if arg != "--supervise"]
             print(
                 f"[supervisor] launching: {' '.join(shlex.quote(c) for c in cmd)}  (attempt {restarts+1})"
@@ -2338,4 +2376,4 @@ if __name__ == "__main__":
             time.sleep(delay)
     else:
         # Normal run: call your existing main(entrypoint) here
-        sys.exit(main(reset_progress=known.reset_progress))
+        sys.exit(main(reset_progress=known.reset_progress, zero_shot=known.zero_shot))

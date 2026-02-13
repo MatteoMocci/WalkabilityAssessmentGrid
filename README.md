@@ -1,150 +1,94 @@
-# WalkCNN Grid Workdir
+# WalkCNN Reproducibility Pipeline
 
-This repository trains and evaluates image classifiers for **perceived walkability level prediction** (5 classes) using:
+This README is the main guide to reproduce the study outputs from this repository.
 
-- street-view images
-- satellite images
-- dual/combined fusion of both views
+## 1) What You Need Before Running
 
-The main workflow is a configurable grid in `main.py` with grouped cross-validation, early stopping, checkpointing, and resume support.
-
-## What the repository does
-
-- Builds matched street/satellite pairs from filenames containing coordinates.
-- Splits data with `GroupKFold` so nearby coordinate groups stay together.
-- Trains multiple backbones (CNNs + transformers) on four views:
-  - `street`
-  - `satellite`
-  - `dual`
-  - `combined`
-- Computes metrics per fold (`accuracy`, `precision`, `recall`, `f1`, `MAE`, `one_off_accuracy`).
-- Saves run-level and fold-level CSV outputs plus JSON metadata.
-
-## Dataset expectations
-
-`main.py` expects class-folder datasets under a base directory:
-
-- `streetview/` (street originals)
-- `satellite/` (satellite originals)
-- `augmented-streetview/` (street augmented, optional depending on config)
-- `augmented-satellite/` (satellite augmented, optional depending on config)
-
-By default, the base directory is the repo root.  
-You can override it with:
-
-```powershell
-$env:WALKCNN_BASE_DIR = "C:\path\to\datasets_root"
-```
-
-Filenames should include coordinate tokens (example pattern used by parser: `id_lat_lon_*.jpg`).
-
-### Startup data checks
-
-`main.py` now validates dataset folders at startup and prints actionable setup hints if data is missing.
-
-It reports for each required root:
-- whether it exists
-- how many numeric class folders were found
-- how many images were found
-
-If setup is incomplete, it prints the expected layout and exits early:
-
-```text
-[setup] Dataset configuration is incomplete.
-[setup] Expected folder layout:
-  <BASE>/streetview/<class_id>/*.jpg
-  <BASE>/satellite/<class_id>/*.jpg
-  <BASE>/augmented-streetview/<class_id>/*.jpg
-  <BASE>/augmented-satellite/<class_id>/*.jpg
-```
-
-Class folders are expected to be numeric (for example: `0`, `1`, `2`, `3`, `4`).
-
-## Quick start
-
-1) Install dependencies:
+1. Clone this repository.
+2. Install Python dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-2) Configure experiment grid in `main.py` (at minimum check):
+3. Install R and required packages (needed for Table 2 and Figure 8):
 
-- `RUN_MODE`
-- `VIEWS`, `MODELS`
-- `LOSSES`, `AUGS_FOR_LOSS`
-- dataset paths / `WALKCNN_BASE_DIR`
-
-3) Run:
-
-```bash
-python main.py
+```r
+install.packages(c("tidyverse", "glmmTMB", "performance", "car", "DHARMa", "rstatix", "emmeans"))
 ```
 
-Optional supervised restart mode:
+4. Download datasets:
+- Streetview images: `https://github.com/gatrunfio/AAPW`
+- Satellite and augmented datasets: `https://figshare.com/s/2753c0fc785521d63636?file=61611229`
 
-```bash
-python main.py --supervise
+5. Arrange folders as:
+
+```text
+<BASE>/
+  streetview/0..4/*.jpg
+  satellite/0..4/*.jpg
+  augmented-streetview/0..4/*.jpg
+  augmented-satellite/0..4/*.jpg
 ```
 
-Reset progress markers/registry:
+By default, `<BASE>` is the current working directory. To use another location:
 
-```bash
-python main.py --reset-progress
+```powershell
+$env:WALKCNN_BASE_DIR = "..\\data"
 ```
 
-## One-command reproducibility
+## 2) How to Start the Reproducibility Pipeline
 
-To reproduce the full pipeline (training/eval + Table 1 + Table 2 + Figure 8) in one go:
+Run:
 
 ```bash
 python reproduce.py
 ```
 
-Optional flags:
+This starts the full end-to-end pipeline (training/evaluation + post-processing + GLMM outputs).
 
-- `--skip-train` if `fold_metrics_full.csv` already exists
-- `--skip-glmm` to skip Table 2/Figure 8 outputs
-- `--reset-progress` to reset the training registry before running
+Important runtime note: full training can take several days depending on hardware.
+If you want a quick test without training the models, run the zero-shot workflow in `zero-shot.md`.
 
-## Appendix tables A.1–A.4 (Mode-specific CV aggregates)
+Useful flags:
+- `--reset-progress`: reset registry/checkpoint progress before running
+- `--skip-train`: skip training/evaluation only if `fold_metrics_full.csv` already exists
+- `--skip-glmm`: skip GLMM/Table 2/Figure 8 outputs
 
-The appendix tables are derived by aggregating cross-validation metrics per mode:
+## 3) What Each Pipeline Step Does
 
-- Mode = `street` -> Appendix Table A.1
-- Mode = `satellite` -> Appendix Table A.2
-- Mode = `combined` -> Appendix Table A.3
-- Mode = `dual` -> Appendix Table A.4
+When you run `python reproduce.py`, the workflow is:
 
-## Outputs
+1. Training and evaluation (`main.py`)
+- Runs the model grid over modes/views and folds.
+- Writes fold metrics and CV summary metrics.
 
-Main artifacts produced in the repository root:
+2. CV aggregation (`tools/compute_cv_stats.py`)
+- Computes mean and standard deviation per run from fold metrics.
+- Produces Table 1 input data.
 
-- `fold_metrics_<mode>.csv` — metrics per fold and run
-- `cv_summary_<mode>.csv` — averaged metrics per run
-- `results_meta/*.json` — per-run metadata
-- `checkpoints/` — `*_best.pt`, `*_state.pt`, and done markers
-- `run_registry_<mode>.json` — status tracking for resume
-- `heartbeat.txt` / logs — liveness and run logging
+3. GLMM input reshaping (`tools/make_mode_loss_fold_metrics.py`)
+- Reshapes fold outputs into mode/model/loss format for statistical modeling.
 
-## Repository layout (key files)
+4. GLMM analysis and figure generation (`glmm_walk.R`)
+- Fits the GLMM and writes Table 2 contrasts.
+- Exports Figure 8 forest plots.
 
-- `main.py` — end-to-end training/evaluation grid runner
-- `data_utils.py` — paired dataset and dataloaders, pre-aug handling
-- `model_utils.py` — model loading and classifier-head replacement
-- `dual_encoder.py` — dual/combined fusion modules
-- `losses.py` — CE/WCE/SCE loss factory
-- `metrics_utils.py` — sklearn-based metrics
-- `tools/*.py` — post-processing/statistics/conversion utilities
-- `glmm_walk.R` — GLMM-based statistical analysis of fold metrics
+## 4) Results Produced
 
-## Utility scripts
+Main outputs are:
 
-- `tools/compute_cv_stats.py`  
-  Builds mean/std summary from `fold_metrics_*.csv`.
-- `tools/make_mode_loss_fold_metrics.py`  
-  Reshapes fold metrics into mode/model/loss format for stats.
-- `balance_dataset_single_op.py`  
-  Balances class counts with one-op image augmentation.
-- `viz_augmentation_grid.py`  
-  Visualizes augmentation operations on matched street/satellite examples.
+- `fold_metrics_full.csv`: per-fold metrics for each run
+- `cv_summary_full.csv`: average metrics per run
+- `cv_summary_full_with_std.csv`: mean and std per run (Table 1 input)
+- `output/metrics_by_mode_loss_fold.csv`: reshaped fold metrics for GLMM
+- `output/table2_glmm_contrasts.csv`: Table 2 contrasts
+- `output/figure8_forest.png`
+- `output/figure8_forest.pdf`
+- `results_meta/*.json`: run metadata
+- `checkpoints/*.pt` and done markers: resume/training state
+
+## Related Docs
+
+- `zero-shot.md`: no-training evaluation workflow
+- `overview.md`: concise description of each repo file and what is required for computation

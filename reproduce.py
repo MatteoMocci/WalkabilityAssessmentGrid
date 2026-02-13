@@ -7,6 +7,7 @@ This script orchestrates the end-to-end workflow using relative paths:
 3) Reshape metrics for GLMM and run GLMM analysis (Table 2 + Figure 8).
 
 Use --skip-train if you already have fold_metrics_full.csv.
+Use --zero-shot to evaluate immediately without any training steps.
 Use --skip-glmm if you only want model metrics and Table 1.
 """
 
@@ -55,9 +56,16 @@ def main() -> int:
     """
     ap = argparse.ArgumentParser(description="Reproduce study findings end-to-end")
     ap.add_argument("--skip-train", action="store_true", help="Skip model training/evaluation")
+    ap.add_argument(
+        "--zero-shot",
+        action="store_true",
+        help="Run evaluation only (no training steps) in main.py",
+    )
     ap.add_argument("--skip-glmm", action="store_true", help="Skip GLMM analysis (Table 2/Figure 8)")
     ap.add_argument("--reset-progress", action="store_true", help="Reset training progress before running")
     args = ap.parse_args()
+    if args.skip_train and args.zero_shot:
+        raise SystemExit("--skip-train and --zero-shot cannot be used together.")
 
     # Paths (relative to repo root)
     fold_metrics = REPO_ROOT / "fold_metrics_full.csv"
@@ -69,6 +77,8 @@ def main() -> int:
         cmd = [PY, "main.py"]
         if args.reset_progress:
             cmd.append("--reset-progress")
+        if args.zero_shot:
+            cmd.append("--zero-shot")
         _run(cmd, cwd=REPO_ROOT, label="train/eval grid")
         _ensure_file(
             fold_metrics,
