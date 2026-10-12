@@ -120,3 +120,15 @@
 2026-10-11 03:07:28  INFO   street_swin_base_ordinal  [fold 9] thresholds tuned on validation: 0.67 0.42 0.48 0.24
 2026-10-11 03:07:31  INFO   street_swin_base_ordinal  [fold 9] test accuracy=0.3212 f1=0.2733 mean_absolute_error=0.9047 one_off_accuracy=0.8165 amae=1.0039 qwk=0.3963 tuned_qwk=0.4383 alpha_ordinal=0.3883 score_mae=0.6695 score_spearman=0.5332 monotonicity_violation_pct=0.2353
 2026-10-11 03:07:32  INFO   street_swin_base_ordinal  [summary] 10 folds -> results/grid/street_swin_base_ordinal/summary.csv
+2026-10-12 15:05:02  INFO   street_swin_base_ordinal  run=street_swin_base_ordinal view=street device=cuda points=4410 with images=4410
+2026-10-12 15:05:02  INFO   street_swin_base_ordinal  [fold 0] already done, skipping (results/grid/street_swin_base_ordinal/fold_0_metrics.json)
+2026-10-12 15:05:02  INFO   street_swin_base_ordinal  [fold 1] already done, skipping (results/grid/street_swin_base_ordinal/fold_1_metrics.json)
+2026-10-12 15:05:02  INFO   street_swin_base_ordinal  [fold 2] already done, skipping (results/grid/street_swin_base_ordinal/fold_2_metrics.json)
+2026-10-12 15:05:02  INFO   street_swin_base_ordinal  [fold 3] already done, skipping (results/grid/street_swin_base_ordinal/fold_3_metrics.json)
+2026-10-12 15:05:02  INFO   street_swin_base_ordinal  [fold 4] already done, skipping (results/grid/street_swin_base_ordinal/fold_4_metrics.json)
+2026-10-12 15:05:02  INFO   street_swin_base_ordinal  [fold 5] already done, skipping (results/grid/street_swin_base_ordinal/fold_5_metrics.json)
+2026-10-12 15:05:02  INFO   street_swin_base_ordinal  [fold 6] already done, skipping (results/grid/street_swin_base_ordinal/fold_6_metrics.json)
+2026-10-12 15:05:02  INFO   street_swin_base_ordinal  [fold 7] already done, skipping (results/grid/street_swin_base_ordinal/fold_7_metrics.json)
+2026-10-12 15:05:02  INFO   street_swin_base_ordinal  [fold 8] already done, skipping (results/grid/street_swin_base_ordinal/fold_8_metrics.json)
+2026-10-12 15:05:02  INFO   street_swin_base_ordinal  [fold 9] already done, skipping (results/grid/street_swin_base_ordinal/fold_9_metrics.json)
+2026-10-12 15:05:02  INFO   street_swin_base_ordinal  [summary] 10 folds -> results/grid/street_swin_base_ordinal/summary.csv

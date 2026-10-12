@@ -126,3 +126,15 @@
 2026-10-11 07:32:44  INFO   aerial_vit_base_ordinal  [fold 9] thresholds tuned on validation: 0.84 0.46 0.47 0.14
 2026-10-11 07:32:45  INFO   aerial_vit_base_ordinal  [fold 9] test accuracy=0.3271 f1=0.2590 mean_absolute_error=0.8859 one_off_accuracy=0.8106 amae=1.0231 qwk=0.3574 tuned_qwk=0.4119 alpha_ordinal=0.3553 score_mae=0.6931 score_spearman=0.4809 monotonicity_violation_pct=0.0000
 2026-10-11 07:32:45  INFO   aerial_vit_base_ordinal  [summary] 10 folds -> results/grid/aerial_vit_base_ordinal/summary.csv
+2026-10-12 15:05:23  INFO   aerial_vit_base_ordinal  run=aerial_vit_base_ordinal view=aerial device=cuda points=4410 with images=4410
+2026-10-12 15:05:23  INFO   aerial_vit_base_ordinal  [fold 0] already done, skipping (results/grid/aerial_vit_base_ordinal/fold_0_metrics.json)
+2026-10-12 15:05:23  INFO   aerial_vit_base_ordinal  [fold 1] already done, skipping (results/grid/aerial_vit_base_ordinal/fold_1_metrics.json)
+2026-10-12 15:05:23  INFO   aerial_vit_base_ordinal  [fold 2] already done, skipping (results/grid/aerial_vit_base_ordinal/fold_2_metrics.json)
+2026-10-12 15:05:23  INFO   aerial_vit_base_ordinal  [fold 3] already done, skipping (results/grid/aerial_vit_base_ordinal/fold_3_metrics.json)
+2026-10-12 15:05:23  INFO   aerial_vit_base_ordinal  [fold 4] already done, skipping (results/grid/aerial_vit_base_ordinal/fold_4_metrics.json)
+2026-10-12 15:05:23  INFO   aerial_vit_base_ordinal  [fold 5] already done, skipping (results/grid/aerial_vit_base_ordinal/fold_5_metrics.json)
+2026-10-12 15:05:23  INFO   aerial_vit_base_ordinal  [fold 6] already done, skipping (results/grid/aerial_vit_base_ordinal/fold_6_metrics.json)
+2026-10-12 15:05:23  INFO   aerial_vit_base_ordinal  [fold 7] already done, skipping (results/grid/aerial_vit_base_ordinal/fold_7_metrics.json)
+2026-10-12 15:05:23  INFO   aerial_vit_base_ordinal  [fold 8] already done, skipping (results/grid/aerial_vit_base_ordinal/fold_8_metrics.json)
+2026-10-12 15:05:23  INFO   aerial_vit_base_ordinal  [fold 9] already done, skipping (results/grid/aerial_vit_base_ordinal/fold_9_metrics.json)
+2026-10-12 15:05:23  INFO   aerial_vit_base_ordinal  [summary] 10 folds -> results/grid/aerial_vit_base_ordinal/summary.csv

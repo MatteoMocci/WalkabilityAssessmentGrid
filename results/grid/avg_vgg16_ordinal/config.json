@@ -1,0 +1,6 @@
+{
+  "head": "ordinal",
+  "view": "average",
+  "street_run": "results/grid/street_vgg16_ordinal",
+  "aerial_run": "results/grid/aerial_vgg16_ordinal"
+}

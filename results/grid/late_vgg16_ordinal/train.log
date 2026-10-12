@@ -1,0 +1,7 @@
+2026-10-12 17:36:51  INFO   late_vgg16_ordinal  run=late_vgg16_ordinal view=late device=cuda points=4410 with images=4410
+2026-10-12 17:36:51  INFO   late_vgg16_ordinal  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-12 17:36:52  INFO   late_vgg16_ordinal  [fold 0] late fusion: street encoder from results/grid/street_vgg16_ordinal/fold_0_best.pt
+2026-10-12 17:36:53  INFO   late_vgg16_ordinal  [fold 0] late fusion: aerial encoder from results/grid/aerial_vgg16_ordinal/fold_0_best.pt
+2026-10-12 17:36:53  INFO   late_vgg16_ordinal  [fold 0] view=late backbone=vgg16 weights=trained results/grid/street_vgg16_ordinal + results/grid/aerial_vgg16_ordinal
+2026-10-12 17:36:53  INFO   late_vgg16_ordinal  [fold 0] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 17:37:23  INFO   late_vgg16_ordinal  [fold 0] fusion_head epoch 1/20 train_loss=0.4228 val_loss=0.4368 val_qwk=0.5044 lr=1.00e-03 * (30s)

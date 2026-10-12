@@ -1,0 +1,188 @@
+2026-10-12 16:05:00  INFO   late_vit_base_ordinal  run=late_vit_base_ordinal view=late device=cuda points=4410 with images=4410
+2026-10-12 16:05:00  INFO   late_vit_base_ordinal  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-12 16:05:01  INFO   late_vit_base_ordinal  [fold 0] late fusion: street encoder from results/grid/street_vit_base_ordinal/fold_0_best.pt
+2026-10-12 16:05:02  INFO   late_vit_base_ordinal  [fold 0] late fusion: aerial encoder from results/grid/aerial_vit_base_ordinal/fold_0_best.pt
+2026-10-12 16:05:02  INFO   late_vit_base_ordinal  [fold 0] view=late backbone=vit_base weights=trained results/grid/street_vit_base_ordinal + results/grid/aerial_vit_base_ordinal
+2026-10-12 16:05:03  INFO   late_vit_base_ordinal  [fold 0] phase=fusion_head trainable params=788,996 lr=0.001
+2026-10-12 16:06:11  INFO   late_vit_base_ordinal  [fold 0] fusion_head epoch 1/20 train_loss=0.3761 val_loss=0.4575 val_qwk=0.4973 lr=1.00e-03 * (68s)
+2026-10-12 16:06:40  INFO   late_vit_base_ordinal  [fold 0] fusion_head epoch 2/20 train_loss=0.3660 val_loss=0.4513 val_qwk=0.4894 lr=1.00e-03 * (30s)
+2026-10-12 16:07:10  INFO   late_vit_base_ordinal  [fold 0] fusion_head epoch 3/20 train_loss=0.3586 val_loss=0.4585 val_qwk=0.5181 lr=1.00e-03 (29s)
+2026-10-12 16:07:39  INFO   late_vit_base_ordinal  [fold 0] fusion_head epoch 4/20 train_loss=0.3556 val_loss=0.4488 val_qwk=0.4961 lr=1.00e-03 * (29s)
+2026-10-12 16:08:08  INFO   late_vit_base_ordinal  [fold 0] fusion_head epoch 5/20 train_loss=0.3537 val_loss=0.4583 val_qwk=0.5279 lr=1.00e-03 (29s)
+2026-10-12 16:08:38  INFO   late_vit_base_ordinal  [fold 0] fusion_head epoch 6/20 train_loss=0.3511 val_loss=0.4431 val_qwk=0.4980 lr=1.00e-03 * (29s)
+2026-10-12 16:09:07  INFO   late_vit_base_ordinal  [fold 0] fusion_head epoch 7/20 train_loss=0.3475 val_loss=0.4527 val_qwk=0.4968 lr=1.00e-03 (30s)
+2026-10-12 16:09:36  INFO   late_vit_base_ordinal  [fold 0] fusion_head epoch 8/20 train_loss=0.3456 val_loss=0.4685 val_qwk=0.5115 lr=1.00e-03 (29s)
+2026-10-12 16:10:06  INFO   late_vit_base_ordinal  [fold 0] fusion_head epoch 9/20 train_loss=0.3432 val_loss=0.4574 val_qwk=0.4859 lr=1.00e-03 (29s)
+2026-10-12 16:10:35  INFO   late_vit_base_ordinal  [fold 0] fusion_head epoch 10/20 train_loss=0.3425 val_loss=0.4712 val_qwk=0.4795 lr=1.00e-03 (29s)
+2026-10-12 16:11:04  INFO   late_vit_base_ordinal  [fold 0] fusion_head epoch 11/20 train_loss=0.3407 val_loss=0.4721 val_qwk=0.4782 lr=1.00e-03 (29s)
+2026-10-12 16:11:04  INFO   late_vit_base_ordinal  [fold 0] fusion_head: early stop after 11 epochs, best so far epoch 6 (fusion_head) val_loss=0.4431 val_qwk=0.4980
+2026-10-12 16:11:08  INFO   late_vit_base_ordinal  [fold 0] thresholds tuned on validation: 0.70 0.49 0.49 0.24
+2026-10-12 16:11:12  INFO   late_vit_base_ordinal  [fold 0] test accuracy=0.3600 f1=0.2905 mean_absolute_error=0.8261 one_off_accuracy=0.8346 amae=0.9621 qwk=0.3924 tuned_qwk=0.4166 alpha_ordinal=0.3898 score_mae=0.6679 score_spearman=0.5458 monotonicity_violation_pct=0.0000
+2026-10-12 16:11:12  INFO   late_vit_base_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-12 16:11:13  INFO   late_vit_base_ordinal  [fold 1] late fusion: street encoder from results/grid/street_vit_base_ordinal/fold_1_best.pt
+2026-10-12 16:11:14  INFO   late_vit_base_ordinal  [fold 1] late fusion: aerial encoder from results/grid/aerial_vit_base_ordinal/fold_1_best.pt
+2026-10-12 16:11:14  INFO   late_vit_base_ordinal  [fold 1] view=late backbone=vit_base weights=trained results/grid/street_vit_base_ordinal + results/grid/aerial_vit_base_ordinal
+2026-10-12 16:11:14  INFO   late_vit_base_ordinal  [fold 1] phase=fusion_head trainable params=788,996 lr=0.001
+2026-10-12 16:11:45  INFO   late_vit_base_ordinal  [fold 1] fusion_head epoch 1/20 train_loss=0.3760 val_loss=0.4464 val_qwk=0.4523 lr=1.00e-03 * (31s)
+2026-10-12 16:12:15  INFO   late_vit_base_ordinal  [fold 1] fusion_head epoch 2/20 train_loss=0.3670 val_loss=0.4445 val_qwk=0.4772 lr=1.00e-03 * (30s)
+2026-10-12 16:12:45  INFO   late_vit_base_ordinal  [fold 1] fusion_head epoch 3/20 train_loss=0.3574 val_loss=0.4502 val_qwk=0.4419 lr=1.00e-03 (30s)
+2026-10-12 16:13:15  INFO   late_vit_base_ordinal  [fold 1] fusion_head epoch 4/20 train_loss=0.3551 val_loss=0.4365 val_qwk=0.3932 lr=1.00e-03 * (30s)
+2026-10-12 16:13:44  INFO   late_vit_base_ordinal  [fold 1] fusion_head epoch 5/20 train_loss=0.3520 val_loss=0.4344 val_qwk=0.4644 lr=1.00e-03 * (30s)
+2026-10-12 16:14:14  INFO   late_vit_base_ordinal  [fold 1] fusion_head epoch 6/20 train_loss=0.3495 val_loss=0.4412 val_qwk=0.4682 lr=1.00e-03 (30s)
+2026-10-12 16:14:44  INFO   late_vit_base_ordinal  [fold 1] fusion_head epoch 7/20 train_loss=0.3475 val_loss=0.4437 val_qwk=0.4545 lr=1.00e-03 (30s)
+2026-10-12 16:15:14  INFO   late_vit_base_ordinal  [fold 1] fusion_head epoch 8/20 train_loss=0.3453 val_loss=0.4470 val_qwk=0.4627 lr=1.00e-03 (30s)
+2026-10-12 16:15:43  INFO   late_vit_base_ordinal  [fold 1] fusion_head epoch 9/20 train_loss=0.3435 val_loss=0.4507 val_qwk=0.4549 lr=1.00e-03 (30s)
+2026-10-12 16:16:13  INFO   late_vit_base_ordinal  [fold 1] fusion_head epoch 10/20 train_loss=0.3411 val_loss=0.4451 val_qwk=0.4138 lr=1.00e-03 (30s)
+2026-10-12 16:16:13  INFO   late_vit_base_ordinal  [fold 1] fusion_head: early stop after 10 epochs, best so far epoch 5 (fusion_head) val_loss=0.4344 val_qwk=0.4644
+2026-10-12 16:16:17  INFO   late_vit_base_ordinal  [fold 1] thresholds tuned on validation: 0.83 0.56 0.50 0.30
+2026-10-12 16:16:21  INFO   late_vit_base_ordinal  [fold 1] test accuracy=0.3877 f1=0.3286 mean_absolute_error=0.7833 one_off_accuracy=0.8579 amae=0.8656 qwk=0.5120 tuned_qwk=0.5497 alpha_ordinal=0.4930 score_mae=0.5924 score_spearman=0.6753 monotonicity_violation_pct=0.0000
+2026-10-12 16:16:21  INFO   late_vit_base_ordinal  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-12 16:16:22  INFO   late_vit_base_ordinal  [fold 2] late fusion: street encoder from results/grid/street_vit_base_ordinal/fold_2_best.pt
+2026-10-12 16:16:23  INFO   late_vit_base_ordinal  [fold 2] late fusion: aerial encoder from results/grid/aerial_vit_base_ordinal/fold_2_best.pt
+2026-10-12 16:16:23  INFO   late_vit_base_ordinal  [fold 2] view=late backbone=vit_base weights=trained results/grid/street_vit_base_ordinal + results/grid/aerial_vit_base_ordinal
+2026-10-12 16:16:23  INFO   late_vit_base_ordinal  [fold 2] phase=fusion_head trainable params=788,996 lr=0.001
+2026-10-12 16:16:54  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 1/20 train_loss=0.4143 val_loss=0.4339 val_qwk=0.4166 lr=1.00e-03 * (31s)
+2026-10-12 16:17:24  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 2/20 train_loss=0.4039 val_loss=0.4353 val_qwk=0.4355 lr=1.00e-03 (30s)
+2026-10-12 16:17:54  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 3/20 train_loss=0.4011 val_loss=0.4334 val_qwk=0.4232 lr=1.00e-03 * (30s)
+2026-10-12 16:18:24  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 4/20 train_loss=0.3984 val_loss=0.4356 val_qwk=0.4278 lr=1.00e-03 (30s)
+2026-10-12 16:18:54  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 5/20 train_loss=0.3966 val_loss=0.4408 val_qwk=0.4450 lr=1.00e-03 (30s)
+2026-10-12 16:19:24  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 6/20 train_loss=0.3940 val_loss=0.4334 val_qwk=0.4240 lr=1.00e-03 (30s)
+2026-10-12 16:19:54  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 7/20 train_loss=0.3930 val_loss=0.4388 val_qwk=0.4267 lr=1.00e-03 (30s)
+2026-10-12 16:20:24  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 8/20 train_loss=0.3912 val_loss=0.4327 val_qwk=0.4114 lr=1.00e-03 * (30s)
+2026-10-12 16:20:54  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 9/20 train_loss=0.3899 val_loss=0.4414 val_qwk=0.4135 lr=1.00e-03 (30s)
+2026-10-12 16:21:24  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 10/20 train_loss=0.3898 val_loss=0.4365 val_qwk=0.3925 lr=1.00e-03 (30s)
+2026-10-12 16:21:54  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 11/20 train_loss=0.3862 val_loss=0.4343 val_qwk=0.4124 lr=1.00e-03 (30s)
+2026-10-12 16:22:24  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 12/20 train_loss=0.3843 val_loss=0.4308 val_qwk=0.3939 lr=1.00e-03 * (30s)
+2026-10-12 16:22:54  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 13/20 train_loss=0.3823 val_loss=0.4352 val_qwk=0.3924 lr=1.00e-03 (30s)
+2026-10-12 16:23:24  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 14/20 train_loss=0.3816 val_loss=0.4344 val_qwk=0.4228 lr=1.00e-03 (30s)
+2026-10-12 16:23:54  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 15/20 train_loss=0.3813 val_loss=0.4438 val_qwk=0.3747 lr=1.00e-03 (30s)
+2026-10-12 16:24:24  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 16/20 train_loss=0.3778 val_loss=0.4551 val_qwk=0.3807 lr=1.00e-03 (30s)
+2026-10-12 16:24:54  INFO   late_vit_base_ordinal  [fold 2] fusion_head epoch 17/20 train_loss=0.3791 val_loss=0.4457 val_qwk=0.4315 lr=1.00e-03 (30s)
+2026-10-12 16:24:54  INFO   late_vit_base_ordinal  [fold 2] fusion_head: early stop after 17 epochs, best so far epoch 12 (fusion_head) val_loss=0.4308 val_qwk=0.3939
+2026-10-12 16:24:58  INFO   late_vit_base_ordinal  [fold 2] thresholds tuned on validation: 0.78 0.36 0.34 0.22
+2026-10-12 16:25:02  INFO   late_vit_base_ordinal  [fold 2] test accuracy=0.3976 f1=0.2911 mean_absolute_error=0.7629 one_off_accuracy=0.8567 amae=0.9646 qwk=0.3934 tuned_qwk=0.4613 alpha_ordinal=0.4028 score_mae=0.6052 score_spearman=0.5722 monotonicity_violation_pct=0.0000
+2026-10-12 16:25:02  INFO   late_vit_base_ordinal  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-12 16:25:02  INFO   late_vit_base_ordinal  [fold 3] late fusion: street encoder from results/grid/street_vit_base_ordinal/fold_3_best.pt
+2026-10-12 16:25:03  INFO   late_vit_base_ordinal  [fold 3] late fusion: aerial encoder from results/grid/aerial_vit_base_ordinal/fold_3_best.pt
+2026-10-12 16:25:03  INFO   late_vit_base_ordinal  [fold 3] view=late backbone=vit_base weights=trained results/grid/street_vit_base_ordinal + results/grid/aerial_vit_base_ordinal
+2026-10-12 16:25:03  INFO   late_vit_base_ordinal  [fold 3] phase=fusion_head trainable params=788,996 lr=0.001
+2026-10-12 16:25:35  INFO   late_vit_base_ordinal  [fold 3] fusion_head epoch 1/20 train_loss=0.3779 val_loss=0.4343 val_qwk=0.4702 lr=1.00e-03 * (31s)
+2026-10-12 16:26:05  INFO   late_vit_base_ordinal  [fold 3] fusion_head epoch 2/20 train_loss=0.3645 val_loss=0.4416 val_qwk=0.5206 lr=1.00e-03 (30s)
+2026-10-12 16:26:34  INFO   late_vit_base_ordinal  [fold 3] fusion_head epoch 3/20 train_loss=0.3599 val_loss=0.4391 val_qwk=0.5033 lr=1.00e-03 (30s)
+2026-10-12 16:27:05  INFO   late_vit_base_ordinal  [fold 3] fusion_head epoch 4/20 train_loss=0.3551 val_loss=0.4467 val_qwk=0.4744 lr=1.00e-03 (30s)
+2026-10-12 16:27:34  INFO   late_vit_base_ordinal  [fold 3] fusion_head epoch 5/20 train_loss=0.3509 val_loss=0.4372 val_qwk=0.4669 lr=1.00e-03 (30s)
+2026-10-12 16:28:04  INFO   late_vit_base_ordinal  [fold 3] fusion_head epoch 6/20 train_loss=0.3474 val_loss=0.4591 val_qwk=0.4953 lr=1.00e-03 (30s)
+2026-10-12 16:28:04  INFO   late_vit_base_ordinal  [fold 3] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4343 val_qwk=0.4702
+2026-10-12 16:28:08  INFO   late_vit_base_ordinal  [fold 3] thresholds tuned on validation: 0.67 0.53 0.44 0.22
+2026-10-12 16:28:12  INFO   late_vit_base_ordinal  [fold 3] test accuracy=0.3698 f1=0.2956 mean_absolute_error=0.8027 one_off_accuracy=0.8481 amae=0.9779 qwk=0.4027 tuned_qwk=0.4477 alpha_ordinal=0.3998 score_mae=0.6228 score_spearman=0.5383 monotonicity_violation_pct=0.0000
+2026-10-12 16:28:12  INFO   late_vit_base_ordinal  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-12 16:28:13  INFO   late_vit_base_ordinal  [fold 4] late fusion: street encoder from results/grid/street_vit_base_ordinal/fold_4_best.pt
+2026-10-12 16:28:14  INFO   late_vit_base_ordinal  [fold 4] late fusion: aerial encoder from results/grid/aerial_vit_base_ordinal/fold_4_best.pt
+2026-10-12 16:28:14  INFO   late_vit_base_ordinal  [fold 4] view=late backbone=vit_base weights=trained results/grid/street_vit_base_ordinal + results/grid/aerial_vit_base_ordinal
+2026-10-12 16:28:14  INFO   late_vit_base_ordinal  [fold 4] phase=fusion_head trainable params=788,996 lr=0.001
+2026-10-12 16:28:45  INFO   late_vit_base_ordinal  [fold 4] fusion_head epoch 1/20 train_loss=0.4172 val_loss=0.4436 val_qwk=0.4497 lr=1.00e-03 * (31s)
+2026-10-12 16:29:16  INFO   late_vit_base_ordinal  [fold 4] fusion_head epoch 2/20 train_loss=0.4076 val_loss=0.4425 val_qwk=0.4710 lr=1.00e-03 * (31s)
+2026-10-12 16:29:46  INFO   late_vit_base_ordinal  [fold 4] fusion_head epoch 3/20 train_loss=0.4047 val_loss=0.4363 val_qwk=0.4600 lr=1.00e-03 * (30s)
+2026-10-12 16:30:16  INFO   late_vit_base_ordinal  [fold 4] fusion_head epoch 4/20 train_loss=0.4026 val_loss=0.4388 val_qwk=0.4728 lr=1.00e-03 (30s)
+2026-10-12 16:30:45  INFO   late_vit_base_ordinal  [fold 4] fusion_head epoch 5/20 train_loss=0.3989 val_loss=0.4377 val_qwk=0.4753 lr=1.00e-03 (30s)
+2026-10-12 16:31:16  INFO   late_vit_base_ordinal  [fold 4] fusion_head epoch 6/20 train_loss=0.3990 val_loss=0.4337 val_qwk=0.4712 lr=1.00e-03 * (30s)
+2026-10-12 16:31:46  INFO   late_vit_base_ordinal  [fold 4] fusion_head epoch 7/20 train_loss=0.3958 val_loss=0.4377 val_qwk=0.4707 lr=1.00e-03 (30s)
+2026-10-12 16:32:16  INFO   late_vit_base_ordinal  [fold 4] fusion_head epoch 8/20 train_loss=0.3926 val_loss=0.4349 val_qwk=0.4739 lr=1.00e-03 (30s)
+2026-10-12 16:32:46  INFO   late_vit_base_ordinal  [fold 4] fusion_head epoch 9/20 train_loss=0.3926 val_loss=0.4399 val_qwk=0.4887 lr=1.00e-03 (30s)
+2026-10-12 16:33:16  INFO   late_vit_base_ordinal  [fold 4] fusion_head epoch 10/20 train_loss=0.3904 val_loss=0.4442 val_qwk=0.4745 lr=1.00e-03 (30s)
+2026-10-12 16:33:46  INFO   late_vit_base_ordinal  [fold 4] fusion_head epoch 11/20 train_loss=0.3885 val_loss=0.4427 val_qwk=0.5018 lr=1.00e-03 (30s)
+2026-10-12 16:33:46  INFO   late_vit_base_ordinal  [fold 4] fusion_head: early stop after 11 epochs, best so far epoch 6 (fusion_head) val_loss=0.4337 val_qwk=0.4712
+2026-10-12 16:33:49  INFO   late_vit_base_ordinal  [fold 4] thresholds tuned on validation: 0.73 0.53 0.53 0.29
+2026-10-12 16:33:53  INFO   late_vit_base_ordinal  [fold 4] test accuracy=0.3970 f1=0.3302 mean_absolute_error=0.7757 one_off_accuracy=0.8513 amae=0.8707 qwk=0.5037 tuned_qwk=0.5346 alpha_ordinal=0.4954 score_mae=0.5812 score_spearman=0.6701 monotonicity_violation_pct=0.0000
+2026-10-12 16:33:53  INFO   late_vit_base_ordinal  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-12 16:33:54  INFO   late_vit_base_ordinal  [fold 5] late fusion: street encoder from results/grid/street_vit_base_ordinal/fold_5_best.pt
+2026-10-12 16:33:55  INFO   late_vit_base_ordinal  [fold 5] late fusion: aerial encoder from results/grid/aerial_vit_base_ordinal/fold_5_best.pt
+2026-10-12 16:33:55  INFO   late_vit_base_ordinal  [fold 5] view=late backbone=vit_base weights=trained results/grid/street_vit_base_ordinal + results/grid/aerial_vit_base_ordinal
+2026-10-12 16:33:55  INFO   late_vit_base_ordinal  [fold 5] phase=fusion_head trainable params=788,996 lr=0.001
+2026-10-12 16:34:26  INFO   late_vit_base_ordinal  [fold 5] fusion_head epoch 1/20 train_loss=0.3712 val_loss=0.4669 val_qwk=0.4065 lr=1.00e-03 * (32s)
+2026-10-12 16:34:57  INFO   late_vit_base_ordinal  [fold 5] fusion_head epoch 2/20 train_loss=0.3568 val_loss=0.4742 val_qwk=0.3952 lr=1.00e-03 (30s)
+2026-10-12 16:35:27  INFO   late_vit_base_ordinal  [fold 5] fusion_head epoch 3/20 train_loss=0.3535 val_loss=0.4701 val_qwk=0.3966 lr=1.00e-03 (30s)
+2026-10-12 16:35:57  INFO   late_vit_base_ordinal  [fold 5] fusion_head epoch 4/20 train_loss=0.3479 val_loss=0.4656 val_qwk=0.4243 lr=1.00e-03 * (30s)
+2026-10-12 16:36:27  INFO   late_vit_base_ordinal  [fold 5] fusion_head epoch 5/20 train_loss=0.3467 val_loss=0.4847 val_qwk=0.3838 lr=1.00e-03 (30s)
+2026-10-12 16:36:58  INFO   late_vit_base_ordinal  [fold 5] fusion_head epoch 6/20 train_loss=0.3425 val_loss=0.4732 val_qwk=0.3697 lr=1.00e-03 (30s)
+2026-10-12 16:37:28  INFO   late_vit_base_ordinal  [fold 5] fusion_head epoch 7/20 train_loss=0.3395 val_loss=0.4728 val_qwk=0.3237 lr=1.00e-03 (31s)
+2026-10-12 16:37:59  INFO   late_vit_base_ordinal  [fold 5] fusion_head epoch 8/20 train_loss=0.3380 val_loss=0.4828 val_qwk=0.4054 lr=1.00e-03 (30s)
+2026-10-12 16:38:29  INFO   late_vit_base_ordinal  [fold 5] fusion_head epoch 9/20 train_loss=0.3374 val_loss=0.5139 val_qwk=0.3846 lr=1.00e-03 (30s)
+2026-10-12 16:38:29  INFO   late_vit_base_ordinal  [fold 5] fusion_head: early stop after 9 epochs, best so far epoch 4 (fusion_head) val_loss=0.4656 val_qwk=0.4243
+2026-10-12 16:38:32  INFO   late_vit_base_ordinal  [fold 5] thresholds tuned on validation: 0.72 0.50 0.41 0.27
+2026-10-12 16:38:36  INFO   late_vit_base_ordinal  [fold 5] test accuracy=0.3762 f1=0.3426 mean_absolute_error=0.8400 one_off_accuracy=0.8166 amae=0.9247 qwk=0.4938 tuned_qwk=0.4914 alpha_ordinal=0.4590 score_mae=0.6056 score_spearman=0.6102 monotonicity_violation_pct=0.9346
+2026-10-12 16:38:36  INFO   late_vit_base_ordinal  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-12 16:38:36  INFO   late_vit_base_ordinal  [fold 6] late fusion: street encoder from results/grid/street_vit_base_ordinal/fold_6_best.pt
+2026-10-12 16:38:37  INFO   late_vit_base_ordinal  [fold 6] late fusion: aerial encoder from results/grid/aerial_vit_base_ordinal/fold_6_best.pt
+2026-10-12 16:38:37  INFO   late_vit_base_ordinal  [fold 6] view=late backbone=vit_base weights=trained results/grid/street_vit_base_ordinal + results/grid/aerial_vit_base_ordinal
+2026-10-12 16:38:37  INFO   late_vit_base_ordinal  [fold 6] phase=fusion_head trainable params=788,996 lr=0.001
+2026-10-12 16:39:10  INFO   late_vit_base_ordinal  [fold 6] fusion_head epoch 1/20 train_loss=0.4113 val_loss=0.4997 val_qwk=0.4255 lr=1.00e-03 * (32s)
+2026-10-12 16:39:41  INFO   late_vit_base_ordinal  [fold 6] fusion_head epoch 2/20 train_loss=0.4012 val_loss=0.4672 val_qwk=0.4314 lr=1.00e-03 * (31s)
+2026-10-12 16:40:12  INFO   late_vit_base_ordinal  [fold 6] fusion_head epoch 3/20 train_loss=0.3986 val_loss=0.4684 val_qwk=0.4424 lr=1.00e-03 (31s)
+2026-10-12 16:40:43  INFO   late_vit_base_ordinal  [fold 6] fusion_head epoch 4/20 train_loss=0.3947 val_loss=0.4574 val_qwk=0.4109 lr=1.00e-03 * (31s)
+2026-10-12 16:41:14  INFO   late_vit_base_ordinal  [fold 6] fusion_head epoch 5/20 train_loss=0.3923 val_loss=0.4577 val_qwk=0.3968 lr=1.00e-03 (31s)
+2026-10-12 16:41:45  INFO   late_vit_base_ordinal  [fold 6] fusion_head epoch 6/20 train_loss=0.3922 val_loss=0.4691 val_qwk=0.4164 lr=1.00e-03 (31s)
+2026-10-12 16:42:16  INFO   late_vit_base_ordinal  [fold 6] fusion_head epoch 7/20 train_loss=0.3903 val_loss=0.4796 val_qwk=0.4275 lr=1.00e-03 (31s)
+2026-10-12 16:42:47  INFO   late_vit_base_ordinal  [fold 6] fusion_head epoch 8/20 train_loss=0.3871 val_loss=0.4756 val_qwk=0.4197 lr=1.00e-03 (31s)
+2026-10-12 16:43:17  INFO   late_vit_base_ordinal  [fold 6] fusion_head epoch 9/20 train_loss=0.3865 val_loss=0.4682 val_qwk=0.4254 lr=1.00e-03 (31s)
+2026-10-12 16:43:17  INFO   late_vit_base_ordinal  [fold 6] fusion_head: early stop after 9 epochs, best so far epoch 4 (fusion_head) val_loss=0.4574 val_qwk=0.4109
+2026-10-12 16:43:20  INFO   late_vit_base_ordinal  [fold 6] thresholds tuned on validation: 0.90 0.47 0.54 0.29
+2026-10-12 16:43:24  INFO   late_vit_base_ordinal  [fold 6] test accuracy=0.3246 f1=0.2466 mean_absolute_error=0.8660 one_off_accuracy=0.8177 amae=1.0463 qwk=0.3179 tuned_qwk=0.3428 alpha_ordinal=0.3157 score_mae=0.6864 score_spearman=0.4656 monotonicity_violation_pct=0.0000
+2026-10-12 16:43:24  INFO   late_vit_base_ordinal  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-12 16:43:24  INFO   late_vit_base_ordinal  [fold 7] late fusion: street encoder from results/grid/street_vit_base_ordinal/fold_7_best.pt
+2026-10-12 16:43:25  INFO   late_vit_base_ordinal  [fold 7] late fusion: aerial encoder from results/grid/aerial_vit_base_ordinal/fold_7_best.pt
+2026-10-12 16:43:25  INFO   late_vit_base_ordinal  [fold 7] view=late backbone=vit_base weights=trained results/grid/street_vit_base_ordinal + results/grid/aerial_vit_base_ordinal
+2026-10-12 16:43:25  INFO   late_vit_base_ordinal  [fold 7] phase=fusion_head trainable params=788,996 lr=0.001
+2026-10-12 16:43:57  INFO   late_vit_base_ordinal  [fold 7] fusion_head epoch 1/20 train_loss=0.4003 val_loss=0.4414 val_qwk=0.4780 lr=1.00e-03 * (32s)
+2026-10-12 16:44:28  INFO   late_vit_base_ordinal  [fold 7] fusion_head epoch 2/20 train_loss=0.3936 val_loss=0.4361 val_qwk=0.4263 lr=1.00e-03 * (31s)
+2026-10-12 16:44:59  INFO   late_vit_base_ordinal  [fold 7] fusion_head epoch 3/20 train_loss=0.3887 val_loss=0.4388 val_qwk=0.4358 lr=1.00e-03 (31s)
+2026-10-12 16:45:29  INFO   late_vit_base_ordinal  [fold 7] fusion_head epoch 4/20 train_loss=0.3876 val_loss=0.4346 val_qwk=0.4434 lr=1.00e-03 * (31s)
+2026-10-12 16:46:00  INFO   late_vit_base_ordinal  [fold 7] fusion_head epoch 5/20 train_loss=0.3822 val_loss=0.4426 val_qwk=0.4753 lr=1.00e-03 (30s)
+2026-10-12 16:46:31  INFO   late_vit_base_ordinal  [fold 7] fusion_head epoch 6/20 train_loss=0.3824 val_loss=0.4375 val_qwk=0.4255 lr=1.00e-03 (31s)
+2026-10-12 16:47:01  INFO   late_vit_base_ordinal  [fold 7] fusion_head epoch 7/20 train_loss=0.3810 val_loss=0.4429 val_qwk=0.4284 lr=1.00e-03 (30s)
+2026-10-12 16:47:31  INFO   late_vit_base_ordinal  [fold 7] fusion_head epoch 8/20 train_loss=0.3793 val_loss=0.4510 val_qwk=0.4401 lr=1.00e-03 (31s)
+2026-10-12 16:48:02  INFO   late_vit_base_ordinal  [fold 7] fusion_head epoch 9/20 train_loss=0.3775 val_loss=0.4516 val_qwk=0.4689 lr=1.00e-03 (31s)
+2026-10-12 16:48:02  INFO   late_vit_base_ordinal  [fold 7] fusion_head: early stop after 9 epochs, best so far epoch 4 (fusion_head) val_loss=0.4346 val_qwk=0.4434
+2026-10-12 16:48:05  INFO   late_vit_base_ordinal  [fold 7] thresholds tuned on validation: 0.69 0.54 0.50 0.07
+2026-10-12 16:48:09  INFO   late_vit_base_ordinal  [fold 7] test accuracy=0.3470 f1=0.2765 mean_absolute_error=0.8496 one_off_accuracy=0.8239 amae=0.9792 qwk=0.4010 tuned_qwk=0.4145 alpha_ordinal=0.3977 score_mae=0.6502 score_spearman=0.5353 monotonicity_violation_pct=0.0000
+2026-10-12 16:48:09  INFO   late_vit_base_ordinal  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-12 16:48:10  INFO   late_vit_base_ordinal  [fold 8] late fusion: street encoder from results/grid/street_vit_base_ordinal/fold_8_best.pt
+2026-10-12 16:48:10  INFO   late_vit_base_ordinal  [fold 8] late fusion: aerial encoder from results/grid/aerial_vit_base_ordinal/fold_8_best.pt
+2026-10-12 16:48:10  INFO   late_vit_base_ordinal  [fold 8] view=late backbone=vit_base weights=trained results/grid/street_vit_base_ordinal + results/grid/aerial_vit_base_ordinal
+2026-10-12 16:48:10  INFO   late_vit_base_ordinal  [fold 8] phase=fusion_head trainable params=788,996 lr=0.001
+2026-10-12 16:48:42  INFO   late_vit_base_ordinal  [fold 8] fusion_head epoch 1/20 train_loss=0.3912 val_loss=0.4850 val_qwk=0.4024 lr=1.00e-03 * (32s)
+2026-10-12 16:49:13  INFO   late_vit_base_ordinal  [fold 8] fusion_head epoch 2/20 train_loss=0.3768 val_loss=0.4825 val_qwk=0.3556 lr=1.00e-03 * (31s)
+2026-10-12 16:49:44  INFO   late_vit_base_ordinal  [fold 8] fusion_head epoch 3/20 train_loss=0.3739 val_loss=0.4851 val_qwk=0.3721 lr=1.00e-03 (31s)
+2026-10-12 16:50:14  INFO   late_vit_base_ordinal  [fold 8] fusion_head epoch 4/20 train_loss=0.3714 val_loss=0.4713 val_qwk=0.4098 lr=1.00e-03 * (31s)
+2026-10-12 16:50:45  INFO   late_vit_base_ordinal  [fold 8] fusion_head epoch 5/20 train_loss=0.3669 val_loss=0.4815 val_qwk=0.3895 lr=1.00e-03 (30s)
+2026-10-12 16:51:15  INFO   late_vit_base_ordinal  [fold 8] fusion_head epoch 6/20 train_loss=0.3656 val_loss=0.4731 val_qwk=0.3443 lr=1.00e-03 (30s)
+2026-10-12 16:51:46  INFO   late_vit_base_ordinal  [fold 8] fusion_head epoch 7/20 train_loss=0.3651 val_loss=0.4679 val_qwk=0.3533 lr=1.00e-03 * (31s)
+2026-10-12 16:52:16  INFO   late_vit_base_ordinal  [fold 8] fusion_head epoch 8/20 train_loss=0.3614 val_loss=0.4914 val_qwk=0.4012 lr=1.00e-03 (30s)
+2026-10-12 16:52:47  INFO   late_vit_base_ordinal  [fold 8] fusion_head epoch 9/20 train_loss=0.3598 val_loss=0.4810 val_qwk=0.3631 lr=1.00e-03 (30s)
+2026-10-12 16:53:17  INFO   late_vit_base_ordinal  [fold 8] fusion_head epoch 10/20 train_loss=0.3581 val_loss=0.4854 val_qwk=0.3955 lr=1.00e-03 (30s)
+2026-10-12 16:53:47  INFO   late_vit_base_ordinal  [fold 8] fusion_head epoch 11/20 train_loss=0.3582 val_loss=0.4872 val_qwk=0.3926 lr=1.00e-03 (30s)
+2026-10-12 16:54:18  INFO   late_vit_base_ordinal  [fold 8] fusion_head epoch 12/20 train_loss=0.3541 val_loss=0.4991 val_qwk=0.3689 lr=1.00e-03 (31s)
+2026-10-12 16:54:18  INFO   late_vit_base_ordinal  [fold 8] fusion_head: early stop after 12 epochs, best so far epoch 7 (fusion_head) val_loss=0.4679 val_qwk=0.3533
+2026-10-12 16:54:21  INFO   late_vit_base_ordinal  [fold 8] thresholds tuned on validation: 0.80 0.44 0.35 0.33
+2026-10-12 16:54:25  INFO   late_vit_base_ordinal  [fold 8] test accuracy=0.3316 f1=0.2540 mean_absolute_error=0.8303 one_off_accuracy=0.8588 amae=0.9788 qwk=0.4093 tuned_qwk=0.4374 alpha_ordinal=0.4281 score_mae=0.6426 score_spearman=0.5553 monotonicity_violation_pct=0.0000
+2026-10-12 16:54:25  INFO   late_vit_base_ordinal  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-12 16:54:26  INFO   late_vit_base_ordinal  [fold 9] late fusion: street encoder from results/grid/street_vit_base_ordinal/fold_9_best.pt
+2026-10-12 16:54:26  INFO   late_vit_base_ordinal  [fold 9] late fusion: aerial encoder from results/grid/aerial_vit_base_ordinal/fold_9_best.pt
+2026-10-12 16:54:26  INFO   late_vit_base_ordinal  [fold 9] view=late backbone=vit_base weights=trained results/grid/street_vit_base_ordinal + results/grid/aerial_vit_base_ordinal
+2026-10-12 16:54:26  INFO   late_vit_base_ordinal  [fold 9] phase=fusion_head trainable params=788,996 lr=0.001
+2026-10-12 16:54:58  INFO   late_vit_base_ordinal  [fold 9] fusion_head epoch 1/20 train_loss=0.4129 val_loss=0.4322 val_qwk=0.4912 lr=1.00e-03 * (31s)
+2026-10-12 16:55:28  INFO   late_vit_base_ordinal  [fold 9] fusion_head epoch 2/20 train_loss=0.4008 val_loss=0.4266 val_qwk=0.4709 lr=1.00e-03 * (30s)
+2026-10-12 16:55:58  INFO   late_vit_base_ordinal  [fold 9] fusion_head epoch 3/20 train_loss=0.3985 val_loss=0.4248 val_qwk=0.4730 lr=1.00e-03 * (30s)
+2026-10-12 16:56:28  INFO   late_vit_base_ordinal  [fold 9] fusion_head epoch 4/20 train_loss=0.3974 val_loss=0.4252 val_qwk=0.4554 lr=1.00e-03 (30s)
+2026-10-12 16:56:58  INFO   late_vit_base_ordinal  [fold 9] fusion_head epoch 5/20 train_loss=0.3939 val_loss=0.4487 val_qwk=0.4567 lr=1.00e-03 (30s)
+2026-10-12 16:57:28  INFO   late_vit_base_ordinal  [fold 9] fusion_head epoch 6/20 train_loss=0.3943 val_loss=0.4296 val_qwk=0.4656 lr=1.00e-03 (30s)
+2026-10-12 16:57:58  INFO   late_vit_base_ordinal  [fold 9] fusion_head epoch 7/20 train_loss=0.3911 val_loss=0.4239 val_qwk=0.4590 lr=1.00e-03 * (30s)
+2026-10-12 16:58:28  INFO   late_vit_base_ordinal  [fold 9] fusion_head epoch 8/20 train_loss=0.3906 val_loss=0.4283 val_qwk=0.4516 lr=1.00e-03 (30s)
+2026-10-12 16:58:58  INFO   late_vit_base_ordinal  [fold 9] fusion_head epoch 9/20 train_loss=0.3899 val_loss=0.4363 val_qwk=0.4488 lr=1.00e-03 (30s)
+2026-10-12 16:59:28  INFO   late_vit_base_ordinal  [fold 9] fusion_head epoch 10/20 train_loss=0.3876 val_loss=0.4298 val_qwk=0.4754 lr=1.00e-03 (30s)
+2026-10-12 16:59:58  INFO   late_vit_base_ordinal  [fold 9] fusion_head epoch 11/20 train_loss=0.3873 val_loss=0.4399 val_qwk=0.4792 lr=1.00e-03 (30s)
+2026-10-12 17:00:28  INFO   late_vit_base_ordinal  [fold 9] fusion_head epoch 12/20 train_loss=0.3865 val_loss=0.4299 val_qwk=0.4452 lr=1.00e-03 (30s)
+2026-10-12 17:00:28  INFO   late_vit_base_ordinal  [fold 9] fusion_head: early stop after 12 epochs, best so far epoch 7 (fusion_head) val_loss=0.4239 val_qwk=0.4590
+2026-10-12 17:00:32  INFO   late_vit_base_ordinal  [fold 9] thresholds tuned on validation: 0.69 0.53 0.54 0.22
+2026-10-12 17:00:36  INFO   late_vit_base_ordinal  [fold 9] test accuracy=0.3529 f1=0.2812 mean_absolute_error=0.8224 one_off_accuracy=0.8447 amae=0.9332 qwk=0.4405 tuned_qwk=0.4598 alpha_ordinal=0.4375 score_mae=0.6388 score_spearman=0.5620 monotonicity_violation_pct=0.0000
+2026-10-12 17:00:36  INFO   late_vit_base_ordinal  [summary] 10 folds -> results/grid/late_vit_base_ordinal/summary.csv

@@ -142,3 +142,15 @@
 2026-10-11 05:24:56  INFO   street_vgg16_ordinal  [fold 9] thresholds tuned on validation: 0.67 0.54 0.38 0.21
 2026-10-11 05:24:59  INFO   street_vgg16_ordinal  [fold 9] test accuracy=0.3435 f1=0.2880 mean_absolute_error=0.8600 one_off_accuracy=0.8294 amae=0.9649 qwk=0.4303 tuned_qwk=0.4480 alpha_ordinal=0.4278 score_mae=0.6597 score_spearman=0.5519 monotonicity_violation_pct=0.0000
 2026-10-11 05:24:59  INFO   street_vgg16_ordinal  [summary] 10 folds -> results/grid/street_vgg16_ordinal/summary.csv
+2026-10-12 15:05:11  INFO   street_vgg16_ordinal  run=street_vgg16_ordinal view=street device=cuda points=4410 with images=4410
+2026-10-12 15:05:11  INFO   street_vgg16_ordinal  [fold 0] already done, skipping (results/grid/street_vgg16_ordinal/fold_0_metrics.json)
+2026-10-12 15:05:11  INFO   street_vgg16_ordinal  [fold 1] already done, skipping (results/grid/street_vgg16_ordinal/fold_1_metrics.json)
+2026-10-12 15:05:11  INFO   street_vgg16_ordinal  [fold 2] already done, skipping (results/grid/street_vgg16_ordinal/fold_2_metrics.json)
+2026-10-12 15:05:11  INFO   street_vgg16_ordinal  [fold 3] already done, skipping (results/grid/street_vgg16_ordinal/fold_3_metrics.json)
+2026-10-12 15:05:11  INFO   street_vgg16_ordinal  [fold 4] already done, skipping (results/grid/street_vgg16_ordinal/fold_4_metrics.json)
+2026-10-12 15:05:11  INFO   street_vgg16_ordinal  [fold 5] already done, skipping (results/grid/street_vgg16_ordinal/fold_5_metrics.json)
+2026-10-12 15:05:11  INFO   street_vgg16_ordinal  [fold 6] already done, skipping (results/grid/street_vgg16_ordinal/fold_6_metrics.json)
+2026-10-12 15:05:11  INFO   street_vgg16_ordinal  [fold 7] already done, skipping (results/grid/street_vgg16_ordinal/fold_7_metrics.json)
+2026-10-12 15:05:11  INFO   street_vgg16_ordinal  [fold 8] already done, skipping (results/grid/street_vgg16_ordinal/fold_8_metrics.json)
+2026-10-12 15:05:11  INFO   street_vgg16_ordinal  [fold 9] already done, skipping (results/grid/street_vgg16_ordinal/fold_9_metrics.json)
+2026-10-12 15:05:11  INFO   street_vgg16_ordinal  [summary] 10 folds -> results/grid/street_vgg16_ordinal/summary.csv

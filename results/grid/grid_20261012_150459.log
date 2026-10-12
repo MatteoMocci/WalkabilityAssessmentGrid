@@ -1,0 +1,49 @@
+2026-10-12 15:04:59  backbone grid start: backbones=swin_base vit_base deit_base vgg16 googlenet alexnet extra args: 
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]          0/10          0/10          0/10
+  vit_base     10/10 [10w]   10/10 [10w]          0/10          0/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]          0/10          0/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]          0/10          0/10          0/10
+  googlenet    10/10 [10w]     6/10 [6w]          0/10          0/10          0/10
+  alexnet      10/10 [10w]     0/10 [0w]          0/10          0/10          0/10
+
+Still to do: avg swin_base (0/10), late swin_base (0/10), dual swin_base (0/10), avg vit_base (0/10), late vit_base (0/10), dual vit_base (0/10), avg deit_base (0/10), late deit_base (0/10), dual deit_base (0/10), avg vgg16 (0/10), late vgg16 (0/10), dual vgg16 (0/10), aerial googlenet (6/10), avg googlenet (0/10), late googlenet (0/10), dual googlenet (0/10), aerial alexnet (0/10), avg alexnet (0/10), late alexnet (0/10), dual alexnet (0/10)
+2026-10-12 15:04:59  [street swin_base] start
+2026-10-12 15:05:03  [street swin_base] done in 0 min
+2026-10-12 15:05:03  [street vit_base] start
+2026-10-12 15:05:06  [street vit_base] done in 0 min
+2026-10-12 15:05:06  [street deit_base] start
+2026-10-12 15:05:09  [street deit_base] done in 0 min
+2026-10-12 15:05:09  [street vgg16] start
+2026-10-12 15:05:12  [street vgg16] done in 0 min
+2026-10-12 15:05:12  [street googlenet] start
+2026-10-12 15:05:15  [street googlenet] done in 0 min
+2026-10-12 15:05:15  [street alexnet] start
+2026-10-12 15:05:18  [street alexnet] done in 0 min
+2026-10-12 15:05:18  [aerial swin_base] start
+2026-10-12 15:05:21  [aerial swin_base] done in 0 min
+2026-10-12 15:05:21  [aerial vit_base] start
+2026-10-12 15:05:23  [aerial vit_base] done in 0 min
+2026-10-12 15:05:23  [aerial deit_base] start
+2026-10-12 15:05:26  [aerial deit_base] done in 0 min
+2026-10-12 15:05:26  [aerial vgg16] start
+2026-10-12 15:05:29  [aerial vgg16] done in 0 min
+2026-10-12 15:05:29  [aerial googlenet] start
+2026-10-12 15:12:38  [aerial googlenet] done in 7 min
+2026-10-12 15:12:38  [aerial alexnet] start
+2026-10-12 15:19:45  [aerial alexnet] done in 7 min
+results/grid/avg_swin_base_ordinal: 10 folds averaged
+results/grid/avg_vit_base_ordinal: 10 folds averaged
+results/grid/avg_deit_base_ordinal: 10 folds averaged
+results/grid/avg_vgg16_ordinal: 10 folds averaged
+results/grid/avg_googlenet_ordinal: 10 folds averaged
+results/grid/avg_alexnet_ordinal: 10 folds averaged
+2026-10-12 15:19:50  [late swin_base] start
+2026-10-12 16:04:58  [late swin_base] done in 45 min
+2026-10-12 16:04:58  [late vit_base] start
+2026-10-12 17:00:37  [late vit_base] done in 55 min
+2026-10-12 17:00:37  [late deit_base] start
+2026-10-12 17:36:48  [late deit_base] done in 36 min
+2026-10-12 17:36:48  [late vgg16] start
