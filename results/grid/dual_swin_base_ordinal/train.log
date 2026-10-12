@@ -22,3 +22,28 @@
 2026-10-12 19:42:34  INFO   dual_swin_base_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
 2026-10-12 19:42:36  INFO   dual_swin_base_ordinal  [fold 1] view=dual backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
 2026-10-12 19:42:36  INFO   dual_swin_base_ordinal  [fold 1] phase=full trainable params=176,587,588 lr=5e-05
+2026-10-12 19:44:02  INFO   dual_swin_base_ordinal  [fold 1] full epoch 1/20 train_loss=0.4435 val_loss=0.4625 val_qwk=0.3976 lr=5.00e-05 * (85s)
+2026-10-12 19:45:03  INFO   dual_swin_base_ordinal  [fold 1] full epoch 2/20 train_loss=0.4060 val_loss=0.4235 val_qwk=0.4618 lr=5.00e-05 * (62s)
+2026-10-12 19:46:06  INFO   dual_swin_base_ordinal  [fold 1] full epoch 3/20 train_loss=0.3587 val_loss=0.4643 val_qwk=0.4017 lr=5.00e-05 (63s)
+2026-10-12 19:47:09  INFO   dual_swin_base_ordinal  [fold 1] full epoch 4/20 train_loss=0.3114 val_loss=0.4934 val_qwk=0.4353 lr=5.00e-05 (63s)
+2026-10-12 19:48:11  INFO   dual_swin_base_ordinal  [fold 1] full epoch 5/20 train_loss=0.2785 val_loss=0.5129 val_qwk=0.4103 lr=5.00e-05 (62s)
+2026-10-12 19:49:15  INFO   dual_swin_base_ordinal  [fold 1] full epoch 6/20 train_loss=0.2563 val_loss=0.5110 val_qwk=0.4542 lr=5.00e-05 (63s)
+2026-10-12 19:50:17  INFO   dual_swin_base_ordinal  [fold 1] full epoch 7/20 train_loss=0.2371 val_loss=0.5743 val_qwk=0.4611 lr=5.00e-05 (63s)
+2026-10-12 19:50:17  INFO   dual_swin_base_ordinal  [fold 1] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4235 val_qwk=0.4618
+2026-10-12 19:50:21  INFO   dual_swin_base_ordinal  [fold 1] thresholds tuned on validation: 0.65 0.54 0.38 0.19
+2026-10-12 19:50:26  INFO   dual_swin_base_ordinal  [fold 1] test accuracy=0.3877 f1=0.3381 mean_absolute_error=0.7714 one_off_accuracy=0.8708 amae=0.8345 qwk=0.5355 tuned_qwk=0.5555 alpha_ordinal=0.5273 score_mae=0.5887 score_spearman=0.6951 monotonicity_violation_pct=0.0000
+2026-10-12 19:50:26  INFO   dual_swin_base_ordinal  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-12 19:50:28  INFO   dual_swin_base_ordinal  [fold 2] view=dual backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-12 19:50:28  INFO   dual_swin_base_ordinal  [fold 2] phase=full trainable params=176,587,588 lr=5e-05
+2026-10-12 19:53:29  INFO   dual_swin_base_ordinal  [fold 2] full epoch 1/20 train_loss=0.4415 val_loss=0.4230 val_qwk=0.4468 lr=5.00e-05 * (181s)
+2026-10-12 19:54:34  INFO   dual_swin_base_ordinal  [fold 2] full epoch 2/20 train_loss=0.4030 val_loss=0.4295 val_qwk=0.4617 lr=5.00e-05 (65s)
+2026-10-12 19:55:37  INFO   dual_swin_base_ordinal  [fold 2] full epoch 3/20 train_loss=0.3593 val_loss=0.4555 val_qwk=0.4326 lr=5.00e-05 (63s)
+2026-10-12 19:56:40  INFO   dual_swin_base_ordinal  [fold 2] full epoch 4/20 train_loss=0.3195 val_loss=0.4752 val_qwk=0.4103 lr=5.00e-05 (63s)
+2026-10-12 19:57:43  INFO   dual_swin_base_ordinal  [fold 2] full epoch 5/20 train_loss=0.2875 val_loss=0.5447 val_qwk=0.4174 lr=5.00e-05 (63s)
+2026-10-12 19:58:46  INFO   dual_swin_base_ordinal  [fold 2] full epoch 6/20 train_loss=0.2624 val_loss=0.5538 val_qwk=0.4070 lr=5.00e-05 (63s)
+2026-10-12 19:58:46  INFO   dual_swin_base_ordinal  [fold 2] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4230 val_qwk=0.4468
+2026-10-12 19:58:51  INFO   dual_swin_base_ordinal  [fold 2] thresholds tuned on validation: 0.81 0.51 0.43 0.27
+2026-10-12 19:58:55  INFO   dual_swin_base_ordinal  [fold 2] test accuracy=0.4116 f1=0.3057 mean_absolute_error=0.7371 one_off_accuracy=0.8696 amae=0.8925 qwk=0.4754 tuned_qwk=0.5040 alpha_ordinal=0.4764 score_mae=0.5889 score_spearman=0.5849 monotonicity_violation_pct=0.0000
+2026-10-12 19:58:56  INFO   dual_swin_base_ordinal  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-12 19:58:57  INFO   dual_swin_base_ordinal  [fold 3] view=dual backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-12 19:58:57  INFO   dual_swin_base_ordinal  [fold 3] phase=full trainable params=176,587,588 lr=5e-05
