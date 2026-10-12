@@ -15,19 +15,22 @@ Works on Linux, Windows and macOS with Python 3.10 or newer. An NVIDIA GPU is st
 ```bash
 git clone -b ordinal-study https://github.com/MatteoMocci/WalkabilityAssessmentGrid.git
 cd WalkabilityAssessmentGrid
-python setup_env.py
+python study.py grid
 ```
 
-`setup_env.py` creates `.venv`, installs the PyTorch build that matches your NVIDIA driver (or the CPU / Apple
-GPU build), installs the other packages and reports which device training will use.
+That single command sets everything up on the first run and then starts the experiment (any study in
+section 3 works the same way). If the environment `.venv` does not exist, `study.py` first runs
+`setup_env.py`, which creates it, installs the PyTorch build that matches your NVIDIA driver (or the CPU /
+Apple GPU build), installs the other packages and reports which device training will use. Afterwards
+`study.py` always runs inside `.venv`, whichever `python` starts it. To only install, run `python setup_env.py`.
 
 - On **Python 3.12** it installs the exact versions of the published results (`requirements-lock.txt`);
   on other versions it installs compatible versions (`requirements.txt`), whose results can differ slightly.
 - `python setup_env.py --torch cpu` (or `cu126`, `cu128`, ...) forces a PyTorch build;
   `--compatible` / `--exact` force the version set.
 
-In the commands below, `python` means the environment's interpreter: `.venv/bin/python` on Linux/macOS,
-`.venv\Scripts\python.exe` on Windows (or activate the environment first).
+On Linux/macOS, `python` may be called `python3`. To use your own environment instead of `.venv`
+(e.g. conda), set `STUDY_NO_VENV=1`.
 
 ## 2) Data
 

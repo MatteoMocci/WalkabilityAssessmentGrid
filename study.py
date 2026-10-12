@@ -7,11 +7,13 @@
     python study.py grid                        # 6 backbones x street / aerial / avg / late fusion / dual encoder
     python study.py grid --backbones swin_base vgg16
 
+Single command on a fresh clone: if the environment (.venv) does not exist yet, it is created
+first with setup_env.py; when started with another Python, the command reruns itself inside
+.venv. Set STUDY_NO_VENV=1 to use the current interpreter as it is.
+
 Every study resumes where it stopped: finished folds are skipped (see run_status.py).
 Arguments this script does not know are passed to run_ordinal.py, e.g.
     python study.py grid --device cpu --folds 0 --epochs 1      # quick check on a machine without GPU
-Run it with the interpreter of the environment created by setup_env.py
-(.venv/bin/python on Linux/macOS, .venv\\Scripts\\python.exe on Windows).
 """
 
 import argparse
@@ -25,6 +27,20 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 PY = sys.executable
 BACKBONES = ["swin_base", "vit_base", "deit_base", "vgg16", "googlenet", "alexnet"]
 GRID_VIEWS = ["street", "aerial", "avg", "late", "dual"]
+VENV = os.environ.get("STUDY_VENV", os.path.join(HERE, ".venv"))
+
+
+def ensure_environment():
+    """Run inside the project's environment: create it with setup_env.py if missing, then rerun this command in it."""
+    if os.environ.get("STUDY_NO_VENV") == "1" or os.path.realpath(sys.prefix) == os.path.realpath(VENV):
+        return
+    py = os.path.join(VENV, "Scripts", "python.exe") if os.name == "nt" else os.path.join(VENV, "bin", "python")
+    if not os.path.exists(py):
+        print(f"No environment in {VENV}: creating it with setup_env.py (first run only, takes a few minutes)",
+              flush=True)
+        if subprocess.run([sys.executable, os.path.join(HERE, "setup_env.py"), "--venv", VENV]).returncode != 0:
+            raise SystemExit("Environment setup failed (see above).")
+    raise SystemExit(subprocess.run([py, os.path.abspath(__file__), *sys.argv[1:]]).returncode)
 
 
 class Study:
@@ -154,6 +170,7 @@ def status(opts, extra):
 
 
 def main():
+    ensure_environment()
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="study", required=True)
     p = sub.add_parser("first-experiment", help="Swin street: ordinal head vs soft-label CE")

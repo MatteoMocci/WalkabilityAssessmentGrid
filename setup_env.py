@@ -179,9 +179,8 @@ def main():
     print("Checking the environment:")
     if subprocess.run([py, "-c", CHECK]).returncode != 0:
         raise SystemExit("The environment does not import correctly (see the error above).")
-    run = venv_python(os.path.relpath(args.venv, HERE))
-    print(f"\nDone. Run the pipeline with this interpreter, e.g.:\n  {run} study.py status\n"
-          f"  {run} study.py grid\n(see README for all commands)")
+    print("\nDone. Start any study with `python study.py <study>` (it runs inside this environment), e.g.\n"
+          "  python study.py status\n  python study.py grid\n(see README for all commands)", flush=True)
 
 
 if __name__ == "__main__":
