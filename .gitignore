@@ -24,3 +24,8 @@ streetview/
 checkpoints/
 Rplots.pdf
 run_registry_full.json.tmp
+# spatial CV folds are shared by all experiments
+!folds.csv
+# data and outputs stay out of git (images 11 GB, results incl. weights 30+ GB)
+views_output/
+results/

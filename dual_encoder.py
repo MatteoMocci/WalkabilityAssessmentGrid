@@ -256,3 +256,88 @@ class CombinedLogitsFusion(torch.nn.Module):
             return a * ls + (1.0 - a) * la
         raise ValueError(f"Unknown fusion mode {self.mode}")
 
+
+
+class CoralHead(nn.Module):
+    """
+    CORAL output layer (Cao et al. 2020): one shared weight vector and K-1 biases,
+    logits_k = w . x + b_k, so the cumulative probabilities are rank-consistent.
+    Exposes .weight / .bias like nn.Linear.
+    """
+    def __init__(self, in_dim: int, n_thresholds: int):
+        super().__init__()
+        self.weight = nn.Parameter(torch.empty(1, in_dim))
+        nn.init.kaiming_uniform_(self.weight, a=5 ** 0.5)
+        # decreasing initial biases, as in the reference implementation
+        self.bias = nn.Parameter(torch.arange(n_thresholds, 0, -1).float() / n_thresholds)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return x @ self.weight.t() + self.bias
+
+
+class TileMeanModel(nn.Module):
+    """
+    Single-view model over several image tiles of the same point:
+      shared backbone features per tile -> mean over tiles -> output layer
+    Input: [B, T, 3, H, W]. out_dim = 4 (ordinal thresholds) or 5 (CE classes).
+    head_type "coral" (ordinal only) shares one weight vector across the thresholds.
+    """
+    def __init__(self, backbone: nn.Module, out_dim: int, head_type: str = "linear"):
+        """
+        Initialize the shared feature extractor and the output layer.
+        """
+        super().__init__()
+        self.ex = make_feature_extractor(backbone)
+        self.head = (CoralHead(self.ex.feat_dim, out_dim) if head_type == "coral"
+                     else nn.Linear(self.ex.feat_dim, out_dim))
+        self.is_pair_input = False
+
+    def forward(self, tiles: torch.Tensor):
+        """
+        Forward pass: extract features per tile, average, and project.
+        """
+        b, t = tiles.shape[:2]
+        feats = self.ex(tiles.flatten(0, 1)).view(b, t, -1)
+        return self.head(feats.mean(dim=1))
+
+
+class FusionModel(nn.Module):
+    """
+    Street + aerial fusion by embedding concatenation:
+      street tiles -> street encoder -> mean over tiles  \
+                                                          concat -> 512 -> ReLU -> Dropout(0.3) -> out_dim
+      aerial tile  -> aerial encoder                     /
+    Dual encoder: both encoders train jointly from pretrained weights.
+    Late fusion: the encoders come from the trained street-only and aerial-only models
+    and are kept fixed; only the fusion head trains.
+    """
+    def __init__(self, street_ex: nn.Module, aerial_ex: nn.Module, out_dim: int,
+                 hidden: int = 512, dropout: float = 0.3):
+        super().__init__()
+        self.st_ex = street_ex
+        self.sa_ex = aerial_ex
+        self.head = nn.Sequential(
+            nn.Linear(street_ex.feat_dim + aerial_ex.feat_dim, hidden),
+            nn.ReLU(inplace=True),
+            nn.Dropout(dropout),
+            nn.Linear(hidden, out_dim),
+        )
+        self.is_pair_input = True
+        self.freeze_encoders = False
+
+    def train(self, mode: bool = True):
+        """With freeze_encoders (late fusion), only the head switches to training mode."""
+        super().train(mode)
+        if self.freeze_encoders:
+            self.st_ex.eval()
+            self.sa_ex.eval()
+        return self
+
+    @staticmethod
+    def _encode(ex, tiles):
+        b, t = tiles.shape[:2]
+        return ex(tiles.flatten(0, 1)).view(b, t, -1).mean(dim=1)
+
+    def forward(self, street: torch.Tensor, aerial: torch.Tensor):
+        """Forward pass: encode both views, concatenate, and project."""
+        return self.head(torch.cat([self._encode(self.st_ex, street), self._encode(self.sa_ex, aerial)], dim=1))

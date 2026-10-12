@@ -49,6 +49,12 @@ def get_criterion(name: str, num_classes: int, class_weights: torch.Tensor | Non
     3) Validate unsupported options.
     """
     key = name.upper()
+    if key == "ORDINAL":
+        # mean over the 4 thresholds (and the batch) = (1/4) * sum_k BCEWithLogits(z_k, y_k)
+        return nn.BCEWithLogitsLoss()
+    if key == "SOFT_CE":
+        # 5-class CE against the raters' soft class distribution
+        return nn.CrossEntropyLoss()
     if key == "CE":
         return nn.CrossEntropyLoss()
     elif key == "WCE":
@@ -58,4 +64,4 @@ def get_criterion(name: str, num_classes: int, class_weights: torch.Tensor | Non
     elif key == "SCE":
         return SCELoss(alpha=0.5, beta=1.0, num_classes=num_classes)
     else:
-        raise ValueError("loss must be one of: CE, WCE, SCE")
+        raise ValueError("loss must be one of: ORDINAL, SOFT_CE, CE, WCE, SCE")

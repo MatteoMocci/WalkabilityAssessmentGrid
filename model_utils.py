@@ -69,8 +69,8 @@ def _maybe_local_checkpoint(key: str) -> str | None:
 def _create_timm_by_alias(key: str, pretrained: bool, drop: float):
     """
     Resolve 'key' to a canonical timm name the current timm version supports.
-    Prefer local checkpoint if provided. Otherwise, try pretrained; on any download
-    failure (SSL/offline), fall back to pretrained=False so the run continues.
+    Prefer a local checkpoint if LOCAL_WEIGHTS_DIR provides one. Otherwise load timm's
+    pretrained weights; a download failure stops the run (no silent random init).
     """
     if timm is None:
         return None
@@ -100,7 +100,6 @@ def _create_timm_by_alias(key: str, pretrained: bool, drop: float):
                 checkpoint_path=local_ckpt,
             )
 
-        # try normal pretrained path
         try:
             return timm.create_model(
                 name,
@@ -109,24 +108,11 @@ def _create_timm_by_alias(key: str, pretrained: bool, drop: float):
                 drop_path_rate=drop,
             )
         except RuntimeError as e:
-            # Unknown model -> try next candidate; other errors -> fall back to random init
+            # Unknown model -> try next candidate. Any other failure (e.g. weights
+            # download) must stop the run instead of silently using random init.
             if "Unknown model" in str(e):
                 continue
-            warnings.warn(f"Pretrained load failed for '{name}' ({e}); using pretrained=False.")
-            return timm.create_model(
-                name,
-                pretrained=False,
-                drop_rate=drop,
-                drop_path_rate=drop,
-            )
-        except Exception as e:
-            warnings.warn(f"Pretrained load failed for '{name}' ({e}); using pretrained=False.")
-            return timm.create_model(
-                name,
-                pretrained=False,
-                drop_rate=drop,
-                drop_path_rate=drop,
-            )
+            raise
 
     # no candidate matched this timm version
     return None
@@ -231,7 +217,8 @@ def replace_head(model, num_classes: int):
 
     raise TypeError(f"replace_head: unsupported model type {type(model)}")
 
-def load_model(name: str, pretrained_source: str, num_classes: int | None):
+def load_model(name: str, pretrained_source: str, num_classes: int | None,
+               pretrained: bool = True):
     """
     Load a backbone model and optionally replace its classifier head.
 
@@ -250,7 +237,7 @@ def load_model(name: str, pretrained_source: str, num_classes: int | None):
         raise ValueError(f"Unknown model name: {name}")
 
     # Try to get a pretrained model; if the factory returns None, this timm version lacks it
-    model = _MODEL_FACTORIES[key](True)
+    model = _MODEL_FACTORIES[key](pretrained)
     if model is None:
         raise RuntimeError(f"SKIP: timm model '{key}' not available in this timm version")
 
