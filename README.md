@@ -1,94 +1,118 @@
-# WalkCNN Reproducibility Pipeline
+# Perceived walkability from street-level and aerial imagery
 
-This README is the main guide to reproduce the study outputs from this repository.
+This repository contains two studies:
 
-## 1) What You Need Before Running
+- **Ordinal walkability study** (this branch, sections 1–5): predicts perceived walkability on a 1–5 scale from
+  Street View and aerial images of 4,410 points in Cagliari, Sassari and Alghero, each rated by two people.
+  The model learns the four cumulative probabilities P(Y > k) from soft targets built from both ratings.
+- **Previous study (WalkCNN)**: the earlier classification pipeline, kept for reproducibility (section 6).
 
-1. Clone this repository.
-2. Install Python dependencies:
+## 1) Installation
+
+Works on Linux, Windows and macOS with Python 3.10 or newer. An NVIDIA GPU is strongly recommended
+(the published runs used an RTX 4090, 24 GB); a CPU works for quick checks only.
 
 ```bash
-pip install -r requirements.txt
+git clone -b ordinal-study https://github.com/MatteoMocci/WalkabilityAssessmentGrid.git
+cd WalkabilityAssessmentGrid
+python setup_env.py
 ```
 
-3. Install R and required packages (needed for Table 2 and Figure 8):
+`setup_env.py` creates `.venv`, installs the PyTorch build that matches your NVIDIA driver (or the CPU / Apple
+GPU build), installs the other packages and reports which device training will use.
+
+- On **Python 3.12** it installs the exact versions of the published results (`requirements-lock.txt`);
+  on other versions it installs compatible versions (`requirements.txt`), whose results can differ slightly.
+- `python setup_env.py --torch cpu` (or `cu126`, `cu128`, ...) forces a PyTorch build;
+  `--compatible` / `--exact` force the version set.
+
+In the commands below, `python` means the environment's interpreter: `.venv/bin/python` on Linux/macOS,
+`.venv\Scripts\python.exe` on Windows (or activate the environment first).
+
+## 2) Data
+
+In the repository:
+
+- `point_labels.csv`: for each point, the soft cumulative targets `p_above_1..4`, the share of the two raters
+  whose rating exceeds k (e.g. ratings 3 and 4 give 1, 1, 0.5, 0).
+- `folds.csv`: the 10 spatial cross-validation folds (1 km blocks, stratified by city × rating), built by
+  `make_folds.py`. All experiments use these folds.
+
+Not in the repository (images), expected at:
+
+```text
+views_output/streetview/images/P000001_front.png, P000001_back.png, ...   (two 180° views per point)
+views_output/wms_patches/images/P000001_lat<lat>_lon<lon>.png, ...         (aerial patch per point)
+```
+
+Pretrained backbone weights are downloaded automatically on the first run (internet needed).
+
+## 3) Running the experiments
+
+```bash
+python study.py status              # what is done / still to do in the backbone x view grid
+python study.py first-experiment    # Swin, street images: ordinal head vs soft-label CE baseline
+python study.py finetune            # full / frozen / head-then-last-stage fine-tuning, then a learning-rate grid
+python study.py grid                # 6 backbones x street / aerial / averaged / late fusion / dual encoder
+```
+
+- **Resuming**: run the same command again. Finished folds are skipped; a fold left incomplete by a crash or
+  power cut is trained again.
+- **Options**: arguments that `study.py` does not know go to `run_ordinal.py`, e.g. a quick check on any
+  machine: `python study.py grid --backbones alexnet --device cpu --folds 0 --epochs 1 --max-points 40`.
+  `python run_ordinal.py --help` lists all options.
+- **Long runs**: on Linux/macOS run inside `tmux` so they survive a closed terminal. The `run_*.sh` scripts are
+  Linux shortcuts for the same studies.
+
+Durations on an RTX 4090: about 1 hour per backbone and view; the full grid about 12–18 hours.
+
+## 4) Outputs
+
+Each run writes a folder in `results/` with, per fold, the test and validation predictions
+(`fold_<k>_preds.csv`, `fold_<k>_val_preds.csv`), the metrics (`fold_<k>_metrics.json`) and `train.log`.
+Summaries and comparisons:
+
+- `results/grid/overview.txt`: backbone × view tables of the main metrics
+- `results/grid/by_view/<view>/comparison.md`, `results/grid/by_backbone/<backbone>/comparison.md`
+- `results/finetune/comparison.md`, `results/coral/comparison.md`, `results/comparison.md`
+- `python evaluate_runs.py <run folders>` recomputes all metrics from the saved predictions and writes a
+  comparison table with paired tests between runs.
+
+Metrics: accuracy, QWK, within-one accuracy and MAE of the predicted class (with the 0.5 rule and with
+thresholds tuned on the validation fold), plus AMAE, Krippendorff's alpha, correlations of the continuous score
+1 + Σ P(Y > k), calibration, and a human reference (one rater scored against the other).
+
+Model weights (`*.pt`) are saved only for the street and aerial grid runs (late fusion reuses them) and are not
+in the repository.
+
+## 5) Reproducibility notes
+
+- Folds and seeds are fixed (seed 42 + fold). Augmentation draws depend on the number of data-loading
+  workers: keep the default `--num-workers 16` to reproduce the published runs.
+- Exact numbers also depend on the GPU, the library versions and whether `torch.compile` is available
+  (CUDA with Triton); without it the models run uncompiled, with the same architecture.
+- `requirements-lock.txt` is the environment of the published results (Python 3.12.13, CUDA 13.0).
+
+## 6) Previous study (WalkCNN pipeline)
+
+The earlier study's pipeline (`main.py`, `reproduce.py`, `tools/`, `glmm_walk.R`) is unchanged. It needs its own
+dependencies and R:
+
+```bash
+pip install -r requirements-legacy.txt
+```
 
 ```r
 install.packages(c("tidyverse", "glmmTMB", "performance", "car", "DHARMa", "rstatix", "emmeans"))
 ```
 
-4. Download datasets:
+Data:
 - Streetview pictures: `https://anonymous.4open.science/r/Streetview180-7357/`
 - Generated aerial views and augmented dataset: `https://figshare.com/s/2753c0fc785521d63636?file=61611229`
 
-5. Arrange folders as:
-
-```text
-<BASE>/
-  streetview/0..4/*.jpg
-  satellite/0..4/*.jpg
-  augmented-streetview/0..4/*.jpg
-  augmented-satellite/0..4/*.jpg
-```
-
-By default, `<BASE>` is the current working directory. To use another location:
-
-```powershell
-$env:WALKCNN_BASE_DIR = "..\\data"
-```
-
-## 2) How to Start the Reproducibility Pipeline
-
-Run:
-
-```bash
-python reproduce.py
-```
-
-This starts the full end-to-end pipeline (training/evaluation + post-processing + GLMM outputs).
-
-Important runtime note: full training can take several days depending on hardware.
-If you want a quick test without training the models, run the zero-shot workflow in `zero-shot.md`.
-
-Useful flags:
-- `--reset-progress`: reset registry/checkpoint progress before running
-- `--skip-train`: skip training/evaluation only if `fold_metrics_full.csv` already exists
-- `--skip-glmm`: skip GLMM/Table 2/Figure 8 outputs
-
-## 3) What Each Pipeline Step Does
-
-When you run `python reproduce.py`, the workflow is:
-
-1. Training and evaluation (`main.py`)
-- Runs the model grid over modes/views and folds.
-- Writes fold metrics and CV summary metrics.
-
-2. CV aggregation (`tools/compute_cv_stats.py`)
-- Computes mean and standard deviation per run from fold metrics.
-- Produces Table 1 input data.
-
-3. GLMM input reshaping (`tools/make_mode_loss_fold_metrics.py`)
-- Reshapes fold outputs into mode/model/loss format for statistical modeling.
-
-4. GLMM analysis and figure generation (`glmm_walk.R`)
-- Fits the GLMM and writes Table 2 contrasts.
-- Exports Figure 8 forest plots.
-
-## 4) Results Produced
-
-Main outputs are:
-
-- `fold_metrics_full.csv`: per-fold metrics for each run
-- `cv_summary_full.csv`: average metrics per run
-- `cv_summary_full_with_std.csv`: mean and std per run (Table 1 input)
-- `output/metrics_by_mode_loss_fold.csv`: reshaped fold metrics for GLMM
-- `output/table2_glmm_contrasts.csv`: Table 2 contrasts
-- `output/figure8_forest.png`
-- `output/figure8_forest.pdf`
-- `results_meta/*.json`: run metadata
-- `checkpoints/*.pt` and done markers: resume/training state
-
-## Related Docs
-
-- `zero-shot.md`: no-training evaluation workflow
-- `overview.md`: concise description of each repo file and what is required for computation
+Arranged as `<BASE>/{streetview,satellite,augmented-streetview,augmented-satellite}/0..4/*.jpg`, where `<BASE>`
+is the working directory or the `WALKCNN_BASE_DIR` environment variable. Run `python reproduce.py`
+(flags: `--reset-progress`, `--skip-train`, `--skip-glmm`). It runs training and evaluation (`main.py`), CV
+aggregation (`tools/compute_cv_stats.py`), GLMM input reshaping (`tools/make_mode_loss_fold_metrics.py`) and the
+GLMM with Table 2 / Figure 8 (`glmm_walk.R`); see `zero-shot.md` for a no-training workflow and `overview.md`
+for a description of each file.

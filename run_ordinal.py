@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import copy
+import importlib.util
 import csv
 import json
 import math
@@ -31,6 +32,8 @@ import time
 
 # torch.compile cache on disk: the default /tmp is a small RAM disk on this machine
 os.environ.setdefault("TORCHINDUCTOR_CACHE_DIR", os.path.join(os.path.expanduser("~"), ".cache", "torchinductor"))
+# Apple GPUs: run the few operations MPS lacks on the CPU instead of failing
+os.environ.setdefault("PYTORCH_ENABLE_MPS_FALLBACK", "1")
 
 import numpy as np
 import torch
@@ -217,8 +220,24 @@ def evaluate_outputs(outputs, points, head, thresholds=None):
 
 def sync_to_disk(path):
     """Force a written file to disk, so a power cut cannot leave it half-written."""
-    with open(path, "rb") as f:
+    with open(path, "r+b") as f:  # writable handle: Windows cannot flush a read-only one
         os.fsync(f.fileno())
+
+
+def pick_device(choice: str) -> torch.device:
+    """--device auto: CUDA GPU, else Apple GPU (MPS), else CPU."""
+    if choice != "auto":
+        return torch.device(choice)
+    if torch.cuda.is_available():
+        return torch.device("cuda")
+    if getattr(torch.backends, "mps", None) is not None and torch.backends.mps.is_available():
+        return torch.device("mps")
+    return torch.device("cpu")
+
+
+def can_compile(device: torch.device) -> bool:
+    """torch.compile is used only where its GPU backend works: CUDA with Triton installed."""
+    return device.type == "cuda" and importlib.util.find_spec("triton") is not None
 
 
 def write_preds(path, points, outputs, cum, fold):
@@ -307,8 +326,11 @@ def train_fold(k, points, args, device, logger, run_dir, aerial_paths=None):
         # speed only, same model: measured gains are compile for transformers, channels_last for CNNs
         if not is_transformer(args.model):
             model = model.to(memory_format=torch.channels_last)
-        elif not args.no_compile:
+        elif not args.no_compile and can_compile(device):
             model.compile()  # in place, so state_dict keys are unchanged
+        elif not args.no_compile and k == args.first_fold:
+            logger.info("torch.compile is not available here (needs CUDA + Triton): running uncompiled, "
+                        "slower but the same model")
     criterion = get_criterion("ORDINAL" if args.head == "ordinal" else "SOFT_CE", num_classes=5)
     scaler = torch.amp.GradScaler("cuda") if (device.type == "cuda" and not args.no_amp) else None
 
@@ -511,6 +533,8 @@ def main():
     ap.add_argument("--num-workers", type=int, default=16,
                     help="keep fixed across runs: augmentation draws depend on the worker count")
     ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--device", choices=["auto", "cuda", "mps", "cpu"], default="auto",
+                    help="auto: CUDA GPU, else Apple GPU (MPS), else CPU")
     ap.add_argument("--no-amp", action="store_true")
     ap.add_argument("--no-compile", action="store_true", help="disable torch.compile for transformers")
     ap.add_argument("--save-weights", action="store_true")
@@ -538,7 +562,7 @@ def main():
     with open(os.path.join(run_dir, "config.json"), "w", encoding="utf-8") as f:
         json.dump(vars(args), f, indent=2)
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = pick_device(args.device)
     points = load_points(args.labels, args.folds_csv)
     aerial_paths = aerial_index(args.aerial_dir) if args.view in VIEWS_WITH_AERIAL else None
     usable = [p for p in points
@@ -557,6 +581,7 @@ def main():
         logger.warning(f"{n_missing} labelled points are missing images and are excluded")
 
     folds = range(N_FOLDS) if args.folds == "all" else [int(x) for x in args.folds.split(",")]
+    args.first_fold = list(folds)[0]
     with logging_redirect_tqdm(loggers=[logger]):
         try:
             for k in tqdm(folds, desc=f"{run_name} folds", unit="fold", dynamic_ncols=True):
