@@ -200,3 +200,15 @@
 2026-10-12 15:05:14  INFO   street_googlenet_ordinal  [fold 8] already done, skipping (results/grid/street_googlenet_ordinal/fold_8_metrics.json)
 2026-10-12 15:05:14  INFO   street_googlenet_ordinal  [fold 9] already done, skipping (results/grid/street_googlenet_ordinal/fold_9_metrics.json)
 2026-10-12 15:05:14  INFO   street_googlenet_ordinal  [summary] 10 folds -> results/grid/street_googlenet_ordinal/summary.csv
+2026-10-12 19:41:48  INFO   street_googlenet_ordinal  run=street_googlenet_ordinal view=street device=cuda points=4410 with images=4410
+2026-10-12 19:41:48  INFO   street_googlenet_ordinal  [fold 0] already done, skipping (results/grid/street_googlenet_ordinal/fold_0_metrics.json)
+2026-10-12 19:41:48  INFO   street_googlenet_ordinal  [fold 1] already done, skipping (results/grid/street_googlenet_ordinal/fold_1_metrics.json)
+2026-10-12 19:41:48  INFO   street_googlenet_ordinal  [fold 2] already done, skipping (results/grid/street_googlenet_ordinal/fold_2_metrics.json)
+2026-10-12 19:41:48  INFO   street_googlenet_ordinal  [fold 3] already done, skipping (results/grid/street_googlenet_ordinal/fold_3_metrics.json)
+2026-10-12 19:41:48  INFO   street_googlenet_ordinal  [fold 4] already done, skipping (results/grid/street_googlenet_ordinal/fold_4_metrics.json)
+2026-10-12 19:41:48  INFO   street_googlenet_ordinal  [fold 5] already done, skipping (results/grid/street_googlenet_ordinal/fold_5_metrics.json)
+2026-10-12 19:41:48  INFO   street_googlenet_ordinal  [fold 6] already done, skipping (results/grid/street_googlenet_ordinal/fold_6_metrics.json)
+2026-10-12 19:41:48  INFO   street_googlenet_ordinal  [fold 7] already done, skipping (results/grid/street_googlenet_ordinal/fold_7_metrics.json)
+2026-10-12 19:41:48  INFO   street_googlenet_ordinal  [fold 8] already done, skipping (results/grid/street_googlenet_ordinal/fold_8_metrics.json)
+2026-10-12 19:41:48  INFO   street_googlenet_ordinal  [fold 9] already done, skipping (results/grid/street_googlenet_ordinal/fold_9_metrics.json)
+2026-10-12 19:41:48  INFO   street_googlenet_ordinal  [summary] 10 folds -> results/grid/street_googlenet_ordinal/summary.csv

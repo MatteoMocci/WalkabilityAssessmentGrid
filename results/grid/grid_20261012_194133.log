@@ -1,0 +1,264 @@
+2026-10-12 19:41:33  backbone grid start: backbones=swin_base vit_base deit_base vgg16 googlenet alexnet extra args: 
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:41:33  [street swin_base] start
+2026-10-12 19:41:36  [street swin_base] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:41:36  [street vit_base] start
+2026-10-12 19:41:39  [street vit_base] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:41:39  [street deit_base] start
+2026-10-12 19:41:42  [street deit_base] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:41:42  [street vgg16] start
+2026-10-12 19:41:45  [street vgg16] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:41:45  [street googlenet] start
+2026-10-12 19:41:48  [street googlenet] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:41:48  [street alexnet] start
+2026-10-12 19:41:51  [street alexnet] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:41:51  [aerial swin_base] start
+2026-10-12 19:41:54  [aerial swin_base] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:41:54  [aerial vit_base] start
+2026-10-12 19:41:57  [aerial vit_base] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:41:57  [aerial deit_base] start
+2026-10-12 19:42:00  [aerial deit_base] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:42:00  [aerial vgg16] start
+2026-10-12 19:42:03  [aerial vgg16] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:42:03  [aerial googlenet] start
+2026-10-12 19:42:06  [aerial googlenet] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:42:06  [aerial alexnet] start
+2026-10-12 19:42:09  [aerial alexnet] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+results/grid/avg_swin_base_ordinal: 10 folds averaged
+results/grid/avg_vit_base_ordinal: 10 folds averaged
+results/grid/avg_deit_base_ordinal: 10 folds averaged
+results/grid/avg_vgg16_ordinal: 10 folds averaged
+results/grid/avg_googlenet_ordinal: 10 folds averaged
+results/grid/avg_alexnet_ordinal: 10 folds averaged
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:42:14  [late swin_base] start
+2026-10-12 19:42:17  [late swin_base] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:42:17  [late vit_base] start
+2026-10-12 19:42:20  [late vit_base] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:42:20  [late deit_base] start
+2026-10-12 19:42:23  [late deit_base] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:42:23  [late vgg16] start
+2026-10-12 19:42:26  [late vgg16] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:42:26  [late googlenet] start
+2026-10-12 19:42:29  [late googlenet] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:42:29  [late alexnet] start
+2026-10-12 19:42:32  [late alexnet] done in 0 min
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          1/10
+  vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+
+Still to do: dual swin_base (1/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)
+2026-10-12 19:42:32  [dual swin_base] start

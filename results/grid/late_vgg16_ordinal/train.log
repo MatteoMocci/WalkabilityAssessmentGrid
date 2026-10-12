@@ -145,3 +145,15 @@
 2026-10-12 18:10:12  INFO   late_vgg16_ordinal  [fold 9] thresholds tuned on validation: 0.77 0.40 0.39 0.15
 2026-10-12 18:10:15  INFO   late_vgg16_ordinal  [fold 9] test accuracy=0.3565 f1=0.2884 mean_absolute_error=0.8388 one_off_accuracy=0.8341 amae=0.9552 qwk=0.4291 tuned_qwk=0.4554 alpha_ordinal=0.4316 score_mae=0.6470 score_spearman=0.5654 monotonicity_violation_pct=0.0000
 2026-10-12 18:10:15  INFO   late_vgg16_ordinal  [summary] 10 folds -> results/grid/late_vgg16_ordinal/summary.csv
+2026-10-12 19:42:25  INFO   late_vgg16_ordinal  run=late_vgg16_ordinal view=late device=cuda points=4410 with images=4410
+2026-10-12 19:42:25  INFO   late_vgg16_ordinal  [fold 0] already done, skipping (results/grid/late_vgg16_ordinal/fold_0_metrics.json)
+2026-10-12 19:42:25  INFO   late_vgg16_ordinal  [fold 1] already done, skipping (results/grid/late_vgg16_ordinal/fold_1_metrics.json)
+2026-10-12 19:42:25  INFO   late_vgg16_ordinal  [fold 2] already done, skipping (results/grid/late_vgg16_ordinal/fold_2_metrics.json)
+2026-10-12 19:42:25  INFO   late_vgg16_ordinal  [fold 3] already done, skipping (results/grid/late_vgg16_ordinal/fold_3_metrics.json)
+2026-10-12 19:42:25  INFO   late_vgg16_ordinal  [fold 4] already done, skipping (results/grid/late_vgg16_ordinal/fold_4_metrics.json)
+2026-10-12 19:42:25  INFO   late_vgg16_ordinal  [fold 5] already done, skipping (results/grid/late_vgg16_ordinal/fold_5_metrics.json)
+2026-10-12 19:42:25  INFO   late_vgg16_ordinal  [fold 6] already done, skipping (results/grid/late_vgg16_ordinal/fold_6_metrics.json)
+2026-10-12 19:42:25  INFO   late_vgg16_ordinal  [fold 7] already done, skipping (results/grid/late_vgg16_ordinal/fold_7_metrics.json)
+2026-10-12 19:42:25  INFO   late_vgg16_ordinal  [fold 8] already done, skipping (results/grid/late_vgg16_ordinal/fold_8_metrics.json)
+2026-10-12 19:42:25  INFO   late_vgg16_ordinal  [fold 9] already done, skipping (results/grid/late_vgg16_ordinal/fold_9_metrics.json)
+2026-10-12 19:42:25  INFO   late_vgg16_ordinal  [summary] 10 folds -> results/grid/late_vgg16_ordinal/summary.csv

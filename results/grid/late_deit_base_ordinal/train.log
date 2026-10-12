@@ -148,3 +148,15 @@
 2026-10-12 17:36:43  INFO   late_deit_base_ordinal  [fold 9] thresholds tuned on validation: 0.92 0.50 0.50 0.19
 2026-10-12 17:36:47  INFO   late_deit_base_ordinal  [fold 9] test accuracy=0.3247 f1=0.2544 mean_absolute_error=0.8529 one_off_accuracy=0.8482 amae=0.9569 qwk=0.4298 tuned_qwk=0.4590 alpha_ordinal=0.4254 score_mae=0.6543 score_spearman=0.5438 monotonicity_violation_pct=0.0000
 2026-10-12 17:36:47  INFO   late_deit_base_ordinal  [summary] 10 folds -> results/grid/late_deit_base_ordinal/summary.csv
+2026-10-12 19:42:22  INFO   late_deit_base_ordinal  run=late_deit_base_ordinal view=late device=cuda points=4410 with images=4410
+2026-10-12 19:42:22  INFO   late_deit_base_ordinal  [fold 0] already done, skipping (results/grid/late_deit_base_ordinal/fold_0_metrics.json)
+2026-10-12 19:42:22  INFO   late_deit_base_ordinal  [fold 1] already done, skipping (results/grid/late_deit_base_ordinal/fold_1_metrics.json)
+2026-10-12 19:42:22  INFO   late_deit_base_ordinal  [fold 2] already done, skipping (results/grid/late_deit_base_ordinal/fold_2_metrics.json)
+2026-10-12 19:42:22  INFO   late_deit_base_ordinal  [fold 3] already done, skipping (results/grid/late_deit_base_ordinal/fold_3_metrics.json)
+2026-10-12 19:42:22  INFO   late_deit_base_ordinal  [fold 4] already done, skipping (results/grid/late_deit_base_ordinal/fold_4_metrics.json)
+2026-10-12 19:42:22  INFO   late_deit_base_ordinal  [fold 5] already done, skipping (results/grid/late_deit_base_ordinal/fold_5_metrics.json)
+2026-10-12 19:42:22  INFO   late_deit_base_ordinal  [fold 6] already done, skipping (results/grid/late_deit_base_ordinal/fold_6_metrics.json)
+2026-10-12 19:42:22  INFO   late_deit_base_ordinal  [fold 7] already done, skipping (results/grid/late_deit_base_ordinal/fold_7_metrics.json)
+2026-10-12 19:42:22  INFO   late_deit_base_ordinal  [fold 8] already done, skipping (results/grid/late_deit_base_ordinal/fold_8_metrics.json)
+2026-10-12 19:42:22  INFO   late_deit_base_ordinal  [fold 9] already done, skipping (results/grid/late_deit_base_ordinal/fold_9_metrics.json)
+2026-10-12 19:42:22  INFO   late_deit_base_ordinal  [summary] 10 folds -> results/grid/late_deit_base_ordinal/summary.csv

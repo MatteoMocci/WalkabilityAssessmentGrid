@@ -143,3 +143,15 @@
 2026-10-12 15:19:44  INFO   aerial_alexnet_ordinal  [fold 9] thresholds tuned on validation: 0.86 0.51 0.51 0.19
 2026-10-12 15:19:44  INFO   aerial_alexnet_ordinal  [fold 9] test accuracy=0.3176 f1=0.2538 mean_absolute_error=0.8976 one_off_accuracy=0.8059 amae=1.0267 qwk=0.3628 tuned_qwk=0.3615 alpha_ordinal=0.3580 score_mae=0.6867 score_spearman=0.4664 monotonicity_violation_pct=0.0000
 2026-10-12 15:19:44  INFO   aerial_alexnet_ordinal  [summary] 10 folds -> results/grid/aerial_alexnet_ordinal/summary.csv
+2026-10-12 19:42:08  INFO   aerial_alexnet_ordinal  run=aerial_alexnet_ordinal view=aerial device=cuda points=4410 with images=4410
+2026-10-12 19:42:08  INFO   aerial_alexnet_ordinal  [fold 0] already done, skipping (results/grid/aerial_alexnet_ordinal/fold_0_metrics.json)
+2026-10-12 19:42:08  INFO   aerial_alexnet_ordinal  [fold 1] already done, skipping (results/grid/aerial_alexnet_ordinal/fold_1_metrics.json)
+2026-10-12 19:42:08  INFO   aerial_alexnet_ordinal  [fold 2] already done, skipping (results/grid/aerial_alexnet_ordinal/fold_2_metrics.json)
+2026-10-12 19:42:08  INFO   aerial_alexnet_ordinal  [fold 3] already done, skipping (results/grid/aerial_alexnet_ordinal/fold_3_metrics.json)
+2026-10-12 19:42:08  INFO   aerial_alexnet_ordinal  [fold 4] already done, skipping (results/grid/aerial_alexnet_ordinal/fold_4_metrics.json)
+2026-10-12 19:42:08  INFO   aerial_alexnet_ordinal  [fold 5] already done, skipping (results/grid/aerial_alexnet_ordinal/fold_5_metrics.json)
+2026-10-12 19:42:08  INFO   aerial_alexnet_ordinal  [fold 6] already done, skipping (results/grid/aerial_alexnet_ordinal/fold_6_metrics.json)
+2026-10-12 19:42:08  INFO   aerial_alexnet_ordinal  [fold 7] already done, skipping (results/grid/aerial_alexnet_ordinal/fold_7_metrics.json)
+2026-10-12 19:42:08  INFO   aerial_alexnet_ordinal  [fold 8] already done, skipping (results/grid/aerial_alexnet_ordinal/fold_8_metrics.json)
+2026-10-12 19:42:08  INFO   aerial_alexnet_ordinal  [fold 9] already done, skipping (results/grid/aerial_alexnet_ordinal/fold_9_metrics.json)
+2026-10-12 19:42:08  INFO   aerial_alexnet_ordinal  [summary] 10 folds -> results/grid/aerial_alexnet_ordinal/summary.csv

@@ -156,3 +156,15 @@
 2026-10-12 18:47:31  INFO   late_googlenet_ordinal  [fold 9] thresholds tuned on validation: 0.94 0.46 0.26 0.21
 2026-10-12 18:47:33  INFO   late_googlenet_ordinal  [fold 9] test accuracy=0.3282 f1=0.2566 mean_absolute_error=0.8694 one_off_accuracy=0.8341 amae=0.9863 qwk=0.4074 tuned_qwk=0.4435 alpha_ordinal=0.4068 score_mae=0.6696 score_spearman=0.5394 monotonicity_violation_pct=0.0000
 2026-10-12 18:47:34  INFO   late_googlenet_ordinal  [summary] 10 folds -> results/grid/late_googlenet_ordinal/summary.csv
+2026-10-12 19:42:28  INFO   late_googlenet_ordinal  run=late_googlenet_ordinal view=late device=cuda points=4410 with images=4410
+2026-10-12 19:42:28  INFO   late_googlenet_ordinal  [fold 0] already done, skipping (results/grid/late_googlenet_ordinal/fold_0_metrics.json)
+2026-10-12 19:42:28  INFO   late_googlenet_ordinal  [fold 1] already done, skipping (results/grid/late_googlenet_ordinal/fold_1_metrics.json)
+2026-10-12 19:42:28  INFO   late_googlenet_ordinal  [fold 2] already done, skipping (results/grid/late_googlenet_ordinal/fold_2_metrics.json)
+2026-10-12 19:42:28  INFO   late_googlenet_ordinal  [fold 3] already done, skipping (results/grid/late_googlenet_ordinal/fold_3_metrics.json)
+2026-10-12 19:42:28  INFO   late_googlenet_ordinal  [fold 4] already done, skipping (results/grid/late_googlenet_ordinal/fold_4_metrics.json)
+2026-10-12 19:42:28  INFO   late_googlenet_ordinal  [fold 5] already done, skipping (results/grid/late_googlenet_ordinal/fold_5_metrics.json)
+2026-10-12 19:42:28  INFO   late_googlenet_ordinal  [fold 6] already done, skipping (results/grid/late_googlenet_ordinal/fold_6_metrics.json)
+2026-10-12 19:42:28  INFO   late_googlenet_ordinal  [fold 7] already done, skipping (results/grid/late_googlenet_ordinal/fold_7_metrics.json)
+2026-10-12 19:42:28  INFO   late_googlenet_ordinal  [fold 8] already done, skipping (results/grid/late_googlenet_ordinal/fold_8_metrics.json)
+2026-10-12 19:42:28  INFO   late_googlenet_ordinal  [fold 9] already done, skipping (results/grid/late_googlenet_ordinal/fold_9_metrics.json)
+2026-10-12 19:42:28  INFO   late_googlenet_ordinal  [summary] 10 folds -> results/grid/late_googlenet_ordinal/summary.csv

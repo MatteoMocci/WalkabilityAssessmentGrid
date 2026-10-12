@@ -25,6 +25,7 @@
   "aug_copies": 1,
   "num_workers": 16,
   "seed": 42,
+  "device": "auto",
   "no_amp": false,
   "no_compile": false,
   "save_weights": true,
