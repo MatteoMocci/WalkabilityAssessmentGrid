@@ -4,8 +4,8 @@ Completed folds per run (out of 10); [w] = folds whose saved weights are intact
   swin_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
   vit_base     10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
   deit_base    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
-  vgg16        10/10 [10w]   10/10 [10w]         10/10          0/10          0/10
-  googlenet    10/10 [10w]   10/10 [10w]         10/10          0/10          0/10
-  alexnet      10/10 [10w]   10/10 [10w]         10/10          0/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  googlenet    10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
+  alexnet      10/10 [10w]   10/10 [10w]         10/10         10/10          0/10
 
-Still to do: dual swin_base (0/10), dual vit_base (0/10), dual deit_base (0/10), late vgg16 (0/10), dual vgg16 (0/10), late googlenet (0/10), dual googlenet (0/10), late alexnet (0/10), dual alexnet (0/10)
+Still to do: dual swin_base (0/10), dual vit_base (0/10), dual deit_base (0/10), dual vgg16 (0/10), dual googlenet (0/10), dual alexnet (0/10)

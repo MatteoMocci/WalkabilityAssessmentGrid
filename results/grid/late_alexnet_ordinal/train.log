@@ -1,0 +1,143 @@
+2026-10-12 18:47:38  INFO   late_alexnet_ordinal  run=late_alexnet_ordinal view=late device=cuda points=4410 with images=4410
+2026-10-12 18:47:38  INFO   late_alexnet_ordinal  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-12 18:47:38  INFO   late_alexnet_ordinal  [fold 0] late fusion: street encoder from results/grid/street_alexnet_ordinal/fold_0_best.pt
+2026-10-12 18:47:39  INFO   late_alexnet_ordinal  [fold 0] late fusion: aerial encoder from results/grid/aerial_alexnet_ordinal/fold_0_best.pt
+2026-10-12 18:47:39  INFO   late_alexnet_ordinal  [fold 0] view=late backbone=alexnet weights=trained results/grid/street_alexnet_ordinal + results/grid/aerial_alexnet_ordinal
+2026-10-12 18:47:39  INFO   late_alexnet_ordinal  [fold 0] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 18:48:08  INFO   late_alexnet_ordinal  [fold 0] fusion_head epoch 1/20 train_loss=0.4343 val_loss=0.4515 val_qwk=0.4742 lr=1.00e-03 * (29s)
+2026-10-12 18:48:37  INFO   late_alexnet_ordinal  [fold 0] fusion_head epoch 2/20 train_loss=0.4045 val_loss=0.4619 val_qwk=0.4305 lr=1.00e-03 (29s)
+2026-10-12 18:49:07  INFO   late_alexnet_ordinal  [fold 0] fusion_head epoch 3/20 train_loss=0.3844 val_loss=0.4749 val_qwk=0.4800 lr=1.00e-03 (30s)
+2026-10-12 18:49:35  INFO   late_alexnet_ordinal  [fold 0] fusion_head epoch 4/20 train_loss=0.3694 val_loss=0.4780 val_qwk=0.4216 lr=1.00e-03 (29s)
+2026-10-12 18:50:04  INFO   late_alexnet_ordinal  [fold 0] fusion_head epoch 5/20 train_loss=0.3522 val_loss=0.4913 val_qwk=0.4667 lr=1.00e-03 (29s)
+2026-10-12 18:50:34  INFO   late_alexnet_ordinal  [fold 0] fusion_head epoch 6/20 train_loss=0.3344 val_loss=0.5238 val_qwk=0.4193 lr=1.00e-03 (29s)
+2026-10-12 18:50:34  INFO   late_alexnet_ordinal  [fold 0] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4515 val_qwk=0.4742
+2026-10-12 18:50:36  INFO   late_alexnet_ordinal  [fold 0] thresholds tuned on validation: 0.76 0.42 0.41 0.25
+2026-10-12 18:50:39  INFO   late_alexnet_ordinal  [fold 0] test accuracy=0.3449 f1=0.2653 mean_absolute_error=0.8205 one_off_accuracy=0.8506 amae=0.9452 qwk=0.4037 tuned_qwk=0.4536 alpha_ordinal=0.4070 score_mae=0.6653 score_spearman=0.5623 monotonicity_violation_pct=0.0000
+2026-10-12 18:50:39  INFO   late_alexnet_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-12 18:50:39  INFO   late_alexnet_ordinal  [fold 1] late fusion: street encoder from results/grid/street_alexnet_ordinal/fold_1_best.pt
+2026-10-12 18:50:40  INFO   late_alexnet_ordinal  [fold 1] late fusion: aerial encoder from results/grid/aerial_alexnet_ordinal/fold_1_best.pt
+2026-10-12 18:50:40  INFO   late_alexnet_ordinal  [fold 1] view=late backbone=alexnet weights=trained results/grid/street_alexnet_ordinal + results/grid/aerial_alexnet_ordinal
+2026-10-12 18:50:40  INFO   late_alexnet_ordinal  [fold 1] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 18:51:11  INFO   late_alexnet_ordinal  [fold 1] fusion_head epoch 1/20 train_loss=0.4378 val_loss=0.4298 val_qwk=0.4600 lr=1.00e-03 * (31s)
+2026-10-12 18:51:41  INFO   late_alexnet_ordinal  [fold 1] fusion_head epoch 2/20 train_loss=0.4122 val_loss=0.4406 val_qwk=0.4110 lr=1.00e-03 (30s)
+2026-10-12 18:52:10  INFO   late_alexnet_ordinal  [fold 1] fusion_head epoch 3/20 train_loss=0.3908 val_loss=0.4463 val_qwk=0.3971 lr=1.00e-03 (30s)
+2026-10-12 18:52:40  INFO   late_alexnet_ordinal  [fold 1] fusion_head epoch 4/20 train_loss=0.3743 val_loss=0.4482 val_qwk=0.3723 lr=1.00e-03 (30s)
+2026-10-12 18:53:10  INFO   late_alexnet_ordinal  [fold 1] fusion_head epoch 5/20 train_loss=0.3550 val_loss=0.4662 val_qwk=0.4082 lr=1.00e-03 (30s)
+2026-10-12 18:53:40  INFO   late_alexnet_ordinal  [fold 1] fusion_head epoch 6/20 train_loss=0.3399 val_loss=0.4626 val_qwk=0.4060 lr=1.00e-03 (30s)
+2026-10-12 18:53:40  INFO   late_alexnet_ordinal  [fold 1] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4298 val_qwk=0.4600
+2026-10-12 18:53:42  INFO   late_alexnet_ordinal  [fold 1] thresholds tuned on validation: 0.87 0.52 0.51 0.35
+2026-10-12 18:53:45  INFO   late_alexnet_ordinal  [fold 1] test accuracy=0.3946 f1=0.3363 mean_absolute_error=0.7893 one_off_accuracy=0.8519 amae=0.8721 qwk=0.5065 tuned_qwk=0.5217 alpha_ordinal=0.4920 score_mae=0.6038 score_spearman=0.6549 monotonicity_violation_pct=0.0000
+2026-10-12 18:53:45  INFO   late_alexnet_ordinal  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-12 18:53:45  INFO   late_alexnet_ordinal  [fold 2] late fusion: street encoder from results/grid/street_alexnet_ordinal/fold_2_best.pt
+2026-10-12 18:53:46  INFO   late_alexnet_ordinal  [fold 2] late fusion: aerial encoder from results/grid/aerial_alexnet_ordinal/fold_2_best.pt
+2026-10-12 18:53:46  INFO   late_alexnet_ordinal  [fold 2] view=late backbone=alexnet weights=trained results/grid/street_alexnet_ordinal + results/grid/aerial_alexnet_ordinal
+2026-10-12 18:53:46  INFO   late_alexnet_ordinal  [fold 2] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 18:54:16  INFO   late_alexnet_ordinal  [fold 2] fusion_head epoch 1/20 train_loss=0.4428 val_loss=0.4327 val_qwk=0.4138 lr=1.00e-03 * (31s)
+2026-10-12 18:54:46  INFO   late_alexnet_ordinal  [fold 2] fusion_head epoch 2/20 train_loss=0.4154 val_loss=0.4393 val_qwk=0.4289 lr=1.00e-03 (30s)
+2026-10-12 18:55:16  INFO   late_alexnet_ordinal  [fold 2] fusion_head epoch 3/20 train_loss=0.3967 val_loss=0.4484 val_qwk=0.3857 lr=1.00e-03 (30s)
+2026-10-12 18:55:46  INFO   late_alexnet_ordinal  [fold 2] fusion_head epoch 4/20 train_loss=0.3827 val_loss=0.4683 val_qwk=0.3396 lr=1.00e-03 (30s)
+2026-10-12 18:56:16  INFO   late_alexnet_ordinal  [fold 2] fusion_head epoch 5/20 train_loss=0.3663 val_loss=0.4702 val_qwk=0.4068 lr=1.00e-03 (30s)
+2026-10-12 18:56:46  INFO   late_alexnet_ordinal  [fold 2] fusion_head epoch 6/20 train_loss=0.3518 val_loss=0.4699 val_qwk=0.4310 lr=1.00e-03 (30s)
+2026-10-12 18:56:46  INFO   late_alexnet_ordinal  [fold 2] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4327 val_qwk=0.4138
+2026-10-12 18:56:48  INFO   late_alexnet_ordinal  [fold 2] thresholds tuned on validation: 0.81 0.55 0.47 0.50
+2026-10-12 18:56:51  INFO   late_alexnet_ordinal  [fold 2] test accuracy=0.3879 f1=0.2631 mean_absolute_error=0.7672 one_off_accuracy=0.8653 amae=0.9463 qwk=0.4235 tuned_qwk=0.4667 alpha_ordinal=0.4270 score_mae=0.6076 score_spearman=0.5729 monotonicity_violation_pct=0.0000
+2026-10-12 18:56:51  INFO   late_alexnet_ordinal  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-12 18:56:51  INFO   late_alexnet_ordinal  [fold 3] late fusion: street encoder from results/grid/street_alexnet_ordinal/fold_3_best.pt
+2026-10-12 18:56:52  INFO   late_alexnet_ordinal  [fold 3] late fusion: aerial encoder from results/grid/aerial_alexnet_ordinal/fold_3_best.pt
+2026-10-12 18:56:52  INFO   late_alexnet_ordinal  [fold 3] view=late backbone=alexnet weights=trained results/grid/street_alexnet_ordinal + results/grid/aerial_alexnet_ordinal
+2026-10-12 18:56:52  INFO   late_alexnet_ordinal  [fold 3] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 18:57:23  INFO   late_alexnet_ordinal  [fold 3] fusion_head epoch 1/20 train_loss=0.4369 val_loss=0.4350 val_qwk=0.4633 lr=1.00e-03 * (32s)
+2026-10-12 18:57:54  INFO   late_alexnet_ordinal  [fold 3] fusion_head epoch 2/20 train_loss=0.4081 val_loss=0.4492 val_qwk=0.4947 lr=1.00e-03 (31s)
+2026-10-12 18:58:24  INFO   late_alexnet_ordinal  [fold 3] fusion_head epoch 3/20 train_loss=0.3890 val_loss=0.4568 val_qwk=0.4613 lr=1.00e-03 (30s)
+2026-10-12 18:58:55  INFO   late_alexnet_ordinal  [fold 3] fusion_head epoch 4/20 train_loss=0.3720 val_loss=0.4535 val_qwk=0.4564 lr=1.00e-03 (31s)
+2026-10-12 18:59:26  INFO   late_alexnet_ordinal  [fold 3] fusion_head epoch 5/20 train_loss=0.3499 val_loss=0.4775 val_qwk=0.4019 lr=1.00e-03 (31s)
+2026-10-12 18:59:56  INFO   late_alexnet_ordinal  [fold 3] fusion_head epoch 6/20 train_loss=0.3363 val_loss=0.4966 val_qwk=0.4386 lr=1.00e-03 (30s)
+2026-10-12 18:59:56  INFO   late_alexnet_ordinal  [fold 3] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4350 val_qwk=0.4633
+2026-10-12 18:59:58  INFO   late_alexnet_ordinal  [fold 3] thresholds tuned on validation: 0.70 0.52 0.47 0.18
+2026-10-12 19:00:01  INFO   late_alexnet_ordinal  [fold 3] test accuracy=0.3688 f1=0.2905 mean_absolute_error=0.8337 one_off_accuracy=0.8223 amae=1.0170 qwk=0.3497 tuned_qwk=0.3760 alpha_ordinal=0.3363 score_mae=0.6371 score_spearman=0.4578 monotonicity_violation_pct=0.0000
+2026-10-12 19:00:01  INFO   late_alexnet_ordinal  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-12 19:00:01  INFO   late_alexnet_ordinal  [fold 4] late fusion: street encoder from results/grid/street_alexnet_ordinal/fold_4_best.pt
+2026-10-12 19:00:02  INFO   late_alexnet_ordinal  [fold 4] late fusion: aerial encoder from results/grid/aerial_alexnet_ordinal/fold_4_best.pt
+2026-10-12 19:00:02  INFO   late_alexnet_ordinal  [fold 4] view=late backbone=alexnet weights=trained results/grid/street_alexnet_ordinal + results/grid/aerial_alexnet_ordinal
+2026-10-12 19:00:02  INFO   late_alexnet_ordinal  [fold 4] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 19:00:34  INFO   late_alexnet_ordinal  [fold 4] fusion_head epoch 1/20 train_loss=0.4435 val_loss=0.4387 val_qwk=0.4250 lr=1.00e-03 * (32s)
+2026-10-12 19:01:05  INFO   late_alexnet_ordinal  [fold 4] fusion_head epoch 2/20 train_loss=0.4132 val_loss=0.4583 val_qwk=0.4382 lr=1.00e-03 (31s)
+2026-10-12 19:01:36  INFO   late_alexnet_ordinal  [fold 4] fusion_head epoch 3/20 train_loss=0.4022 val_loss=0.4564 val_qwk=0.3895 lr=1.00e-03 (31s)
+2026-10-12 19:02:06  INFO   late_alexnet_ordinal  [fold 4] fusion_head epoch 4/20 train_loss=0.3824 val_loss=0.4651 val_qwk=0.4155 lr=1.00e-03 (31s)
+2026-10-12 19:02:36  INFO   late_alexnet_ordinal  [fold 4] fusion_head epoch 5/20 train_loss=0.3659 val_loss=0.4811 val_qwk=0.4057 lr=1.00e-03 (30s)
+2026-10-12 19:03:06  INFO   late_alexnet_ordinal  [fold 4] fusion_head epoch 6/20 train_loss=0.3503 val_loss=0.4958 val_qwk=0.4228 lr=1.00e-03 (30s)
+2026-10-12 19:03:06  INFO   late_alexnet_ordinal  [fold 4] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4387 val_qwk=0.4250
+2026-10-12 19:03:09  INFO   late_alexnet_ordinal  [fold 4] thresholds tuned on validation: 0.74 0.61 0.37 0.43
+2026-10-12 19:03:11  INFO   late_alexnet_ordinal  [fold 4] test accuracy=0.3684 f1=0.2722 mean_absolute_error=0.7941 one_off_accuracy=0.8570 amae=0.9153 qwk=0.4560 tuned_qwk=0.5083 alpha_ordinal=0.4685 score_mae=0.6141 score_spearman=0.6377 monotonicity_violation_pct=0.0000
+2026-10-12 19:03:11  INFO   late_alexnet_ordinal  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-12 19:03:12  INFO   late_alexnet_ordinal  [fold 5] late fusion: street encoder from results/grid/street_alexnet_ordinal/fold_5_best.pt
+2026-10-12 19:03:12  INFO   late_alexnet_ordinal  [fold 5] late fusion: aerial encoder from results/grid/aerial_alexnet_ordinal/fold_5_best.pt
+2026-10-12 19:03:12  INFO   late_alexnet_ordinal  [fold 5] view=late backbone=alexnet weights=trained results/grid/street_alexnet_ordinal + results/grid/aerial_alexnet_ordinal
+2026-10-12 19:03:12  INFO   late_alexnet_ordinal  [fold 5] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 19:03:44  INFO   late_alexnet_ordinal  [fold 5] fusion_head epoch 1/20 train_loss=0.4215 val_loss=0.4843 val_qwk=0.3398 lr=1.00e-03 * (32s)
+2026-10-12 19:04:16  INFO   late_alexnet_ordinal  [fold 5] fusion_head epoch 2/20 train_loss=0.3863 val_loss=0.4823 val_qwk=0.2437 lr=1.00e-03 * (32s)
+2026-10-12 19:04:46  INFO   late_alexnet_ordinal  [fold 5] fusion_head epoch 3/20 train_loss=0.3683 val_loss=0.5011 val_qwk=0.3319 lr=1.00e-03 (31s)
+2026-10-12 19:05:17  INFO   late_alexnet_ordinal  [fold 5] fusion_head epoch 4/20 train_loss=0.3517 val_loss=0.4912 val_qwk=0.3188 lr=1.00e-03 (31s)
+2026-10-12 19:05:49  INFO   late_alexnet_ordinal  [fold 5] fusion_head epoch 5/20 train_loss=0.3354 val_loss=0.5311 val_qwk=0.3065 lr=1.00e-03 (31s)
+2026-10-12 19:06:20  INFO   late_alexnet_ordinal  [fold 5] fusion_head epoch 6/20 train_loss=0.3216 val_loss=0.5319 val_qwk=0.3275 lr=1.00e-03 (31s)
+2026-10-12 19:06:51  INFO   late_alexnet_ordinal  [fold 5] fusion_head epoch 7/20 train_loss=0.3080 val_loss=0.5688 val_qwk=0.2834 lr=1.00e-03 (31s)
+2026-10-12 19:06:51  INFO   late_alexnet_ordinal  [fold 5] fusion_head: early stop after 7 epochs, best so far epoch 2 (fusion_head) val_loss=0.4823 val_qwk=0.2437
+2026-10-12 19:06:53  INFO   late_alexnet_ordinal  [fold 5] thresholds tuned on validation: 0.76 0.41 0.23 0.31
+2026-10-12 19:06:55  INFO   late_alexnet_ordinal  [fold 5] test accuracy=0.3329 f1=0.2495 mean_absolute_error=0.8633 one_off_accuracy=0.8271 amae=0.9845 qwk=0.3887 tuned_qwk=0.4148 alpha_ordinal=0.4006 score_mae=0.6719 score_spearman=0.5429 monotonicity_violation_pct=0.0000
+2026-10-12 19:06:55  INFO   late_alexnet_ordinal  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-12 19:06:56  INFO   late_alexnet_ordinal  [fold 6] late fusion: street encoder from results/grid/street_alexnet_ordinal/fold_6_best.pt
+2026-10-12 19:06:56  INFO   late_alexnet_ordinal  [fold 6] late fusion: aerial encoder from results/grid/aerial_alexnet_ordinal/fold_6_best.pt
+2026-10-12 19:06:56  INFO   late_alexnet_ordinal  [fold 6] view=late backbone=alexnet weights=trained results/grid/street_alexnet_ordinal + results/grid/aerial_alexnet_ordinal
+2026-10-12 19:06:56  INFO   late_alexnet_ordinal  [fold 6] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 19:07:28  INFO   late_alexnet_ordinal  [fold 6] fusion_head epoch 1/20 train_loss=0.4183 val_loss=0.4721 val_qwk=0.4106 lr=1.00e-03 * (32s)
+2026-10-12 19:08:00  INFO   late_alexnet_ordinal  [fold 6] fusion_head epoch 2/20 train_loss=0.3828 val_loss=0.4901 val_qwk=0.3875 lr=1.00e-03 (31s)
+2026-10-12 19:08:31  INFO   late_alexnet_ordinal  [fold 6] fusion_head epoch 3/20 train_loss=0.3643 val_loss=0.5189 val_qwk=0.3961 lr=1.00e-03 (31s)
+2026-10-12 19:09:02  INFO   late_alexnet_ordinal  [fold 6] fusion_head epoch 4/20 train_loss=0.3476 val_loss=0.4948 val_qwk=0.3901 lr=1.00e-03 (31s)
+2026-10-12 19:09:34  INFO   late_alexnet_ordinal  [fold 6] fusion_head epoch 5/20 train_loss=0.3314 val_loss=0.5357 val_qwk=0.3649 lr=1.00e-03 (31s)
+2026-10-12 19:10:05  INFO   late_alexnet_ordinal  [fold 6] fusion_head epoch 6/20 train_loss=0.3183 val_loss=0.5341 val_qwk=0.3689 lr=1.00e-03 (31s)
+2026-10-12 19:10:05  INFO   late_alexnet_ordinal  [fold 6] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4721 val_qwk=0.4106
+2026-10-12 19:10:07  INFO   late_alexnet_ordinal  [fold 6] thresholds tuned on validation: 0.69 0.49 0.58 0.30
+2026-10-12 19:10:09  INFO   late_alexnet_ordinal  [fold 6] test accuracy=0.3619 f1=0.3038 mean_absolute_error=0.8688 one_off_accuracy=0.7997 amae=1.0086 qwk=0.3753 tuned_qwk=0.3238 alpha_ordinal=0.3633 score_mae=0.7104 score_spearman=0.4380 monotonicity_violation_pct=0.5525
+2026-10-12 19:10:09  INFO   late_alexnet_ordinal  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-12 19:10:10  INFO   late_alexnet_ordinal  [fold 7] late fusion: street encoder from results/grid/street_alexnet_ordinal/fold_7_best.pt
+2026-10-12 19:10:10  INFO   late_alexnet_ordinal  [fold 7] late fusion: aerial encoder from results/grid/aerial_alexnet_ordinal/fold_7_best.pt
+2026-10-12 19:10:10  INFO   late_alexnet_ordinal  [fold 7] view=late backbone=alexnet weights=trained results/grid/street_alexnet_ordinal + results/grid/aerial_alexnet_ordinal
+2026-10-12 19:10:10  INFO   late_alexnet_ordinal  [fold 7] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 19:10:42  INFO   late_alexnet_ordinal  [fold 7] fusion_head epoch 1/20 train_loss=0.4232 val_loss=0.4565 val_qwk=0.4470 lr=1.00e-03 * (32s)
+2026-10-12 19:11:13  INFO   late_alexnet_ordinal  [fold 7] fusion_head epoch 2/20 train_loss=0.3948 val_loss=0.4648 val_qwk=0.3675 lr=1.00e-03 (31s)
+2026-10-12 19:11:44  INFO   late_alexnet_ordinal  [fold 7] fusion_head epoch 3/20 train_loss=0.3756 val_loss=0.4737 val_qwk=0.3996 lr=1.00e-03 (31s)
+2026-10-12 19:12:16  INFO   late_alexnet_ordinal  [fold 7] fusion_head epoch 4/20 train_loss=0.3577 val_loss=0.5135 val_qwk=0.3574 lr=1.00e-03 (31s)
+2026-10-12 19:12:48  INFO   late_alexnet_ordinal  [fold 7] fusion_head epoch 5/20 train_loss=0.3405 val_loss=0.5108 val_qwk=0.4226 lr=1.00e-03 (32s)
+2026-10-12 19:13:19  INFO   late_alexnet_ordinal  [fold 7] fusion_head epoch 6/20 train_loss=0.3251 val_loss=0.4964 val_qwk=0.3798 lr=1.00e-03 (32s)
+2026-10-12 19:13:19  INFO   late_alexnet_ordinal  [fold 7] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4565 val_qwk=0.4470
+2026-10-12 19:13:21  INFO   late_alexnet_ordinal  [fold 7] thresholds tuned on validation: 0.65 0.50 0.52 0.28
+2026-10-12 19:13:24  INFO   late_alexnet_ordinal  [fold 7] test accuracy=0.3226 f1=0.2826 mean_absolute_error=0.9087 one_off_accuracy=0.8046 amae=1.0029 qwk=0.4191 tuned_qwk=0.4414 alpha_ordinal=0.3972 score_mae=0.6795 score_spearman=0.5346 monotonicity_violation_pct=1.5424
+2026-10-12 19:13:24  INFO   late_alexnet_ordinal  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-12 19:13:24  INFO   late_alexnet_ordinal  [fold 8] late fusion: street encoder from results/grid/street_alexnet_ordinal/fold_8_best.pt
+2026-10-12 19:13:25  INFO   late_alexnet_ordinal  [fold 8] late fusion: aerial encoder from results/grid/aerial_alexnet_ordinal/fold_8_best.pt
+2026-10-12 19:13:25  INFO   late_alexnet_ordinal  [fold 8] view=late backbone=alexnet weights=trained results/grid/street_alexnet_ordinal + results/grid/aerial_alexnet_ordinal
+2026-10-12 19:13:25  INFO   late_alexnet_ordinal  [fold 8] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 19:13:56  INFO   late_alexnet_ordinal  [fold 8] fusion_head epoch 1/20 train_loss=0.4353 val_loss=0.4699 val_qwk=0.4078 lr=1.00e-03 * (32s)
+2026-10-12 19:14:27  INFO   late_alexnet_ordinal  [fold 8] fusion_head epoch 2/20 train_loss=0.4068 val_loss=0.4821 val_qwk=0.3963 lr=1.00e-03 (31s)
+2026-10-12 19:14:59  INFO   late_alexnet_ordinal  [fold 8] fusion_head epoch 3/20 train_loss=0.3908 val_loss=0.4812 val_qwk=0.3713 lr=1.00e-03 (31s)
+2026-10-12 19:15:30  INFO   late_alexnet_ordinal  [fold 8] fusion_head epoch 4/20 train_loss=0.3741 val_loss=0.5054 val_qwk=0.4045 lr=1.00e-03 (31s)
+2026-10-12 19:15:59  INFO   late_alexnet_ordinal  [fold 8] fusion_head epoch 5/20 train_loss=0.3587 val_loss=0.5277 val_qwk=0.3554 lr=1.00e-03 (30s)
+2026-10-12 19:16:28  INFO   late_alexnet_ordinal  [fold 8] fusion_head epoch 6/20 train_loss=0.3430 val_loss=0.5305 val_qwk=0.3360 lr=1.00e-03 (29s)
+2026-10-12 19:16:28  INFO   late_alexnet_ordinal  [fold 8] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4699 val_qwk=0.4078
+2026-10-12 19:16:30  INFO   late_alexnet_ordinal  [fold 8] thresholds tuned on validation: 0.73 0.41 0.39 0.24
+2026-10-12 19:16:32  INFO   late_alexnet_ordinal  [fold 8] test accuracy=0.3692 f1=0.2784 mean_absolute_error=0.8096 one_off_accuracy=0.8472 amae=0.9609 qwk=0.4199 tuned_qwk=0.4533 alpha_ordinal=0.4419 score_mae=0.6323 score_spearman=0.5762 monotonicity_violation_pct=0.0000
+2026-10-12 19:16:32  INFO   late_alexnet_ordinal  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-12 19:16:33  INFO   late_alexnet_ordinal  [fold 9] late fusion: street encoder from results/grid/street_alexnet_ordinal/fold_9_best.pt
+2026-10-12 19:16:33  INFO   late_alexnet_ordinal  [fold 9] late fusion: aerial encoder from results/grid/aerial_alexnet_ordinal/fold_9_best.pt
+2026-10-12 19:16:33  INFO   late_alexnet_ordinal  [fold 9] view=late backbone=alexnet weights=trained results/grid/street_alexnet_ordinal + results/grid/aerial_alexnet_ordinal
+2026-10-12 19:16:33  INFO   late_alexnet_ordinal  [fold 9] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 19:17:02  INFO   late_alexnet_ordinal  [fold 9] fusion_head epoch 1/20 train_loss=0.4307 val_loss=0.4480 val_qwk=0.4485 lr=1.00e-03 * (29s)
+2026-10-12 19:17:30  INFO   late_alexnet_ordinal  [fold 9] fusion_head epoch 2/20 train_loss=0.3973 val_loss=0.4505 val_qwk=0.4320 lr=1.00e-03 (28s)
+2026-10-12 19:17:58  INFO   late_alexnet_ordinal  [fold 9] fusion_head epoch 3/20 train_loss=0.3799 val_loss=0.4636 val_qwk=0.4455 lr=1.00e-03 (28s)
+2026-10-12 19:18:26  INFO   late_alexnet_ordinal  [fold 9] fusion_head epoch 4/20 train_loss=0.3610 val_loss=0.4777 val_qwk=0.4221 lr=1.00e-03 (28s)
+2026-10-12 19:18:54  INFO   late_alexnet_ordinal  [fold 9] fusion_head epoch 5/20 train_loss=0.3434 val_loss=0.5136 val_qwk=0.4160 lr=1.00e-03 (28s)
+2026-10-12 19:19:22  INFO   late_alexnet_ordinal  [fold 9] fusion_head epoch 6/20 train_loss=0.3307 val_loss=0.5018 val_qwk=0.4334 lr=1.00e-03 (28s)
+2026-10-12 19:19:22  INFO   late_alexnet_ordinal  [fold 9] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4480 val_qwk=0.4485
+2026-10-12 19:19:24  INFO   late_alexnet_ordinal  [fold 9] thresholds tuned on validation: 0.61 0.47 0.41 0.14
+2026-10-12 19:19:26  INFO   late_alexnet_ordinal  [fold 9] test accuracy=0.3247 f1=0.2715 mean_absolute_error=0.8906 one_off_accuracy=0.8129 amae=0.9861 qwk=0.4178 tuned_qwk=0.4021 alpha_ordinal=0.4036 score_mae=0.6744 score_spearman=0.5056 monotonicity_violation_pct=0.0000
+2026-10-12 19:19:26  INFO   late_alexnet_ordinal  [summary] 10 folds -> results/grid/late_alexnet_ordinal/summary.csv

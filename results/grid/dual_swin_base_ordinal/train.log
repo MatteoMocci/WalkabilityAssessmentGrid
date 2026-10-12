@@ -1,0 +1,18 @@
+2026-10-12 19:19:29  INFO   dual_swin_base_ordinal  run=dual_swin_base_ordinal view=dual device=cuda points=4410 with images=4410
+2026-10-12 19:19:29  INFO   dual_swin_base_ordinal  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-12 19:19:31  INFO   dual_swin_base_ordinal  [fold 0] view=dual backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-12 19:19:32  INFO   dual_swin_base_ordinal  [fold 0] phase=full trainable params=176,587,588 lr=5e-05
+2026-10-12 19:26:00  INFO   dual_swin_base_ordinal  [fold 0] full epoch 1/20 train_loss=0.4418 val_loss=0.4313 val_qwk=0.5204 lr=5.00e-05 * (388s)
+2026-10-12 19:27:01  INFO   dual_swin_base_ordinal  [fold 0] full epoch 2/20 train_loss=0.4057 val_loss=0.4203 val_qwk=0.5259 lr=5.00e-05 * (61s)
+2026-10-12 19:28:04  INFO   dual_swin_base_ordinal  [fold 0] full epoch 3/20 train_loss=0.3568 val_loss=0.4892 val_qwk=0.5132 lr=5.00e-05 (62s)
+2026-10-12 19:29:05  INFO   dual_swin_base_ordinal  [fold 0] full epoch 4/20 train_loss=0.3155 val_loss=0.4805 val_qwk=0.5247 lr=5.00e-05 (61s)
+2026-10-12 19:30:07  INFO   dual_swin_base_ordinal  [fold 0] full epoch 5/20 train_loss=0.2810 val_loss=0.5154 val_qwk=0.5406 lr=5.00e-05 (62s)
+2026-10-12 19:31:09  INFO   dual_swin_base_ordinal  [fold 0] full epoch 6/20 train_loss=0.2582 val_loss=0.4990 val_qwk=0.5373 lr=5.00e-05 (62s)
+2026-10-12 19:32:11  INFO   dual_swin_base_ordinal  [fold 0] full epoch 7/20 train_loss=0.2428 val_loss=0.5799 val_qwk=0.5322 lr=5.00e-05 (61s)
+2026-10-12 19:32:11  INFO   dual_swin_base_ordinal  [fold 0] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4203 val_qwk=0.5259
+2026-10-12 19:32:15  INFO   dual_swin_base_ordinal  [fold 0] thresholds tuned on validation: 0.68 0.59 0.46 0.31
+2026-10-12 19:32:20  INFO   dual_swin_base_ordinal  [fold 0] test accuracy=0.3722 f1=0.2721 mean_absolute_error=0.7829 one_off_accuracy=0.8618 amae=0.9228 qwk=0.4511 tuned_qwk=0.4936 alpha_ordinal=0.4552 score_mae=0.6184 score_spearman=0.6146 monotonicity_violation_pct=0.0000
+2026-10-12 19:32:21  INFO   dual_swin_base_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-12 19:32:22  INFO   dual_swin_base_ordinal  [fold 1] view=dual backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-12 19:32:22  INFO   dual_swin_base_ordinal  [fold 1] phase=full trainable params=176,587,588 lr=5e-05
+2026-10-12 19:35:23  INFO   dual_swin_base_ordinal  [fold 1] full epoch 1/20 train_loss=0.4420 val_loss=0.4678 val_qwk=0.4120 lr=5.00e-05 * (181s)

@@ -1,0 +1,158 @@
+2026-10-12 18:10:18  INFO   late_googlenet_ordinal  run=late_googlenet_ordinal view=late device=cuda points=4410 with images=4410
+2026-10-12 18:10:18  INFO   late_googlenet_ordinal  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-12 18:10:18  INFO   late_googlenet_ordinal  [fold 0] late fusion: street encoder from results/grid/street_googlenet_ordinal/fold_0_best.pt
+2026-10-12 18:10:18  INFO   late_googlenet_ordinal  [fold 0] late fusion: aerial encoder from results/grid/aerial_googlenet_ordinal/fold_0_best.pt
+2026-10-12 18:10:18  INFO   late_googlenet_ordinal  [fold 0] view=late backbone=googlenet weights=trained results/grid/street_googlenet_ordinal + results/grid/aerial_googlenet_ordinal
+2026-10-12 18:10:18  INFO   late_googlenet_ordinal  [fold 0] phase=fusion_head trainable params=1,051,140 lr=0.001
+2026-10-12 18:10:46  INFO   late_googlenet_ordinal  [fold 0] fusion_head epoch 1/20 train_loss=0.4229 val_loss=0.4350 val_qwk=0.4750 lr=1.00e-03 * (28s)
+2026-10-12 18:11:14  INFO   late_googlenet_ordinal  [fold 0] fusion_head epoch 2/20 train_loss=0.4087 val_loss=0.4379 val_qwk=0.4732 lr=1.00e-03 (28s)
+2026-10-12 18:11:41  INFO   late_googlenet_ordinal  [fold 0] fusion_head epoch 3/20 train_loss=0.4015 val_loss=0.4427 val_qwk=0.4890 lr=1.00e-03 (27s)
+2026-10-12 18:12:08  INFO   late_googlenet_ordinal  [fold 0] fusion_head epoch 4/20 train_loss=0.3977 val_loss=0.4374 val_qwk=0.4896 lr=1.00e-03 (27s)
+2026-10-12 18:12:36  INFO   late_googlenet_ordinal  [fold 0] fusion_head epoch 5/20 train_loss=0.3934 val_loss=0.4454 val_qwk=0.5209 lr=1.00e-03 (28s)
+2026-10-12 18:13:03  INFO   late_googlenet_ordinal  [fold 0] fusion_head epoch 6/20 train_loss=0.3934 val_loss=0.4493 val_qwk=0.4633 lr=1.00e-03 (27s)
+2026-10-12 18:13:03  INFO   late_googlenet_ordinal  [fold 0] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4350 val_qwk=0.4750
+2026-10-12 18:13:06  INFO   late_googlenet_ordinal  [fold 0] thresholds tuned on validation: 0.72 0.37 0.43 0.27
+2026-10-12 18:13:08  INFO   late_googlenet_ordinal  [fold 0] test accuracy=0.3722 f1=0.2942 mean_absolute_error=0.8073 one_off_accuracy=0.8374 amae=0.9349 qwk=0.4155 tuned_qwk=0.4569 alpha_ordinal=0.4134 score_mae=0.6613 score_spearman=0.5413 monotonicity_violation_pct=0.0000
+2026-10-12 18:13:08  INFO   late_googlenet_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-12 18:13:09  INFO   late_googlenet_ordinal  [fold 1] late fusion: street encoder from results/grid/street_googlenet_ordinal/fold_1_best.pt
+2026-10-12 18:13:09  INFO   late_googlenet_ordinal  [fold 1] late fusion: aerial encoder from results/grid/aerial_googlenet_ordinal/fold_1_best.pt
+2026-10-12 18:13:09  INFO   late_googlenet_ordinal  [fold 1] view=late backbone=googlenet weights=trained results/grid/street_googlenet_ordinal + results/grid/aerial_googlenet_ordinal
+2026-10-12 18:13:09  INFO   late_googlenet_ordinal  [fold 1] phase=fusion_head trainable params=1,051,140 lr=0.001
+2026-10-12 18:13:37  INFO   late_googlenet_ordinal  [fold 1] fusion_head epoch 1/20 train_loss=0.4299 val_loss=0.4519 val_qwk=0.4023 lr=1.00e-03 * (28s)
+2026-10-12 18:14:05  INFO   late_googlenet_ordinal  [fold 1] fusion_head epoch 2/20 train_loss=0.4172 val_loss=0.4342 val_qwk=0.4105 lr=1.00e-03 * (28s)
+2026-10-12 18:14:32  INFO   late_googlenet_ordinal  [fold 1] fusion_head epoch 3/20 train_loss=0.4081 val_loss=0.4320 val_qwk=0.4297 lr=1.00e-03 * (28s)
+2026-10-12 18:15:00  INFO   late_googlenet_ordinal  [fold 1] fusion_head epoch 4/20 train_loss=0.4053 val_loss=0.4309 val_qwk=0.3784 lr=1.00e-03 * (28s)
+2026-10-12 18:15:28  INFO   late_googlenet_ordinal  [fold 1] fusion_head epoch 5/20 train_loss=0.4026 val_loss=0.4288 val_qwk=0.4075 lr=1.00e-03 * (28s)
+2026-10-12 18:15:55  INFO   late_googlenet_ordinal  [fold 1] fusion_head epoch 6/20 train_loss=0.3996 val_loss=0.4324 val_qwk=0.4325 lr=1.00e-03 (28s)
+2026-10-12 18:16:23  INFO   late_googlenet_ordinal  [fold 1] fusion_head epoch 7/20 train_loss=0.3959 val_loss=0.4482 val_qwk=0.4273 lr=1.00e-03 (28s)
+2026-10-12 18:16:51  INFO   late_googlenet_ordinal  [fold 1] fusion_head epoch 8/20 train_loss=0.3942 val_loss=0.4317 val_qwk=0.4498 lr=1.00e-03 (28s)
+2026-10-12 18:17:19  INFO   late_googlenet_ordinal  [fold 1] fusion_head epoch 9/20 train_loss=0.3913 val_loss=0.4311 val_qwk=0.4299 lr=1.00e-03 (28s)
+2026-10-12 18:17:46  INFO   late_googlenet_ordinal  [fold 1] fusion_head epoch 10/20 train_loss=0.3863 val_loss=0.4380 val_qwk=0.3511 lr=1.00e-03 (28s)
+2026-10-12 18:17:46  INFO   late_googlenet_ordinal  [fold 1] fusion_head: early stop after 10 epochs, best so far epoch 5 (fusion_head) val_loss=0.4288 val_qwk=0.4075
+2026-10-12 18:17:48  INFO   late_googlenet_ordinal  [fold 1] thresholds tuned on validation: 0.79 0.52 0.55 0.14
+2026-10-12 18:17:51  INFO   late_googlenet_ordinal  [fold 1] test accuracy=0.3708 f1=0.2955 mean_absolute_error=0.7932 one_off_accuracy=0.8598 amae=0.8826 qwk=0.4777 tuned_qwk=0.5208 alpha_ordinal=0.4798 score_mae=0.6185 score_spearman=0.6610 monotonicity_violation_pct=0.0000
+2026-10-12 18:17:51  INFO   late_googlenet_ordinal  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-12 18:17:51  INFO   late_googlenet_ordinal  [fold 2] late fusion: street encoder from results/grid/street_googlenet_ordinal/fold_2_best.pt
+2026-10-12 18:17:51  INFO   late_googlenet_ordinal  [fold 2] late fusion: aerial encoder from results/grid/aerial_googlenet_ordinal/fold_2_best.pt
+2026-10-12 18:17:51  INFO   late_googlenet_ordinal  [fold 2] view=late backbone=googlenet weights=trained results/grid/street_googlenet_ordinal + results/grid/aerial_googlenet_ordinal
+2026-10-12 18:17:51  INFO   late_googlenet_ordinal  [fold 2] phase=fusion_head trainable params=1,051,140 lr=0.001
+2026-10-12 18:18:20  INFO   late_googlenet_ordinal  [fold 2] fusion_head epoch 1/20 train_loss=0.4308 val_loss=0.4349 val_qwk=0.4303 lr=1.00e-03 * (29s)
+2026-10-12 18:18:48  INFO   late_googlenet_ordinal  [fold 2] fusion_head epoch 2/20 train_loss=0.4160 val_loss=0.4398 val_qwk=0.4313 lr=1.00e-03 (28s)
+2026-10-12 18:19:16  INFO   late_googlenet_ordinal  [fold 2] fusion_head epoch 3/20 train_loss=0.4121 val_loss=0.4362 val_qwk=0.4231 lr=1.00e-03 (28s)
+2026-10-12 18:19:44  INFO   late_googlenet_ordinal  [fold 2] fusion_head epoch 4/20 train_loss=0.4080 val_loss=0.4373 val_qwk=0.4347 lr=1.00e-03 (28s)
+2026-10-12 18:20:12  INFO   late_googlenet_ordinal  [fold 2] fusion_head epoch 5/20 train_loss=0.4044 val_loss=0.4491 val_qwk=0.4515 lr=1.00e-03 (28s)
+2026-10-12 18:20:40  INFO   late_googlenet_ordinal  [fold 2] fusion_head epoch 6/20 train_loss=0.4033 val_loss=0.4430 val_qwk=0.4281 lr=1.00e-03 (28s)
+2026-10-12 18:20:40  INFO   late_googlenet_ordinal  [fold 2] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4349 val_qwk=0.4303
+2026-10-12 18:20:43  INFO   late_googlenet_ordinal  [fold 2] thresholds tuned on validation: 0.76 0.38 0.46 0.27
+2026-10-12 18:20:45  INFO   late_googlenet_ordinal  [fold 2] test accuracy=0.3847 f1=0.2597 mean_absolute_error=0.7888 one_off_accuracy=0.8524 amae=0.9467 qwk=0.4197 tuned_qwk=0.4687 alpha_ordinal=0.4216 score_mae=0.6074 score_spearman=0.5682 monotonicity_violation_pct=0.0000
+2026-10-12 18:20:45  INFO   late_googlenet_ordinal  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-12 18:20:45  INFO   late_googlenet_ordinal  [fold 3] late fusion: street encoder from results/grid/street_googlenet_ordinal/fold_3_best.pt
+2026-10-12 18:20:45  INFO   late_googlenet_ordinal  [fold 3] late fusion: aerial encoder from results/grid/aerial_googlenet_ordinal/fold_3_best.pt
+2026-10-12 18:20:45  INFO   late_googlenet_ordinal  [fold 3] view=late backbone=googlenet weights=trained results/grid/street_googlenet_ordinal + results/grid/aerial_googlenet_ordinal
+2026-10-12 18:20:45  INFO   late_googlenet_ordinal  [fold 3] phase=fusion_head trainable params=1,051,140 lr=0.001
+2026-10-12 18:21:14  INFO   late_googlenet_ordinal  [fold 3] fusion_head epoch 1/20 train_loss=0.4282 val_loss=0.4324 val_qwk=0.4658 lr=1.00e-03 * (29s)
+2026-10-12 18:21:42  INFO   late_googlenet_ordinal  [fold 3] fusion_head epoch 2/20 train_loss=0.4111 val_loss=0.4485 val_qwk=0.4636 lr=1.00e-03 (28s)
+2026-10-12 18:22:10  INFO   late_googlenet_ordinal  [fold 3] fusion_head epoch 3/20 train_loss=0.4059 val_loss=0.4372 val_qwk=0.4693 lr=1.00e-03 (28s)
+2026-10-12 18:22:39  INFO   late_googlenet_ordinal  [fold 3] fusion_head epoch 4/20 train_loss=0.4024 val_loss=0.4568 val_qwk=0.4208 lr=1.00e-03 (29s)
+2026-10-12 18:23:07  INFO   late_googlenet_ordinal  [fold 3] fusion_head epoch 5/20 train_loss=0.3989 val_loss=0.4388 val_qwk=0.4535 lr=1.00e-03 (28s)
+2026-10-12 18:23:35  INFO   late_googlenet_ordinal  [fold 3] fusion_head epoch 6/20 train_loss=0.3966 val_loss=0.4604 val_qwk=0.4918 lr=1.00e-03 (29s)
+2026-10-12 18:23:35  INFO   late_googlenet_ordinal  [fold 3] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4324 val_qwk=0.4658
+2026-10-12 18:23:37  INFO   late_googlenet_ordinal  [fold 3] thresholds tuned on validation: 0.76 0.49 0.49 0.23
+2026-10-12 18:23:40  INFO   late_googlenet_ordinal  [fold 3] test accuracy=0.3915 f1=0.3055 mean_absolute_error=0.7758 one_off_accuracy=0.8533 amae=0.9545 qwk=0.4114 tuned_qwk=0.4632 alpha_ordinal=0.4031 score_mae=0.6050 score_spearman=0.5373 monotonicity_violation_pct=0.0000
+2026-10-12 18:23:40  INFO   late_googlenet_ordinal  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-12 18:23:40  INFO   late_googlenet_ordinal  [fold 4] late fusion: street encoder from results/grid/street_googlenet_ordinal/fold_4_best.pt
+2026-10-12 18:23:40  INFO   late_googlenet_ordinal  [fold 4] late fusion: aerial encoder from results/grid/aerial_googlenet_ordinal/fold_4_best.pt
+2026-10-12 18:23:40  INFO   late_googlenet_ordinal  [fold 4] view=late backbone=googlenet weights=trained results/grid/street_googlenet_ordinal + results/grid/aerial_googlenet_ordinal
+2026-10-12 18:23:40  INFO   late_googlenet_ordinal  [fold 4] phase=fusion_head trainable params=1,051,140 lr=0.001
+2026-10-12 18:24:10  INFO   late_googlenet_ordinal  [fold 4] fusion_head epoch 1/20 train_loss=0.4114 val_loss=0.4429 val_qwk=0.4449 lr=1.00e-03 * (30s)
+2026-10-12 18:24:38  INFO   late_googlenet_ordinal  [fold 4] fusion_head epoch 2/20 train_loss=0.3939 val_loss=0.4583 val_qwk=0.4564 lr=1.00e-03 (28s)
+2026-10-12 18:25:07  INFO   late_googlenet_ordinal  [fold 4] fusion_head epoch 3/20 train_loss=0.3900 val_loss=0.4483 val_qwk=0.4542 lr=1.00e-03 (29s)
+2026-10-12 18:25:36  INFO   late_googlenet_ordinal  [fold 4] fusion_head epoch 4/20 train_loss=0.3846 val_loss=0.4574 val_qwk=0.4419 lr=1.00e-03 (29s)
+2026-10-12 18:26:05  INFO   late_googlenet_ordinal  [fold 4] fusion_head epoch 5/20 train_loss=0.3798 val_loss=0.4542 val_qwk=0.4484 lr=1.00e-03 (29s)
+2026-10-12 18:26:34  INFO   late_googlenet_ordinal  [fold 4] fusion_head epoch 6/20 train_loss=0.3794 val_loss=0.4544 val_qwk=0.4679 lr=1.00e-03 (29s)
+2026-10-12 18:26:34  INFO   late_googlenet_ordinal  [fold 4] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4429 val_qwk=0.4449
+2026-10-12 18:26:36  INFO   late_googlenet_ordinal  [fold 4] thresholds tuned on validation: 0.82 0.57 0.20 0.26
+2026-10-12 18:26:39  INFO   late_googlenet_ordinal  [fold 4] test accuracy=0.3387 f1=0.2723 mean_absolute_error=0.8352 one_off_accuracy=0.8467 amae=0.9461 qwk=0.4209 tuned_qwk=0.4549 alpha_ordinal=0.4289 score_mae=0.6604 score_spearman=0.5673 monotonicity_violation_pct=0.0000
+2026-10-12 18:26:39  INFO   late_googlenet_ordinal  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-12 18:26:39  INFO   late_googlenet_ordinal  [fold 5] late fusion: street encoder from results/grid/street_googlenet_ordinal/fold_5_best.pt
+2026-10-12 18:26:39  INFO   late_googlenet_ordinal  [fold 5] late fusion: aerial encoder from results/grid/aerial_googlenet_ordinal/fold_5_best.pt
+2026-10-12 18:26:39  INFO   late_googlenet_ordinal  [fold 5] view=late backbone=googlenet weights=trained results/grid/street_googlenet_ordinal + results/grid/aerial_googlenet_ordinal
+2026-10-12 18:26:39  INFO   late_googlenet_ordinal  [fold 5] phase=fusion_head trainable params=1,051,140 lr=0.001
+2026-10-12 18:27:09  INFO   late_googlenet_ordinal  [fold 5] fusion_head epoch 1/20 train_loss=0.4181 val_loss=0.4553 val_qwk=0.3926 lr=1.00e-03 * (30s)
+2026-10-12 18:27:39  INFO   late_googlenet_ordinal  [fold 5] fusion_head epoch 2/20 train_loss=0.4009 val_loss=0.4528 val_qwk=0.3814 lr=1.00e-03 * (30s)
+2026-10-12 18:28:08  INFO   late_googlenet_ordinal  [fold 5] fusion_head epoch 3/20 train_loss=0.3958 val_loss=0.4666 val_qwk=0.3583 lr=1.00e-03 (29s)
+2026-10-12 18:28:38  INFO   late_googlenet_ordinal  [fold 5] fusion_head epoch 4/20 train_loss=0.3913 val_loss=0.4563 val_qwk=0.4216 lr=1.00e-03 (30s)
+2026-10-12 18:29:07  INFO   late_googlenet_ordinal  [fold 5] fusion_head epoch 5/20 train_loss=0.3867 val_loss=0.4606 val_qwk=0.3494 lr=1.00e-03 (29s)
+2026-10-12 18:29:36  INFO   late_googlenet_ordinal  [fold 5] fusion_head epoch 6/20 train_loss=0.3859 val_loss=0.4530 val_qwk=0.3734 lr=1.00e-03 (29s)
+2026-10-12 18:30:05  INFO   late_googlenet_ordinal  [fold 5] fusion_head epoch 7/20 train_loss=0.3811 val_loss=0.4520 val_qwk=0.3599 lr=1.00e-03 * (29s)
+2026-10-12 18:30:34  INFO   late_googlenet_ordinal  [fold 5] fusion_head epoch 8/20 train_loss=0.3788 val_loss=0.4701 val_qwk=0.4095 lr=1.00e-03 (29s)
+2026-10-12 18:31:03  INFO   late_googlenet_ordinal  [fold 5] fusion_head epoch 9/20 train_loss=0.3785 val_loss=0.4596 val_qwk=0.3577 lr=1.00e-03 (29s)
+2026-10-12 18:31:31  INFO   late_googlenet_ordinal  [fold 5] fusion_head epoch 10/20 train_loss=0.3752 val_loss=0.4628 val_qwk=0.3886 lr=1.00e-03 (29s)
+2026-10-12 18:32:00  INFO   late_googlenet_ordinal  [fold 5] fusion_head epoch 11/20 train_loss=0.3756 val_loss=0.4874 val_qwk=0.3434 lr=1.00e-03 (29s)
+2026-10-12 18:32:29  INFO   late_googlenet_ordinal  [fold 5] fusion_head epoch 12/20 train_loss=0.3721 val_loss=0.4680 val_qwk=0.3783 lr=1.00e-03 (29s)
+2026-10-12 18:32:29  INFO   late_googlenet_ordinal  [fold 5] fusion_head: early stop after 12 epochs, best so far epoch 7 (fusion_head) val_loss=0.4520 val_qwk=0.3599
+2026-10-12 18:32:31  INFO   late_googlenet_ordinal  [fold 5] thresholds tuned on validation: 0.71 0.54 0.30 0.22
+2026-10-12 18:32:33  INFO   late_googlenet_ordinal  [fold 5] test accuracy=0.3668 f1=0.3080 mean_absolute_error=0.8213 one_off_accuracy=0.8294 amae=0.9325 qwk=0.4604 tuned_qwk=0.4850 alpha_ordinal=0.4590 score_mae=0.5976 score_spearman=0.6261 monotonicity_violation_pct=0.0000
+2026-10-12 18:32:33  INFO   late_googlenet_ordinal  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-12 18:32:33  INFO   late_googlenet_ordinal  [fold 6] late fusion: street encoder from results/grid/street_googlenet_ordinal/fold_6_best.pt
+2026-10-12 18:32:34  INFO   late_googlenet_ordinal  [fold 6] late fusion: aerial encoder from results/grid/aerial_googlenet_ordinal/fold_6_best.pt
+2026-10-12 18:32:34  INFO   late_googlenet_ordinal  [fold 6] view=late backbone=googlenet weights=trained results/grid/street_googlenet_ordinal + results/grid/aerial_googlenet_ordinal
+2026-10-12 18:32:34  INFO   late_googlenet_ordinal  [fold 6] phase=fusion_head trainable params=1,051,140 lr=0.001
+2026-10-12 18:33:03  INFO   late_googlenet_ordinal  [fold 6] fusion_head epoch 1/20 train_loss=0.4093 val_loss=0.4729 val_qwk=0.4206 lr=1.00e-03 * (30s)
+2026-10-12 18:33:33  INFO   late_googlenet_ordinal  [fold 6] fusion_head epoch 2/20 train_loss=0.3914 val_loss=0.4766 val_qwk=0.4096 lr=1.00e-03 (29s)
+2026-10-12 18:34:02  INFO   late_googlenet_ordinal  [fold 6] fusion_head epoch 3/20 train_loss=0.3854 val_loss=0.4892 val_qwk=0.4146 lr=1.00e-03 (29s)
+2026-10-12 18:34:31  INFO   late_googlenet_ordinal  [fold 6] fusion_head epoch 4/20 train_loss=0.3825 val_loss=0.4660 val_qwk=0.3760 lr=1.00e-03 * (30s)
+2026-10-12 18:35:01  INFO   late_googlenet_ordinal  [fold 6] fusion_head epoch 5/20 train_loss=0.3785 val_loss=0.4694 val_qwk=0.3937 lr=1.00e-03 (30s)
+2026-10-12 18:35:30  INFO   late_googlenet_ordinal  [fold 6] fusion_head epoch 6/20 train_loss=0.3773 val_loss=0.4748 val_qwk=0.4110 lr=1.00e-03 (29s)
+2026-10-12 18:35:59  INFO   late_googlenet_ordinal  [fold 6] fusion_head epoch 7/20 train_loss=0.3725 val_loss=0.5071 val_qwk=0.3825 lr=1.00e-03 (29s)
+2026-10-12 18:36:28  INFO   late_googlenet_ordinal  [fold 6] fusion_head epoch 8/20 train_loss=0.3733 val_loss=0.4696 val_qwk=0.4128 lr=1.00e-03 (29s)
+2026-10-12 18:36:57  INFO   late_googlenet_ordinal  [fold 6] fusion_head epoch 9/20 train_loss=0.3684 val_loss=0.4843 val_qwk=0.4000 lr=1.00e-03 (29s)
+2026-10-12 18:36:57  INFO   late_googlenet_ordinal  [fold 6] fusion_head: early stop after 9 epochs, best so far epoch 4 (fusion_head) val_loss=0.4660 val_qwk=0.3760
+2026-10-12 18:36:59  INFO   late_googlenet_ordinal  [fold 6] thresholds tuned on validation: 0.66 0.35 0.38 0.24
+2026-10-12 18:37:01  INFO   late_googlenet_ordinal  [fold 6] test accuracy=0.3425 f1=0.2524 mean_absolute_error=0.8798 one_off_accuracy=0.8122 amae=1.0744 qwk=0.3034 tuned_qwk=0.4131 alpha_ordinal=0.3224 score_mae=0.6824 score_spearman=0.5204 monotonicity_violation_pct=0.0000
+2026-10-12 18:37:02  INFO   late_googlenet_ordinal  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-12 18:37:02  INFO   late_googlenet_ordinal  [fold 7] late fusion: street encoder from results/grid/street_googlenet_ordinal/fold_7_best.pt
+2026-10-12 18:37:02  INFO   late_googlenet_ordinal  [fold 7] late fusion: aerial encoder from results/grid/aerial_googlenet_ordinal/fold_7_best.pt
+2026-10-12 18:37:02  INFO   late_googlenet_ordinal  [fold 7] view=late backbone=googlenet weights=trained results/grid/street_googlenet_ordinal + results/grid/aerial_googlenet_ordinal
+2026-10-12 18:37:02  INFO   late_googlenet_ordinal  [fold 7] phase=fusion_head trainable params=1,051,140 lr=0.001
+2026-10-12 18:37:32  INFO   late_googlenet_ordinal  [fold 7] fusion_head epoch 1/20 train_loss=0.4132 val_loss=0.4492 val_qwk=0.4430 lr=1.00e-03 * (30s)
+2026-10-12 18:38:02  INFO   late_googlenet_ordinal  [fold 7] fusion_head epoch 2/20 train_loss=0.3975 val_loss=0.4440 val_qwk=0.4352 lr=1.00e-03 * (31s)
+2026-10-12 18:38:33  INFO   late_googlenet_ordinal  [fold 7] fusion_head epoch 3/20 train_loss=0.3932 val_loss=0.4468 val_qwk=0.4358 lr=1.00e-03 (30s)
+2026-10-12 18:39:03  INFO   late_googlenet_ordinal  [fold 7] fusion_head epoch 4/20 train_loss=0.3884 val_loss=0.4446 val_qwk=0.4401 lr=1.00e-03 (30s)
+2026-10-12 18:39:32  INFO   late_googlenet_ordinal  [fold 7] fusion_head epoch 5/20 train_loss=0.3824 val_loss=0.4569 val_qwk=0.4639 lr=1.00e-03 (30s)
+2026-10-12 18:40:01  INFO   late_googlenet_ordinal  [fold 7] fusion_head epoch 6/20 train_loss=0.3813 val_loss=0.4605 val_qwk=0.4433 lr=1.00e-03 (29s)
+2026-10-12 18:40:30  INFO   late_googlenet_ordinal  [fold 7] fusion_head epoch 7/20 train_loss=0.3771 val_loss=0.4935 val_qwk=0.3769 lr=1.00e-03 (29s)
+2026-10-12 18:40:30  INFO   late_googlenet_ordinal  [fold 7] fusion_head: early stop after 7 epochs, best so far epoch 2 (fusion_head) val_loss=0.4440 val_qwk=0.4352
+2026-10-12 18:40:32  INFO   late_googlenet_ordinal  [fold 7] thresholds tuned on validation: 0.61 0.53 0.48 0.22
+2026-10-12 18:40:34  INFO   late_googlenet_ordinal  [fold 7] test accuracy=0.3380 f1=0.2722 mean_absolute_error=0.8393 one_off_accuracy=0.8432 amae=0.9662 qwk=0.4158 tuned_qwk=0.4673 alpha_ordinal=0.4157 score_mae=0.6479 score_spearman=0.5508 monotonicity_violation_pct=0.0000
+2026-10-12 18:40:35  INFO   late_googlenet_ordinal  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-12 18:40:35  INFO   late_googlenet_ordinal  [fold 8] late fusion: street encoder from results/grid/street_googlenet_ordinal/fold_8_best.pt
+2026-10-12 18:40:35  INFO   late_googlenet_ordinal  [fold 8] late fusion: aerial encoder from results/grid/aerial_googlenet_ordinal/fold_8_best.pt
+2026-10-12 18:40:35  INFO   late_googlenet_ordinal  [fold 8] view=late backbone=googlenet weights=trained results/grid/street_googlenet_ordinal + results/grid/aerial_googlenet_ordinal
+2026-10-12 18:40:35  INFO   late_googlenet_ordinal  [fold 8] phase=fusion_head trainable params=1,051,140 lr=0.001
+2026-10-12 18:41:05  INFO   late_googlenet_ordinal  [fold 8] fusion_head epoch 1/20 train_loss=0.4031 val_loss=0.4702 val_qwk=0.4032 lr=1.00e-03 * (30s)
+2026-10-12 18:41:34  INFO   late_googlenet_ordinal  [fold 8] fusion_head epoch 2/20 train_loss=0.3882 val_loss=0.4649 val_qwk=0.4031 lr=1.00e-03 * (29s)
+2026-10-12 18:42:03  INFO   late_googlenet_ordinal  [fold 8] fusion_head epoch 3/20 train_loss=0.3837 val_loss=0.4804 val_qwk=0.3893 lr=1.00e-03 (29s)
+2026-10-12 18:42:33  INFO   late_googlenet_ordinal  [fold 8] fusion_head epoch 4/20 train_loss=0.3805 val_loss=0.4742 val_qwk=0.4158 lr=1.00e-03 (29s)
+2026-10-12 18:43:02  INFO   late_googlenet_ordinal  [fold 8] fusion_head epoch 5/20 train_loss=0.3774 val_loss=0.4824 val_qwk=0.3902 lr=1.00e-03 (29s)
+2026-10-12 18:43:31  INFO   late_googlenet_ordinal  [fold 8] fusion_head epoch 6/20 train_loss=0.3751 val_loss=0.4760 val_qwk=0.3837 lr=1.00e-03 (29s)
+2026-10-12 18:44:00  INFO   late_googlenet_ordinal  [fold 8] fusion_head epoch 7/20 train_loss=0.3707 val_loss=0.4769 val_qwk=0.3903 lr=1.00e-03 (29s)
+2026-10-12 18:44:00  INFO   late_googlenet_ordinal  [fold 8] fusion_head: early stop after 7 epochs, best so far epoch 2 (fusion_head) val_loss=0.4649 val_qwk=0.4031
+2026-10-12 18:44:02  INFO   late_googlenet_ordinal  [fold 8] thresholds tuned on validation: 0.76 0.31 0.35 0.37
+2026-10-12 18:44:05  INFO   late_googlenet_ordinal  [fold 8] test accuracy=0.3394 f1=0.2752 mean_absolute_error=0.8303 one_off_accuracy=0.8472 amae=0.9595 qwk=0.4443 tuned_qwk=0.4537 alpha_ordinal=0.4557 score_mae=0.6383 score_spearman=0.5860 monotonicity_violation_pct=0.0000
+2026-10-12 18:44:05  INFO   late_googlenet_ordinal  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-12 18:44:05  INFO   late_googlenet_ordinal  [fold 9] late fusion: street encoder from results/grid/street_googlenet_ordinal/fold_9_best.pt
+2026-10-12 18:44:05  INFO   late_googlenet_ordinal  [fold 9] late fusion: aerial encoder from results/grid/aerial_googlenet_ordinal/fold_9_best.pt
+2026-10-12 18:44:05  INFO   late_googlenet_ordinal  [fold 9] view=late backbone=googlenet weights=trained results/grid/street_googlenet_ordinal + results/grid/aerial_googlenet_ordinal
+2026-10-12 18:44:05  INFO   late_googlenet_ordinal  [fold 9] phase=fusion_head trainable params=1,051,140 lr=0.001
+2026-10-12 18:44:34  INFO   late_googlenet_ordinal  [fold 9] fusion_head epoch 1/20 train_loss=0.4078 val_loss=0.4451 val_qwk=0.4368 lr=1.00e-03 * (29s)
+2026-10-12 18:45:03  INFO   late_googlenet_ordinal  [fold 9] fusion_head epoch 2/20 train_loss=0.3924 val_loss=0.4428 val_qwk=0.4030 lr=1.00e-03 * (29s)
+2026-10-12 18:45:31  INFO   late_googlenet_ordinal  [fold 9] fusion_head epoch 3/20 train_loss=0.3835 val_loss=0.4499 val_qwk=0.4077 lr=1.00e-03 (29s)
+2026-10-12 18:46:00  INFO   late_googlenet_ordinal  [fold 9] fusion_head epoch 4/20 train_loss=0.3817 val_loss=0.4530 val_qwk=0.4343 lr=1.00e-03 (29s)
+2026-10-12 18:46:29  INFO   late_googlenet_ordinal  [fold 9] fusion_head epoch 5/20 train_loss=0.3768 val_loss=0.4771 val_qwk=0.4209 lr=1.00e-03 (29s)
+2026-10-12 18:46:58  INFO   late_googlenet_ordinal  [fold 9] fusion_head epoch 6/20 train_loss=0.3748 val_loss=0.4656 val_qwk=0.4226 lr=1.00e-03 (29s)
+2026-10-12 18:47:29  INFO   late_googlenet_ordinal  [fold 9] fusion_head epoch 7/20 train_loss=0.3711 val_loss=0.4541 val_qwk=0.4035 lr=1.00e-03 (31s)
+2026-10-12 18:47:29  INFO   late_googlenet_ordinal  [fold 9] fusion_head: early stop after 7 epochs, best so far epoch 2 (fusion_head) val_loss=0.4428 val_qwk=0.4030
+2026-10-12 18:47:31  INFO   late_googlenet_ordinal  [fold 9] thresholds tuned on validation: 0.94 0.46 0.26 0.21
+2026-10-12 18:47:33  INFO   late_googlenet_ordinal  [fold 9] test accuracy=0.3282 f1=0.2566 mean_absolute_error=0.8694 one_off_accuracy=0.8341 amae=0.9863 qwk=0.4074 tuned_qwk=0.4435 alpha_ordinal=0.4068 score_mae=0.6696 score_spearman=0.5394 monotonicity_violation_pct=0.0000
+2026-10-12 18:47:34  INFO   late_googlenet_ordinal  [summary] 10 folds -> results/grid/late_googlenet_ordinal/summary.csv

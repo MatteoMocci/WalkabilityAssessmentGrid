@@ -47,3 +47,9 @@ results/grid/avg_alexnet_ordinal: 10 folds averaged
 2026-10-12 17:00:37  [late deit_base] start
 2026-10-12 17:36:48  [late deit_base] done in 36 min
 2026-10-12 17:36:48  [late vgg16] start
+2026-10-12 18:10:15  [late vgg16] done in 33 min
+2026-10-12 18:10:15  [late googlenet] start
+2026-10-12 18:47:34  [late googlenet] done in 37 min
+2026-10-12 18:47:35  [late alexnet] start
+2026-10-12 19:19:27  [late alexnet] done in 31 min
+2026-10-12 19:19:27  [dual swin_base] start

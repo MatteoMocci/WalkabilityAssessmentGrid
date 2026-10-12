@@ -5,3 +5,143 @@
 2026-10-12 17:36:53  INFO   late_vgg16_ordinal  [fold 0] view=late backbone=vgg16 weights=trained results/grid/street_vgg16_ordinal + results/grid/aerial_vgg16_ordinal
 2026-10-12 17:36:53  INFO   late_vgg16_ordinal  [fold 0] phase=fusion_head trainable params=4,196,868 lr=0.001
 2026-10-12 17:37:23  INFO   late_vgg16_ordinal  [fold 0] fusion_head epoch 1/20 train_loss=0.4228 val_loss=0.4368 val_qwk=0.5044 lr=1.00e-03 * (30s)
+2026-10-12 17:37:52  INFO   late_vgg16_ordinal  [fold 0] fusion_head epoch 2/20 train_loss=0.4059 val_loss=0.4429 val_qwk=0.4973 lr=1.00e-03 (29s)
+2026-10-12 17:38:20  INFO   late_vgg16_ordinal  [fold 0] fusion_head epoch 3/20 train_loss=0.3972 val_loss=0.4469 val_qwk=0.5136 lr=1.00e-03 (28s)
+2026-10-12 17:38:48  INFO   late_vgg16_ordinal  [fold 0] fusion_head epoch 4/20 train_loss=0.3883 val_loss=0.4381 val_qwk=0.5063 lr=1.00e-03 (28s)
+2026-10-12 17:39:17  INFO   late_vgg16_ordinal  [fold 0] fusion_head epoch 5/20 train_loss=0.3815 val_loss=0.4583 val_qwk=0.5141 lr=1.00e-03 (28s)
+2026-10-12 17:39:45  INFO   late_vgg16_ordinal  [fold 0] fusion_head epoch 6/20 train_loss=0.3729 val_loss=0.4503 val_qwk=0.4758 lr=1.00e-03 (29s)
+2026-10-12 17:39:45  INFO   late_vgg16_ordinal  [fold 0] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4368 val_qwk=0.5044
+2026-10-12 17:39:48  INFO   late_vgg16_ordinal  [fold 0] thresholds tuned on validation: 0.74 0.43 0.52 0.24
+2026-10-12 17:39:52  INFO   late_vgg16_ordinal  [fold 0] test accuracy=0.3882 f1=0.3122 mean_absolute_error=0.7791 one_off_accuracy=0.8487 amae=0.9068 qwk=0.4584 tuned_qwk=0.4803 alpha_ordinal=0.4529 score_mae=0.6113 score_spearman=0.5997 monotonicity_violation_pct=0.0000
+2026-10-12 17:39:52  INFO   late_vgg16_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-12 17:39:53  INFO   late_vgg16_ordinal  [fold 1] late fusion: street encoder from results/grid/street_vgg16_ordinal/fold_1_best.pt
+2026-10-12 17:39:54  INFO   late_vgg16_ordinal  [fold 1] late fusion: aerial encoder from results/grid/aerial_vgg16_ordinal/fold_1_best.pt
+2026-10-12 17:39:54  INFO   late_vgg16_ordinal  [fold 1] view=late backbone=vgg16 weights=trained results/grid/street_vgg16_ordinal + results/grid/aerial_vgg16_ordinal
+2026-10-12 17:39:54  INFO   late_vgg16_ordinal  [fold 1] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 17:40:23  INFO   late_vgg16_ordinal  [fold 1] fusion_head epoch 1/20 train_loss=0.4282 val_loss=0.4228 val_qwk=0.4524 lr=1.00e-03 * (30s)
+2026-10-12 17:40:52  INFO   late_vgg16_ordinal  [fold 1] fusion_head epoch 2/20 train_loss=0.4134 val_loss=0.4284 val_qwk=0.4154 lr=1.00e-03 (29s)
+2026-10-12 17:41:21  INFO   late_vgg16_ordinal  [fold 1] fusion_head epoch 3/20 train_loss=0.4017 val_loss=0.4258 val_qwk=0.4542 lr=1.00e-03 (29s)
+2026-10-12 17:41:50  INFO   late_vgg16_ordinal  [fold 1] fusion_head epoch 4/20 train_loss=0.3953 val_loss=0.4290 val_qwk=0.4024 lr=1.00e-03 (29s)
+2026-10-12 17:42:19  INFO   late_vgg16_ordinal  [fold 1] fusion_head epoch 5/20 train_loss=0.3858 val_loss=0.4373 val_qwk=0.4317 lr=1.00e-03 (29s)
+2026-10-12 17:42:48  INFO   late_vgg16_ordinal  [fold 1] fusion_head epoch 6/20 train_loss=0.3791 val_loss=0.4312 val_qwk=0.4406 lr=1.00e-03 (29s)
+2026-10-12 17:42:48  INFO   late_vgg16_ordinal  [fold 1] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4228 val_qwk=0.4524
+2026-10-12 17:42:51  INFO   late_vgg16_ordinal  [fold 1] thresholds tuned on validation: 0.79 0.48 0.53 0.27
+2026-10-12 17:42:54  INFO   late_vgg16_ordinal  [fold 1] test accuracy=0.3837 f1=0.3094 mean_absolute_error=0.7793 one_off_accuracy=0.8648 amae=0.8691 qwk=0.5086 tuned_qwk=0.5542 alpha_ordinal=0.5026 score_mae=0.5953 score_spearman=0.6837 monotonicity_violation_pct=0.0000
+2026-10-12 17:42:54  INFO   late_vgg16_ordinal  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-12 17:42:55  INFO   late_vgg16_ordinal  [fold 2] late fusion: street encoder from results/grid/street_vgg16_ordinal/fold_2_best.pt
+2026-10-12 17:42:56  INFO   late_vgg16_ordinal  [fold 2] late fusion: aerial encoder from results/grid/aerial_vgg16_ordinal/fold_2_best.pt
+2026-10-12 17:42:56  INFO   late_vgg16_ordinal  [fold 2] view=late backbone=vgg16 weights=trained results/grid/street_vgg16_ordinal + results/grid/aerial_vgg16_ordinal
+2026-10-12 17:42:56  INFO   late_vgg16_ordinal  [fold 2] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 17:43:26  INFO   late_vgg16_ordinal  [fold 2] fusion_head epoch 1/20 train_loss=0.4113 val_loss=0.4352 val_qwk=0.4314 lr=1.00e-03 * (30s)
+2026-10-12 17:43:55  INFO   late_vgg16_ordinal  [fold 2] fusion_head epoch 2/20 train_loss=0.3923 val_loss=0.4465 val_qwk=0.4469 lr=1.00e-03 (29s)
+2026-10-12 17:44:24  INFO   late_vgg16_ordinal  [fold 2] fusion_head epoch 3/20 train_loss=0.3809 val_loss=0.4474 val_qwk=0.4386 lr=1.00e-03 (29s)
+2026-10-12 17:44:53  INFO   late_vgg16_ordinal  [fold 2] fusion_head epoch 4/20 train_loss=0.3723 val_loss=0.4513 val_qwk=0.4210 lr=1.00e-03 (29s)
+2026-10-12 17:45:22  INFO   late_vgg16_ordinal  [fold 2] fusion_head epoch 5/20 train_loss=0.3664 val_loss=0.4634 val_qwk=0.4346 lr=1.00e-03 (29s)
+2026-10-12 17:45:51  INFO   late_vgg16_ordinal  [fold 2] fusion_head epoch 6/20 train_loss=0.3559 val_loss=0.4571 val_qwk=0.4416 lr=1.00e-03 (29s)
+2026-10-12 17:45:51  INFO   late_vgg16_ordinal  [fold 2] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4352 val_qwk=0.4314
+2026-10-12 17:45:54  INFO   late_vgg16_ordinal  [fold 2] thresholds tuned on validation: 0.81 0.45 0.33 0.21
+2026-10-12 17:45:58  INFO   late_vgg16_ordinal  [fold 2] test accuracy=0.4106 f1=0.3170 mean_absolute_error=0.7586 one_off_accuracy=0.8599 amae=0.9087 qwk=0.4644 tuned_qwk=0.4700 alpha_ordinal=0.4581 score_mae=0.5941 score_spearman=0.5843 monotonicity_violation_pct=0.0000
+2026-10-12 17:45:58  INFO   late_vgg16_ordinal  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-12 17:45:59  INFO   late_vgg16_ordinal  [fold 3] late fusion: street encoder from results/grid/street_vgg16_ordinal/fold_3_best.pt
+2026-10-12 17:45:59  INFO   late_vgg16_ordinal  [fold 3] late fusion: aerial encoder from results/grid/aerial_vgg16_ordinal/fold_3_best.pt
+2026-10-12 17:45:59  INFO   late_vgg16_ordinal  [fold 3] view=late backbone=vgg16 weights=trained results/grid/street_vgg16_ordinal + results/grid/aerial_vgg16_ordinal
+2026-10-12 17:45:59  INFO   late_vgg16_ordinal  [fold 3] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 17:46:30  INFO   late_vgg16_ordinal  [fold 3] fusion_head epoch 1/20 train_loss=0.4171 val_loss=0.4244 val_qwk=0.5050 lr=1.00e-03 * (30s)
+2026-10-12 17:46:59  INFO   late_vgg16_ordinal  [fold 3] fusion_head epoch 2/20 train_loss=0.3957 val_loss=0.4369 val_qwk=0.4901 lr=1.00e-03 (29s)
+2026-10-12 17:47:28  INFO   late_vgg16_ordinal  [fold 3] fusion_head epoch 3/20 train_loss=0.3888 val_loss=0.4357 val_qwk=0.5083 lr=1.00e-03 (29s)
+2026-10-12 17:47:57  INFO   late_vgg16_ordinal  [fold 3] fusion_head epoch 4/20 train_loss=0.3808 val_loss=0.4504 val_qwk=0.4716 lr=1.00e-03 (29s)
+2026-10-12 17:48:26  INFO   late_vgg16_ordinal  [fold 3] fusion_head epoch 5/20 train_loss=0.3698 val_loss=0.4483 val_qwk=0.4589 lr=1.00e-03 (29s)
+2026-10-12 17:48:55  INFO   late_vgg16_ordinal  [fold 3] fusion_head epoch 6/20 train_loss=0.3652 val_loss=0.4611 val_qwk=0.4901 lr=1.00e-03 (29s)
+2026-10-12 17:48:55  INFO   late_vgg16_ordinal  [fold 3] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4244 val_qwk=0.5050
+2026-10-12 17:48:58  INFO   late_vgg16_ordinal  [fold 3] thresholds tuned on validation: 0.80 0.37 0.48 0.34
+2026-10-12 17:49:01  INFO   late_vgg16_ordinal  [fold 3] test accuracy=0.4008 f1=0.3216 mean_absolute_error=0.7717 one_off_accuracy=0.8523 amae=0.9326 qwk=0.4462 tuned_qwk=0.4718 alpha_ordinal=0.4347 score_mae=0.5836 score_spearman=0.5567 monotonicity_violation_pct=0.0000
+2026-10-12 17:49:01  INFO   late_vgg16_ordinal  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-12 17:49:02  INFO   late_vgg16_ordinal  [fold 4] late fusion: street encoder from results/grid/street_vgg16_ordinal/fold_4_best.pt
+2026-10-12 17:49:03  INFO   late_vgg16_ordinal  [fold 4] late fusion: aerial encoder from results/grid/aerial_vgg16_ordinal/fold_4_best.pt
+2026-10-12 17:49:03  INFO   late_vgg16_ordinal  [fold 4] view=late backbone=vgg16 weights=trained results/grid/street_vgg16_ordinal + results/grid/aerial_vgg16_ordinal
+2026-10-12 17:49:03  INFO   late_vgg16_ordinal  [fold 4] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 17:49:33  INFO   late_vgg16_ordinal  [fold 4] fusion_head epoch 1/20 train_loss=0.4280 val_loss=0.4245 val_qwk=0.4729 lr=1.00e-03 * (30s)
+2026-10-12 17:50:03  INFO   late_vgg16_ordinal  [fold 4] fusion_head epoch 2/20 train_loss=0.4067 val_loss=0.4348 val_qwk=0.4978 lr=1.00e-03 (29s)
+2026-10-12 17:50:32  INFO   late_vgg16_ordinal  [fold 4] fusion_head epoch 3/20 train_loss=0.3989 val_loss=0.4324 val_qwk=0.4904 lr=1.00e-03 (29s)
+2026-10-12 17:51:01  INFO   late_vgg16_ordinal  [fold 4] fusion_head epoch 4/20 train_loss=0.3916 val_loss=0.4413 val_qwk=0.4775 lr=1.00e-03 (29s)
+2026-10-12 17:51:31  INFO   late_vgg16_ordinal  [fold 4] fusion_head epoch 5/20 train_loss=0.3839 val_loss=0.4414 val_qwk=0.5138 lr=1.00e-03 (29s)
+2026-10-12 17:52:00  INFO   late_vgg16_ordinal  [fold 4] fusion_head epoch 6/20 train_loss=0.3738 val_loss=0.4412 val_qwk=0.4915 lr=1.00e-03 (29s)
+2026-10-12 17:52:00  INFO   late_vgg16_ordinal  [fold 4] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4245 val_qwk=0.4729
+2026-10-12 17:52:03  INFO   late_vgg16_ordinal  [fold 4] thresholds tuned on validation: 0.71 0.63 0.43 0.35
+2026-10-12 17:52:06  INFO   late_vgg16_ordinal  [fold 4] test accuracy=0.3799 f1=0.3057 mean_absolute_error=0.7712 one_off_accuracy=0.8684 amae=0.8863 qwk=0.4877 tuned_qwk=0.5285 alpha_ordinal=0.4952 score_mae=0.5989 score_spearman=0.6527 monotonicity_violation_pct=0.0000
+2026-10-12 17:52:06  INFO   late_vgg16_ordinal  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-12 17:52:07  INFO   late_vgg16_ordinal  [fold 5] late fusion: street encoder from results/grid/street_vgg16_ordinal/fold_5_best.pt
+2026-10-12 17:52:08  INFO   late_vgg16_ordinal  [fold 5] late fusion: aerial encoder from results/grid/aerial_vgg16_ordinal/fold_5_best.pt
+2026-10-12 17:52:08  INFO   late_vgg16_ordinal  [fold 5] view=late backbone=vgg16 weights=trained results/grid/street_vgg16_ordinal + results/grid/aerial_vgg16_ordinal
+2026-10-12 17:52:08  INFO   late_vgg16_ordinal  [fold 5] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 17:52:38  INFO   late_vgg16_ordinal  [fold 5] fusion_head epoch 1/20 train_loss=0.4270 val_loss=0.4476 val_qwk=0.3912 lr=1.00e-03 * (30s)
+2026-10-12 17:53:08  INFO   late_vgg16_ordinal  [fold 5] fusion_head epoch 2/20 train_loss=0.4099 val_loss=0.4500 val_qwk=0.3982 lr=1.00e-03 (30s)
+2026-10-12 17:53:38  INFO   late_vgg16_ordinal  [fold 5] fusion_head epoch 3/20 train_loss=0.4036 val_loss=0.4616 val_qwk=0.4229 lr=1.00e-03 (29s)
+2026-10-12 17:54:07  INFO   late_vgg16_ordinal  [fold 5] fusion_head epoch 4/20 train_loss=0.3958 val_loss=0.4571 val_qwk=0.4449 lr=1.00e-03 (30s)
+2026-10-12 17:54:37  INFO   late_vgg16_ordinal  [fold 5] fusion_head epoch 5/20 train_loss=0.3884 val_loss=0.4557 val_qwk=0.4215 lr=1.00e-03 (30s)
+2026-10-12 17:55:06  INFO   late_vgg16_ordinal  [fold 5] fusion_head epoch 6/20 train_loss=0.3810 val_loss=0.4700 val_qwk=0.3974 lr=1.00e-03 (30s)
+2026-10-12 17:55:06  INFO   late_vgg16_ordinal  [fold 5] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4476 val_qwk=0.3912
+2026-10-12 17:55:09  INFO   late_vgg16_ordinal  [fold 5] thresholds tuned on validation: 0.93 0.37 0.36 0.24
+2026-10-12 17:55:12  INFO   late_vgg16_ordinal  [fold 5] test accuracy=0.3914 f1=0.2883 mean_absolute_error=0.7652 one_off_accuracy=0.8586 amae=0.8887 qwk=0.4951 tuned_qwk=0.5233 alpha_ordinal=0.4947 score_mae=0.5608 score_spearman=0.6760 monotonicity_violation_pct=0.0000
+2026-10-12 17:55:12  INFO   late_vgg16_ordinal  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-12 17:55:13  INFO   late_vgg16_ordinal  [fold 6] late fusion: street encoder from results/grid/street_vgg16_ordinal/fold_6_best.pt
+2026-10-12 17:55:14  INFO   late_vgg16_ordinal  [fold 6] late fusion: aerial encoder from results/grid/aerial_vgg16_ordinal/fold_6_best.pt
+2026-10-12 17:55:14  INFO   late_vgg16_ordinal  [fold 6] view=late backbone=vgg16 weights=trained results/grid/street_vgg16_ordinal + results/grid/aerial_vgg16_ordinal
+2026-10-12 17:55:14  INFO   late_vgg16_ordinal  [fold 6] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 17:55:45  INFO   late_vgg16_ordinal  [fold 6] fusion_head epoch 1/20 train_loss=0.4118 val_loss=0.4820 val_qwk=0.4309 lr=1.00e-03 * (32s)
+2026-10-12 17:56:16  INFO   late_vgg16_ordinal  [fold 6] fusion_head epoch 2/20 train_loss=0.3929 val_loss=0.4832 val_qwk=0.4364 lr=1.00e-03 (31s)
+2026-10-12 17:56:47  INFO   late_vgg16_ordinal  [fold 6] fusion_head epoch 3/20 train_loss=0.3831 val_loss=0.4897 val_qwk=0.4500 lr=1.00e-03 (31s)
+2026-10-12 17:57:18  INFO   late_vgg16_ordinal  [fold 6] fusion_head epoch 4/20 train_loss=0.3744 val_loss=0.4749 val_qwk=0.4012 lr=1.00e-03 * (31s)
+2026-10-12 17:57:48  INFO   late_vgg16_ordinal  [fold 6] fusion_head epoch 5/20 train_loss=0.3676 val_loss=0.4852 val_qwk=0.4142 lr=1.00e-03 (30s)
+2026-10-12 17:58:19  INFO   late_vgg16_ordinal  [fold 6] fusion_head epoch 6/20 train_loss=0.3595 val_loss=0.5080 val_qwk=0.4070 lr=1.00e-03 (30s)
+2026-10-12 17:58:49  INFO   late_vgg16_ordinal  [fold 6] fusion_head epoch 7/20 train_loss=0.3515 val_loss=0.5126 val_qwk=0.4132 lr=1.00e-03 (30s)
+2026-10-12 17:59:20  INFO   late_vgg16_ordinal  [fold 6] fusion_head epoch 8/20 train_loss=0.3415 val_loss=0.5184 val_qwk=0.4251 lr=1.00e-03 (31s)
+2026-10-12 17:59:50  INFO   late_vgg16_ordinal  [fold 6] fusion_head epoch 9/20 train_loss=0.3355 val_loss=0.5245 val_qwk=0.4091 lr=1.00e-03 (31s)
+2026-10-12 17:59:50  INFO   late_vgg16_ordinal  [fold 6] fusion_head: early stop after 9 epochs, best so far epoch 4 (fusion_head) val_loss=0.4749 val_qwk=0.4012
+2026-10-12 17:59:53  INFO   late_vgg16_ordinal  [fold 6] thresholds tuned on validation: 0.65 0.56 0.44 0.29
+2026-10-12 17:59:56  INFO   late_vgg16_ordinal  [fold 6] test accuracy=0.3273 f1=0.2238 mean_absolute_error=0.8301 one_off_accuracy=0.8494 amae=0.9947 qwk=0.3816 tuned_qwk=0.4168 alpha_ordinal=0.4035 score_mae=0.6452 score_spearman=0.5621 monotonicity_violation_pct=0.0000
+2026-10-12 17:59:56  INFO   late_vgg16_ordinal  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-12 17:59:57  INFO   late_vgg16_ordinal  [fold 7] late fusion: street encoder from results/grid/street_vgg16_ordinal/fold_7_best.pt
+2026-10-12 17:59:58  INFO   late_vgg16_ordinal  [fold 7] late fusion: aerial encoder from results/grid/aerial_vgg16_ordinal/fold_7_best.pt
+2026-10-12 17:59:58  INFO   late_vgg16_ordinal  [fold 7] view=late backbone=vgg16 weights=trained results/grid/street_vgg16_ordinal + results/grid/aerial_vgg16_ordinal
+2026-10-12 17:59:58  INFO   late_vgg16_ordinal  [fold 7] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 18:00:29  INFO   late_vgg16_ordinal  [fold 7] fusion_head epoch 1/20 train_loss=0.4146 val_loss=0.4581 val_qwk=0.4136 lr=1.00e-03 * (31s)
+2026-10-12 18:00:59  INFO   late_vgg16_ordinal  [fold 7] fusion_head epoch 2/20 train_loss=0.3969 val_loss=0.4479 val_qwk=0.3917 lr=1.00e-03 * (30s)
+2026-10-12 18:01:29  INFO   late_vgg16_ordinal  [fold 7] fusion_head epoch 3/20 train_loss=0.3891 val_loss=0.4656 val_qwk=0.4013 lr=1.00e-03 (30s)
+2026-10-12 18:01:58  INFO   late_vgg16_ordinal  [fold 7] fusion_head epoch 4/20 train_loss=0.3809 val_loss=0.4674 val_qwk=0.4050 lr=1.00e-03 (30s)
+2026-10-12 18:02:28  INFO   late_vgg16_ordinal  [fold 7] fusion_head epoch 5/20 train_loss=0.3732 val_loss=0.4734 val_qwk=0.4254 lr=1.00e-03 (30s)
+2026-10-12 18:02:58  INFO   late_vgg16_ordinal  [fold 7] fusion_head epoch 6/20 train_loss=0.3648 val_loss=0.4933 val_qwk=0.4150 lr=1.00e-03 (30s)
+2026-10-12 18:03:28  INFO   late_vgg16_ordinal  [fold 7] fusion_head epoch 7/20 train_loss=0.3576 val_loss=0.5157 val_qwk=0.3514 lr=1.00e-03 (30s)
+2026-10-12 18:03:28  INFO   late_vgg16_ordinal  [fold 7] fusion_head: early stop after 7 epochs, best so far epoch 2 (fusion_head) val_loss=0.4479 val_qwk=0.3917
+2026-10-12 18:03:31  INFO   late_vgg16_ordinal  [fold 7] thresholds tuned on validation: 0.75 0.58 0.40 0.30
+2026-10-12 18:03:34  INFO   late_vgg16_ordinal  [fold 7] test accuracy=0.3252 f1=0.2687 mean_absolute_error=0.8753 one_off_accuracy=0.8213 amae=0.9928 qwk=0.3920 tuned_qwk=0.4078 alpha_ordinal=0.3774 score_mae=0.6724 score_spearman=0.5178 monotonicity_violation_pct=0.0000
+2026-10-12 18:03:34  INFO   late_vgg16_ordinal  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-12 18:03:35  INFO   late_vgg16_ordinal  [fold 8] late fusion: street encoder from results/grid/street_vgg16_ordinal/fold_8_best.pt
+2026-10-12 18:03:35  INFO   late_vgg16_ordinal  [fold 8] late fusion: aerial encoder from results/grid/aerial_vgg16_ordinal/fold_8_best.pt
+2026-10-12 18:03:36  INFO   late_vgg16_ordinal  [fold 8] view=late backbone=vgg16 weights=trained results/grid/street_vgg16_ordinal + results/grid/aerial_vgg16_ordinal
+2026-10-12 18:03:36  INFO   late_vgg16_ordinal  [fold 8] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 18:04:06  INFO   late_vgg16_ordinal  [fold 8] fusion_head epoch 1/20 train_loss=0.4132 val_loss=0.4743 val_qwk=0.4273 lr=1.00e-03 * (31s)
+2026-10-12 18:04:36  INFO   late_vgg16_ordinal  [fold 8] fusion_head epoch 2/20 train_loss=0.3914 val_loss=0.4642 val_qwk=0.4008 lr=1.00e-03 * (30s)
+2026-10-12 18:05:06  INFO   late_vgg16_ordinal  [fold 8] fusion_head epoch 3/20 train_loss=0.3825 val_loss=0.4871 val_qwk=0.3471 lr=1.00e-03 (30s)
+2026-10-12 18:05:36  INFO   late_vgg16_ordinal  [fold 8] fusion_head epoch 4/20 train_loss=0.3754 val_loss=0.4847 val_qwk=0.3997 lr=1.00e-03 (30s)
+2026-10-12 18:06:06  INFO   late_vgg16_ordinal  [fold 8] fusion_head epoch 5/20 train_loss=0.3662 val_loss=0.4826 val_qwk=0.4038 lr=1.00e-03 (30s)
+2026-10-12 18:06:35  INFO   late_vgg16_ordinal  [fold 8] fusion_head epoch 6/20 train_loss=0.3559 val_loss=0.4896 val_qwk=0.4036 lr=1.00e-03 (30s)
+2026-10-12 18:07:05  INFO   late_vgg16_ordinal  [fold 8] fusion_head epoch 7/20 train_loss=0.3503 val_loss=0.4901 val_qwk=0.4023 lr=1.00e-03 (30s)
+2026-10-12 18:07:05  INFO   late_vgg16_ordinal  [fold 8] fusion_head: early stop after 7 epochs, best so far epoch 2 (fusion_head) val_loss=0.4642 val_qwk=0.4008
+2026-10-12 18:07:08  INFO   late_vgg16_ordinal  [fold 8] thresholds tuned on validation: 0.68 0.46 0.48 0.22
+2026-10-12 18:07:11  INFO   late_vgg16_ordinal  [fold 8] test accuracy=0.3653 f1=0.2918 mean_absolute_error=0.8148 one_off_accuracy=0.8407 amae=0.9623 qwk=0.4195 tuned_qwk=0.4591 alpha_ordinal=0.4272 score_mae=0.6540 score_spearman=0.5435 monotonicity_violation_pct=0.0000
+2026-10-12 18:07:11  INFO   late_vgg16_ordinal  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-12 18:07:12  INFO   late_vgg16_ordinal  [fold 9] late fusion: street encoder from results/grid/street_vgg16_ordinal/fold_9_best.pt
+2026-10-12 18:07:13  INFO   late_vgg16_ordinal  [fold 9] late fusion: aerial encoder from results/grid/aerial_vgg16_ordinal/fold_9_best.pt
+2026-10-12 18:07:13  INFO   late_vgg16_ordinal  [fold 9] view=late backbone=vgg16 weights=trained results/grid/street_vgg16_ordinal + results/grid/aerial_vgg16_ordinal
+2026-10-12 18:07:13  INFO   late_vgg16_ordinal  [fold 9] phase=fusion_head trainable params=4,196,868 lr=0.001
+2026-10-12 18:07:43  INFO   late_vgg16_ordinal  [fold 9] fusion_head epoch 1/20 train_loss=0.3928 val_loss=0.4432 val_qwk=0.4651 lr=1.00e-03 * (30s)
+2026-10-12 18:08:12  INFO   late_vgg16_ordinal  [fold 9] fusion_head epoch 2/20 train_loss=0.3676 val_loss=0.4469 val_qwk=0.4463 lr=1.00e-03 (29s)
+2026-10-12 18:08:41  INFO   late_vgg16_ordinal  [fold 9] fusion_head epoch 3/20 train_loss=0.3560 val_loss=0.4524 val_qwk=0.4782 lr=1.00e-03 (29s)
+2026-10-12 18:09:10  INFO   late_vgg16_ordinal  [fold 9] fusion_head epoch 4/20 train_loss=0.3511 val_loss=0.4619 val_qwk=0.4393 lr=1.00e-03 (29s)
+2026-10-12 18:09:39  INFO   late_vgg16_ordinal  [fold 9] fusion_head epoch 5/20 train_loss=0.3393 val_loss=0.5023 val_qwk=0.4353 lr=1.00e-03 (29s)
+2026-10-12 18:10:08  INFO   late_vgg16_ordinal  [fold 9] fusion_head epoch 6/20 train_loss=0.3311 val_loss=0.4855 val_qwk=0.4426 lr=1.00e-03 (29s)
+2026-10-12 18:10:08  INFO   late_vgg16_ordinal  [fold 9] fusion_head: early stop after 6 epochs, best so far epoch 1 (fusion_head) val_loss=0.4432 val_qwk=0.4651
+2026-10-12 18:10:12  INFO   late_vgg16_ordinal  [fold 9] thresholds tuned on validation: 0.77 0.40 0.39 0.15
+2026-10-12 18:10:15  INFO   late_vgg16_ordinal  [fold 9] test accuracy=0.3565 f1=0.2884 mean_absolute_error=0.8388 one_off_accuracy=0.8341 amae=0.9552 qwk=0.4291 tuned_qwk=0.4554 alpha_ordinal=0.4316 score_mae=0.6470 score_spearman=0.5654 monotonicity_violation_pct=0.0000
+2026-10-12 18:10:15  INFO   late_vgg16_ordinal  [summary] 10 folds -> results/grid/late_vgg16_ordinal/summary.csv
