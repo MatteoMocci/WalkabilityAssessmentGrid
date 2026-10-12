@@ -16,3 +16,4 @@
 2026-10-12 19:32:22  INFO   dual_swin_base_ordinal  [fold 1] view=dual backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
 2026-10-12 19:32:22  INFO   dual_swin_base_ordinal  [fold 1] phase=full trainable params=176,587,588 lr=5e-05
 2026-10-12 19:35:23  INFO   dual_swin_base_ordinal  [fold 1] full epoch 1/20 train_loss=0.4420 val_loss=0.4678 val_qwk=0.4120 lr=5.00e-05 * (181s)
+2026-10-12 19:36:28  INFO   dual_swin_base_ordinal  [fold 1] full epoch 2/20 train_loss=0.4111 val_loss=0.4253 val_qwk=0.4606 lr=5.00e-05 * (65s)
