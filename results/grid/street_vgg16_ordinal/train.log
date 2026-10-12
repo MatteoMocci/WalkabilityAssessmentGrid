@@ -1,0 +1,144 @@
+2026-10-11 04:32:24  INFO   street_vgg16_ordinal  run=street_vgg16_ordinal view=street device=cuda points=4410 with images=4410
+2026-10-11 04:32:24  INFO   street_vgg16_ordinal  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-11 04:32:25  INFO   street_vgg16_ordinal  [fold 0] view=street backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 04:32:25  INFO   street_vgg16_ordinal  [fold 0] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 04:33:02  INFO   street_vgg16_ordinal  [fold 0] full epoch 1/20 train_loss=0.4540 val_loss=0.4459 val_qwk=0.5067 lr=1.00e-03 * (38s)
+2026-10-11 04:33:39  INFO   street_vgg16_ordinal  [fold 0] full epoch 2/20 train_loss=0.4310 val_loss=0.4398 val_qwk=0.4948 lr=1.00e-03 * (37s)
+2026-10-11 04:34:15  INFO   street_vgg16_ordinal  [fold 0] full epoch 3/20 train_loss=0.4223 val_loss=0.4281 val_qwk=0.5209 lr=1.00e-03 * (36s)
+2026-10-11 04:34:52  INFO   street_vgg16_ordinal  [fold 0] full epoch 4/20 train_loss=0.4134 val_loss=0.4281 val_qwk=0.5050 lr=1.00e-03 (36s)
+2026-10-11 04:35:28  INFO   street_vgg16_ordinal  [fold 0] full epoch 5/20 train_loss=0.4055 val_loss=0.4312 val_qwk=0.5317 lr=1.00e-03 (36s)
+2026-10-11 04:36:04  INFO   street_vgg16_ordinal  [fold 0] full epoch 6/20 train_loss=0.3949 val_loss=0.4486 val_qwk=0.4983 lr=1.00e-03 (36s)
+2026-10-11 04:36:41  INFO   street_vgg16_ordinal  [fold 0] full epoch 7/20 train_loss=0.3836 val_loss=0.4401 val_qwk=0.5202 lr=1.00e-03 (36s)
+2026-10-11 04:37:17  INFO   street_vgg16_ordinal  [fold 0] full epoch 8/20 train_loss=0.3715 val_loss=0.4535 val_qwk=0.4873 lr=1.00e-03 (36s)
+2026-10-11 04:37:17  INFO   street_vgg16_ordinal  [fold 0] full: early stop after 8 epochs, best so far epoch 3 (full) val_loss=0.4281 val_qwk=0.5209
+2026-10-11 04:37:20  INFO   street_vgg16_ordinal  [fold 0] thresholds tuned on validation: 0.77 0.35 0.56 0.28
+2026-10-11 04:37:23  INFO   street_vgg16_ordinal  [fold 0] test accuracy=0.3957 f1=0.3185 mean_absolute_error=0.7773 one_off_accuracy=0.8506 amae=0.9080 qwk=0.4612 tuned_qwk=0.4798 alpha_ordinal=0.4483 score_mae=0.6129 score_spearman=0.5953 monotonicity_violation_pct=0.0000
+2026-10-11 04:37:23  INFO   street_vgg16_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-11 04:37:23  INFO   street_vgg16_ordinal  [fold 1] view=street backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 04:37:23  INFO   street_vgg16_ordinal  [fold 1] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 04:38:01  INFO   street_vgg16_ordinal  [fold 1] full epoch 1/20 train_loss=0.4534 val_loss=0.4317 val_qwk=0.4343 lr=1.00e-03 * (38s)
+2026-10-11 04:38:38  INFO   street_vgg16_ordinal  [fold 1] full epoch 2/20 train_loss=0.4321 val_loss=0.4198 val_qwk=0.4559 lr=1.00e-03 * (37s)
+2026-10-11 04:39:15  INFO   street_vgg16_ordinal  [fold 1] full epoch 3/20 train_loss=0.4205 val_loss=0.4218 val_qwk=0.4648 lr=1.00e-03 (37s)
+2026-10-11 04:39:52  INFO   street_vgg16_ordinal  [fold 1] full epoch 4/20 train_loss=0.4129 val_loss=0.4212 val_qwk=0.4116 lr=1.00e-03 (37s)
+2026-10-11 04:40:29  INFO   street_vgg16_ordinal  [fold 1] full epoch 5/20 train_loss=0.4030 val_loss=0.4203 val_qwk=0.4709 lr=1.00e-03 (37s)
+2026-10-11 04:41:06  INFO   street_vgg16_ordinal  [fold 1] full epoch 6/20 train_loss=0.3930 val_loss=0.4288 val_qwk=0.4706 lr=1.00e-03 (37s)
+2026-10-11 04:41:43  INFO   street_vgg16_ordinal  [fold 1] full epoch 7/20 train_loss=0.3813 val_loss=0.4346 val_qwk=0.4705 lr=1.00e-03 (37s)
+2026-10-11 04:41:43  INFO   street_vgg16_ordinal  [fold 1] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4198 val_qwk=0.4559
+2026-10-11 04:41:46  INFO   street_vgg16_ordinal  [fold 1] thresholds tuned on validation: 0.71 0.50 0.46 0.24
+2026-10-11 04:41:48  INFO   street_vgg16_ordinal  [fold 1] test accuracy=0.3757 f1=0.3166 mean_absolute_error=0.7873 one_off_accuracy=0.8668 amae=0.8584 qwk=0.5214 tuned_qwk=0.5594 alpha_ordinal=0.5167 score_mae=0.5999 score_spearman=0.6866 monotonicity_violation_pct=0.0000
+2026-10-11 04:41:48  INFO   street_vgg16_ordinal  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-11 04:41:49  INFO   street_vgg16_ordinal  [fold 2] view=street backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 04:41:49  INFO   street_vgg16_ordinal  [fold 2] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 04:42:27  INFO   street_vgg16_ordinal  [fold 2] full epoch 1/20 train_loss=0.4549 val_loss=0.4268 val_qwk=0.4199 lr=1.00e-03 * (38s)
+2026-10-11 04:43:05  INFO   street_vgg16_ordinal  [fold 2] full epoch 2/20 train_loss=0.4300 val_loss=0.4276 val_qwk=0.4306 lr=1.00e-03 (37s)
+2026-10-11 04:43:42  INFO   street_vgg16_ordinal  [fold 2] full epoch 3/20 train_loss=0.4217 val_loss=0.4262 val_qwk=0.4387 lr=1.00e-03 * (37s)
+2026-10-11 04:44:19  INFO   street_vgg16_ordinal  [fold 2] full epoch 4/20 train_loss=0.4122 val_loss=0.4257 val_qwk=0.4304 lr=1.00e-03 * (37s)
+2026-10-11 04:44:57  INFO   street_vgg16_ordinal  [fold 2] full epoch 5/20 train_loss=0.4040 val_loss=0.4314 val_qwk=0.4353 lr=1.00e-03 (37s)
+2026-10-11 04:45:34  INFO   street_vgg16_ordinal  [fold 2] full epoch 6/20 train_loss=0.3945 val_loss=0.4305 val_qwk=0.4499 lr=1.00e-03 (37s)
+2026-10-11 04:46:11  INFO   street_vgg16_ordinal  [fold 2] full epoch 7/20 train_loss=0.3806 val_loss=0.4469 val_qwk=0.4236 lr=1.00e-03 (37s)
+2026-10-11 04:46:48  INFO   street_vgg16_ordinal  [fold 2] full epoch 8/20 train_loss=0.3677 val_loss=0.4529 val_qwk=0.4032 lr=1.00e-03 (37s)
+2026-10-11 04:47:26  INFO   street_vgg16_ordinal  [fold 2] full epoch 9/20 train_loss=0.3518 val_loss=0.4621 val_qwk=0.4285 lr=1.00e-03 (37s)
+2026-10-11 04:47:26  INFO   street_vgg16_ordinal  [fold 2] full: early stop after 9 epochs, best so far epoch 4 (full) val_loss=0.4257 val_qwk=0.4304
+2026-10-11 04:47:28  INFO   street_vgg16_ordinal  [fold 2] thresholds tuned on validation: 0.82 0.49 0.43 0.28
+2026-10-11 04:47:31  INFO   street_vgg16_ordinal  [fold 2] test accuracy=0.3912 f1=0.2835 mean_absolute_error=0.7500 one_off_accuracy=0.8772 amae=0.9276 qwk=0.4343 tuned_qwk=0.4907 alpha_ordinal=0.4408 score_mae=0.6021 score_spearman=0.5721 monotonicity_violation_pct=0.0000
+2026-10-11 04:47:31  INFO   street_vgg16_ordinal  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-11 04:47:32  INFO   street_vgg16_ordinal  [fold 3] view=street backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 04:47:32  INFO   street_vgg16_ordinal  [fold 3] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 04:48:10  INFO   street_vgg16_ordinal  [fold 3] full epoch 1/20 train_loss=0.4568 val_loss=0.4272 val_qwk=0.4906 lr=1.00e-03 * (38s)
+2026-10-11 04:48:47  INFO   street_vgg16_ordinal  [fold 3] full epoch 2/20 train_loss=0.4311 val_loss=0.4374 val_qwk=0.4868 lr=1.00e-03 (37s)
+2026-10-11 04:49:24  INFO   street_vgg16_ordinal  [fold 3] full epoch 3/20 train_loss=0.4230 val_loss=0.4232 val_qwk=0.5002 lr=1.00e-03 * (37s)
+2026-10-11 04:50:02  INFO   street_vgg16_ordinal  [fold 3] full epoch 4/20 train_loss=0.4143 val_loss=0.4227 val_qwk=0.5099 lr=1.00e-03 * (37s)
+2026-10-11 04:50:39  INFO   street_vgg16_ordinal  [fold 3] full epoch 5/20 train_loss=0.4036 val_loss=0.4226 val_qwk=0.4915 lr=1.00e-03 (37s)
+2026-10-11 04:51:16  INFO   street_vgg16_ordinal  [fold 3] full epoch 6/20 train_loss=0.3942 val_loss=0.4275 val_qwk=0.5219 lr=1.00e-03 (37s)
+2026-10-11 04:51:53  INFO   street_vgg16_ordinal  [fold 3] full epoch 7/20 train_loss=0.3815 val_loss=0.4329 val_qwk=0.5159 lr=1.00e-03 (37s)
+2026-10-11 04:52:30  INFO   street_vgg16_ordinal  [fold 3] full epoch 8/20 train_loss=0.3696 val_loss=0.4630 val_qwk=0.4772 lr=1.00e-03 (37s)
+2026-10-11 04:53:08  INFO   street_vgg16_ordinal  [fold 3] full epoch 9/20 train_loss=0.3526 val_loss=0.4699 val_qwk=0.4815 lr=1.00e-03 (37s)
+2026-10-11 04:53:08  INFO   street_vgg16_ordinal  [fold 3] full: early stop after 9 epochs, best so far epoch 4 (full) val_loss=0.4227 val_qwk=0.5099
+2026-10-11 04:53:10  INFO   street_vgg16_ordinal  [fold 3] thresholds tuned on validation: 0.60 0.55 0.44 0.22
+2026-10-11 04:53:13  INFO   street_vgg16_ordinal  [fold 3] test accuracy=0.4050 f1=0.3318 mean_absolute_error=0.7593 one_off_accuracy=0.8585 amae=0.9268 qwk=0.4463 tuned_qwk=0.4681 alpha_ordinal=0.4331 score_mae=0.5792 score_spearman=0.5667 monotonicity_violation_pct=0.0000
+2026-10-11 04:53:13  INFO   street_vgg16_ordinal  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-11 04:53:14  INFO   street_vgg16_ordinal  [fold 4] view=street backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 04:53:14  INFO   street_vgg16_ordinal  [fold 4] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 04:53:52  INFO   street_vgg16_ordinal  [fold 4] full epoch 1/20 train_loss=0.4520 val_loss=0.4335 val_qwk=0.4548 lr=1.00e-03 * (38s)
+2026-10-11 04:54:30  INFO   street_vgg16_ordinal  [fold 4] full epoch 2/20 train_loss=0.4294 val_loss=0.4295 val_qwk=0.4948 lr=1.00e-03 * (38s)
+2026-10-11 04:55:08  INFO   street_vgg16_ordinal  [fold 4] full epoch 3/20 train_loss=0.4200 val_loss=0.4235 val_qwk=0.5018 lr=1.00e-03 * (38s)
+2026-10-11 04:55:46  INFO   street_vgg16_ordinal  [fold 4] full epoch 4/20 train_loss=0.4109 val_loss=0.4262 val_qwk=0.4971 lr=1.00e-03 (38s)
+2026-10-11 04:56:23  INFO   street_vgg16_ordinal  [fold 4] full epoch 5/20 train_loss=0.4015 val_loss=0.4456 val_qwk=0.4637 lr=1.00e-03 (38s)
+2026-10-11 04:57:01  INFO   street_vgg16_ordinal  [fold 4] full epoch 6/20 train_loss=0.3910 val_loss=0.4341 val_qwk=0.5102 lr=1.00e-03 (38s)
+2026-10-11 04:57:39  INFO   street_vgg16_ordinal  [fold 4] full epoch 7/20 train_loss=0.3774 val_loss=0.4415 val_qwk=0.4890 lr=1.00e-03 (38s)
+2026-10-11 04:58:17  INFO   street_vgg16_ordinal  [fold 4] full epoch 8/20 train_loss=0.3625 val_loss=0.4410 val_qwk=0.4593 lr=1.00e-03 (38s)
+2026-10-11 04:58:17  INFO   street_vgg16_ordinal  [fold 4] full: early stop after 8 epochs, best so far epoch 3 (full) val_loss=0.4235 val_qwk=0.5018
+2026-10-11 04:58:19  INFO   street_vgg16_ordinal  [fold 4] thresholds tuned on validation: 0.77 0.56 0.37 0.24
+2026-10-11 04:58:22  INFO   street_vgg16_ordinal  [fold 4] test accuracy=0.3787 f1=0.3157 mean_absolute_error=0.7735 one_off_accuracy=0.8673 amae=0.8805 qwk=0.4804 tuned_qwk=0.5426 alpha_ordinal=0.4902 score_mae=0.6055 score_spearman=0.6676 monotonicity_violation_pct=0.0000
+2026-10-11 04:58:22  INFO   street_vgg16_ordinal  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-11 04:58:22  INFO   street_vgg16_ordinal  [fold 5] view=street backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 04:58:22  INFO   street_vgg16_ordinal  [fold 5] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 04:59:01  INFO   street_vgg16_ordinal  [fold 5] full epoch 1/20 train_loss=0.4508 val_loss=0.4525 val_qwk=0.3667 lr=1.00e-03 * (39s)
+2026-10-11 04:59:40  INFO   street_vgg16_ordinal  [fold 5] full epoch 2/20 train_loss=0.4270 val_loss=0.4396 val_qwk=0.3779 lr=1.00e-03 * (38s)
+2026-10-11 05:00:18  INFO   street_vgg16_ordinal  [fold 5] full epoch 3/20 train_loss=0.4174 val_loss=0.4425 val_qwk=0.4161 lr=1.00e-03 (38s)
+2026-10-11 05:00:56  INFO   street_vgg16_ordinal  [fold 5] full epoch 4/20 train_loss=0.4080 val_loss=0.4520 val_qwk=0.4087 lr=1.00e-03 (38s)
+2026-10-11 05:01:34  INFO   street_vgg16_ordinal  [fold 5] full epoch 5/20 train_loss=0.4000 val_loss=0.4472 val_qwk=0.4003 lr=1.00e-03 (38s)
+2026-10-11 05:02:13  INFO   street_vgg16_ordinal  [fold 5] full epoch 6/20 train_loss=0.3875 val_loss=0.4675 val_qwk=0.3964 lr=1.00e-03 (38s)
+2026-10-11 05:02:51  INFO   street_vgg16_ordinal  [fold 5] full epoch 7/20 train_loss=0.3723 val_loss=0.4534 val_qwk=0.3829 lr=1.00e-03 (38s)
+2026-10-11 05:02:51  INFO   street_vgg16_ordinal  [fold 5] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4396 val_qwk=0.3779
+2026-10-11 05:02:53  INFO   street_vgg16_ordinal  [fold 5] thresholds tuned on validation: 0.91 0.41 0.37 0.23
+2026-10-11 05:02:56  INFO   street_vgg16_ordinal  [fold 5] test accuracy=0.3797 f1=0.3054 mean_absolute_error=0.7722 one_off_accuracy=0.8645 amae=0.8894 qwk=0.4897 tuned_qwk=0.5184 alpha_ordinal=0.4941 score_mae=0.5600 score_spearman=0.6754 monotonicity_violation_pct=0.0000
+2026-10-11 05:02:56  INFO   street_vgg16_ordinal  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-11 05:02:56  INFO   street_vgg16_ordinal  [fold 6] view=street backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 05:02:56  INFO   street_vgg16_ordinal  [fold 6] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 05:03:36  INFO   street_vgg16_ordinal  [fold 6] full epoch 1/20 train_loss=0.4495 val_loss=0.4728 val_qwk=0.4191 lr=1.00e-03 * (39s)
+2026-10-11 05:04:14  INFO   street_vgg16_ordinal  [fold 6] full epoch 2/20 train_loss=0.4249 val_loss=0.4581 val_qwk=0.4181 lr=1.00e-03 * (39s)
+2026-10-11 05:04:53  INFO   street_vgg16_ordinal  [fold 6] full epoch 3/20 train_loss=0.4151 val_loss=0.4738 val_qwk=0.4539 lr=1.00e-03 (39s)
+2026-10-11 05:05:32  INFO   street_vgg16_ordinal  [fold 6] full epoch 4/20 train_loss=0.4061 val_loss=0.4523 val_qwk=0.4171 lr=1.00e-03 * (39s)
+2026-10-11 05:06:11  INFO   street_vgg16_ordinal  [fold 6] full epoch 5/20 train_loss=0.3968 val_loss=0.4543 val_qwk=0.4273 lr=1.00e-03 (39s)
+2026-10-11 05:06:50  INFO   street_vgg16_ordinal  [fold 6] full epoch 6/20 train_loss=0.3862 val_loss=0.4581 val_qwk=0.4402 lr=1.00e-03 (39s)
+2026-10-11 05:07:28  INFO   street_vgg16_ordinal  [fold 6] full epoch 7/20 train_loss=0.3725 val_loss=0.4889 val_qwk=0.4245 lr=1.00e-03 (39s)
+2026-10-11 05:08:07  INFO   street_vgg16_ordinal  [fold 6] full epoch 8/20 train_loss=0.3572 val_loss=0.4900 val_qwk=0.4130 lr=1.00e-03 (39s)
+2026-10-11 05:08:46  INFO   street_vgg16_ordinal  [fold 6] full epoch 9/20 train_loss=0.3423 val_loss=0.4973 val_qwk=0.4192 lr=1.00e-03 (39s)
+2026-10-11 05:08:46  INFO   street_vgg16_ordinal  [fold 6] full: early stop after 9 epochs, best so far epoch 4 (full) val_loss=0.4523 val_qwk=0.4171
+2026-10-11 05:08:48  INFO   street_vgg16_ordinal  [fold 6] thresholds tuned on validation: 0.66 0.53 0.45 0.28
+2026-10-11 05:08:51  INFO   street_vgg16_ordinal  [fold 6] test accuracy=0.3439 f1=0.2719 mean_absolute_error=0.8273 one_off_accuracy=0.8439 amae=0.9776 qwk=0.4045 tuned_qwk=0.4519 alpha_ordinal=0.4134 score_mae=0.6383 score_spearman=0.5461 monotonicity_violation_pct=0.0000
+2026-10-11 05:08:51  INFO   street_vgg16_ordinal  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-11 05:08:51  INFO   street_vgg16_ordinal  [fold 7] view=street backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 05:08:51  INFO   street_vgg16_ordinal  [fold 7] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 05:09:30  INFO   street_vgg16_ordinal  [fold 7] full epoch 1/20 train_loss=0.4497 val_loss=0.4478 val_qwk=0.4156 lr=1.00e-03 * (39s)
+2026-10-11 05:10:09  INFO   street_vgg16_ordinal  [fold 7] full epoch 2/20 train_loss=0.4254 val_loss=0.4396 val_qwk=0.4077 lr=1.00e-03 * (39s)
+2026-10-11 05:10:48  INFO   street_vgg16_ordinal  [fold 7] full epoch 3/20 train_loss=0.4150 val_loss=0.4441 val_qwk=0.4315 lr=1.00e-03 (39s)
+2026-10-11 05:11:26  INFO   street_vgg16_ordinal  [fold 7] full epoch 4/20 train_loss=0.4064 val_loss=0.4414 val_qwk=0.4034 lr=1.00e-03 (39s)
+2026-10-11 05:12:04  INFO   street_vgg16_ordinal  [fold 7] full epoch 5/20 train_loss=0.3955 val_loss=0.4474 val_qwk=0.4421 lr=1.00e-03 (38s)
+2026-10-11 05:12:43  INFO   street_vgg16_ordinal  [fold 7] full epoch 6/20 train_loss=0.3854 val_loss=0.4478 val_qwk=0.4297 lr=1.00e-03 (38s)
+2026-10-11 05:13:21  INFO   street_vgg16_ordinal  [fold 7] full epoch 7/20 train_loss=0.3717 val_loss=0.4870 val_qwk=0.3896 lr=1.00e-03 (38s)
+2026-10-11 05:13:21  INFO   street_vgg16_ordinal  [fold 7] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4396 val_qwk=0.4077
+2026-10-11 05:13:24  INFO   street_vgg16_ordinal  [fold 7] thresholds tuned on validation: 0.72 0.47 0.48 0.20
+2026-10-11 05:13:26  INFO   street_vgg16_ordinal  [fold 7] test accuracy=0.3535 f1=0.2928 mean_absolute_error=0.8445 one_off_accuracy=0.8252 amae=0.9669 qwk=0.4151 tuned_qwk=0.4387 alpha_ordinal=0.4051 score_mae=0.6447 score_spearman=0.5478 monotonicity_violation_pct=0.0000
+2026-10-11 05:13:26  INFO   street_vgg16_ordinal  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-11 05:13:27  INFO   street_vgg16_ordinal  [fold 8] view=street backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 05:13:27  INFO   street_vgg16_ordinal  [fold 8] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 05:14:06  INFO   street_vgg16_ordinal  [fold 8] full epoch 1/20 train_loss=0.4500 val_loss=0.4625 val_qwk=0.4158 lr=1.00e-03 * (39s)
+2026-10-11 05:14:44  INFO   street_vgg16_ordinal  [fold 8] full epoch 2/20 train_loss=0.4234 val_loss=0.4650 val_qwk=0.3695 lr=1.00e-03 (38s)
+2026-10-11 05:15:22  INFO   street_vgg16_ordinal  [fold 8] full epoch 3/20 train_loss=0.4164 val_loss=0.4519 val_qwk=0.3954 lr=1.00e-03 * (38s)
+2026-10-11 05:16:01  INFO   street_vgg16_ordinal  [fold 8] full epoch 4/20 train_loss=0.4055 val_loss=0.4773 val_qwk=0.4049 lr=1.00e-03 (38s)
+2026-10-11 05:16:39  INFO   street_vgg16_ordinal  [fold 8] full epoch 5/20 train_loss=0.3973 val_loss=0.4630 val_qwk=0.4335 lr=1.00e-03 (38s)
+2026-10-11 05:17:17  INFO   street_vgg16_ordinal  [fold 8] full epoch 6/20 train_loss=0.3848 val_loss=0.4679 val_qwk=0.3833 lr=1.00e-03 (38s)
+2026-10-11 05:17:56  INFO   street_vgg16_ordinal  [fold 8] full epoch 7/20 train_loss=0.3739 val_loss=0.4668 val_qwk=0.3785 lr=1.00e-03 (38s)
+2026-10-11 05:18:34  INFO   street_vgg16_ordinal  [fold 8] full epoch 8/20 train_loss=0.3590 val_loss=0.4805 val_qwk=0.3817 lr=1.00e-03 (38s)
+2026-10-11 05:18:34  INFO   street_vgg16_ordinal  [fold 8] full: early stop after 8 epochs, best so far epoch 3 (full) val_loss=0.4519 val_qwk=0.3954
+2026-10-11 05:18:36  INFO   street_vgg16_ordinal  [fold 8] thresholds tuned on validation: 0.93 0.46 0.36 0.25
+2026-10-11 05:18:39  INFO   street_vgg16_ordinal  [fold 8] test accuracy=0.3601 f1=0.2721 mean_absolute_error=0.8122 one_off_accuracy=0.8459 amae=0.9650 qwk=0.4091 tuned_qwk=0.4542 alpha_ordinal=0.4303 score_mae=0.6491 score_spearman=0.5698 monotonicity_violation_pct=0.0000
+2026-10-11 05:18:39  INFO   street_vgg16_ordinal  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-11 05:18:39  INFO   street_vgg16_ordinal  [fold 9] view=street backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 05:18:40  INFO   street_vgg16_ordinal  [fold 9] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 05:19:18  INFO   street_vgg16_ordinal  [fold 9] full epoch 1/20 train_loss=0.4503 val_loss=0.4312 val_qwk=0.4814 lr=1.00e-03 * (38s)
+2026-10-11 05:19:55  INFO   street_vgg16_ordinal  [fold 9] full epoch 2/20 train_loss=0.4261 val_loss=0.4271 val_qwk=0.4944 lr=1.00e-03 * (37s)
+2026-10-11 05:20:32  INFO   street_vgg16_ordinal  [fold 9] full epoch 3/20 train_loss=0.4171 val_loss=0.4298 val_qwk=0.4578 lr=1.00e-03 (37s)
+2026-10-11 05:21:10  INFO   street_vgg16_ordinal  [fold 9] full epoch 4/20 train_loss=0.4087 val_loss=0.4263 val_qwk=0.4695 lr=1.00e-03 * (37s)
+2026-10-11 05:21:47  INFO   street_vgg16_ordinal  [fold 9] full epoch 5/20 train_loss=0.3967 val_loss=0.4240 val_qwk=0.4777 lr=1.00e-03 * (37s)
+2026-10-11 05:22:24  INFO   street_vgg16_ordinal  [fold 9] full epoch 6/20 train_loss=0.3887 val_loss=0.4437 val_qwk=0.4785 lr=1.00e-03 (37s)
+2026-10-11 05:23:02  INFO   street_vgg16_ordinal  [fold 9] full epoch 7/20 train_loss=0.3753 val_loss=0.4386 val_qwk=0.4763 lr=1.00e-03 (37s)
+2026-10-11 05:23:39  INFO   street_vgg16_ordinal  [fold 9] full epoch 8/20 train_loss=0.3619 val_loss=0.4403 val_qwk=0.4451 lr=1.00e-03 (37s)
+2026-10-11 05:24:16  INFO   street_vgg16_ordinal  [fold 9] full epoch 9/20 train_loss=0.3466 val_loss=0.4604 val_qwk=0.4535 lr=1.00e-03 (37s)
+2026-10-11 05:24:54  INFO   street_vgg16_ordinal  [fold 9] full epoch 10/20 train_loss=0.3312 val_loss=0.4632 val_qwk=0.4571 lr=1.00e-03 (37s)
+2026-10-11 05:24:54  INFO   street_vgg16_ordinal  [fold 9] full: early stop after 10 epochs, best so far epoch 5 (full) val_loss=0.4240 val_qwk=0.4777
+2026-10-11 05:24:56  INFO   street_vgg16_ordinal  [fold 9] thresholds tuned on validation: 0.67 0.54 0.38 0.21
+2026-10-11 05:24:59  INFO   street_vgg16_ordinal  [fold 9] test accuracy=0.3435 f1=0.2880 mean_absolute_error=0.8600 one_off_accuracy=0.8294 amae=0.9649 qwk=0.4303 tuned_qwk=0.4480 alpha_ordinal=0.4278 score_mae=0.6597 score_spearman=0.5519 monotonicity_violation_pct=0.0000
+2026-10-11 05:24:59  INFO   street_vgg16_ordinal  [summary] 10 folds -> results/grid/street_vgg16_ordinal/summary.csv

@@ -26,6 +26,12 @@ Rplots.pdf
 run_registry_full.json.tmp
 # spatial CV folds are shared by all experiments
 !folds.csv
-# data and outputs stay out of git (images 11 GB, results incl. weights 30+ GB)
+# images stay out of git (11 GB)
 views_output/
-results/
+# results: small files (metrics, predictions, summaries, logs, status) are tracked;
+# model weights (*.pt, ignored above) stay on the machine that trained them
+!results/**/*.csv
+!results/**/*.log
+results/**/*.tmp
+# the survey labels are published with the code (the per-participant file is not)
+!point_labels.csv

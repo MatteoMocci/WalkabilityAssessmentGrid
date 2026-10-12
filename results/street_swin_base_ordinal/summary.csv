@@ -1,0 +1,10 @@
+metric,mean,std,n_folds
+accuracy,0.3672,0.0239,10
+f1,0.3015,0.0256,10
+mean_absolute_error,0.8146,0.0505,10
+one_off_accuracy,0.8422,0.0223,10
+score_mae,0.6207,0.0405,10
+score_spearman,0.6036,0.0542,10
+monotonicity_violation_pct,0.1542,0.4878,10
+best_val_loss,0.4394,0.0161,10
+test_loss,0.4404,0.0184,10

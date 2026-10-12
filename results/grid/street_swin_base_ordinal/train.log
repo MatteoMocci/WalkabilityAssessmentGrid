@@ -1,0 +1,122 @@
+2026-10-11 02:14:58  INFO   street_swin_base_ordinal  run=street_swin_base_ordinal view=street device=cuda points=4410 with images=4410
+2026-10-11 02:14:58  INFO   street_swin_base_ordinal  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-11 02:14:59  INFO   street_swin_base_ordinal  [fold 0] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-11 02:15:00  INFO   street_swin_base_ordinal  [fold 0] phase=full trainable params=87,772,324 lr=5e-05
+2026-10-11 02:16:50  INFO   street_swin_base_ordinal  [fold 0] full epoch 1/20 train_loss=0.4375 val_loss=0.4303 val_qwk=0.5364 lr=5.00e-05 * (111s)
+2026-10-11 02:17:37  INFO   street_swin_base_ordinal  [fold 0] full epoch 2/20 train_loss=0.3958 val_loss=0.4391 val_qwk=0.5271 lr=5.00e-05 (47s)
+2026-10-11 02:18:24  INFO   street_swin_base_ordinal  [fold 0] full epoch 3/20 train_loss=0.3383 val_loss=0.4930 val_qwk=0.5154 lr=5.00e-05 (46s)
+2026-10-11 02:19:10  INFO   street_swin_base_ordinal  [fold 0] full epoch 4/20 train_loss=0.2877 val_loss=0.5182 val_qwk=0.4972 lr=5.00e-05 (46s)
+2026-10-11 02:19:57  INFO   street_swin_base_ordinal  [fold 0] full epoch 5/20 train_loss=0.2568 val_loss=0.5524 val_qwk=0.5180 lr=5.00e-05 (47s)
+2026-10-11 02:20:43  INFO   street_swin_base_ordinal  [fold 0] full epoch 6/20 train_loss=0.2432 val_loss=0.5392 val_qwk=0.5018 lr=5.00e-05 (46s)
+2026-10-11 02:20:43  INFO   street_swin_base_ordinal  [fold 0] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4303 val_qwk=0.5364
+2026-10-11 02:20:46  INFO   street_swin_base_ordinal  [fold 0] thresholds tuned on validation: 0.70 0.29 0.52 0.32
+2026-10-11 02:20:50  INFO   street_swin_base_ordinal  [fold 0] test accuracy=0.3788 f1=0.3213 mean_absolute_error=0.7829 one_off_accuracy=0.8581 amae=0.9005 qwk=0.4759 tuned_qwk=0.4981 alpha_ordinal=0.4711 score_mae=0.6072 score_spearman=0.6257 monotonicity_violation_pct=0.1880
+2026-10-11 02:20:51  INFO   street_swin_base_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-11 02:20:51  INFO   street_swin_base_ordinal  [fold 1] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-11 02:20:51  INFO   street_swin_base_ordinal  [fold 1] phase=full trainable params=87,772,324 lr=5e-05
+2026-10-11 02:22:38  INFO   street_swin_base_ordinal  [fold 1] full epoch 1/20 train_loss=0.4376 val_loss=0.4278 val_qwk=0.4528 lr=5.00e-05 * (106s)
+2026-10-11 02:23:25  INFO   street_swin_base_ordinal  [fold 1] full epoch 2/20 train_loss=0.3971 val_loss=0.4295 val_qwk=0.4490 lr=5.00e-05 (47s)
+2026-10-11 02:24:12  INFO   street_swin_base_ordinal  [fold 1] full epoch 3/20 train_loss=0.3371 val_loss=0.4492 val_qwk=0.4429 lr=5.00e-05 (47s)
+2026-10-11 02:24:59  INFO   street_swin_base_ordinal  [fold 1] full epoch 4/20 train_loss=0.2877 val_loss=0.5004 val_qwk=0.4394 lr=5.00e-05 (47s)
+2026-10-11 02:25:47  INFO   street_swin_base_ordinal  [fold 1] full epoch 5/20 train_loss=0.2593 val_loss=0.5096 val_qwk=0.4479 lr=5.00e-05 (48s)
+2026-10-11 02:26:33  INFO   street_swin_base_ordinal  [fold 1] full epoch 6/20 train_loss=0.2435 val_loss=0.4952 val_qwk=0.4604 lr=5.00e-05 (47s)
+2026-10-11 02:26:33  INFO   street_swin_base_ordinal  [fold 1] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4278 val_qwk=0.4528
+2026-10-11 02:26:37  INFO   street_swin_base_ordinal  [fold 1] thresholds tuned on validation: 0.94 0.44 0.60 0.38
+2026-10-11 02:26:41  INFO   street_swin_base_ordinal  [fold 1] test accuracy=0.3688 f1=0.3236 mean_absolute_error=0.8191 one_off_accuracy=0.8449 amae=0.8971 qwk=0.5161 tuned_qwk=0.5626 alpha_ordinal=0.4766 score_mae=0.5877 score_spearman=0.6911 monotonicity_violation_pct=0.0000
+2026-10-11 02:26:41  INFO   street_swin_base_ordinal  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-11 02:26:42  INFO   street_swin_base_ordinal  [fold 2] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-11 02:26:42  INFO   street_swin_base_ordinal  [fold 2] phase=full trainable params=87,772,324 lr=5e-05
+2026-10-11 02:27:35  INFO   street_swin_base_ordinal  [fold 2] full epoch 1/20 train_loss=0.4375 val_loss=0.4236 val_qwk=0.4601 lr=5.00e-05 * (53s)
+2026-10-11 02:28:22  INFO   street_swin_base_ordinal  [fold 2] full epoch 2/20 train_loss=0.3982 val_loss=0.4386 val_qwk=0.4438 lr=5.00e-05 (47s)
+2026-10-11 02:29:09  INFO   street_swin_base_ordinal  [fold 2] full epoch 3/20 train_loss=0.3499 val_loss=0.4533 val_qwk=0.4257 lr=5.00e-05 (47s)
+2026-10-11 02:29:57  INFO   street_swin_base_ordinal  [fold 2] full epoch 4/20 train_loss=0.3026 val_loss=0.5328 val_qwk=0.3659 lr=5.00e-05 (48s)
+2026-10-11 02:30:44  INFO   street_swin_base_ordinal  [fold 2] full epoch 5/20 train_loss=0.2687 val_loss=0.5285 val_qwk=0.4335 lr=5.00e-05 (47s)
+2026-10-11 02:31:32  INFO   street_swin_base_ordinal  [fold 2] full epoch 6/20 train_loss=0.2487 val_loss=0.5444 val_qwk=0.3969 lr=5.00e-05 (47s)
+2026-10-11 02:31:32  INFO   street_swin_base_ordinal  [fold 2] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4236 val_qwk=0.4601
+2026-10-11 02:31:35  INFO   street_swin_base_ordinal  [fold 2] thresholds tuned on validation: 0.80 0.51 0.42 0.30
+2026-10-11 02:31:39  INFO   street_swin_base_ordinal  [fold 2] test accuracy=0.4009 f1=0.3133 mean_absolute_error=0.7586 one_off_accuracy=0.8599 amae=0.9147 qwk=0.4530 tuned_qwk=0.4948 alpha_ordinal=0.4441 score_mae=0.5926 score_spearman=0.5772 monotonicity_violation_pct=0.0000
+2026-10-11 02:31:39  INFO   street_swin_base_ordinal  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-11 02:31:40  INFO   street_swin_base_ordinal  [fold 3] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-11 02:31:40  INFO   street_swin_base_ordinal  [fold 3] phase=full trainable params=87,772,324 lr=5e-05
+2026-10-11 02:33:26  INFO   street_swin_base_ordinal  [fold 3] full epoch 1/20 train_loss=0.4376 val_loss=0.4264 val_qwk=0.4898 lr=5.00e-05 * (106s)
+2026-10-11 02:34:13  INFO   street_swin_base_ordinal  [fold 3] full epoch 2/20 train_loss=0.3949 val_loss=0.4481 val_qwk=0.5041 lr=5.00e-05 (47s)
+2026-10-11 02:35:00  INFO   street_swin_base_ordinal  [fold 3] full epoch 3/20 train_loss=0.3335 val_loss=0.5130 val_qwk=0.4749 lr=5.00e-05 (47s)
+2026-10-11 02:35:48  INFO   street_swin_base_ordinal  [fold 3] full epoch 4/20 train_loss=0.2841 val_loss=0.4991 val_qwk=0.5031 lr=5.00e-05 (48s)
+2026-10-11 02:36:35  INFO   street_swin_base_ordinal  [fold 3] full epoch 5/20 train_loss=0.2576 val_loss=0.5375 val_qwk=0.4843 lr=5.00e-05 (47s)
+2026-10-11 02:37:22  INFO   street_swin_base_ordinal  [fold 3] full epoch 6/20 train_loss=0.2410 val_loss=0.5602 val_qwk=0.4841 lr=5.00e-05 (47s)
+2026-10-11 02:37:22  INFO   street_swin_base_ordinal  [fold 3] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4264 val_qwk=0.4898
+2026-10-11 02:37:26  INFO   street_swin_base_ordinal  [fold 3] thresholds tuned on validation: 0.64 0.43 0.33 0.14
+2026-10-11 02:37:30  INFO   street_swin_base_ordinal  [fold 3] test accuracy=0.3884 f1=0.3082 mean_absolute_error=0.7614 one_off_accuracy=0.8647 amae=0.9312 qwk=0.4228 tuned_qwk=0.4483 alpha_ordinal=0.4148 score_mae=0.5995 score_spearman=0.5726 monotonicity_violation_pct=0.0000
+2026-10-11 02:37:30  INFO   street_swin_base_ordinal  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-11 02:37:31  INFO   street_swin_base_ordinal  [fold 4] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-11 02:37:31  INFO   street_swin_base_ordinal  [fold 4] phase=full trainable params=87,772,324 lr=5e-05
+2026-10-11 02:38:20  INFO   street_swin_base_ordinal  [fold 4] full epoch 1/20 train_loss=0.4393 val_loss=0.4363 val_qwk=0.4613 lr=5.00e-05 * (49s)
+2026-10-11 02:39:08  INFO   street_swin_base_ordinal  [fold 4] full epoch 2/20 train_loss=0.3975 val_loss=0.4467 val_qwk=0.4759 lr=5.00e-05 (48s)
+2026-10-11 02:39:56  INFO   street_swin_base_ordinal  [fold 4] full epoch 3/20 train_loss=0.3422 val_loss=0.5020 val_qwk=0.4525 lr=5.00e-05 (48s)
+2026-10-11 02:40:44  INFO   street_swin_base_ordinal  [fold 4] full epoch 4/20 train_loss=0.2942 val_loss=0.5492 val_qwk=0.4620 lr=5.00e-05 (49s)
+2026-10-11 02:41:32  INFO   street_swin_base_ordinal  [fold 4] full epoch 5/20 train_loss=0.2638 val_loss=0.5613 val_qwk=0.4531 lr=5.00e-05 (48s)
+2026-10-11 02:42:20  INFO   street_swin_base_ordinal  [fold 4] full epoch 6/20 train_loss=0.2451 val_loss=0.5687 val_qwk=0.4902 lr=5.00e-05 (48s)
+2026-10-11 02:42:20  INFO   street_swin_base_ordinal  [fold 4] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4363 val_qwk=0.4613
+2026-10-11 02:42:23  INFO   street_swin_base_ordinal  [fold 4] thresholds tuned on validation: 0.95 0.50 0.49 0.30
+2026-10-11 02:42:27  INFO   street_swin_base_ordinal  [fold 4] test accuracy=0.3638 f1=0.2636 mean_absolute_error=0.8009 one_off_accuracy=0.8570 amae=0.9262 qwk=0.4594 tuned_qwk=0.5219 alpha_ordinal=0.4652 score_mae=0.6242 score_spearman=0.6512 monotonicity_violation_pct=0.0000
+2026-10-11 02:42:27  INFO   street_swin_base_ordinal  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-11 02:42:28  INFO   street_swin_base_ordinal  [fold 5] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-11 02:42:28  INFO   street_swin_base_ordinal  [fold 5] phase=full trainable params=87,772,324 lr=5e-05
+2026-10-11 02:43:17  INFO   street_swin_base_ordinal  [fold 5] full epoch 1/20 train_loss=0.4349 val_loss=0.4529 val_qwk=0.4020 lr=5.00e-05 * (50s)
+2026-10-11 02:44:06  INFO   street_swin_base_ordinal  [fold 5] full epoch 2/20 train_loss=0.3912 val_loss=0.4636 val_qwk=0.3922 lr=5.00e-05 (49s)
+2026-10-11 02:44:55  INFO   street_swin_base_ordinal  [fold 5] full epoch 3/20 train_loss=0.3388 val_loss=0.5126 val_qwk=0.3554 lr=5.00e-05 (49s)
+2026-10-11 02:45:44  INFO   street_swin_base_ordinal  [fold 5] full epoch 4/20 train_loss=0.2861 val_loss=0.5594 val_qwk=0.3168 lr=5.00e-05 (48s)
+2026-10-11 02:46:32  INFO   street_swin_base_ordinal  [fold 5] full epoch 5/20 train_loss=0.2580 val_loss=0.6318 val_qwk=0.3687 lr=5.00e-05 (49s)
+2026-10-11 02:47:21  INFO   street_swin_base_ordinal  [fold 5] full epoch 6/20 train_loss=0.2392 val_loss=0.6268 val_qwk=0.3577 lr=5.00e-05 (49s)
+2026-10-11 02:47:21  INFO   street_swin_base_ordinal  [fold 5] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4529 val_qwk=0.4020
+2026-10-11 02:47:24  INFO   street_swin_base_ordinal  [fold 5] thresholds tuned on validation: 0.78 0.84 0.23 0.13
+2026-10-11 02:47:27  INFO   street_swin_base_ordinal  [fold 5] test accuracy=0.3937 f1=0.3386 mean_absolute_error=0.7792 one_off_accuracy=0.8470 amae=0.8884 qwk=0.5033 tuned_qwk=0.5089 alpha_ordinal=0.4901 score_mae=0.5668 score_spearman=0.6640 monotonicity_violation_pct=0.0000
+2026-10-11 02:47:27  INFO   street_swin_base_ordinal  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-11 02:47:28  INFO   street_swin_base_ordinal  [fold 6] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-11 02:47:28  INFO   street_swin_base_ordinal  [fold 6] phase=full trainable params=87,772,324 lr=5e-05
+2026-10-11 02:48:19  INFO   street_swin_base_ordinal  [fold 6] full epoch 1/20 train_loss=0.4335 val_loss=0.4687 val_qwk=0.4199 lr=5.00e-05 * (50s)
+2026-10-11 02:49:09  INFO   street_swin_base_ordinal  [fold 6] full epoch 2/20 train_loss=0.3982 val_loss=0.4750 val_qwk=0.4006 lr=5.00e-05 (50s)
+2026-10-11 02:49:58  INFO   street_swin_base_ordinal  [fold 6] full epoch 3/20 train_loss=0.3467 val_loss=0.4963 val_qwk=0.4158 lr=5.00e-05 (49s)
+2026-10-11 02:50:47  INFO   street_swin_base_ordinal  [fold 6] full epoch 4/20 train_loss=0.2970 val_loss=0.5281 val_qwk=0.3598 lr=5.00e-05 (49s)
+2026-10-11 02:51:36  INFO   street_swin_base_ordinal  [fold 6] full epoch 5/20 train_loss=0.2643 val_loss=0.5941 val_qwk=0.3961 lr=5.00e-05 (49s)
+2026-10-11 02:52:25  INFO   street_swin_base_ordinal  [fold 6] full epoch 6/20 train_loss=0.2448 val_loss=0.6411 val_qwk=0.4113 lr=5.00e-05 (49s)
+2026-10-11 02:52:25  INFO   street_swin_base_ordinal  [fold 6] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4687 val_qwk=0.4199
+2026-10-11 02:52:28  INFO   street_swin_base_ordinal  [fold 6] thresholds tuned on validation: 0.82 0.34 0.61 0.40
+2026-10-11 02:52:31  INFO   street_swin_base_ordinal  [fold 6] test accuracy=0.3273 f1=0.2751 mean_absolute_error=0.8854 one_off_accuracy=0.8039 amae=0.9838 qwk=0.4048 tuned_qwk=0.4263 alpha_ordinal=0.3660 score_mae=0.6683 score_spearman=0.5475 monotonicity_violation_pct=0.0000
+2026-10-11 02:52:31  INFO   street_swin_base_ordinal  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-11 02:52:32  INFO   street_swin_base_ordinal  [fold 7] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-11 02:52:32  INFO   street_swin_base_ordinal  [fold 7] phase=full trainable params=87,772,324 lr=5e-05
+2026-10-11 02:53:22  INFO   street_swin_base_ordinal  [fold 7] full epoch 1/20 train_loss=0.4328 val_loss=0.4532 val_qwk=0.4521 lr=5.00e-05 * (50s)
+2026-10-11 02:54:12  INFO   street_swin_base_ordinal  [fold 7] full epoch 2/20 train_loss=0.3920 val_loss=0.4603 val_qwk=0.4015 lr=5.00e-05 (50s)
+2026-10-11 02:55:01  INFO   street_swin_base_ordinal  [fold 7] full epoch 3/20 train_loss=0.3372 val_loss=0.5137 val_qwk=0.4309 lr=5.00e-05 (49s)
+2026-10-11 02:55:50  INFO   street_swin_base_ordinal  [fold 7] full epoch 4/20 train_loss=0.2915 val_loss=0.5260 val_qwk=0.3890 lr=5.00e-05 (49s)
+2026-10-11 02:56:38  INFO   street_swin_base_ordinal  [fold 7] full epoch 5/20 train_loss=0.2610 val_loss=0.5471 val_qwk=0.4108 lr=5.00e-05 (49s)
+2026-10-11 02:57:27  INFO   street_swin_base_ordinal  [fold 7] full epoch 6/20 train_loss=0.2429 val_loss=0.5468 val_qwk=0.4517 lr=5.00e-05 (49s)
+2026-10-11 02:57:27  INFO   street_swin_base_ordinal  [fold 7] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4532 val_qwk=0.4521
+2026-10-11 02:57:30  INFO   street_swin_base_ordinal  [fold 7] thresholds tuned on validation: 0.71 0.90 0.47 0.30
+2026-10-11 02:57:34  INFO   street_swin_base_ordinal  [fold 7] test accuracy=0.3445 f1=0.2985 mean_absolute_error=0.8907 one_off_accuracy=0.8072 amae=0.9673 qwk=0.4321 tuned_qwk=0.4400 alpha_ordinal=0.4023 score_mae=0.6914 score_spearman=0.5546 monotonicity_violation_pct=1.5424
+2026-10-11 02:57:34  INFO   street_swin_base_ordinal  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-11 02:57:35  INFO   street_swin_base_ordinal  [fold 8] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-11 02:57:35  INFO   street_swin_base_ordinal  [fold 8] phase=full trainable params=87,772,324 lr=5e-05
+2026-10-11 02:58:26  INFO   street_swin_base_ordinal  [fold 8] full epoch 1/20 train_loss=0.4300 val_loss=0.4584 val_qwk=0.4201 lr=5.00e-05 * (52s)
+2026-10-11 02:59:15  INFO   street_swin_base_ordinal  [fold 8] full epoch 2/20 train_loss=0.3894 val_loss=0.4686 val_qwk=0.4060 lr=5.00e-05 (49s)
+2026-10-11 03:00:03  INFO   street_swin_base_ordinal  [fold 8] full epoch 3/20 train_loss=0.3352 val_loss=0.5003 val_qwk=0.3778 lr=5.00e-05 (49s)
+2026-10-11 03:00:52  INFO   street_swin_base_ordinal  [fold 8] full epoch 4/20 train_loss=0.2876 val_loss=0.5519 val_qwk=0.3548 lr=5.00e-05 (49s)
+2026-10-11 03:01:41  INFO   street_swin_base_ordinal  [fold 8] full epoch 5/20 train_loss=0.2595 val_loss=0.6026 val_qwk=0.3160 lr=5.00e-05 (49s)
+2026-10-11 03:02:30  INFO   street_swin_base_ordinal  [fold 8] full epoch 6/20 train_loss=0.2424 val_loss=0.6078 val_qwk=0.3498 lr=5.00e-05 (49s)
+2026-10-11 03:02:30  INFO   street_swin_base_ordinal  [fold 8] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4584 val_qwk=0.4201
+2026-10-11 03:02:33  INFO   street_swin_base_ordinal  [fold 8] thresholds tuned on validation: 0.76 0.47 0.43 0.26
+2026-10-11 03:02:37  INFO   street_swin_base_ordinal  [fold 8] test accuracy=0.3575 f1=0.2842 mean_absolute_error=0.8122 one_off_accuracy=0.8459 amae=0.9444 qwk=0.4386 tuned_qwk=0.4960 alpha_ordinal=0.4486 score_mae=0.6169 score_spearman=0.6131 monotonicity_violation_pct=0.2591
+2026-10-11 03:02:37  INFO   street_swin_base_ordinal  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-11 03:02:38  INFO   street_swin_base_ordinal  [fold 9] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-11 03:02:38  INFO   street_swin_base_ordinal  [fold 9] phase=full trainable params=87,772,324 lr=5e-05
+2026-10-11 03:03:26  INFO   street_swin_base_ordinal  [fold 9] full epoch 1/20 train_loss=0.4347 val_loss=0.4238 val_qwk=0.4993 lr=5.00e-05 * (49s)
+2026-10-11 03:04:14  INFO   street_swin_base_ordinal  [fold 9] full epoch 2/20 train_loss=0.3910 val_loss=0.4250 val_qwk=0.4734 lr=5.00e-05 (47s)
+2026-10-11 03:05:01  INFO   street_swin_base_ordinal  [fold 9] full epoch 3/20 train_loss=0.3330 val_loss=0.4617 val_qwk=0.4991 lr=5.00e-05 (47s)
+2026-10-11 03:05:48  INFO   street_swin_base_ordinal  [fold 9] full epoch 4/20 train_loss=0.2874 val_loss=0.5040 val_qwk=0.4252 lr=5.00e-05 (47s)
+2026-10-11 03:06:37  INFO   street_swin_base_ordinal  [fold 9] full epoch 5/20 train_loss=0.2586 val_loss=0.5476 val_qwk=0.4570 lr=5.00e-05 (48s)
+2026-10-11 03:07:24  INFO   street_swin_base_ordinal  [fold 9] full epoch 6/20 train_loss=0.2431 val_loss=0.5836 val_qwk=0.4635 lr=5.00e-05 (47s)
+2026-10-11 03:07:24  INFO   street_swin_base_ordinal  [fold 9] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4238 val_qwk=0.4993
+2026-10-11 03:07:28  INFO   street_swin_base_ordinal  [fold 9] thresholds tuned on validation: 0.67 0.42 0.48 0.24
+2026-10-11 03:07:31  INFO   street_swin_base_ordinal  [fold 9] test accuracy=0.3212 f1=0.2733 mean_absolute_error=0.9047 one_off_accuracy=0.8165 amae=1.0039 qwk=0.3963 tuned_qwk=0.4383 alpha_ordinal=0.3883 score_mae=0.6695 score_spearman=0.5332 monotonicity_violation_pct=0.2353
+2026-10-11 03:07:32  INFO   street_swin_base_ordinal  [summary] 10 folds -> results/grid/street_swin_base_ordinal/summary.csv

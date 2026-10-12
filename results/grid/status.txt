@@ -1,0 +1,11 @@
+Completed folds per run (out of 10); [w] = folds whose saved weights are intact
+
+                    street        aerial           avg          late          dual
+  swin_base    10/10 [10w]   10/10 [10w]          0/10          0/10          0/10
+  vit_base     10/10 [10w]   10/10 [10w]          0/10          0/10          0/10
+  deit_base    10/10 [10w]   10/10 [10w]          0/10          0/10          0/10
+  vgg16        10/10 [10w]   10/10 [10w]          0/10          0/10          0/10
+  googlenet    10/10 [10w]     6/10 [6w]          0/10          0/10          0/10
+  alexnet      10/10 [10w]     0/10 [0w]          0/10          0/10          0/10
+
+Still to do: avg swin_base (0/10), late swin_base (0/10), dual swin_base (0/10), avg vit_base (0/10), late vit_base (0/10), dual vit_base (0/10), avg deit_base (0/10), late deit_base (0/10), dual deit_base (0/10), avg vgg16 (0/10), late vgg16 (0/10), dual vgg16 (0/10), aerial googlenet (6/10), avg googlenet (0/10), late googlenet (0/10), dual googlenet (0/10), aerial alexnet (0/10), avg alexnet (0/10), late alexnet (0/10), dual alexnet (0/10)

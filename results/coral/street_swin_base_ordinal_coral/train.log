@@ -1,0 +1,227 @@
+2026-10-10 18:02:14  INFO   street_swin_base_ordinal_coral  run=street_swin_base_ordinal_coral view=street device=cuda points=4410 with images=4410
+2026-10-10 18:02:14  INFO   street_swin_base_ordinal_coral  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-10 18:02:14  INFO   street_swin_base_ordinal_coral  [fold 0] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 18:02:15  INFO   street_swin_base_ordinal_coral  [fold 0] phase=full trainable params=87,769,252 lr=5e-05
+2026-10-10 18:04:06  INFO   street_swin_base_ordinal_coral  [fold 0] full epoch 1/20 train_loss=0.5772 val_loss=0.5575 val_qwk=0.5073 lr=5.00e-05 * (111s)
+2026-10-10 18:04:53  INFO   street_swin_base_ordinal_coral  [fold 0] full epoch 2/20 train_loss=0.5556 val_loss=0.5507 val_qwk=0.4915 lr=5.00e-05 * (47s)
+2026-10-10 18:05:39  INFO   street_swin_base_ordinal_coral  [fold 0] full epoch 3/20 train_loss=0.5282 val_loss=0.5575 val_qwk=0.4641 lr=5.00e-05 (46s)
+2026-10-10 18:06:25  INFO   street_swin_base_ordinal_coral  [fold 0] full epoch 4/20 train_loss=0.5036 val_loss=0.5549 val_qwk=0.4847 lr=5.00e-05 (46s)
+2026-10-10 18:07:11  INFO   street_swin_base_ordinal_coral  [fold 0] full epoch 5/20 train_loss=0.4895 val_loss=0.5691 val_qwk=0.4613 lr=5.00e-05 (46s)
+2026-10-10 18:07:58  INFO   street_swin_base_ordinal_coral  [fold 0] full epoch 6/20 train_loss=0.4796 val_loss=0.5596 val_qwk=0.4870 lr=5.00e-05 (47s)
+2026-10-10 18:08:44  INFO   street_swin_base_ordinal_coral  [fold 0] full epoch 7/20 train_loss=0.4727 val_loss=0.5510 val_qwk=0.5020 lr=5.00e-05 (46s)
+2026-10-10 18:08:44  INFO   street_swin_base_ordinal_coral  [fold 0] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.5507 val_qwk=0.4915
+2026-10-10 18:08:48  INFO   street_swin_base_ordinal_coral  [fold 0] thresholds tuned on validation: 0.83 0.23 0.48 0.50
+2026-10-10 18:08:52  INFO   street_swin_base_ordinal_coral  [fold 0] test accuracy=0.2679 f1=0.2663 mean_absolute_error=1.1739 one_off_accuracy=0.6767 amae=1.1060 qwk=0.4409 tuned_qwk=0.5046 alpha_ordinal=0.3607 score_mae=0.6151 score_spearman=0.6118 monotonicity_violation_pct=0.0000
+2026-10-10 18:08:52  INFO   street_swin_base_ordinal_coral  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-10 18:08:53  INFO   street_swin_base_ordinal_coral  [fold 1] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 18:08:53  INFO   street_swin_base_ordinal_coral  [fold 1] phase=full trainable params=87,769,252 lr=5e-05
+2026-10-10 18:10:39  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 1/20 train_loss=0.5719 val_loss=0.5969 val_qwk=0.3459 lr=5.00e-05 * (106s)
+2026-10-10 18:11:26  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 2/20 train_loss=0.5474 val_loss=0.5689 val_qwk=0.4387 lr=5.00e-05 * (47s)
+2026-10-10 18:12:14  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 3/20 train_loss=0.5164 val_loss=0.5779 val_qwk=0.4215 lr=5.00e-05 (48s)
+2026-10-10 18:13:01  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 4/20 train_loss=0.4952 val_loss=0.5689 val_qwk=0.4181 lr=5.00e-05 (47s)
+2026-10-10 18:13:48  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 5/20 train_loss=0.4825 val_loss=0.5642 val_qwk=0.4391 lr=5.00e-05 * (47s)
+2026-10-10 18:14:35  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 6/20 train_loss=0.4761 val_loss=0.5650 val_qwk=0.4174 lr=5.00e-05 (47s)
+2026-10-10 18:15:22  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 7/20 train_loss=0.4698 val_loss=0.5574 val_qwk=0.4430 lr=5.00e-05 * (48s)
+2026-10-10 18:16:09  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 8/20 train_loss=0.4646 val_loss=0.5550 val_qwk=0.4511 lr=5.00e-05 * (47s)
+2026-10-10 18:16:56  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 9/20 train_loss=0.4595 val_loss=0.5504 val_qwk=0.4282 lr=5.00e-05 * (47s)
+2026-10-10 18:17:43  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 10/20 train_loss=0.4550 val_loss=0.5460 val_qwk=0.4351 lr=5.00e-05 * (47s)
+2026-10-10 18:18:31  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 11/20 train_loss=0.4505 val_loss=0.5438 val_qwk=0.4603 lr=5.00e-05 * (47s)
+2026-10-10 18:19:18  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 12/20 train_loss=0.4472 val_loss=0.5328 val_qwk=0.4494 lr=5.00e-05 * (47s)
+2026-10-10 18:20:05  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 13/20 train_loss=0.4430 val_loss=0.5298 val_qwk=0.4637 lr=5.00e-05 * (47s)
+2026-10-10 18:20:52  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 14/20 train_loss=0.4393 val_loss=0.5282 val_qwk=0.4599 lr=5.00e-05 * (47s)
+2026-10-10 18:21:39  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 15/20 train_loss=0.4354 val_loss=0.5221 val_qwk=0.4542 lr=5.00e-05 * (47s)
+2026-10-10 18:22:26  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 16/20 train_loss=0.4322 val_loss=0.5354 val_qwk=0.4642 lr=5.00e-05 (47s)
+2026-10-10 18:23:14  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 17/20 train_loss=0.4282 val_loss=0.5146 val_qwk=0.4781 lr=5.00e-05 * (47s)
+2026-10-10 18:24:01  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 18/20 train_loss=0.4250 val_loss=0.5151 val_qwk=0.4650 lr=5.00e-05 (47s)
+2026-10-10 18:24:48  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 19/20 train_loss=0.4214 val_loss=0.5102 val_qwk=0.4820 lr=5.00e-05 * (48s)
+2026-10-10 18:25:35  INFO   street_swin_base_ordinal_coral  [fold 1] full epoch 20/20 train_loss=0.4198 val_loss=0.5155 val_qwk=0.4670 lr=5.00e-05 (47s)
+2026-10-10 18:25:38  INFO   street_swin_base_ordinal_coral  [fold 1] thresholds tuned on validation: 0.53 0.58 0.51 0.65
+2026-10-10 18:25:42  INFO   street_swin_base_ordinal_coral  [fold 1] test accuracy=0.3648 f1=0.3504 mean_absolute_error=0.9284 one_off_accuracy=0.7753 amae=0.9043 qwk=0.5439 tuned_qwk=0.5622 alpha_ordinal=0.5232 score_mae=0.5866 score_spearman=0.6848 monotonicity_violation_pct=0.0000
+2026-10-10 18:25:43  INFO   street_swin_base_ordinal_coral  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-10 18:25:43  INFO   street_swin_base_ordinal_coral  [fold 2] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 18:25:43  INFO   street_swin_base_ordinal_coral  [fold 2] phase=full trainable params=87,769,252 lr=5e-05
+2026-10-10 18:27:30  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 1/20 train_loss=0.5695 val_loss=0.5706 val_qwk=0.4759 lr=5.00e-05 * (106s)
+2026-10-10 18:28:17  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 2/20 train_loss=0.5415 val_loss=0.5740 val_qwk=0.4102 lr=5.00e-05 (47s)
+2026-10-10 18:29:04  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 3/20 train_loss=0.5124 val_loss=0.5880 val_qwk=0.3462 lr=5.00e-05 (47s)
+2026-10-10 18:29:53  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 4/20 train_loss=0.4934 val_loss=0.5717 val_qwk=0.4023 lr=5.00e-05 (48s)
+2026-10-10 18:30:40  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 5/20 train_loss=0.4802 val_loss=0.5953 val_qwk=0.3674 lr=5.00e-05 (47s)
+2026-10-10 18:31:28  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 6/20 train_loss=0.4726 val_loss=0.5691 val_qwk=0.3968 lr=5.00e-05 * (48s)
+2026-10-10 18:32:15  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 7/20 train_loss=0.4671 val_loss=0.5660 val_qwk=0.3905 lr=5.00e-05 * (47s)
+2026-10-10 18:33:03  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 8/20 train_loss=0.4615 val_loss=0.5633 val_qwk=0.4014 lr=5.00e-05 * (48s)
+2026-10-10 18:33:50  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 9/20 train_loss=0.4568 val_loss=0.5605 val_qwk=0.4285 lr=5.00e-05 * (47s)
+2026-10-10 18:34:38  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 10/20 train_loss=0.4526 val_loss=0.5512 val_qwk=0.4135 lr=5.00e-05 * (48s)
+2026-10-10 18:35:25  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 11/20 train_loss=0.4483 val_loss=0.5459 val_qwk=0.4342 lr=5.00e-05 * (47s)
+2026-10-10 18:36:13  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 12/20 train_loss=0.4434 val_loss=0.5425 val_qwk=0.4187 lr=5.00e-05 * (47s)
+2026-10-10 18:37:00  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 13/20 train_loss=0.4401 val_loss=0.5393 val_qwk=0.4392 lr=5.00e-05 * (48s)
+2026-10-10 18:37:48  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 14/20 train_loss=0.4365 val_loss=0.5347 val_qwk=0.4274 lr=5.00e-05 * (48s)
+2026-10-10 18:38:35  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 15/20 train_loss=0.4329 val_loss=0.5309 val_qwk=0.4332 lr=5.00e-05 * (48s)
+2026-10-10 18:39:23  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 16/20 train_loss=0.4297 val_loss=0.5334 val_qwk=0.4360 lr=5.00e-05 (48s)
+2026-10-10 18:40:11  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 17/20 train_loss=0.4263 val_loss=0.5258 val_qwk=0.4342 lr=5.00e-05 * (48s)
+2026-10-10 18:40:58  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 18/20 train_loss=0.4217 val_loss=0.5202 val_qwk=0.4543 lr=5.00e-05 * (48s)
+2026-10-10 18:41:46  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 19/20 train_loss=0.4184 val_loss=0.5195 val_qwk=0.4349 lr=5.00e-05 * (47s)
+2026-10-10 18:42:33  INFO   street_swin_base_ordinal_coral  [fold 2] full epoch 20/20 train_loss=0.4166 val_loss=0.5188 val_qwk=0.4332 lr=5.00e-05 * (48s)
+2026-10-10 18:42:37  INFO   street_swin_base_ordinal_coral  [fold 2] thresholds tuned on validation: 0.54 0.49 0.44 0.71
+2026-10-10 18:42:41  INFO   street_swin_base_ordinal_coral  [fold 2] test accuracy=0.3233 f1=0.3029 mean_absolute_error=0.9569 one_off_accuracy=0.7726 amae=1.0185 qwk=0.4368 tuned_qwk=0.4384 alpha_ordinal=0.4159 score_mae=0.6252 score_spearman=0.5593 monotonicity_violation_pct=0.0000
+2026-10-10 18:42:41  INFO   street_swin_base_ordinal_coral  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-10 18:42:42  INFO   street_swin_base_ordinal_coral  [fold 3] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 18:42:42  INFO   street_swin_base_ordinal_coral  [fold 3] phase=full trainable params=87,769,252 lr=5e-05
+2026-10-10 18:43:35  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 1/20 train_loss=0.5730 val_loss=0.5684 val_qwk=0.4914 lr=5.00e-05 * (53s)
+2026-10-10 18:44:23  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 2/20 train_loss=0.5440 val_loss=0.5702 val_qwk=0.4727 lr=5.00e-05 (48s)
+2026-10-10 18:45:11  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 3/20 train_loss=0.5100 val_loss=0.5638 val_qwk=0.4751 lr=5.00e-05 * (47s)
+2026-10-10 18:45:58  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 4/20 train_loss=0.4912 val_loss=0.5570 val_qwk=0.4675 lr=5.00e-05 * (47s)
+2026-10-10 18:46:45  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 5/20 train_loss=0.4810 val_loss=0.5575 val_qwk=0.4883 lr=5.00e-05 (47s)
+2026-10-10 18:47:33  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 6/20 train_loss=0.4723 val_loss=0.5526 val_qwk=0.4698 lr=5.00e-05 * (47s)
+2026-10-10 18:48:20  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 7/20 train_loss=0.4669 val_loss=0.5514 val_qwk=0.4857 lr=5.00e-05 * (48s)
+2026-10-10 18:49:08  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 8/20 train_loss=0.4617 val_loss=0.5411 val_qwk=0.5078 lr=5.00e-05 * (48s)
+2026-10-10 18:49:56  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 9/20 train_loss=0.4568 val_loss=0.5402 val_qwk=0.4967 lr=5.00e-05 * (47s)
+2026-10-10 18:50:43  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 10/20 train_loss=0.4526 val_loss=0.5484 val_qwk=0.5035 lr=5.00e-05 (47s)
+2026-10-10 18:51:30  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 11/20 train_loss=0.4487 val_loss=0.5288 val_qwk=0.5035 lr=5.00e-05 * (47s)
+2026-10-10 18:52:17  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 12/20 train_loss=0.4445 val_loss=0.5309 val_qwk=0.4960 lr=5.00e-05 (47s)
+2026-10-10 18:53:05  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 13/20 train_loss=0.4404 val_loss=0.5239 val_qwk=0.5105 lr=5.00e-05 * (48s)
+2026-10-10 18:53:52  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 14/20 train_loss=0.4366 val_loss=0.5234 val_qwk=0.5098 lr=5.00e-05 * (47s)
+2026-10-10 18:54:40  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 15/20 train_loss=0.4322 val_loss=0.5207 val_qwk=0.5036 lr=5.00e-05 * (47s)
+2026-10-10 18:55:27  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 16/20 train_loss=0.4280 val_loss=0.5168 val_qwk=0.5149 lr=5.00e-05 * (47s)
+2026-10-10 18:56:14  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 17/20 train_loss=0.4258 val_loss=0.5103 val_qwk=0.5205 lr=5.00e-05 * (47s)
+2026-10-10 18:57:02  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 18/20 train_loss=0.4226 val_loss=0.5071 val_qwk=0.5304 lr=5.00e-05 * (48s)
+2026-10-10 18:57:50  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 19/20 train_loss=0.4182 val_loss=0.5169 val_qwk=0.5120 lr=5.00e-05 (47s)
+2026-10-10 18:58:37  INFO   street_swin_base_ordinal_coral  [fold 3] full epoch 20/20 train_loss=0.4151 val_loss=0.5050 val_qwk=0.5314 lr=5.00e-05 * (47s)
+2026-10-10 18:58:40  INFO   street_swin_base_ordinal_coral  [fold 3] thresholds tuned on validation: 0.45 0.41 0.42 0.53
+2026-10-10 18:58:44  INFO   street_swin_base_ordinal_coral  [fold 3] test accuracy=0.3492 f1=0.3006 mean_absolute_error=0.9019 one_off_accuracy=0.8048 amae=0.9873 qwk=0.4592 tuned_qwk=0.4607 alpha_ordinal=0.4429 score_mae=0.6194 score_spearman=0.5439 monotonicity_violation_pct=0.0000
+2026-10-10 18:58:44  INFO   street_swin_base_ordinal_coral  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-10 18:58:45  INFO   street_swin_base_ordinal_coral  [fold 4] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 18:58:45  INFO   street_swin_base_ordinal_coral  [fold 4] phase=full trainable params=87,769,252 lr=5e-05
+2026-10-10 18:59:34  INFO   street_swin_base_ordinal_coral  [fold 4] full epoch 1/20 train_loss=0.5740 val_loss=0.5634 val_qwk=0.4598 lr=5.00e-05 * (49s)
+2026-10-10 19:00:23  INFO   street_swin_base_ordinal_coral  [fold 4] full epoch 2/20 train_loss=0.5486 val_loss=0.5643 val_qwk=0.4433 lr=5.00e-05 (49s)
+2026-10-10 19:01:11  INFO   street_swin_base_ordinal_coral  [fold 4] full epoch 3/20 train_loss=0.5218 val_loss=0.5665 val_qwk=0.4429 lr=5.00e-05 (48s)
+2026-10-10 19:01:58  INFO   street_swin_base_ordinal_coral  [fold 4] full epoch 4/20 train_loss=0.4977 val_loss=0.5697 val_qwk=0.4182 lr=5.00e-05 (48s)
+2026-10-10 19:02:46  INFO   street_swin_base_ordinal_coral  [fold 4] full epoch 5/20 train_loss=0.4841 val_loss=0.5657 val_qwk=0.4469 lr=5.00e-05 (48s)
+2026-10-10 19:03:35  INFO   street_swin_base_ordinal_coral  [fold 4] full epoch 6/20 train_loss=0.4745 val_loss=0.5667 val_qwk=0.4463 lr=5.00e-05 (48s)
+2026-10-10 19:03:35  INFO   street_swin_base_ordinal_coral  [fold 4] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.5634 val_qwk=0.4598
+2026-10-10 19:03:38  INFO   street_swin_base_ordinal_coral  [fold 4] thresholds tuned on validation: 0.76 0.45 0.50 0.53
+2026-10-10 19:03:41  INFO   street_swin_base_ordinal_coral  [fold 4] test accuracy=0.2838 f1=0.2738 mean_absolute_error=1.1327 one_off_accuracy=0.6945 amae=1.0670 qwk=0.4804 tuned_qwk=0.5445 alpha_ordinal=0.3981 score_mae=0.6077 score_spearman=0.6632 monotonicity_violation_pct=0.0000
+2026-10-10 19:03:41  INFO   street_swin_base_ordinal_coral  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-10 19:03:42  INFO   street_swin_base_ordinal_coral  [fold 5] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 19:03:42  INFO   street_swin_base_ordinal_coral  [fold 5] phase=full trainable params=87,769,252 lr=5e-05
+2026-10-10 19:04:32  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 1/20 train_loss=0.5723 val_loss=0.5988 val_qwk=0.3254 lr=5.00e-05 * (50s)
+2026-10-10 19:05:20  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 2/20 train_loss=0.5425 val_loss=0.5821 val_qwk=0.3955 lr=5.00e-05 * (49s)
+2026-10-10 19:06:09  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 3/20 train_loss=0.5120 val_loss=0.5962 val_qwk=0.3424 lr=5.00e-05 (48s)
+2026-10-10 19:06:58  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 4/20 train_loss=0.4925 val_loss=0.5957 val_qwk=0.3491 lr=5.00e-05 (49s)
+2026-10-10 19:07:46  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 5/20 train_loss=0.4813 val_loss=0.5874 val_qwk=0.3402 lr=5.00e-05 (49s)
+2026-10-10 19:08:35  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 6/20 train_loss=0.4726 val_loss=0.5837 val_qwk=0.3265 lr=5.00e-05 (49s)
+2026-10-10 19:09:23  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 7/20 train_loss=0.4666 val_loss=0.5760 val_qwk=0.3434 lr=5.00e-05 * (49s)
+2026-10-10 19:10:12  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 8/20 train_loss=0.4615 val_loss=0.5657 val_qwk=0.3628 lr=5.00e-05 * (49s)
+2026-10-10 19:11:01  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 9/20 train_loss=0.4564 val_loss=0.5708 val_qwk=0.3667 lr=5.00e-05 (49s)
+2026-10-10 19:11:49  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 10/20 train_loss=0.4522 val_loss=0.5618 val_qwk=0.3668 lr=5.00e-05 * (48s)
+2026-10-10 19:12:38  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 11/20 train_loss=0.4479 val_loss=0.5597 val_qwk=0.3759 lr=5.00e-05 * (48s)
+2026-10-10 19:13:26  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 12/20 train_loss=0.4432 val_loss=0.5505 val_qwk=0.3989 lr=5.00e-05 * (49s)
+2026-10-10 19:14:15  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 13/20 train_loss=0.4389 val_loss=0.5454 val_qwk=0.3962 lr=5.00e-05 * (49s)
+2026-10-10 19:15:04  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 14/20 train_loss=0.4348 val_loss=0.5429 val_qwk=0.4017 lr=5.00e-05 * (49s)
+2026-10-10 19:15:52  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 15/20 train_loss=0.4307 val_loss=0.5374 val_qwk=0.3871 lr=5.00e-05 * (48s)
+2026-10-10 19:16:41  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 16/20 train_loss=0.4278 val_loss=0.5423 val_qwk=0.3895 lr=5.00e-05 (48s)
+2026-10-10 19:17:29  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 17/20 train_loss=0.4242 val_loss=0.5344 val_qwk=0.3995 lr=5.00e-05 * (49s)
+2026-10-10 19:18:18  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 18/20 train_loss=0.4204 val_loss=0.5259 val_qwk=0.4038 lr=5.00e-05 * (49s)
+2026-10-10 19:19:06  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 19/20 train_loss=0.4171 val_loss=0.5325 val_qwk=0.3760 lr=5.00e-05 (48s)
+2026-10-10 19:19:55  INFO   street_swin_base_ordinal_coral  [fold 5] full epoch 20/20 train_loss=0.4139 val_loss=0.5310 val_qwk=0.3997 lr=5.00e-05 (48s)
+2026-10-10 19:19:57  INFO   street_swin_base_ordinal_coral  [fold 5] thresholds tuned on validation: 0.34 0.56 0.52 0.52
+2026-10-10 19:20:01  INFO   street_swin_base_ordinal_coral  [fold 5] test accuracy=0.3166 f1=0.3057 mean_absolute_error=0.9848 one_off_accuracy=0.7558 amae=0.9803 qwk=0.4973 tuned_qwk=0.4935 alpha_ordinal=0.4666 score_mae=0.5884 score_spearman=0.6217 monotonicity_violation_pct=0.0000
+2026-10-10 19:20:01  INFO   street_swin_base_ordinal_coral  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-10 19:20:02  INFO   street_swin_base_ordinal_coral  [fold 6] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 19:20:02  INFO   street_swin_base_ordinal_coral  [fold 6] phase=full trainable params=87,769,252 lr=5e-05
+2026-10-10 19:20:53  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 1/20 train_loss=0.5718 val_loss=0.5943 val_qwk=0.3653 lr=5.00e-05 * (51s)
+2026-10-10 19:21:42  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 2/20 train_loss=0.5426 val_loss=0.5942 val_qwk=0.3697 lr=5.00e-05 (49s)
+2026-10-10 19:22:32  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 3/20 train_loss=0.5107 val_loss=0.6000 val_qwk=0.3574 lr=5.00e-05 (49s)
+2026-10-10 19:23:21  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 4/20 train_loss=0.4910 val_loss=0.5864 val_qwk=0.3936 lr=5.00e-05 * (49s)
+2026-10-10 19:24:10  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 5/20 train_loss=0.4805 val_loss=0.5945 val_qwk=0.3628 lr=5.00e-05 (49s)
+2026-10-10 19:25:00  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 6/20 train_loss=0.4735 val_loss=0.5848 val_qwk=0.4069 lr=5.00e-05 * (50s)
+2026-10-10 19:25:49  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 7/20 train_loss=0.4670 val_loss=0.5759 val_qwk=0.3819 lr=5.00e-05 * (49s)
+2026-10-10 19:26:38  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 8/20 train_loss=0.4614 val_loss=0.5657 val_qwk=0.3856 lr=5.00e-05 * (49s)
+2026-10-10 19:27:27  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 9/20 train_loss=0.4562 val_loss=0.5729 val_qwk=0.3874 lr=5.00e-05 (49s)
+2026-10-10 19:28:17  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 10/20 train_loss=0.4514 val_loss=0.5643 val_qwk=0.3946 lr=5.00e-05 * (49s)
+2026-10-10 19:29:06  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 11/20 train_loss=0.4470 val_loss=0.5637 val_qwk=0.3686 lr=5.00e-05 * (50s)
+2026-10-10 19:29:56  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 12/20 train_loss=0.4432 val_loss=0.5607 val_qwk=0.4088 lr=5.00e-05 * (49s)
+2026-10-10 19:30:45  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 13/20 train_loss=0.4395 val_loss=0.5540 val_qwk=0.4006 lr=5.00e-05 * (49s)
+2026-10-10 19:31:34  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 14/20 train_loss=0.4349 val_loss=0.5546 val_qwk=0.3984 lr=5.00e-05 (49s)
+2026-10-10 19:32:24  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 15/20 train_loss=0.4315 val_loss=0.5435 val_qwk=0.4182 lr=5.00e-05 * (50s)
+2026-10-10 19:33:13  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 16/20 train_loss=0.4277 val_loss=0.5398 val_qwk=0.3960 lr=5.00e-05 * (49s)
+2026-10-10 19:34:02  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 17/20 train_loss=0.4242 val_loss=0.5416 val_qwk=0.4151 lr=5.00e-05 (49s)
+2026-10-10 19:34:51  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 18/20 train_loss=0.4205 val_loss=0.5415 val_qwk=0.3984 lr=5.00e-05 (49s)
+2026-10-10 19:35:41  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 19/20 train_loss=0.4173 val_loss=0.5343 val_qwk=0.4031 lr=5.00e-05 * (50s)
+2026-10-10 19:36:31  INFO   street_swin_base_ordinal_coral  [fold 6] full epoch 20/20 train_loss=0.4140 val_loss=0.5328 val_qwk=0.4302 lr=5.00e-05 * (49s)
+2026-10-10 19:36:34  INFO   street_swin_base_ordinal_coral  [fold 6] thresholds tuned on validation: 0.65 0.36 0.71 0.40
+2026-10-10 19:36:37  INFO   street_swin_base_ordinal_coral  [fold 6] test accuracy=0.3550 f1=0.3201 mean_absolute_error=0.9406 one_off_accuracy=0.7610 amae=1.0185 qwk=0.3869 tuned_qwk=0.3729 alpha_ordinal=0.3711 score_mae=0.6732 score_spearman=0.4766 monotonicity_violation_pct=0.0000
+2026-10-10 19:36:37  INFO   street_swin_base_ordinal_coral  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-10 19:36:38  INFO   street_swin_base_ordinal_coral  [fold 7] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 19:36:38  INFO   street_swin_base_ordinal_coral  [fold 7] phase=full trainable params=87,769,252 lr=5e-05
+2026-10-10 19:37:28  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 1/20 train_loss=0.5720 val_loss=0.5794 val_qwk=0.3931 lr=5.00e-05 * (50s)
+2026-10-10 19:38:17  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 2/20 train_loss=0.5451 val_loss=0.5769 val_qwk=0.4193 lr=5.00e-05 * (49s)
+2026-10-10 19:39:06  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 3/20 train_loss=0.5147 val_loss=0.5762 val_qwk=0.3995 lr=5.00e-05 * (49s)
+2026-10-10 19:39:56  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 4/20 train_loss=0.4927 val_loss=0.5729 val_qwk=0.4137 lr=5.00e-05 * (49s)
+2026-10-10 19:40:44  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 5/20 train_loss=0.4816 val_loss=0.5735 val_qwk=0.4168 lr=5.00e-05 (49s)
+2026-10-10 19:41:33  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 6/20 train_loss=0.4735 val_loss=0.5586 val_qwk=0.4396 lr=5.00e-05 * (49s)
+2026-10-10 19:42:22  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 7/20 train_loss=0.4674 val_loss=0.5619 val_qwk=0.4096 lr=5.00e-05 (49s)
+2026-10-10 19:43:11  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 8/20 train_loss=0.4620 val_loss=0.5594 val_qwk=0.4228 lr=5.00e-05 (49s)
+2026-10-10 19:44:00  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 9/20 train_loss=0.4567 val_loss=0.5565 val_qwk=0.4281 lr=5.00e-05 * (49s)
+2026-10-10 19:44:49  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 10/20 train_loss=0.4522 val_loss=0.5552 val_qwk=0.4237 lr=5.00e-05 * (49s)
+2026-10-10 19:45:38  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 11/20 train_loss=0.4485 val_loss=0.5453 val_qwk=0.4545 lr=5.00e-05 * (49s)
+2026-10-10 19:46:27  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 12/20 train_loss=0.4431 val_loss=0.5437 val_qwk=0.4361 lr=5.00e-05 * (49s)
+2026-10-10 19:47:17  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 13/20 train_loss=0.4394 val_loss=0.5374 val_qwk=0.4332 lr=5.00e-05 * (49s)
+2026-10-10 19:48:05  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 14/20 train_loss=0.4356 val_loss=0.5429 val_qwk=0.4493 lr=5.00e-05 (49s)
+2026-10-10 19:48:54  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 15/20 train_loss=0.4311 val_loss=0.5291 val_qwk=0.4479 lr=5.00e-05 * (49s)
+2026-10-10 19:49:43  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 16/20 train_loss=0.4277 val_loss=0.5273 val_qwk=0.4522 lr=5.00e-05 * (49s)
+2026-10-10 19:50:32  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 17/20 train_loss=0.4244 val_loss=0.5227 val_qwk=0.4525 lr=5.00e-05 * (49s)
+2026-10-10 19:51:21  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 18/20 train_loss=0.4211 val_loss=0.5248 val_qwk=0.4591 lr=5.00e-05 (49s)
+2026-10-10 19:52:10  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 19/20 train_loss=0.4176 val_loss=0.5156 val_qwk=0.4391 lr=5.00e-05 * (49s)
+2026-10-10 19:52:59  INFO   street_swin_base_ordinal_coral  [fold 7] full epoch 20/20 train_loss=0.4142 val_loss=0.5188 val_qwk=0.4332 lr=5.00e-05 (49s)
+2026-10-10 19:53:02  INFO   street_swin_base_ordinal_coral  [fold 7] thresholds tuned on validation: 0.39 0.57 0.49 0.47
+2026-10-10 19:53:05  INFO   street_swin_base_ordinal_coral  [fold 7] test accuracy=0.3162 f1=0.3004 mean_absolute_error=0.9884 one_off_accuracy=0.7609 amae=1.0171 qwk=0.4377 tuned_qwk=0.4065 alpha_ordinal=0.4308 score_mae=0.6579 score_spearman=0.5320 monotonicity_violation_pct=0.0000
+2026-10-10 19:53:06  INFO   street_swin_base_ordinal_coral  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-10 19:53:06  INFO   street_swin_base_ordinal_coral  [fold 8] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 19:53:06  INFO   street_swin_base_ordinal_coral  [fold 8] phase=full trainable params=87,769,252 lr=5e-05
+2026-10-10 19:53:57  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 1/20 train_loss=0.5686 val_loss=0.5813 val_qwk=0.4033 lr=5.00e-05 * (51s)
+2026-10-10 19:54:46  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 2/20 train_loss=0.5468 val_loss=0.5830 val_qwk=0.4136 lr=5.00e-05 (49s)
+2026-10-10 19:55:34  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 3/20 train_loss=0.5180 val_loss=0.5949 val_qwk=0.3793 lr=5.00e-05 (48s)
+2026-10-10 19:56:23  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 4/20 train_loss=0.4954 val_loss=0.5898 val_qwk=0.3675 lr=5.00e-05 (49s)
+2026-10-10 19:57:12  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 5/20 train_loss=0.4813 val_loss=0.5941 val_qwk=0.3776 lr=5.00e-05 (49s)
+2026-10-10 19:58:01  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 6/20 train_loss=0.4733 val_loss=0.5811 val_qwk=0.3874 lr=5.00e-05 * (49s)
+2026-10-10 19:58:49  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 7/20 train_loss=0.4671 val_loss=0.5817 val_qwk=0.3743 lr=5.00e-05 (49s)
+2026-10-10 19:59:38  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 8/20 train_loss=0.4619 val_loss=0.5706 val_qwk=0.3818 lr=5.00e-05 * (49s)
+2026-10-10 20:00:27  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 9/20 train_loss=0.4565 val_loss=0.5663 val_qwk=0.3851 lr=5.00e-05 * (49s)
+2026-10-10 20:01:16  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 10/20 train_loss=0.4522 val_loss=0.5605 val_qwk=0.4167 lr=5.00e-05 * (48s)
+2026-10-10 20:02:04  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 11/20 train_loss=0.4477 val_loss=0.5650 val_qwk=0.4077 lr=5.00e-05 (49s)
+2026-10-10 20:02:53  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 12/20 train_loss=0.4440 val_loss=0.5553 val_qwk=0.4056 lr=5.00e-05 * (49s)
+2026-10-10 20:03:42  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 13/20 train_loss=0.4404 val_loss=0.5630 val_qwk=0.3826 lr=5.00e-05 (49s)
+2026-10-10 20:04:31  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 14/20 train_loss=0.4354 val_loss=0.5526 val_qwk=0.4148 lr=5.00e-05 * (49s)
+2026-10-10 20:05:20  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 15/20 train_loss=0.4322 val_loss=0.5481 val_qwk=0.4046 lr=5.00e-05 * (49s)
+2026-10-10 20:06:09  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 16/20 train_loss=0.4283 val_loss=0.5418 val_qwk=0.4154 lr=5.00e-05 * (49s)
+2026-10-10 20:06:57  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 17/20 train_loss=0.4250 val_loss=0.5441 val_qwk=0.3963 lr=5.00e-05 (49s)
+2026-10-10 20:07:47  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 18/20 train_loss=0.4213 val_loss=0.5361 val_qwk=0.4290 lr=5.00e-05 * (49s)
+2026-10-10 20:08:35  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 19/20 train_loss=0.4175 val_loss=0.5320 val_qwk=0.4250 lr=5.00e-05 * (49s)
+2026-10-10 20:09:24  INFO   street_swin_base_ordinal_coral  [fold 8] full epoch 20/20 train_loss=0.4142 val_loss=0.5319 val_qwk=0.4127 lr=5.00e-05 (49s)
+2026-10-10 20:09:27  INFO   street_swin_base_ordinal_coral  [fold 8] thresholds tuned on validation: 0.49 0.54 0.47 0.64
+2026-10-10 20:09:30  INFO   street_swin_base_ordinal_coral  [fold 8] test accuracy=0.3290 f1=0.3178 mean_absolute_error=0.9650 one_off_accuracy=0.7681 amae=0.9967 qwk=0.4466 tuned_qwk=0.4495 alpha_ordinal=0.4435 score_mae=0.6590 score_spearman=0.5669 monotonicity_violation_pct=0.0000
+2026-10-10 20:09:31  INFO   street_swin_base_ordinal_coral  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-10 20:09:31  INFO   street_swin_base_ordinal_coral  [fold 9] view=street backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 20:09:31  INFO   street_swin_base_ordinal_coral  [fold 9] phase=full trainable params=87,769,252 lr=5e-05
+2026-10-10 20:10:20  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 1/20 train_loss=0.5727 val_loss=0.5609 val_qwk=0.4879 lr=5.00e-05 * (49s)
+2026-10-10 20:11:08  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 2/20 train_loss=0.5448 val_loss=0.5610 val_qwk=0.4677 lr=5.00e-05 (48s)
+2026-10-10 20:11:56  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 3/20 train_loss=0.5181 val_loss=0.5735 val_qwk=0.4301 lr=5.00e-05 (47s)
+2026-10-10 20:12:43  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 4/20 train_loss=0.4992 val_loss=0.5751 val_qwk=0.3941 lr=5.00e-05 (47s)
+2026-10-10 20:13:30  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 5/20 train_loss=0.4863 val_loss=0.5629 val_qwk=0.4501 lr=5.00e-05 (47s)
+2026-10-10 20:14:18  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 6/20 train_loss=0.4761 val_loss=0.5558 val_qwk=0.4651 lr=5.00e-05 * (48s)
+2026-10-10 20:15:06  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 7/20 train_loss=0.4686 val_loss=0.5458 val_qwk=0.4822 lr=5.00e-05 * (48s)
+2026-10-10 20:15:54  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 8/20 train_loss=0.4637 val_loss=0.5464 val_qwk=0.4805 lr=5.00e-05 (47s)
+2026-10-10 20:16:41  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 9/20 train_loss=0.4586 val_loss=0.5452 val_qwk=0.4136 lr=5.00e-05 * (47s)
+2026-10-10 20:17:28  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 10/20 train_loss=0.4537 val_loss=0.5394 val_qwk=0.4644 lr=5.00e-05 * (47s)
+2026-10-10 20:18:16  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 11/20 train_loss=0.4495 val_loss=0.5367 val_qwk=0.4809 lr=5.00e-05 * (47s)
+2026-10-10 20:19:03  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 12/20 train_loss=0.4463 val_loss=0.5329 val_qwk=0.4773 lr=5.00e-05 * (48s)
+2026-10-10 20:19:51  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 13/20 train_loss=0.4421 val_loss=0.5317 val_qwk=0.4697 lr=5.00e-05 * (47s)
+2026-10-10 20:20:38  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 14/20 train_loss=0.4381 val_loss=0.5277 val_qwk=0.4773 lr=5.00e-05 * (47s)
+2026-10-10 20:21:26  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 15/20 train_loss=0.4344 val_loss=0.5221 val_qwk=0.4781 lr=5.00e-05 * (48s)
+2026-10-10 20:22:14  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 16/20 train_loss=0.4308 val_loss=0.5188 val_qwk=0.4921 lr=5.00e-05 * (48s)
+2026-10-10 20:23:01  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 17/20 train_loss=0.4272 val_loss=0.5157 val_qwk=0.4947 lr=5.00e-05 * (47s)
+2026-10-10 20:23:48  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 18/20 train_loss=0.4244 val_loss=0.5119 val_qwk=0.4905 lr=5.00e-05 * (47s)
+2026-10-10 20:24:36  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 19/20 train_loss=0.4204 val_loss=0.5104 val_qwk=0.4864 lr=5.00e-05 * (47s)
+2026-10-10 20:25:23  INFO   street_swin_base_ordinal_coral  [fold 9] full epoch 20/20 train_loss=0.4174 val_loss=0.5065 val_qwk=0.4877 lr=5.00e-05 * (47s)
+2026-10-10 20:25:27  INFO   street_swin_base_ordinal_coral  [fold 9] thresholds tuned on validation: 0.51 0.49 0.53 0.62
+2026-10-10 20:25:31  INFO   street_swin_base_ordinal_coral  [fold 9] test accuracy=0.3200 f1=0.3256 mean_absolute_error=0.9753 one_off_accuracy=0.7682 amae=0.9943 qwk=0.4451 tuned_qwk=0.4263 alpha_ordinal=0.4284 score_mae=0.6522 score_spearman=0.5471 monotonicity_violation_pct=0.0000
+2026-10-10 20:25:31  INFO   street_swin_base_ordinal_coral  [summary] 10 folds -> results/coral/street_swin_base_ordinal_coral/summary.csv

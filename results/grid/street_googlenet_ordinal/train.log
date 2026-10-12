@@ -1,0 +1,190 @@
+2026-10-11 05:25:02  INFO   street_googlenet_ordinal  run=street_googlenet_ordinal view=street device=cuda points=4410 with images=4410
+2026-10-11 05:25:02  INFO   street_googlenet_ordinal  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-11 05:25:03  INFO   street_googlenet_ordinal  [fold 0] view=street backbone=googlenet weights=torchvision IMAGENET1K
+2026-10-11 05:25:03  INFO   street_googlenet_ordinal  [fold 0] phase=full trainable params=6,629,004 lr=0.001
+2026-10-11 05:25:27  INFO   street_googlenet_ordinal  [fold 0] full epoch 1/20 train_loss=0.4888 val_loss=0.4907 val_qwk=0.2469 lr=1.00e-03 * (24s)
+2026-10-11 05:25:50  INFO   street_googlenet_ordinal  [fold 0] full epoch 2/20 train_loss=0.4614 val_loss=0.4627 val_qwk=0.4006 lr=1.00e-03 * (23s)
+2026-10-11 05:26:14  INFO   street_googlenet_ordinal  [fold 0] full epoch 3/20 train_loss=0.4485 val_loss=0.4440 val_qwk=0.4729 lr=1.00e-03 * (23s)
+2026-10-11 05:26:37  INFO   street_googlenet_ordinal  [fold 0] full epoch 4/20 train_loss=0.4402 val_loss=0.4347 val_qwk=0.4900 lr=1.00e-03 * (23s)
+2026-10-11 05:27:00  INFO   street_googlenet_ordinal  [fold 0] full epoch 5/20 train_loss=0.4337 val_loss=0.4292 val_qwk=0.4890 lr=1.00e-03 * (23s)
+2026-10-11 05:27:24  INFO   street_googlenet_ordinal  [fold 0] full epoch 6/20 train_loss=0.4312 val_loss=0.4298 val_qwk=0.5018 lr=1.00e-03 (23s)
+2026-10-11 05:27:47  INFO   street_googlenet_ordinal  [fold 0] full epoch 7/20 train_loss=0.4245 val_loss=0.4286 val_qwk=0.5011 lr=1.00e-03 * (23s)
+2026-10-11 05:28:10  INFO   street_googlenet_ordinal  [fold 0] full epoch 8/20 train_loss=0.4209 val_loss=0.4312 val_qwk=0.5035 lr=1.00e-03 (23s)
+2026-10-11 05:28:34  INFO   street_googlenet_ordinal  [fold 0] full epoch 9/20 train_loss=0.4141 val_loss=0.4296 val_qwk=0.5135 lr=1.00e-03 (23s)
+2026-10-11 05:28:57  INFO   street_googlenet_ordinal  [fold 0] full epoch 10/20 train_loss=0.4087 val_loss=0.4333 val_qwk=0.4922 lr=1.00e-03 (23s)
+2026-10-11 05:29:20  INFO   street_googlenet_ordinal  [fold 0] full epoch 11/20 train_loss=0.4021 val_loss=0.4315 val_qwk=0.5016 lr=1.00e-03 (23s)
+2026-10-11 05:29:43  INFO   street_googlenet_ordinal  [fold 0] full epoch 12/20 train_loss=0.3939 val_loss=0.4355 val_qwk=0.4912 lr=1.00e-03 (23s)
+2026-10-11 05:29:43  INFO   street_googlenet_ordinal  [fold 0] full: early stop after 12 epochs, best so far epoch 7 (full) val_loss=0.4286 val_qwk=0.5011
+2026-10-11 05:29:45  INFO   street_googlenet_ordinal  [fold 0] thresholds tuned on validation: 0.66 0.42 0.46 0.25
+2026-10-11 05:29:48  INFO   street_googlenet_ordinal  [fold 0] test accuracy=0.3628 f1=0.2983 mean_absolute_error=0.8111 one_off_accuracy=0.8468 amae=0.9334 qwk=0.4342 tuned_qwk=0.4923 alpha_ordinal=0.4268 score_mae=0.6393 score_spearman=0.5762 monotonicity_violation_pct=0.0000
+2026-10-11 05:29:48  INFO   street_googlenet_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-11 05:29:48  INFO   street_googlenet_ordinal  [fold 1] view=street backbone=googlenet weights=torchvision IMAGENET1K
+2026-10-11 05:29:48  INFO   street_googlenet_ordinal  [fold 1] phase=full trainable params=6,629,004 lr=0.001
+2026-10-11 05:30:12  INFO   street_googlenet_ordinal  [fold 1] full epoch 1/20 train_loss=0.4948 val_loss=0.4547 val_qwk=0.2526 lr=1.00e-03 * (24s)
+2026-10-11 05:30:36  INFO   street_googlenet_ordinal  [fold 1] full epoch 2/20 train_loss=0.4647 val_loss=0.4398 val_qwk=0.3222 lr=1.00e-03 * (24s)
+2026-10-11 05:31:00  INFO   street_googlenet_ordinal  [fold 1] full epoch 3/20 train_loss=0.4521 val_loss=0.4338 val_qwk=0.4030 lr=1.00e-03 * (24s)
+2026-10-11 05:31:23  INFO   street_googlenet_ordinal  [fold 1] full epoch 4/20 train_loss=0.4427 val_loss=0.4287 val_qwk=0.4058 lr=1.00e-03 * (24s)
+2026-10-11 05:31:47  INFO   street_googlenet_ordinal  [fold 1] full epoch 5/20 train_loss=0.4375 val_loss=0.4272 val_qwk=0.4131 lr=1.00e-03 * (24s)
+2026-10-11 05:32:11  INFO   street_googlenet_ordinal  [fold 1] full epoch 6/20 train_loss=0.4319 val_loss=0.4273 val_qwk=0.4129 lr=1.00e-03 (24s)
+2026-10-11 05:32:35  INFO   street_googlenet_ordinal  [fold 1] full epoch 7/20 train_loss=0.4265 val_loss=0.4238 val_qwk=0.4299 lr=1.00e-03 * (24s)
+2026-10-11 05:32:59  INFO   street_googlenet_ordinal  [fold 1] full epoch 8/20 train_loss=0.4214 val_loss=0.4240 val_qwk=0.4286 lr=1.00e-03 (24s)
+2026-10-11 05:33:23  INFO   street_googlenet_ordinal  [fold 1] full epoch 9/20 train_loss=0.4149 val_loss=0.4240 val_qwk=0.4508 lr=1.00e-03 (24s)
+2026-10-11 05:33:47  INFO   street_googlenet_ordinal  [fold 1] full epoch 10/20 train_loss=0.4088 val_loss=0.4251 val_qwk=0.4306 lr=1.00e-03 (24s)
+2026-10-11 05:34:10  INFO   street_googlenet_ordinal  [fold 1] full epoch 11/20 train_loss=0.4038 val_loss=0.4244 val_qwk=0.4159 lr=1.00e-03 (24s)
+2026-10-11 05:34:34  INFO   street_googlenet_ordinal  [fold 1] full epoch 12/20 train_loss=0.3964 val_loss=0.4267 val_qwk=0.4199 lr=1.00e-03 (24s)
+2026-10-11 05:34:34  INFO   street_googlenet_ordinal  [fold 1] full: early stop after 12 epochs, best so far epoch 7 (full) val_loss=0.4238 val_qwk=0.4299
+2026-10-11 05:34:36  INFO   street_googlenet_ordinal  [fold 1] thresholds tuned on validation: 0.73 0.51 0.44 0.22
+2026-10-11 05:34:38  INFO   street_googlenet_ordinal  [fold 1] test accuracy=0.3748 f1=0.3294 mean_absolute_error=0.7972 one_off_accuracy=0.8559 amae=0.8662 qwk=0.5110 tuned_qwk=0.5494 alpha_ordinal=0.5002 score_mae=0.6073 score_spearman=0.6685 monotonicity_violation_pct=0.0000
+2026-10-11 05:34:38  INFO   street_googlenet_ordinal  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-11 05:34:38  INFO   street_googlenet_ordinal  [fold 2] view=street backbone=googlenet weights=torchvision IMAGENET1K
+2026-10-11 05:34:38  INFO   street_googlenet_ordinal  [fold 2] phase=full trainable params=6,629,004 lr=0.001
+2026-10-11 05:35:03  INFO   street_googlenet_ordinal  [fold 2] full epoch 1/20 train_loss=0.4983 val_loss=0.4519 val_qwk=0.3038 lr=1.00e-03 * (25s)
+2026-10-11 05:35:27  INFO   street_googlenet_ordinal  [fold 2] full epoch 2/20 train_loss=0.4669 val_loss=0.4368 val_qwk=0.3280 lr=1.00e-03 * (24s)
+2026-10-11 05:35:51  INFO   street_googlenet_ordinal  [fold 2] full epoch 3/20 train_loss=0.4497 val_loss=0.4323 val_qwk=0.3777 lr=1.00e-03 * (24s)
+2026-10-11 05:36:15  INFO   street_googlenet_ordinal  [fold 2] full epoch 4/20 train_loss=0.4393 val_loss=0.4282 val_qwk=0.3882 lr=1.00e-03 * (24s)
+2026-10-11 05:36:39  INFO   street_googlenet_ordinal  [fold 2] full epoch 5/20 train_loss=0.4359 val_loss=0.4277 val_qwk=0.4057 lr=1.00e-03 * (24s)
+2026-10-11 05:37:03  INFO   street_googlenet_ordinal  [fold 2] full epoch 6/20 train_loss=0.4307 val_loss=0.4270 val_qwk=0.3968 lr=1.00e-03 * (24s)
+2026-10-11 05:37:28  INFO   street_googlenet_ordinal  [fold 2] full epoch 7/20 train_loss=0.4262 val_loss=0.4266 val_qwk=0.4126 lr=1.00e-03 * (24s)
+2026-10-11 05:37:52  INFO   street_googlenet_ordinal  [fold 2] full epoch 8/20 train_loss=0.4198 val_loss=0.4269 val_qwk=0.4070 lr=1.00e-03 (24s)
+2026-10-11 05:38:16  INFO   street_googlenet_ordinal  [fold 2] full epoch 9/20 train_loss=0.4154 val_loss=0.4278 val_qwk=0.4296 lr=1.00e-03 (24s)
+2026-10-11 05:38:40  INFO   street_googlenet_ordinal  [fold 2] full epoch 10/20 train_loss=0.4099 val_loss=0.4291 val_qwk=0.4361 lr=1.00e-03 (24s)
+2026-10-11 05:39:04  INFO   street_googlenet_ordinal  [fold 2] full epoch 11/20 train_loss=0.4047 val_loss=0.4283 val_qwk=0.4443 lr=1.00e-03 (24s)
+2026-10-11 05:39:28  INFO   street_googlenet_ordinal  [fold 2] full epoch 12/20 train_loss=0.3993 val_loss=0.4297 val_qwk=0.4233 lr=1.00e-03 (24s)
+2026-10-11 05:39:28  INFO   street_googlenet_ordinal  [fold 2] full: early stop after 12 epochs, best so far epoch 7 (full) val_loss=0.4266 val_qwk=0.4126
+2026-10-11 05:39:30  INFO   street_googlenet_ordinal  [fold 2] thresholds tuned on validation: 0.72 0.55 0.46 0.33
+2026-10-11 05:39:32  INFO   street_googlenet_ordinal  [fold 2] test accuracy=0.3793 f1=0.2821 mean_absolute_error=0.7694 one_off_accuracy=0.8685 amae=0.9343 qwk=0.4341 tuned_qwk=0.4702 alpha_ordinal=0.4345 score_mae=0.6112 score_spearman=0.5605 monotonicity_violation_pct=0.0000
+2026-10-11 05:39:32  INFO   street_googlenet_ordinal  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-11 05:39:32  INFO   street_googlenet_ordinal  [fold 3] view=street backbone=googlenet weights=torchvision IMAGENET1K
+2026-10-11 05:39:32  INFO   street_googlenet_ordinal  [fold 3] phase=full trainable params=6,629,004 lr=0.001
+2026-10-11 05:39:57  INFO   street_googlenet_ordinal  [fold 3] full epoch 1/20 train_loss=0.4927 val_loss=0.4715 val_qwk=0.2262 lr=1.00e-03 * (25s)
+2026-10-11 05:40:21  INFO   street_googlenet_ordinal  [fold 3] full epoch 2/20 train_loss=0.4645 val_loss=0.4528 val_qwk=0.4031 lr=1.00e-03 * (24s)
+2026-10-11 05:40:45  INFO   street_googlenet_ordinal  [fold 3] full epoch 3/20 train_loss=0.4499 val_loss=0.4441 val_qwk=0.4204 lr=1.00e-03 * (24s)
+2026-10-11 05:41:09  INFO   street_googlenet_ordinal  [fold 3] full epoch 4/20 train_loss=0.4411 val_loss=0.4395 val_qwk=0.4483 lr=1.00e-03 * (24s)
+2026-10-11 05:41:33  INFO   street_googlenet_ordinal  [fold 3] full epoch 5/20 train_loss=0.4356 val_loss=0.4375 val_qwk=0.4604 lr=1.00e-03 * (24s)
+2026-10-11 05:41:57  INFO   street_googlenet_ordinal  [fold 3] full epoch 6/20 train_loss=0.4299 val_loss=0.4366 val_qwk=0.4575 lr=1.00e-03 * (24s)
+2026-10-11 05:42:21  INFO   street_googlenet_ordinal  [fold 3] full epoch 7/20 train_loss=0.4261 val_loss=0.4331 val_qwk=0.4758 lr=1.00e-03 * (24s)
+2026-10-11 05:42:45  INFO   street_googlenet_ordinal  [fold 3] full epoch 8/20 train_loss=0.4204 val_loss=0.4282 val_qwk=0.4844 lr=1.00e-03 * (24s)
+2026-10-11 05:43:10  INFO   street_googlenet_ordinal  [fold 3] full epoch 9/20 train_loss=0.4147 val_loss=0.4305 val_qwk=0.4793 lr=1.00e-03 (25s)
+2026-10-11 05:43:34  INFO   street_googlenet_ordinal  [fold 3] full epoch 10/20 train_loss=0.4087 val_loss=0.4286 val_qwk=0.4730 lr=1.00e-03 (24s)
+2026-10-11 05:43:58  INFO   street_googlenet_ordinal  [fold 3] full epoch 11/20 train_loss=0.4027 val_loss=0.4354 val_qwk=0.4866 lr=1.00e-03 (24s)
+2026-10-11 05:44:22  INFO   street_googlenet_ordinal  [fold 3] full epoch 12/20 train_loss=0.3959 val_loss=0.4312 val_qwk=0.4659 lr=1.00e-03 (24s)
+2026-10-11 05:44:46  INFO   street_googlenet_ordinal  [fold 3] full epoch 13/20 train_loss=0.3877 val_loss=0.4336 val_qwk=0.4691 lr=1.00e-03 (24s)
+2026-10-11 05:44:46  INFO   street_googlenet_ordinal  [fold 3] full: early stop after 13 epochs, best so far epoch 8 (full) val_loss=0.4282 val_qwk=0.4844
+2026-10-11 05:44:48  INFO   street_googlenet_ordinal  [fold 3] thresholds tuned on validation: 0.78 0.47 0.44 0.18
+2026-10-11 05:44:50  INFO   street_googlenet_ordinal  [fold 3] test accuracy=0.4008 f1=0.3271 mean_absolute_error=0.7717 one_off_accuracy=0.8533 amae=0.9300 qwk=0.4421 tuned_qwk=0.4723 alpha_ordinal=0.4285 score_mae=0.5996 score_spearman=0.5454 monotonicity_violation_pct=0.0000
+2026-10-11 05:44:50  INFO   street_googlenet_ordinal  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-11 05:44:50  INFO   street_googlenet_ordinal  [fold 4] view=street backbone=googlenet weights=torchvision IMAGENET1K
+2026-10-11 05:44:50  INFO   street_googlenet_ordinal  [fold 4] phase=full trainable params=6,629,004 lr=0.001
+2026-10-11 05:45:15  INFO   street_googlenet_ordinal  [fold 4] full epoch 1/20 train_loss=0.4936 val_loss=0.4723 val_qwk=0.2637 lr=1.00e-03 * (25s)
+2026-10-11 05:45:40  INFO   street_googlenet_ordinal  [fold 4] full epoch 2/20 train_loss=0.4652 val_loss=0.4514 val_qwk=0.4027 lr=1.00e-03 * (25s)
+2026-10-11 05:46:04  INFO   street_googlenet_ordinal  [fold 4] full epoch 3/20 train_loss=0.4502 val_loss=0.4389 val_qwk=0.4275 lr=1.00e-03 * (24s)
+2026-10-11 05:46:28  INFO   street_googlenet_ordinal  [fold 4] full epoch 4/20 train_loss=0.4396 val_loss=0.4335 val_qwk=0.4556 lr=1.00e-03 * (24s)
+2026-10-11 05:46:53  INFO   street_googlenet_ordinal  [fold 4] full epoch 5/20 train_loss=0.4338 val_loss=0.4305 val_qwk=0.4708 lr=1.00e-03 * (25s)
+2026-10-11 05:47:17  INFO   street_googlenet_ordinal  [fold 4] full epoch 6/20 train_loss=0.4287 val_loss=0.4288 val_qwk=0.4650 lr=1.00e-03 * (25s)
+2026-10-11 05:47:42  INFO   street_googlenet_ordinal  [fold 4] full epoch 7/20 train_loss=0.4232 val_loss=0.4284 val_qwk=0.4681 lr=1.00e-03 * (25s)
+2026-10-11 05:48:06  INFO   street_googlenet_ordinal  [fold 4] full epoch 8/20 train_loss=0.4189 val_loss=0.4287 val_qwk=0.4599 lr=1.00e-03 (24s)
+2026-10-11 05:48:31  INFO   street_googlenet_ordinal  [fold 4] full epoch 9/20 train_loss=0.4139 val_loss=0.4318 val_qwk=0.4639 lr=1.00e-03 (25s)
+2026-10-11 05:48:55  INFO   street_googlenet_ordinal  [fold 4] full epoch 10/20 train_loss=0.4057 val_loss=0.4318 val_qwk=0.4674 lr=1.00e-03 (24s)
+2026-10-11 05:49:20  INFO   street_googlenet_ordinal  [fold 4] full epoch 11/20 train_loss=0.3993 val_loss=0.4324 val_qwk=0.4723 lr=1.00e-03 (24s)
+2026-10-11 05:49:44  INFO   street_googlenet_ordinal  [fold 4] full epoch 12/20 train_loss=0.3926 val_loss=0.4355 val_qwk=0.4801 lr=1.00e-03 (24s)
+2026-10-11 05:49:44  INFO   street_googlenet_ordinal  [fold 4] full: early stop after 12 epochs, best so far epoch 7 (full) val_loss=0.4284 val_qwk=0.4681
+2026-10-11 05:49:46  INFO   street_googlenet_ordinal  [fold 4] thresholds tuned on validation: 0.71 0.57 0.44 0.21
+2026-10-11 05:49:47  INFO   street_googlenet_ordinal  [fold 4] test accuracy=0.3696 f1=0.2830 mean_absolute_error=0.7757 one_off_accuracy=0.8719 amae=0.8868 qwk=0.4863 tuned_qwk=0.5114 alpha_ordinal=0.5023 score_mae=0.6279 score_spearman=0.6312 monotonicity_violation_pct=0.0000
+2026-10-11 05:49:48  INFO   street_googlenet_ordinal  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-11 05:49:48  INFO   street_googlenet_ordinal  [fold 5] view=street backbone=googlenet weights=torchvision IMAGENET1K
+2026-10-11 05:49:48  INFO   street_googlenet_ordinal  [fold 5] phase=full trainable params=6,629,004 lr=0.001
+2026-10-11 05:50:13  INFO   street_googlenet_ordinal  [fold 5] full epoch 1/20 train_loss=0.4934 val_loss=0.4838 val_qwk=0.1567 lr=1.00e-03 * (25s)
+2026-10-11 05:50:38  INFO   street_googlenet_ordinal  [fold 5] full epoch 2/20 train_loss=0.4614 val_loss=0.4699 val_qwk=0.2275 lr=1.00e-03 * (25s)
+2026-10-11 05:51:03  INFO   street_googlenet_ordinal  [fold 5] full epoch 3/20 train_loss=0.4466 val_loss=0.4616 val_qwk=0.2753 lr=1.00e-03 * (25s)
+2026-10-11 05:51:28  INFO   street_googlenet_ordinal  [fold 5] full epoch 4/20 train_loss=0.4384 val_loss=0.4567 val_qwk=0.3257 lr=1.00e-03 * (25s)
+2026-10-11 05:51:53  INFO   street_googlenet_ordinal  [fold 5] full epoch 5/20 train_loss=0.4313 val_loss=0.4524 val_qwk=0.3150 lr=1.00e-03 * (25s)
+2026-10-11 05:52:18  INFO   street_googlenet_ordinal  [fold 5] full epoch 6/20 train_loss=0.4266 val_loss=0.4520 val_qwk=0.3443 lr=1.00e-03 * (25s)
+2026-10-11 05:52:43  INFO   street_googlenet_ordinal  [fold 5] full epoch 7/20 train_loss=0.4219 val_loss=0.4537 val_qwk=0.3413 lr=1.00e-03 (25s)
+2026-10-11 05:53:08  INFO   street_googlenet_ordinal  [fold 5] full epoch 8/20 train_loss=0.4168 val_loss=0.4458 val_qwk=0.3458 lr=1.00e-03 * (25s)
+2026-10-11 05:53:33  INFO   street_googlenet_ordinal  [fold 5] full epoch 9/20 train_loss=0.4098 val_loss=0.4469 val_qwk=0.3686 lr=1.00e-03 (25s)
+2026-10-11 05:53:58  INFO   street_googlenet_ordinal  [fold 5] full epoch 10/20 train_loss=0.4035 val_loss=0.4482 val_qwk=0.3521 lr=1.00e-03 (25s)
+2026-10-11 05:54:22  INFO   street_googlenet_ordinal  [fold 5] full epoch 11/20 train_loss=0.3974 val_loss=0.4492 val_qwk=0.3574 lr=1.00e-03 (25s)
+2026-10-11 05:54:47  INFO   street_googlenet_ordinal  [fold 5] full epoch 12/20 train_loss=0.3882 val_loss=0.4564 val_qwk=0.3653 lr=1.00e-03 (25s)
+2026-10-11 05:55:12  INFO   street_googlenet_ordinal  [fold 5] full epoch 13/20 train_loss=0.3768 val_loss=0.4595 val_qwk=0.3613 lr=1.00e-03 (25s)
+2026-10-11 05:55:12  INFO   street_googlenet_ordinal  [fold 5] full: early stop after 13 epochs, best so far epoch 8 (full) val_loss=0.4458 val_qwk=0.3458
+2026-10-11 05:55:13  INFO   street_googlenet_ordinal  [fold 5] thresholds tuned on validation: 0.70 0.56 0.33 0.25
+2026-10-11 05:55:15  INFO   street_googlenet_ordinal  [fold 5] test accuracy=0.3762 f1=0.3055 mean_absolute_error=0.7909 one_off_accuracy=0.8493 amae=0.9071 qwk=0.4773 tuned_qwk=0.5154 alpha_ordinal=0.4788 score_mae=0.5792 score_spearman=0.6487 monotonicity_violation_pct=0.0000
+2026-10-11 05:55:15  INFO   street_googlenet_ordinal  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-11 05:55:15  INFO   street_googlenet_ordinal  [fold 6] view=street backbone=googlenet weights=torchvision IMAGENET1K
+2026-10-11 05:55:15  INFO   street_googlenet_ordinal  [fold 6] phase=full trainable params=6,629,004 lr=0.001
+2026-10-11 05:55:41  INFO   street_googlenet_ordinal  [fold 6] full epoch 1/20 train_loss=0.4882 val_loss=0.4793 val_qwk=0.3011 lr=1.00e-03 * (26s)
+2026-10-11 05:56:06  INFO   street_googlenet_ordinal  [fold 6] full epoch 2/20 train_loss=0.4580 val_loss=0.4668 val_qwk=0.3511 lr=1.00e-03 * (25s)
+2026-10-11 05:56:32  INFO   street_googlenet_ordinal  [fold 6] full epoch 3/20 train_loss=0.4442 val_loss=0.4568 val_qwk=0.3606 lr=1.00e-03 * (26s)
+2026-10-11 05:56:57  INFO   street_googlenet_ordinal  [fold 6] full epoch 4/20 train_loss=0.4358 val_loss=0.4548 val_qwk=0.3679 lr=1.00e-03 * (25s)
+2026-10-11 05:57:23  INFO   street_googlenet_ordinal  [fold 6] full epoch 5/20 train_loss=0.4307 val_loss=0.4537 val_qwk=0.3658 lr=1.00e-03 * (25s)
+2026-10-11 05:57:48  INFO   street_googlenet_ordinal  [fold 6] full epoch 6/20 train_loss=0.4251 val_loss=0.4534 val_qwk=0.3641 lr=1.00e-03 * (25s)
+2026-10-11 05:58:13  INFO   street_googlenet_ordinal  [fold 6] full epoch 7/20 train_loss=0.4209 val_loss=0.4565 val_qwk=0.3656 lr=1.00e-03 (25s)
+2026-10-11 05:58:38  INFO   street_googlenet_ordinal  [fold 6] full epoch 8/20 train_loss=0.4154 val_loss=0.4536 val_qwk=0.3707 lr=1.00e-03 (25s)
+2026-10-11 05:59:04  INFO   street_googlenet_ordinal  [fold 6] full epoch 9/20 train_loss=0.4105 val_loss=0.4531 val_qwk=0.3706 lr=1.00e-03 * (25s)
+2026-10-11 05:59:29  INFO   street_googlenet_ordinal  [fold 6] full epoch 10/20 train_loss=0.4054 val_loss=0.4540 val_qwk=0.3748 lr=1.00e-03 (25s)
+2026-10-11 05:59:54  INFO   street_googlenet_ordinal  [fold 6] full epoch 11/20 train_loss=0.3983 val_loss=0.4579 val_qwk=0.3769 lr=1.00e-03 (25s)
+2026-10-11 06:00:19  INFO   street_googlenet_ordinal  [fold 6] full epoch 12/20 train_loss=0.3912 val_loss=0.4634 val_qwk=0.3870 lr=1.00e-03 (25s)
+2026-10-11 06:00:44  INFO   street_googlenet_ordinal  [fold 6] full epoch 13/20 train_loss=0.3855 val_loss=0.4653 val_qwk=0.3891 lr=1.00e-03 (25s)
+2026-10-11 06:01:10  INFO   street_googlenet_ordinal  [fold 6] full epoch 14/20 train_loss=0.3775 val_loss=0.4733 val_qwk=0.3835 lr=1.00e-03 (25s)
+2026-10-11 06:01:10  INFO   street_googlenet_ordinal  [fold 6] full: early stop after 14 epochs, best so far epoch 9 (full) val_loss=0.4531 val_qwk=0.3706
+2026-10-11 06:01:11  INFO   street_googlenet_ordinal  [fold 6] thresholds tuned on validation: 0.75 0.41 0.40 0.23
+2026-10-11 06:01:13  INFO   street_googlenet_ordinal  [fold 6] test accuracy=0.3370 f1=0.2584 mean_absolute_error=0.8494 one_off_accuracy=0.8301 amae=1.0248 qwk=0.3505 tuned_qwk=0.3959 alpha_ordinal=0.3673 score_mae=0.6542 score_spearman=0.5280 monotonicity_violation_pct=0.0000
+2026-10-11 06:01:13  INFO   street_googlenet_ordinal  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-11 06:01:13  INFO   street_googlenet_ordinal  [fold 7] view=street backbone=googlenet weights=torchvision IMAGENET1K
+2026-10-11 06:01:13  INFO   street_googlenet_ordinal  [fold 7] phase=full trainable params=6,629,004 lr=0.001
+2026-10-11 06:01:39  INFO   street_googlenet_ordinal  [fold 7] full epoch 1/20 train_loss=0.4924 val_loss=0.4733 val_qwk=0.2842 lr=1.00e-03 * (26s)
+2026-10-11 06:02:04  INFO   street_googlenet_ordinal  [fold 7] full epoch 2/20 train_loss=0.4613 val_loss=0.4558 val_qwk=0.3709 lr=1.00e-03 * (25s)
+2026-10-11 06:02:29  INFO   street_googlenet_ordinal  [fold 7] full epoch 3/20 train_loss=0.4463 val_loss=0.4407 val_qwk=0.3724 lr=1.00e-03 * (25s)
+2026-10-11 06:02:54  INFO   street_googlenet_ordinal  [fold 7] full epoch 4/20 train_loss=0.4381 val_loss=0.4384 val_qwk=0.4195 lr=1.00e-03 * (25s)
+2026-10-11 06:03:19  INFO   street_googlenet_ordinal  [fold 7] full epoch 5/20 train_loss=0.4309 val_loss=0.4391 val_qwk=0.4155 lr=1.00e-03 (25s)
+2026-10-11 06:03:44  INFO   street_googlenet_ordinal  [fold 7] full epoch 6/20 train_loss=0.4271 val_loss=0.4359 val_qwk=0.4282 lr=1.00e-03 * (25s)
+2026-10-11 06:04:09  INFO   street_googlenet_ordinal  [fold 7] full epoch 7/20 train_loss=0.4214 val_loss=0.4331 val_qwk=0.4038 lr=1.00e-03 * (25s)
+2026-10-11 06:04:34  INFO   street_googlenet_ordinal  [fold 7] full epoch 8/20 train_loss=0.4164 val_loss=0.4333 val_qwk=0.4299 lr=1.00e-03 (25s)
+2026-10-11 06:04:59  INFO   street_googlenet_ordinal  [fold 7] full epoch 9/20 train_loss=0.4101 val_loss=0.4333 val_qwk=0.4299 lr=1.00e-03 (25s)
+2026-10-11 06:05:24  INFO   street_googlenet_ordinal  [fold 7] full epoch 10/20 train_loss=0.4070 val_loss=0.4339 val_qwk=0.4166 lr=1.00e-03 (25s)
+2026-10-11 06:05:49  INFO   street_googlenet_ordinal  [fold 7] full epoch 11/20 train_loss=0.4000 val_loss=0.4334 val_qwk=0.4174 lr=1.00e-03 (25s)
+2026-10-11 06:06:14  INFO   street_googlenet_ordinal  [fold 7] full epoch 12/20 train_loss=0.3929 val_loss=0.4359 val_qwk=0.4124 lr=1.00e-03 (25s)
+2026-10-11 06:06:14  INFO   street_googlenet_ordinal  [fold 7] full: early stop after 12 epochs, best so far epoch 7 (full) val_loss=0.4331 val_qwk=0.4038
+2026-10-11 06:06:16  INFO   street_googlenet_ordinal  [fold 7] thresholds tuned on validation: 0.73 0.60 0.42 0.19
+2026-10-11 06:06:18  INFO   street_googlenet_ordinal  [fold 7] test accuracy=0.3329 f1=0.2620 mean_absolute_error=0.8445 one_off_accuracy=0.8368 amae=0.9745 qwk=0.4049 tuned_qwk=0.4406 alpha_ordinal=0.4091 score_mae=0.6572 score_spearman=0.5321 monotonicity_violation_pct=0.0000
+2026-10-11 06:06:18  INFO   street_googlenet_ordinal  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-11 06:06:18  INFO   street_googlenet_ordinal  [fold 8] view=street backbone=googlenet weights=torchvision IMAGENET1K
+2026-10-11 06:06:18  INFO   street_googlenet_ordinal  [fold 8] phase=full trainable params=6,629,004 lr=0.001
+2026-10-11 06:06:43  INFO   street_googlenet_ordinal  [fold 8] full epoch 1/20 train_loss=0.4927 val_loss=0.4755 val_qwk=0.2358 lr=1.00e-03 * (25s)
+2026-10-11 06:07:08  INFO   street_googlenet_ordinal  [fold 8] full epoch 2/20 train_loss=0.4613 val_loss=0.4634 val_qwk=0.3097 lr=1.00e-03 * (25s)
+2026-10-11 06:07:33  INFO   street_googlenet_ordinal  [fold 8] full epoch 3/20 train_loss=0.4459 val_loss=0.4605 val_qwk=0.3745 lr=1.00e-03 * (25s)
+2026-10-11 06:07:58  INFO   street_googlenet_ordinal  [fold 8] full epoch 4/20 train_loss=0.4359 val_loss=0.4597 val_qwk=0.3968 lr=1.00e-03 * (25s)
+2026-10-11 06:08:23  INFO   street_googlenet_ordinal  [fold 8] full epoch 5/20 train_loss=0.4303 val_loss=0.4601 val_qwk=0.4139 lr=1.00e-03 (25s)
+2026-10-11 06:08:48  INFO   street_googlenet_ordinal  [fold 8] full epoch 6/20 train_loss=0.4261 val_loss=0.4594 val_qwk=0.3617 lr=1.00e-03 * (25s)
+2026-10-11 06:09:12  INFO   street_googlenet_ordinal  [fold 8] full epoch 7/20 train_loss=0.4197 val_loss=0.4590 val_qwk=0.4005 lr=1.00e-03 * (25s)
+2026-10-11 06:09:38  INFO   street_googlenet_ordinal  [fold 8] full epoch 8/20 train_loss=0.4157 val_loss=0.4584 val_qwk=0.3871 lr=1.00e-03 * (25s)
+2026-10-11 06:10:02  INFO   street_googlenet_ordinal  [fold 8] full epoch 9/20 train_loss=0.4117 val_loss=0.4627 val_qwk=0.3977 lr=1.00e-03 (25s)
+2026-10-11 06:10:27  INFO   street_googlenet_ordinal  [fold 8] full epoch 10/20 train_loss=0.4066 val_loss=0.4623 val_qwk=0.4044 lr=1.00e-03 (25s)
+2026-10-11 06:10:52  INFO   street_googlenet_ordinal  [fold 8] full epoch 11/20 train_loss=0.3996 val_loss=0.4606 val_qwk=0.4023 lr=1.00e-03 (25s)
+2026-10-11 06:11:17  INFO   street_googlenet_ordinal  [fold 8] full epoch 12/20 train_loss=0.3942 val_loss=0.4716 val_qwk=0.4057 lr=1.00e-03 (25s)
+2026-10-11 06:11:42  INFO   street_googlenet_ordinal  [fold 8] full epoch 13/20 train_loss=0.3860 val_loss=0.4672 val_qwk=0.4076 lr=1.00e-03 (25s)
+2026-10-11 06:11:42  INFO   street_googlenet_ordinal  [fold 8] full: early stop after 13 epochs, best so far epoch 8 (full) val_loss=0.4584 val_qwk=0.3871
+2026-10-11 06:11:43  INFO   street_googlenet_ordinal  [fold 8] thresholds tuned on validation: 0.84 0.42 0.38 0.28
+2026-10-11 06:11:45  INFO   street_googlenet_ordinal  [fold 8] test accuracy=0.3510 f1=0.2666 mean_absolute_error=0.8122 one_off_accuracy=0.8510 amae=0.9525 qwk=0.4170 tuned_qwk=0.4609 alpha_ordinal=0.4301 score_mae=0.6294 score_spearman=0.5847 monotonicity_violation_pct=0.0000
+2026-10-11 06:11:45  INFO   street_googlenet_ordinal  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-11 06:11:46  INFO   street_googlenet_ordinal  [fold 9] view=street backbone=googlenet weights=torchvision IMAGENET1K
+2026-10-11 06:11:46  INFO   street_googlenet_ordinal  [fold 9] phase=full trainable params=6,629,004 lr=0.001
+2026-10-11 06:12:10  INFO   street_googlenet_ordinal  [fold 9] full epoch 1/20 train_loss=0.4919 val_loss=0.4708 val_qwk=0.2003 lr=1.00e-03 * (25s)
+2026-10-11 06:12:34  INFO   street_googlenet_ordinal  [fold 9] full epoch 2/20 train_loss=0.4620 val_loss=0.4531 val_qwk=0.3118 lr=1.00e-03 * (24s)
+2026-10-11 06:12:59  INFO   street_googlenet_ordinal  [fold 9] full epoch 3/20 train_loss=0.4451 val_loss=0.4420 val_qwk=0.3854 lr=1.00e-03 * (24s)
+2026-10-11 06:13:23  INFO   street_googlenet_ordinal  [fold 9] full epoch 4/20 train_loss=0.4373 val_loss=0.4353 val_qwk=0.4067 lr=1.00e-03 * (24s)
+2026-10-11 06:13:47  INFO   street_googlenet_ordinal  [fold 9] full epoch 5/20 train_loss=0.4321 val_loss=0.4334 val_qwk=0.4091 lr=1.00e-03 * (24s)
+2026-10-11 06:14:11  INFO   street_googlenet_ordinal  [fold 9] full epoch 6/20 train_loss=0.4277 val_loss=0.4307 val_qwk=0.4374 lr=1.00e-03 * (24s)
+2026-10-11 06:14:35  INFO   street_googlenet_ordinal  [fold 9] full epoch 7/20 train_loss=0.4221 val_loss=0.4292 val_qwk=0.4309 lr=1.00e-03 * (24s)
+2026-10-11 06:15:00  INFO   street_googlenet_ordinal  [fold 9] full epoch 8/20 train_loss=0.4172 val_loss=0.4312 val_qwk=0.4190 lr=1.00e-03 (24s)
+2026-10-11 06:15:24  INFO   street_googlenet_ordinal  [fold 9] full epoch 9/20 train_loss=0.4113 val_loss=0.4297 val_qwk=0.4446 lr=1.00e-03 (24s)
+2026-10-11 06:15:48  INFO   street_googlenet_ordinal  [fold 9] full epoch 10/20 train_loss=0.4056 val_loss=0.4276 val_qwk=0.4272 lr=1.00e-03 * (24s)
+2026-10-11 06:16:12  INFO   street_googlenet_ordinal  [fold 9] full epoch 11/20 train_loss=0.4011 val_loss=0.4295 val_qwk=0.4163 lr=1.00e-03 (24s)
+2026-10-11 06:16:36  INFO   street_googlenet_ordinal  [fold 9] full epoch 12/20 train_loss=0.3929 val_loss=0.4312 val_qwk=0.4314 lr=1.00e-03 (24s)
+2026-10-11 06:17:01  INFO   street_googlenet_ordinal  [fold 9] full epoch 13/20 train_loss=0.3856 val_loss=0.4354 val_qwk=0.4104 lr=1.00e-03 (24s)
+2026-10-11 06:17:25  INFO   street_googlenet_ordinal  [fold 9] full epoch 14/20 train_loss=0.3784 val_loss=0.4358 val_qwk=0.4147 lr=1.00e-03 (24s)
+2026-10-11 06:17:49  INFO   street_googlenet_ordinal  [fold 9] full epoch 15/20 train_loss=0.3696 val_loss=0.4402 val_qwk=0.4213 lr=1.00e-03 (24s)
+2026-10-11 06:17:49  INFO   street_googlenet_ordinal  [fold 9] full: early stop after 15 epochs, best so far epoch 10 (full) val_loss=0.4276 val_qwk=0.4272
+2026-10-11 06:17:51  INFO   street_googlenet_ordinal  [fold 9] thresholds tuned on validation: 0.71 0.63 0.44 0.20
+2026-10-11 06:17:53  INFO   street_googlenet_ordinal  [fold 9] test accuracy=0.3341 f1=0.2696 mean_absolute_error=0.8671 one_off_accuracy=0.8306 amae=0.9758 qwk=0.4118 tuned_qwk=0.4251 alpha_ordinal=0.4053 score_mae=0.6729 score_spearman=0.5226 monotonicity_violation_pct=0.0000
+2026-10-11 06:17:53  INFO   street_googlenet_ordinal  [summary] 10 folds -> results/grid/street_googlenet_ordinal/summary.csv

@@ -1,0 +1,6 @@
+2026-10-08 20:17:46  experiment start: model=swin_base args: 
+2026-10-08 20:17:46  [ordinal] start
+2026-10-08 21:08:56  [ordinal] done in 51 min -> results/street_swin_base_ordinal/summary.csv
+2026-10-08 21:08:56  [ce] start
+2026-10-08 22:00:38  [ce] done in 51 min -> results/street_swin_base_ce/summary.csv
+2026-10-08 22:00:38  experiment finished

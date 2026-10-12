@@ -1,0 +1,136 @@
+2026-10-11 07:48:13  INFO   aerial_vgg16_ordinal  run=aerial_vgg16_ordinal view=aerial device=cuda points=4410 with images=4410
+2026-10-11 07:48:13  INFO   aerial_vgg16_ordinal  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-11 07:48:13  INFO   aerial_vgg16_ordinal  [fold 0] view=aerial backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 07:48:13  INFO   aerial_vgg16_ordinal  [fold 0] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 07:48:27  INFO   aerial_vgg16_ordinal  [fold 0] full epoch 1/20 train_loss=0.4724 val_loss=0.4792 val_qwk=0.3346 lr=1.00e-03 * (14s)
+2026-10-11 07:48:40  INFO   aerial_vgg16_ordinal  [fold 0] full epoch 2/20 train_loss=0.4472 val_loss=0.4641 val_qwk=0.4024 lr=1.00e-03 * (13s)
+2026-10-11 07:48:52  INFO   aerial_vgg16_ordinal  [fold 0] full epoch 3/20 train_loss=0.4330 val_loss=0.4653 val_qwk=0.4333 lr=1.00e-03 (13s)
+2026-10-11 07:49:05  INFO   aerial_vgg16_ordinal  [fold 0] full epoch 4/20 train_loss=0.4193 val_loss=0.4651 val_qwk=0.4325 lr=1.00e-03 (13s)
+2026-10-11 07:49:18  INFO   aerial_vgg16_ordinal  [fold 0] full epoch 5/20 train_loss=0.4029 val_loss=0.4650 val_qwk=0.4469 lr=1.00e-03 (13s)
+2026-10-11 07:49:30  INFO   aerial_vgg16_ordinal  [fold 0] full epoch 6/20 train_loss=0.3843 val_loss=0.4736 val_qwk=0.4377 lr=1.00e-03 (13s)
+2026-10-11 07:49:43  INFO   aerial_vgg16_ordinal  [fold 0] full epoch 7/20 train_loss=0.3667 val_loss=0.4872 val_qwk=0.4315 lr=1.00e-03 (13s)
+2026-10-11 07:49:43  INFO   aerial_vgg16_ordinal  [fold 0] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4641 val_qwk=0.4024
+2026-10-11 07:49:44  INFO   aerial_vgg16_ordinal  [fold 0] thresholds tuned on validation: 0.69 0.58 0.37 0.33
+2026-10-11 07:49:45  INFO   aerial_vgg16_ordinal  [fold 0] test accuracy=0.3534 f1=0.2924 mean_absolute_error=0.8731 one_off_accuracy=0.7989 amae=1.0104 qwk=0.3489 tuned_qwk=0.3667 alpha_ordinal=0.3245 score_mae=0.7278 score_spearman=0.3824 monotonicity_violation_pct=0.0000
+2026-10-11 07:49:45  INFO   aerial_vgg16_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-11 07:49:45  INFO   aerial_vgg16_ordinal  [fold 1] view=aerial backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 07:49:45  INFO   aerial_vgg16_ordinal  [fold 1] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 07:49:59  INFO   aerial_vgg16_ordinal  [fold 1] full epoch 1/20 train_loss=0.4739 val_loss=0.4418 val_qwk=0.3927 lr=1.00e-03 * (14s)
+2026-10-11 07:50:12  INFO   aerial_vgg16_ordinal  [fold 1] full epoch 2/20 train_loss=0.4507 val_loss=0.4374 val_qwk=0.3857 lr=1.00e-03 * (13s)
+2026-10-11 07:50:25  INFO   aerial_vgg16_ordinal  [fold 1] full epoch 3/20 train_loss=0.4339 val_loss=0.4391 val_qwk=0.3986 lr=1.00e-03 (13s)
+2026-10-11 07:50:38  INFO   aerial_vgg16_ordinal  [fold 1] full epoch 4/20 train_loss=0.4202 val_loss=0.4383 val_qwk=0.3928 lr=1.00e-03 (13s)
+2026-10-11 07:50:51  INFO   aerial_vgg16_ordinal  [fold 1] full epoch 5/20 train_loss=0.4038 val_loss=0.4496 val_qwk=0.3985 lr=1.00e-03 (13s)
+2026-10-11 07:51:04  INFO   aerial_vgg16_ordinal  [fold 1] full epoch 6/20 train_loss=0.3853 val_loss=0.4507 val_qwk=0.4268 lr=1.00e-03 (13s)
+2026-10-11 07:51:17  INFO   aerial_vgg16_ordinal  [fold 1] full epoch 7/20 train_loss=0.3658 val_loss=0.4952 val_qwk=0.3961 lr=1.00e-03 (13s)
+2026-10-11 07:51:17  INFO   aerial_vgg16_ordinal  [fold 1] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4374 val_qwk=0.3857
+2026-10-11 07:51:18  INFO   aerial_vgg16_ordinal  [fold 1] thresholds tuned on validation: 0.86 0.51 0.50 0.50
+2026-10-11 07:51:18  INFO   aerial_vgg16_ordinal  [fold 1] test accuracy=0.3509 f1=0.2890 mean_absolute_error=0.8410 one_off_accuracy=0.8360 amae=0.9396 qwk=0.4272 tuned_qwk=0.4693 alpha_ordinal=0.4147 score_mae=0.6871 score_spearman=0.5449 monotonicity_violation_pct=0.0000
+2026-10-11 07:51:19  INFO   aerial_vgg16_ordinal  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-11 07:51:19  INFO   aerial_vgg16_ordinal  [fold 2] view=aerial backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 07:51:19  INFO   aerial_vgg16_ordinal  [fold 2] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 07:51:33  INFO   aerial_vgg16_ordinal  [fold 2] full epoch 1/20 train_loss=0.4775 val_loss=0.4461 val_qwk=0.3966 lr=1.00e-03 * (14s)
+2026-10-11 07:51:46  INFO   aerial_vgg16_ordinal  [fold 2] full epoch 2/20 train_loss=0.4509 val_loss=0.4387 val_qwk=0.4018 lr=1.00e-03 * (13s)
+2026-10-11 07:51:59  INFO   aerial_vgg16_ordinal  [fold 2] full epoch 3/20 train_loss=0.4378 val_loss=0.4373 val_qwk=0.4131 lr=1.00e-03 * (13s)
+2026-10-11 07:52:12  INFO   aerial_vgg16_ordinal  [fold 2] full epoch 4/20 train_loss=0.4248 val_loss=0.4429 val_qwk=0.4150 lr=1.00e-03 (13s)
+2026-10-11 07:52:25  INFO   aerial_vgg16_ordinal  [fold 2] full epoch 5/20 train_loss=0.4084 val_loss=0.4393 val_qwk=0.3943 lr=1.00e-03 (13s)
+2026-10-11 07:52:38  INFO   aerial_vgg16_ordinal  [fold 2] full epoch 6/20 train_loss=0.3906 val_loss=0.4473 val_qwk=0.4167 lr=1.00e-03 (13s)
+2026-10-11 07:52:51  INFO   aerial_vgg16_ordinal  [fold 2] full epoch 7/20 train_loss=0.3691 val_loss=0.4560 val_qwk=0.3867 lr=1.00e-03 (13s)
+2026-10-11 07:53:04  INFO   aerial_vgg16_ordinal  [fold 2] full epoch 8/20 train_loss=0.3534 val_loss=0.4805 val_qwk=0.4130 lr=1.00e-03 (13s)
+2026-10-11 07:53:04  INFO   aerial_vgg16_ordinal  [fold 2] full: early stop after 8 epochs, best so far epoch 3 (full) val_loss=0.4373 val_qwk=0.4131
+2026-10-11 07:53:05  INFO   aerial_vgg16_ordinal  [fold 2] thresholds tuned on validation: 0.74 0.57 0.38 0.34
+2026-10-11 07:53:06  INFO   aerial_vgg16_ordinal  [fold 2] test accuracy=0.3901 f1=0.3096 mean_absolute_error=0.8017 one_off_accuracy=0.8384 amae=0.9636 qwk=0.4139 tuned_qwk=0.4159 alpha_ordinal=0.3842 score_mae=0.6479 score_spearman=0.4785 monotonicity_violation_pct=0.0000
+2026-10-11 07:53:06  INFO   aerial_vgg16_ordinal  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-11 07:53:06  INFO   aerial_vgg16_ordinal  [fold 3] view=aerial backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 07:53:06  INFO   aerial_vgg16_ordinal  [fold 3] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 07:53:20  INFO   aerial_vgg16_ordinal  [fold 3] full epoch 1/20 train_loss=0.4738 val_loss=0.4669 val_qwk=0.3389 lr=1.00e-03 * (14s)
+2026-10-11 07:53:34  INFO   aerial_vgg16_ordinal  [fold 3] full epoch 2/20 train_loss=0.4455 val_loss=0.4630 val_qwk=0.3768 lr=1.00e-03 * (13s)
+2026-10-11 07:53:47  INFO   aerial_vgg16_ordinal  [fold 3] full epoch 3/20 train_loss=0.4311 val_loss=0.4643 val_qwk=0.3883 lr=1.00e-03 (13s)
+2026-10-11 07:54:00  INFO   aerial_vgg16_ordinal  [fold 3] full epoch 4/20 train_loss=0.4147 val_loss=0.4693 val_qwk=0.3739 lr=1.00e-03 (13s)
+2026-10-11 07:54:13  INFO   aerial_vgg16_ordinal  [fold 3] full epoch 5/20 train_loss=0.3987 val_loss=0.4683 val_qwk=0.3779 lr=1.00e-03 (13s)
+2026-10-11 07:54:26  INFO   aerial_vgg16_ordinal  [fold 3] full epoch 6/20 train_loss=0.3809 val_loss=0.4978 val_qwk=0.4147 lr=1.00e-03 (13s)
+2026-10-11 07:54:39  INFO   aerial_vgg16_ordinal  [fold 3] full epoch 7/20 train_loss=0.3611 val_loss=0.5001 val_qwk=0.3528 lr=1.00e-03 (13s)
+2026-10-11 07:54:39  INFO   aerial_vgg16_ordinal  [fold 3] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4630 val_qwk=0.3768
+2026-10-11 07:54:40  INFO   aerial_vgg16_ordinal  [fold 3] thresholds tuned on validation: 0.71 0.47 0.36 0.29
+2026-10-11 07:54:41  INFO   aerial_vgg16_ordinal  [fold 3] test accuracy=0.3585 f1=0.2881 mean_absolute_error=0.8254 one_off_accuracy=0.8430 amae=0.9909 qwk=0.3952 tuned_qwk=0.4424 alpha_ordinal=0.3770 score_mae=0.6207 score_spearman=0.4976 monotonicity_violation_pct=0.0000
+2026-10-11 07:54:41  INFO   aerial_vgg16_ordinal  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-11 07:54:41  INFO   aerial_vgg16_ordinal  [fold 4] view=aerial backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 07:54:41  INFO   aerial_vgg16_ordinal  [fold 4] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 07:54:55  INFO   aerial_vgg16_ordinal  [fold 4] full epoch 1/20 train_loss=0.4724 val_loss=0.4499 val_qwk=0.3752 lr=1.00e-03 * (14s)
+2026-10-11 07:55:08  INFO   aerial_vgg16_ordinal  [fold 4] full epoch 2/20 train_loss=0.4467 val_loss=0.4502 val_qwk=0.3774 lr=1.00e-03 (13s)
+2026-10-11 07:55:22  INFO   aerial_vgg16_ordinal  [fold 4] full epoch 3/20 train_loss=0.4327 val_loss=0.4607 val_qwk=0.3092 lr=1.00e-03 (13s)
+2026-10-11 07:55:35  INFO   aerial_vgg16_ordinal  [fold 4] full epoch 4/20 train_loss=0.4199 val_loss=0.4515 val_qwk=0.3916 lr=1.00e-03 (13s)
+2026-10-11 07:55:48  INFO   aerial_vgg16_ordinal  [fold 4] full epoch 5/20 train_loss=0.4059 val_loss=0.4639 val_qwk=0.3843 lr=1.00e-03 (13s)
+2026-10-11 07:56:01  INFO   aerial_vgg16_ordinal  [fold 4] full epoch 6/20 train_loss=0.3882 val_loss=0.4599 val_qwk=0.4029 lr=1.00e-03 (13s)
+2026-10-11 07:56:01  INFO   aerial_vgg16_ordinal  [fold 4] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4499 val_qwk=0.3752
+2026-10-11 07:56:02  INFO   aerial_vgg16_ordinal  [fold 4] thresholds tuned on validation: 0.76 0.42 0.44 0.23
+2026-10-11 07:56:03  INFO   aerial_vgg16_ordinal  [fold 4] test accuracy=0.3272 f1=0.2412 mean_absolute_error=0.8924 one_off_accuracy=0.8078 amae=1.0288 qwk=0.3480 tuned_qwk=0.4199 alpha_ordinal=0.3350 score_mae=0.7084 score_spearman=0.4040 monotonicity_violation_pct=0.0000
+2026-10-11 07:56:03  INFO   aerial_vgg16_ordinal  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-11 07:56:04  INFO   aerial_vgg16_ordinal  [fold 5] view=aerial backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 07:56:04  INFO   aerial_vgg16_ordinal  [fold 5] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 07:56:18  INFO   aerial_vgg16_ordinal  [fold 5] full epoch 1/20 train_loss=0.4717 val_loss=0.4738 val_qwk=0.3050 lr=1.00e-03 * (14s)
+2026-10-11 07:56:31  INFO   aerial_vgg16_ordinal  [fold 5] full epoch 2/20 train_loss=0.4488 val_loss=0.4633 val_qwk=0.2307 lr=1.00e-03 * (14s)
+2026-10-11 07:56:45  INFO   aerial_vgg16_ordinal  [fold 5] full epoch 3/20 train_loss=0.4357 val_loss=0.4674 val_qwk=0.2783 lr=1.00e-03 (13s)
+2026-10-11 07:56:58  INFO   aerial_vgg16_ordinal  [fold 5] full epoch 4/20 train_loss=0.4224 val_loss=0.4703 val_qwk=0.3325 lr=1.00e-03 (13s)
+2026-10-11 07:57:12  INFO   aerial_vgg16_ordinal  [fold 5] full epoch 5/20 train_loss=0.4085 val_loss=0.4811 val_qwk=0.3064 lr=1.00e-03 (13s)
+2026-10-11 07:57:25  INFO   aerial_vgg16_ordinal  [fold 5] full epoch 6/20 train_loss=0.3940 val_loss=0.4819 val_qwk=0.3004 lr=1.00e-03 (13s)
+2026-10-11 07:57:38  INFO   aerial_vgg16_ordinal  [fold 5] full epoch 7/20 train_loss=0.3739 val_loss=0.4783 val_qwk=0.2486 lr=1.00e-03 (13s)
+2026-10-11 07:57:38  INFO   aerial_vgg16_ordinal  [fold 5] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4633 val_qwk=0.2307
+2026-10-11 07:57:39  INFO   aerial_vgg16_ordinal  [fold 5] thresholds tuned on validation: 0.94 0.32 0.33 0.22
+2026-10-11 07:57:40  INFO   aerial_vgg16_ordinal  [fold 5] test accuracy=0.3072 f1=0.2222 mean_absolute_error=0.8750 one_off_accuracy=0.8294 amae=1.0117 qwk=0.3502 tuned_qwk=0.4517 alpha_ordinal=0.3524 score_mae=0.6539 score_spearman=0.5273 monotonicity_violation_pct=0.0000
+2026-10-11 07:57:40  INFO   aerial_vgg16_ordinal  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-11 07:57:41  INFO   aerial_vgg16_ordinal  [fold 6] view=aerial backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 07:57:41  INFO   aerial_vgg16_ordinal  [fold 6] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 07:57:55  INFO   aerial_vgg16_ordinal  [fold 6] full epoch 1/20 train_loss=0.4708 val_loss=0.4707 val_qwk=0.3718 lr=1.00e-03 * (14s)
+2026-10-11 07:58:09  INFO   aerial_vgg16_ordinal  [fold 6] full epoch 2/20 train_loss=0.4458 val_loss=0.4673 val_qwk=0.3620 lr=1.00e-03 * (14s)
+2026-10-11 07:58:23  INFO   aerial_vgg16_ordinal  [fold 6] full epoch 3/20 train_loss=0.4324 val_loss=0.4776 val_qwk=0.4043 lr=1.00e-03 (14s)
+2026-10-11 07:58:36  INFO   aerial_vgg16_ordinal  [fold 6] full epoch 4/20 train_loss=0.4187 val_loss=0.4807 val_qwk=0.3864 lr=1.00e-03 (14s)
+2026-10-11 07:58:50  INFO   aerial_vgg16_ordinal  [fold 6] full epoch 5/20 train_loss=0.4025 val_loss=0.4877 val_qwk=0.3805 lr=1.00e-03 (14s)
+2026-10-11 07:59:03  INFO   aerial_vgg16_ordinal  [fold 6] full epoch 6/20 train_loss=0.3873 val_loss=0.4783 val_qwk=0.3612 lr=1.00e-03 (14s)
+2026-10-11 07:59:17  INFO   aerial_vgg16_ordinal  [fold 6] full epoch 7/20 train_loss=0.3683 val_loss=0.5091 val_qwk=0.3857 lr=1.00e-03 (14s)
+2026-10-11 07:59:17  INFO   aerial_vgg16_ordinal  [fold 6] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4673 val_qwk=0.3620
+2026-10-11 07:59:18  INFO   aerial_vgg16_ordinal  [fold 6] thresholds tuned on validation: 0.86 0.29 0.42 0.24
+2026-10-11 07:59:18  INFO   aerial_vgg16_ordinal  [fold 6] test accuracy=0.3425 f1=0.2487 mean_absolute_error=0.8771 one_off_accuracy=0.7914 amae=1.0723 qwk=0.2739 tuned_qwk=0.3468 alpha_ordinal=0.2625 score_mae=0.7085 score_spearman=0.4530 monotonicity_violation_pct=0.0000
+2026-10-11 07:59:19  INFO   aerial_vgg16_ordinal  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-11 07:59:19  INFO   aerial_vgg16_ordinal  [fold 7] view=aerial backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 07:59:19  INFO   aerial_vgg16_ordinal  [fold 7] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 07:59:33  INFO   aerial_vgg16_ordinal  [fold 7] full epoch 1/20 train_loss=0.4700 val_loss=0.4611 val_qwk=0.3653 lr=1.00e-03 * (14s)
+2026-10-11 07:59:47  INFO   aerial_vgg16_ordinal  [fold 7] full epoch 2/20 train_loss=0.4453 val_loss=0.4603 val_qwk=0.3817 lr=1.00e-03 * (14s)
+2026-10-11 08:00:01  INFO   aerial_vgg16_ordinal  [fold 7] full epoch 3/20 train_loss=0.4321 val_loss=0.4497 val_qwk=0.4118 lr=1.00e-03 * (14s)
+2026-10-11 08:00:14  INFO   aerial_vgg16_ordinal  [fold 7] full epoch 4/20 train_loss=0.4183 val_loss=0.4552 val_qwk=0.4089 lr=1.00e-03 (13s)
+2026-10-11 08:00:28  INFO   aerial_vgg16_ordinal  [fold 7] full epoch 5/20 train_loss=0.4033 val_loss=0.4621 val_qwk=0.4205 lr=1.00e-03 (13s)
+2026-10-11 08:00:41  INFO   aerial_vgg16_ordinal  [fold 7] full epoch 6/20 train_loss=0.3847 val_loss=0.4681 val_qwk=0.3943 lr=1.00e-03 (13s)
+2026-10-11 08:00:55  INFO   aerial_vgg16_ordinal  [fold 7] full epoch 7/20 train_loss=0.3689 val_loss=0.4897 val_qwk=0.3563 lr=1.00e-03 (14s)
+2026-10-11 08:01:08  INFO   aerial_vgg16_ordinal  [fold 7] full epoch 8/20 train_loss=0.3480 val_loss=0.4956 val_qwk=0.3704 lr=1.00e-03 (14s)
+2026-10-11 08:01:08  INFO   aerial_vgg16_ordinal  [fold 7] full: early stop after 8 epochs, best so far epoch 3 (full) val_loss=0.4497 val_qwk=0.4118
+2026-10-11 08:01:09  INFO   aerial_vgg16_ordinal  [fold 7] thresholds tuned on validation: 0.74 0.57 0.52 0.24
+2026-10-11 08:01:10  INFO   aerial_vgg16_ordinal  [fold 7] test accuracy=0.3226 f1=0.2645 mean_absolute_error=0.8933 one_off_accuracy=0.8072 amae=1.0183 qwk=0.3574 tuned_qwk=0.3522 alpha_ordinal=0.3399 score_mae=0.7026 score_spearman=0.4337 monotonicity_violation_pct=0.0000
+2026-10-11 08:01:10  INFO   aerial_vgg16_ordinal  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-11 08:01:10  INFO   aerial_vgg16_ordinal  [fold 8] view=aerial backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 08:01:10  INFO   aerial_vgg16_ordinal  [fold 8] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 08:01:25  INFO   aerial_vgg16_ordinal  [fold 8] full epoch 1/20 train_loss=0.4693 val_loss=0.4741 val_qwk=0.3529 lr=1.00e-03 * (14s)
+2026-10-11 08:01:38  INFO   aerial_vgg16_ordinal  [fold 8] full epoch 2/20 train_loss=0.4462 val_loss=0.4699 val_qwk=0.2762 lr=1.00e-03 * (14s)
+2026-10-11 08:01:52  INFO   aerial_vgg16_ordinal  [fold 8] full epoch 3/20 train_loss=0.4330 val_loss=0.4673 val_qwk=0.2960 lr=1.00e-03 * (14s)
+2026-10-11 08:02:05  INFO   aerial_vgg16_ordinal  [fold 8] full epoch 4/20 train_loss=0.4176 val_loss=0.4696 val_qwk=0.3785 lr=1.00e-03 (13s)
+2026-10-11 08:02:19  INFO   aerial_vgg16_ordinal  [fold 8] full epoch 5/20 train_loss=0.4015 val_loss=0.4953 val_qwk=0.3585 lr=1.00e-03 (13s)
+2026-10-11 08:02:32  INFO   aerial_vgg16_ordinal  [fold 8] full epoch 6/20 train_loss=0.3836 val_loss=0.4763 val_qwk=0.3194 lr=1.00e-03 (13s)
+2026-10-11 08:02:46  INFO   aerial_vgg16_ordinal  [fold 8] full epoch 7/20 train_loss=0.3639 val_loss=0.4944 val_qwk=0.3072 lr=1.00e-03 (13s)
+2026-10-11 08:02:59  INFO   aerial_vgg16_ordinal  [fold 8] full epoch 8/20 train_loss=0.3447 val_loss=0.5123 val_qwk=0.3457 lr=1.00e-03 (13s)
+2026-10-11 08:02:59  INFO   aerial_vgg16_ordinal  [fold 8] full: early stop after 8 epochs, best so far epoch 3 (full) val_loss=0.4673 val_qwk=0.2960
+2026-10-11 08:03:00  INFO   aerial_vgg16_ordinal  [fold 8] thresholds tuned on validation: 0.70 0.53 0.43 0.50
+2026-10-11 08:03:01  INFO   aerial_vgg16_ordinal  [fold 8] test accuracy=0.3459 f1=0.2498 mean_absolute_error=0.8251 one_off_accuracy=0.8329 amae=0.9998 qwk=0.3665 tuned_qwk=0.4236 alpha_ordinal=0.3841 score_mae=0.6519 score_spearman=0.5361 monotonicity_violation_pct=0.0000
+2026-10-11 08:03:01  INFO   aerial_vgg16_ordinal  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-11 08:03:01  INFO   aerial_vgg16_ordinal  [fold 9] view=aerial backbone=vgg16 weights=torchvision IMAGENET1K
+2026-10-11 08:03:01  INFO   aerial_vgg16_ordinal  [fold 9] phase=full trainable params=138,373,932 lr=0.001
+2026-10-11 08:03:15  INFO   aerial_vgg16_ordinal  [fold 9] full epoch 1/20 train_loss=0.4694 val_loss=0.4651 val_qwk=0.3318 lr=1.00e-03 * (14s)
+2026-10-11 08:03:28  INFO   aerial_vgg16_ordinal  [fold 9] full epoch 2/20 train_loss=0.4437 val_loss=0.4624 val_qwk=0.3566 lr=1.00e-03 * (13s)
+2026-10-11 08:03:41  INFO   aerial_vgg16_ordinal  [fold 9] full epoch 3/20 train_loss=0.4308 val_loss=0.4635 val_qwk=0.3219 lr=1.00e-03 (13s)
+2026-10-11 08:03:54  INFO   aerial_vgg16_ordinal  [fold 9] full epoch 4/20 train_loss=0.4167 val_loss=0.4594 val_qwk=0.3456 lr=1.00e-03 * (13s)
+2026-10-11 08:04:07  INFO   aerial_vgg16_ordinal  [fold 9] full epoch 5/20 train_loss=0.4000 val_loss=0.4801 val_qwk=0.3798 lr=1.00e-03 (13s)
+2026-10-11 08:04:20  INFO   aerial_vgg16_ordinal  [fold 9] full epoch 6/20 train_loss=0.3837 val_loss=0.4787 val_qwk=0.3751 lr=1.00e-03 (13s)
+2026-10-11 08:04:33  INFO   aerial_vgg16_ordinal  [fold 9] full epoch 7/20 train_loss=0.3638 val_loss=0.4775 val_qwk=0.3851 lr=1.00e-03 (13s)
+2026-10-11 08:04:46  INFO   aerial_vgg16_ordinal  [fold 9] full epoch 8/20 train_loss=0.3456 val_loss=0.4845 val_qwk=0.3880 lr=1.00e-03 (13s)
+2026-10-11 08:04:59  INFO   aerial_vgg16_ordinal  [fold 9] full epoch 9/20 train_loss=0.3297 val_loss=0.5119 val_qwk=0.3147 lr=1.00e-03 (13s)
+2026-10-11 08:04:59  INFO   aerial_vgg16_ordinal  [fold 9] full: early stop after 9 epochs, best so far epoch 4 (full) val_loss=0.4594 val_qwk=0.3456
+2026-10-11 08:05:00  INFO   aerial_vgg16_ordinal  [fold 9] thresholds tuned on validation: 0.80 0.65 0.42 0.32
+2026-10-11 08:05:01  INFO   aerial_vgg16_ordinal  [fold 9] test accuracy=0.3329 f1=0.2600 mean_absolute_error=0.8812 one_off_accuracy=0.8118 amae=1.0050 qwk=0.3909 tuned_qwk=0.4289 alpha_ordinal=0.3828 score_mae=0.6757 score_spearman=0.5030 monotonicity_violation_pct=0.0000
+2026-10-11 08:05:01  INFO   aerial_vgg16_ordinal  [summary] 10 folds -> results/grid/aerial_vgg16_ordinal/summary.csv

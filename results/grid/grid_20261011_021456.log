@@ -1,0 +1,22 @@
+2026-10-11 02:14:56  backbone grid start: backbones=swin_base vit_base deit_base vgg16 googlenet alexnet extra args: 
+2026-10-11 02:14:56  [street swin_base] start
+2026-10-11 03:07:35  [street swin_base] done in 52 min
+2026-10-11 03:07:35  [street vit_base] start
+2026-10-11 03:51:22  [street vit_base] done in 43 min
+2026-10-11 03:51:22  [street deit_base] start
+2026-10-11 04:32:21  [street deit_base] done in 40 min
+2026-10-11 04:32:21  [street vgg16] start
+2026-10-11 05:25:00  [street vgg16] done in 52 min
+2026-10-11 05:25:00  [street googlenet] start
+2026-10-11 06:17:54  [street googlenet] done in 52 min
+2026-10-11 06:17:54  [street alexnet] start
+2026-10-11 06:52:59  [street alexnet] done in 35 min
+2026-10-11 06:52:59  [aerial swin_base] start
+2026-10-11 07:16:01  [aerial swin_base] done in 23 min
+2026-10-11 07:16:01  [aerial vit_base] start
+2026-10-11 07:32:46  [aerial vit_base] done in 16 min
+2026-10-11 07:32:46  [aerial deit_base] start
+2026-10-11 07:48:10  [aerial deit_base] done in 15 min
+2026-10-11 07:48:10  [aerial vgg16] start
+2026-10-11 08:05:02  [aerial vgg16] done in 16 min
+2026-10-11 08:05:02  [aerial googlenet] start

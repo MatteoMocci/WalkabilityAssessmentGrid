@@ -1,0 +1,148 @@
+2026-10-11 06:17:56  INFO   street_alexnet_ordinal  run=street_alexnet_ordinal view=street device=cuda points=4410 with images=4410
+2026-10-11 06:17:56  INFO   street_alexnet_ordinal  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-11 06:17:57  INFO   street_alexnet_ordinal  [fold 0] view=street backbone=alexnet weights=torchvision IMAGENET1K
+2026-10-11 06:17:57  INFO   street_alexnet_ordinal  [fold 0] phase=full trainable params=61,117,228 lr=0.001
+2026-10-11 06:18:21  INFO   street_alexnet_ordinal  [fold 0] full epoch 1/20 train_loss=0.4541 val_loss=0.4581 val_qwk=0.4863 lr=1.00e-03 * (24s)
+2026-10-11 06:18:44  INFO   street_alexnet_ordinal  [fold 0] full epoch 2/20 train_loss=0.4368 val_loss=0.4392 val_qwk=0.4966 lr=1.00e-03 * (23s)
+2026-10-11 06:19:07  INFO   street_alexnet_ordinal  [fold 0] full epoch 3/20 train_loss=0.4296 val_loss=0.4307 val_qwk=0.4952 lr=1.00e-03 * (23s)
+2026-10-11 06:19:30  INFO   street_alexnet_ordinal  [fold 0] full epoch 4/20 train_loss=0.4232 val_loss=0.4311 val_qwk=0.5014 lr=1.00e-03 (23s)
+2026-10-11 06:19:53  INFO   street_alexnet_ordinal  [fold 0] full epoch 5/20 train_loss=0.4177 val_loss=0.4353 val_qwk=0.5241 lr=1.00e-03 (23s)
+2026-10-11 06:20:16  INFO   street_alexnet_ordinal  [fold 0] full epoch 6/20 train_loss=0.4103 val_loss=0.4364 val_qwk=0.5232 lr=1.00e-03 (23s)
+2026-10-11 06:20:39  INFO   street_alexnet_ordinal  [fold 0] full epoch 7/20 train_loss=0.4055 val_loss=0.4399 val_qwk=0.5314 lr=1.00e-03 (23s)
+2026-10-11 06:21:02  INFO   street_alexnet_ordinal  [fold 0] full epoch 8/20 train_loss=0.3990 val_loss=0.4442 val_qwk=0.5249 lr=1.00e-03 (23s)
+2026-10-11 06:21:02  INFO   street_alexnet_ordinal  [fold 0] full: early stop after 8 epochs, best so far epoch 3 (full) val_loss=0.4307 val_qwk=0.4952
+2026-10-11 06:21:04  INFO   street_alexnet_ordinal  [fold 0] thresholds tuned on validation: 0.69 0.50 0.57 0.29
+2026-10-11 06:21:06  INFO   street_alexnet_ordinal  [fold 0] test accuracy=0.3647 f1=0.2905 mean_absolute_error=0.8186 one_off_accuracy=0.8412 amae=0.9521 qwk=0.4294 tuned_qwk=0.4510 alpha_ordinal=0.4107 score_mae=0.6494 score_spearman=0.5513 monotonicity_violation_pct=0.1880
+2026-10-11 06:21:06  INFO   street_alexnet_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-11 06:21:06  INFO   street_alexnet_ordinal  [fold 1] view=street backbone=alexnet weights=torchvision IMAGENET1K
+2026-10-11 06:21:06  INFO   street_alexnet_ordinal  [fold 1] phase=full trainable params=61,117,228 lr=0.001
+2026-10-11 06:21:30  INFO   street_alexnet_ordinal  [fold 1] full epoch 1/20 train_loss=0.4552 val_loss=0.4357 val_qwk=0.3975 lr=1.00e-03 * (24s)
+2026-10-11 06:21:54  INFO   street_alexnet_ordinal  [fold 1] full epoch 2/20 train_loss=0.4386 val_loss=0.4331 val_qwk=0.3962 lr=1.00e-03 * (23s)
+2026-10-11 06:22:17  INFO   street_alexnet_ordinal  [fold 1] full epoch 3/20 train_loss=0.4291 val_loss=0.4360 val_qwk=0.4121 lr=1.00e-03 (23s)
+2026-10-11 06:22:41  INFO   street_alexnet_ordinal  [fold 1] full epoch 4/20 train_loss=0.4248 val_loss=0.4302 val_qwk=0.3845 lr=1.00e-03 * (23s)
+2026-10-11 06:23:04  INFO   street_alexnet_ordinal  [fold 1] full epoch 5/20 train_loss=0.4176 val_loss=0.4336 val_qwk=0.4283 lr=1.00e-03 (23s)
+2026-10-11 06:23:27  INFO   street_alexnet_ordinal  [fold 1] full epoch 6/20 train_loss=0.4129 val_loss=0.4377 val_qwk=0.4485 lr=1.00e-03 (23s)
+2026-10-11 06:23:51  INFO   street_alexnet_ordinal  [fold 1] full epoch 7/20 train_loss=0.4057 val_loss=0.4372 val_qwk=0.4287 lr=1.00e-03 (23s)
+2026-10-11 06:24:14  INFO   street_alexnet_ordinal  [fold 1] full epoch 8/20 train_loss=0.3988 val_loss=0.4354 val_qwk=0.4255 lr=1.00e-03 (23s)
+2026-10-11 06:24:37  INFO   street_alexnet_ordinal  [fold 1] full epoch 9/20 train_loss=0.3930 val_loss=0.4503 val_qwk=0.4174 lr=1.00e-03 (23s)
+2026-10-11 06:24:37  INFO   street_alexnet_ordinal  [fold 1] full: early stop after 9 epochs, best so far epoch 4 (full) val_loss=0.4302 val_qwk=0.3845
+2026-10-11 06:24:39  INFO   street_alexnet_ordinal  [fold 1] thresholds tuned on validation: 0.83 0.47 0.42 0.24
+2026-10-11 06:24:41  INFO   street_alexnet_ordinal  [fold 1] test accuracy=0.3638 f1=0.3194 mean_absolute_error=0.8131 one_off_accuracy=0.8509 amae=0.8850 qwk=0.4971 tuned_qwk=0.5301 alpha_ordinal=0.4823 score_mae=0.6151 score_spearman=0.6493 monotonicity_violation_pct=0.0000
+2026-10-11 06:24:41  INFO   street_alexnet_ordinal  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-11 06:24:41  INFO   street_alexnet_ordinal  [fold 2] view=street backbone=alexnet weights=torchvision IMAGENET1K
+2026-10-11 06:24:41  INFO   street_alexnet_ordinal  [fold 2] phase=full trainable params=61,117,228 lr=0.001
+2026-10-11 06:25:05  INFO   street_alexnet_ordinal  [fold 2] full epoch 1/20 train_loss=0.4558 val_loss=0.4344 val_qwk=0.4053 lr=1.00e-03 * (24s)
+2026-10-11 06:25:29  INFO   street_alexnet_ordinal  [fold 2] full epoch 2/20 train_loss=0.4369 val_loss=0.4359 val_qwk=0.4135 lr=1.00e-03 (24s)
+2026-10-11 06:25:52  INFO   street_alexnet_ordinal  [fold 2] full epoch 3/20 train_loss=0.4304 val_loss=0.4340 val_qwk=0.4046 lr=1.00e-03 * (23s)
+2026-10-11 06:26:16  INFO   street_alexnet_ordinal  [fold 2] full epoch 4/20 train_loss=0.4224 val_loss=0.4360 val_qwk=0.3963 lr=1.00e-03 (23s)
+2026-10-11 06:26:39  INFO   street_alexnet_ordinal  [fold 2] full epoch 5/20 train_loss=0.4160 val_loss=0.4348 val_qwk=0.4440 lr=1.00e-03 (23s)
+2026-10-11 06:27:03  INFO   street_alexnet_ordinal  [fold 2] full epoch 6/20 train_loss=0.4118 val_loss=0.4375 val_qwk=0.4424 lr=1.00e-03 (24s)
+2026-10-11 06:27:26  INFO   street_alexnet_ordinal  [fold 2] full epoch 7/20 train_loss=0.4053 val_loss=0.4502 val_qwk=0.4218 lr=1.00e-03 (24s)
+2026-10-11 06:27:50  INFO   street_alexnet_ordinal  [fold 2] full epoch 8/20 train_loss=0.4010 val_loss=0.4460 val_qwk=0.3964 lr=1.00e-03 (23s)
+2026-10-11 06:27:50  INFO   street_alexnet_ordinal  [fold 2] full: early stop after 8 epochs, best so far epoch 3 (full) val_loss=0.4340 val_qwk=0.4046
+2026-10-11 06:27:51  INFO   street_alexnet_ordinal  [fold 2] thresholds tuned on validation: 0.71 0.50 0.41 0.43
+2026-10-11 06:27:53  INFO   street_alexnet_ordinal  [fold 2] test accuracy=0.3998 f1=0.3040 mean_absolute_error=0.7629 one_off_accuracy=0.8578 amae=0.9386 qwk=0.4259 tuned_qwk=0.4668 alpha_ordinal=0.4307 score_mae=0.6124 score_spearman=0.5562 monotonicity_violation_pct=0.0000
+2026-10-11 06:27:53  INFO   street_alexnet_ordinal  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-11 06:27:54  INFO   street_alexnet_ordinal  [fold 3] view=street backbone=alexnet weights=torchvision IMAGENET1K
+2026-10-11 06:27:54  INFO   street_alexnet_ordinal  [fold 3] phase=full trainable params=61,117,228 lr=0.001
+2026-10-11 06:28:18  INFO   street_alexnet_ordinal  [fold 3] full epoch 1/20 train_loss=0.4573 val_loss=0.4393 val_qwk=0.4712 lr=1.00e-03 * (24s)
+2026-10-11 06:28:42  INFO   street_alexnet_ordinal  [fold 3] full epoch 2/20 train_loss=0.4365 val_loss=0.4419 val_qwk=0.5035 lr=1.00e-03 (24s)
+2026-10-11 06:29:05  INFO   street_alexnet_ordinal  [fold 3] full epoch 3/20 train_loss=0.4312 val_loss=0.4359 val_qwk=0.4941 lr=1.00e-03 * (23s)
+2026-10-11 06:29:29  INFO   street_alexnet_ordinal  [fold 3] full epoch 4/20 train_loss=0.4231 val_loss=0.4318 val_qwk=0.4923 lr=1.00e-03 * (24s)
+2026-10-11 06:29:52  INFO   street_alexnet_ordinal  [fold 3] full epoch 5/20 train_loss=0.4163 val_loss=0.4367 val_qwk=0.4773 lr=1.00e-03 (23s)
+2026-10-11 06:30:16  INFO   street_alexnet_ordinal  [fold 3] full epoch 6/20 train_loss=0.4114 val_loss=0.4323 val_qwk=0.5085 lr=1.00e-03 (24s)
+2026-10-11 06:30:39  INFO   street_alexnet_ordinal  [fold 3] full epoch 7/20 train_loss=0.4060 val_loss=0.4367 val_qwk=0.5100 lr=1.00e-03 (24s)
+2026-10-11 06:31:03  INFO   street_alexnet_ordinal  [fold 3] full epoch 8/20 train_loss=0.3996 val_loss=0.4394 val_qwk=0.4981 lr=1.00e-03 (24s)
+2026-10-11 06:31:27  INFO   street_alexnet_ordinal  [fold 3] full epoch 9/20 train_loss=0.3936 val_loss=0.4403 val_qwk=0.4645 lr=1.00e-03 (24s)
+2026-10-11 06:31:27  INFO   street_alexnet_ordinal  [fold 3] full: early stop after 9 epochs, best so far epoch 4 (full) val_loss=0.4318 val_qwk=0.4923
+2026-10-11 06:31:29  INFO   street_alexnet_ordinal  [fold 3] thresholds tuned on validation: 0.85 0.32 0.55 0.23
+2026-10-11 06:31:31  INFO   street_alexnet_ordinal  [fold 3] test accuracy=0.3905 f1=0.3258 mean_absolute_error=0.7800 one_off_accuracy=0.8554 amae=0.9342 qwk=0.4436 tuned_qwk=0.4296 alpha_ordinal=0.4184 score_mae=0.5868 score_spearman=0.5453 monotonicity_violation_pct=0.0000
+2026-10-11 06:31:31  INFO   street_alexnet_ordinal  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-11 06:31:31  INFO   street_alexnet_ordinal  [fold 4] view=street backbone=alexnet weights=torchvision IMAGENET1K
+2026-10-11 06:31:31  INFO   street_alexnet_ordinal  [fold 4] phase=full trainable params=61,117,228 lr=0.001
+2026-10-11 06:31:55  INFO   street_alexnet_ordinal  [fold 4] full epoch 1/20 train_loss=0.4542 val_loss=0.4384 val_qwk=0.4662 lr=1.00e-03 * (25s)
+2026-10-11 06:32:19  INFO   street_alexnet_ordinal  [fold 4] full epoch 2/20 train_loss=0.4362 val_loss=0.4363 val_qwk=0.4707 lr=1.00e-03 * (24s)
+2026-10-11 06:32:43  INFO   street_alexnet_ordinal  [fold 4] full epoch 3/20 train_loss=0.4288 val_loss=0.4385 val_qwk=0.4284 lr=1.00e-03 (24s)
+2026-10-11 06:33:07  INFO   street_alexnet_ordinal  [fold 4] full epoch 4/20 train_loss=0.4226 val_loss=0.4402 val_qwk=0.4621 lr=1.00e-03 (24s)
+2026-10-11 06:33:31  INFO   street_alexnet_ordinal  [fold 4] full epoch 5/20 train_loss=0.4162 val_loss=0.4547 val_qwk=0.4557 lr=1.00e-03 (24s)
+2026-10-11 06:33:55  INFO   street_alexnet_ordinal  [fold 4] full epoch 6/20 train_loss=0.4100 val_loss=0.4416 val_qwk=0.4852 lr=1.00e-03 (24s)
+2026-10-11 06:34:19  INFO   street_alexnet_ordinal  [fold 4] full epoch 7/20 train_loss=0.4046 val_loss=0.4472 val_qwk=0.4744 lr=1.00e-03 (24s)
+2026-10-11 06:34:19  INFO   street_alexnet_ordinal  [fold 4] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4363 val_qwk=0.4707
+2026-10-11 06:34:20  INFO   street_alexnet_ordinal  [fold 4] thresholds tuned on validation: 0.73 0.53 0.49 0.33
+2026-10-11 06:34:22  INFO   street_alexnet_ordinal  [fold 4] test accuracy=0.3673 f1=0.2967 mean_absolute_error=0.7872 one_off_accuracy=0.8650 amae=0.8967 qwk=0.4836 tuned_qwk=0.5104 alpha_ordinal=0.4845 score_mae=0.6193 score_spearman=0.6271 monotonicity_violation_pct=0.0000
+2026-10-11 06:34:22  INFO   street_alexnet_ordinal  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-11 06:34:23  INFO   street_alexnet_ordinal  [fold 5] view=street backbone=alexnet weights=torchvision IMAGENET1K
+2026-10-11 06:34:23  INFO   street_alexnet_ordinal  [fold 5] phase=full trainable params=61,117,228 lr=0.001
+2026-10-11 06:34:48  INFO   street_alexnet_ordinal  [fold 5] full epoch 1/20 train_loss=0.4522 val_loss=0.4579 val_qwk=0.3680 lr=1.00e-03 * (25s)
+2026-10-11 06:35:12  INFO   street_alexnet_ordinal  [fold 5] full epoch 2/20 train_loss=0.4343 val_loss=0.4514 val_qwk=0.3814 lr=1.00e-03 * (24s)
+2026-10-11 06:35:36  INFO   street_alexnet_ordinal  [fold 5] full epoch 3/20 train_loss=0.4263 val_loss=0.4531 val_qwk=0.3831 lr=1.00e-03 (24s)
+2026-10-11 06:36:01  INFO   street_alexnet_ordinal  [fold 5] full epoch 4/20 train_loss=0.4195 val_loss=0.4663 val_qwk=0.3870 lr=1.00e-03 (24s)
+2026-10-11 06:36:25  INFO   street_alexnet_ordinal  [fold 5] full epoch 5/20 train_loss=0.4147 val_loss=0.4587 val_qwk=0.3736 lr=1.00e-03 (24s)
+2026-10-11 06:36:49  INFO   street_alexnet_ordinal  [fold 5] full epoch 6/20 train_loss=0.4085 val_loss=0.4605 val_qwk=0.3751 lr=1.00e-03 (24s)
+2026-10-11 06:37:14  INFO   street_alexnet_ordinal  [fold 5] full epoch 7/20 train_loss=0.4019 val_loss=0.4583 val_qwk=0.3503 lr=1.00e-03 (25s)
+2026-10-11 06:37:14  INFO   street_alexnet_ordinal  [fold 5] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4514 val_qwk=0.3814
+2026-10-11 06:37:16  INFO   street_alexnet_ordinal  [fold 5] thresholds tuned on validation: 0.69 0.73 0.27 0.23
+2026-10-11 06:37:17  INFO   street_alexnet_ordinal  [fold 5] test accuracy=0.3820 f1=0.2965 mean_absolute_error=0.7956 one_off_accuracy=0.8400 amae=0.9134 qwk=0.4679 tuned_qwk=0.5069 alpha_ordinal=0.4750 score_mae=0.5893 score_spearman=0.6416 monotonicity_violation_pct=0.0000
+2026-10-11 06:37:18  INFO   street_alexnet_ordinal  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-11 06:37:18  INFO   street_alexnet_ordinal  [fold 6] view=street backbone=alexnet weights=torchvision IMAGENET1K
+2026-10-11 06:37:18  INFO   street_alexnet_ordinal  [fold 6] phase=full trainable params=61,117,228 lr=0.001
+2026-10-11 06:37:43  INFO   street_alexnet_ordinal  [fold 6] full epoch 1/20 train_loss=0.4510 val_loss=0.4775 val_qwk=0.4315 lr=1.00e-03 * (25s)
+2026-10-11 06:38:08  INFO   street_alexnet_ordinal  [fold 6] full epoch 2/20 train_loss=0.4330 val_loss=0.4576 val_qwk=0.4055 lr=1.00e-03 * (25s)
+2026-10-11 06:38:32  INFO   street_alexnet_ordinal  [fold 6] full epoch 3/20 train_loss=0.4273 val_loss=0.4660 val_qwk=0.4427 lr=1.00e-03 (24s)
+2026-10-11 06:38:57  INFO   street_alexnet_ordinal  [fold 6] full epoch 4/20 train_loss=0.4201 val_loss=0.4615 val_qwk=0.4136 lr=1.00e-03 (24s)
+2026-10-11 06:39:22  INFO   street_alexnet_ordinal  [fold 6] full epoch 5/20 train_loss=0.4124 val_loss=0.4526 val_qwk=0.3905 lr=1.00e-03 * (25s)
+2026-10-11 06:39:46  INFO   street_alexnet_ordinal  [fold 6] full epoch 6/20 train_loss=0.4087 val_loss=0.4563 val_qwk=0.4160 lr=1.00e-03 (24s)
+2026-10-11 06:40:10  INFO   street_alexnet_ordinal  [fold 6] full epoch 7/20 train_loss=0.4033 val_loss=0.4596 val_qwk=0.4334 lr=1.00e-03 (24s)
+2026-10-11 06:40:35  INFO   street_alexnet_ordinal  [fold 6] full epoch 8/20 train_loss=0.3979 val_loss=0.4824 val_qwk=0.4132 lr=1.00e-03 (24s)
+2026-10-11 06:41:00  INFO   street_alexnet_ordinal  [fold 6] full epoch 9/20 train_loss=0.3913 val_loss=0.4655 val_qwk=0.4262 lr=1.00e-03 (25s)
+2026-10-11 06:41:25  INFO   street_alexnet_ordinal  [fold 6] full epoch 10/20 train_loss=0.3856 val_loss=0.4658 val_qwk=0.4199 lr=1.00e-03 (25s)
+2026-10-11 06:41:25  INFO   street_alexnet_ordinal  [fold 6] full: early stop after 10 epochs, best so far epoch 5 (full) val_loss=0.4526 val_qwk=0.3905
+2026-10-11 06:41:26  INFO   street_alexnet_ordinal  [fold 6] thresholds tuned on validation: 0.64 0.54 0.38 0.23
+2026-10-11 06:41:28  INFO   street_alexnet_ordinal  [fold 6] test accuracy=0.3508 f1=0.2758 mean_absolute_error=0.8329 one_off_accuracy=0.8301 amae=1.0061 qwk=0.3641 tuned_qwk=0.4226 alpha_ordinal=0.3702 score_mae=0.6604 score_spearman=0.5067 monotonicity_violation_pct=0.0000
+2026-10-11 06:41:28  INFO   street_alexnet_ordinal  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-11 06:41:28  INFO   street_alexnet_ordinal  [fold 7] view=street backbone=alexnet weights=torchvision IMAGENET1K
+2026-10-11 06:41:28  INFO   street_alexnet_ordinal  [fold 7] phase=full trainable params=61,117,228 lr=0.001
+2026-10-11 06:41:53  INFO   street_alexnet_ordinal  [fold 7] full epoch 1/20 train_loss=0.4521 val_loss=0.4562 val_qwk=0.3991 lr=1.00e-03 * (25s)
+2026-10-11 06:42:18  INFO   street_alexnet_ordinal  [fold 7] full epoch 2/20 train_loss=0.4328 val_loss=0.4462 val_qwk=0.3861 lr=1.00e-03 * (25s)
+2026-10-11 06:42:42  INFO   street_alexnet_ordinal  [fold 7] full epoch 3/20 train_loss=0.4250 val_loss=0.4468 val_qwk=0.4122 lr=1.00e-03 (24s)
+2026-10-11 06:43:07  INFO   street_alexnet_ordinal  [fold 7] full epoch 4/20 train_loss=0.4175 val_loss=0.4453 val_qwk=0.4041 lr=1.00e-03 * (24s)
+2026-10-11 06:43:32  INFO   street_alexnet_ordinal  [fold 7] full epoch 5/20 train_loss=0.4125 val_loss=0.4485 val_qwk=0.4269 lr=1.00e-03 (25s)
+2026-10-11 06:43:56  INFO   street_alexnet_ordinal  [fold 7] full epoch 6/20 train_loss=0.4064 val_loss=0.4444 val_qwk=0.4051 lr=1.00e-03 * (25s)
+2026-10-11 06:44:21  INFO   street_alexnet_ordinal  [fold 7] full epoch 7/20 train_loss=0.4002 val_loss=0.4467 val_qwk=0.3719 lr=1.00e-03 (24s)
+2026-10-11 06:44:45  INFO   street_alexnet_ordinal  [fold 7] full epoch 8/20 train_loss=0.3948 val_loss=0.4501 val_qwk=0.4256 lr=1.00e-03 (24s)
+2026-10-11 06:45:09  INFO   street_alexnet_ordinal  [fold 7] full epoch 9/20 train_loss=0.3888 val_loss=0.4546 val_qwk=0.4176 lr=1.00e-03 (24s)
+2026-10-11 06:45:34  INFO   street_alexnet_ordinal  [fold 7] full epoch 10/20 train_loss=0.3836 val_loss=0.4540 val_qwk=0.4249 lr=1.00e-03 (24s)
+2026-10-11 06:45:58  INFO   street_alexnet_ordinal  [fold 7] full epoch 11/20 train_loss=0.3749 val_loss=0.4545 val_qwk=0.4240 lr=1.00e-03 (24s)
+2026-10-11 06:45:58  INFO   street_alexnet_ordinal  [fold 7] full: early stop after 11 epochs, best so far epoch 6 (full) val_loss=0.4444 val_qwk=0.4051
+2026-10-11 06:46:00  INFO   street_alexnet_ordinal  [fold 7] thresholds tuned on validation: 0.75 0.35 0.54 0.26
+2026-10-11 06:46:02  INFO   street_alexnet_ordinal  [fold 7] test accuracy=0.3445 f1=0.3081 mean_absolute_error=0.8599 one_off_accuracy=0.8265 amae=0.9602 qwk=0.4308 tuned_qwk=0.4204 alpha_ordinal=0.4190 score_mae=0.6507 score_spearman=0.5309 monotonicity_violation_pct=1.0283
+2026-10-11 06:46:02  INFO   street_alexnet_ordinal  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-11 06:46:02  INFO   street_alexnet_ordinal  [fold 8] view=street backbone=alexnet weights=torchvision IMAGENET1K
+2026-10-11 06:46:02  INFO   street_alexnet_ordinal  [fold 8] phase=full trainable params=61,117,228 lr=0.001
+2026-10-11 06:46:27  INFO   street_alexnet_ordinal  [fold 8] full epoch 1/20 train_loss=0.4486 val_loss=0.4624 val_qwk=0.4009 lr=1.00e-03 * (25s)
+2026-10-11 06:46:51  INFO   street_alexnet_ordinal  [fold 8] full epoch 2/20 train_loss=0.4320 val_loss=0.4652 val_qwk=0.3882 lr=1.00e-03 (24s)
+2026-10-11 06:47:16  INFO   street_alexnet_ordinal  [fold 8] full epoch 3/20 train_loss=0.4256 val_loss=0.4612 val_qwk=0.3691 lr=1.00e-03 * (24s)
+2026-10-11 06:47:40  INFO   street_alexnet_ordinal  [fold 8] full epoch 4/20 train_loss=0.4194 val_loss=0.4662 val_qwk=0.4128 lr=1.00e-03 (24s)
+2026-10-11 06:48:04  INFO   street_alexnet_ordinal  [fold 8] full epoch 5/20 train_loss=0.4134 val_loss=0.4838 val_qwk=0.4280 lr=1.00e-03 (24s)
+2026-10-11 06:48:28  INFO   street_alexnet_ordinal  [fold 8] full epoch 6/20 train_loss=0.4072 val_loss=0.4735 val_qwk=0.3647 lr=1.00e-03 (24s)
+2026-10-11 06:48:53  INFO   street_alexnet_ordinal  [fold 8] full epoch 7/20 train_loss=0.4016 val_loss=0.4796 val_qwk=0.3679 lr=1.00e-03 (25s)
+2026-10-11 06:49:17  INFO   street_alexnet_ordinal  [fold 8] full epoch 8/20 train_loss=0.3958 val_loss=0.4876 val_qwk=0.3813 lr=1.00e-03 (24s)
+2026-10-11 06:49:17  INFO   street_alexnet_ordinal  [fold 8] full: early stop after 8 epochs, best so far epoch 3 (full) val_loss=0.4612 val_qwk=0.3691
+2026-10-11 06:49:18  INFO   street_alexnet_ordinal  [fold 8] thresholds tuned on validation: 0.56 0.61 0.34 0.30
+2026-10-11 06:49:20  INFO   street_alexnet_ordinal  [fold 8] test accuracy=0.3536 f1=0.2544 mean_absolute_error=0.8199 one_off_accuracy=0.8394 amae=0.9875 qwk=0.3730 tuned_qwk=0.4201 alpha_ordinal=0.3937 score_mae=0.6505 score_spearman=0.5495 monotonicity_violation_pct=0.0000
+2026-10-11 06:49:20  INFO   street_alexnet_ordinal  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-11 06:49:21  INFO   street_alexnet_ordinal  [fold 9] view=street backbone=alexnet weights=torchvision IMAGENET1K
+2026-10-11 06:49:21  INFO   street_alexnet_ordinal  [fold 9] phase=full trainable params=61,117,228 lr=0.001
+2026-10-11 06:49:45  INFO   street_alexnet_ordinal  [fold 9] full epoch 1/20 train_loss=0.4517 val_loss=0.4379 val_qwk=0.4618 lr=1.00e-03 * (24s)
+2026-10-11 06:50:09  INFO   street_alexnet_ordinal  [fold 9] full epoch 2/20 train_loss=0.4331 val_loss=0.4389 val_qwk=0.4490 lr=1.00e-03 (24s)
+2026-10-11 06:50:32  INFO   street_alexnet_ordinal  [fold 9] full epoch 3/20 train_loss=0.4247 val_loss=0.4371 val_qwk=0.4566 lr=1.00e-03 * (24s)
+2026-10-11 06:50:56  INFO   street_alexnet_ordinal  [fold 9] full epoch 4/20 train_loss=0.4195 val_loss=0.4350 val_qwk=0.4527 lr=1.00e-03 * (24s)
+2026-10-11 06:51:20  INFO   street_alexnet_ordinal  [fold 9] full epoch 5/20 train_loss=0.4123 val_loss=0.4411 val_qwk=0.4499 lr=1.00e-03 (24s)
+2026-10-11 06:51:43  INFO   street_alexnet_ordinal  [fold 9] full epoch 6/20 train_loss=0.4076 val_loss=0.4387 val_qwk=0.4550 lr=1.00e-03 (24s)
+2026-10-11 06:52:07  INFO   street_alexnet_ordinal  [fold 9] full epoch 7/20 train_loss=0.4012 val_loss=0.4353 val_qwk=0.4652 lr=1.00e-03 (24s)
+2026-10-11 06:52:31  INFO   street_alexnet_ordinal  [fold 9] full epoch 8/20 train_loss=0.3944 val_loss=0.4365 val_qwk=0.4609 lr=1.00e-03 (24s)
+2026-10-11 06:52:54  INFO   street_alexnet_ordinal  [fold 9] full epoch 9/20 train_loss=0.3878 val_loss=0.4409 val_qwk=0.4398 lr=1.00e-03 (24s)
+2026-10-11 06:52:54  INFO   street_alexnet_ordinal  [fold 9] full: early stop after 9 epochs, best so far epoch 4 (full) val_loss=0.4350 val_qwk=0.4527
+2026-10-11 06:52:56  INFO   street_alexnet_ordinal  [fold 9] thresholds tuned on validation: 0.87 0.51 0.52 0.31
+2026-10-11 06:52:58  INFO   street_alexnet_ordinal  [fold 9] test accuracy=0.3365 f1=0.2709 mean_absolute_error=0.8953 one_off_accuracy=0.8000 amae=1.0028 qwk=0.3925 tuned_qwk=0.4321 alpha_ordinal=0.3694 score_mae=0.6862 score_spearman=0.5273 monotonicity_violation_pct=0.0000
+2026-10-11 06:52:58  INFO   street_alexnet_ordinal  [summary] 10 folds -> results/grid/street_alexnet_ordinal/summary.csv

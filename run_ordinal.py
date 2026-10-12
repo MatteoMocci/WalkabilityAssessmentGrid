@@ -47,6 +47,7 @@ from losses import get_criterion
 from metrics_utils import (cumulative_from_output, decode_thresholds, discrete_metrics_vs_raters, ordinal_metrics,
                            tune_thresholds)
 from model_utils import load_model
+from run_status import fold_complete
 
 N_FOLDS = 10
 AERIAL_DIR = os.path.join("views_output", "wms_patches", "images")
@@ -214,6 +215,12 @@ def evaluate_outputs(outputs, points, head, thresholds=None):
     return cum, metrics
 
 
+def sync_to_disk(path):
+    """Force a written file to disk, so a power cut cannot leave it half-written."""
+    with open(path, "rb") as f:
+        os.fsync(f.fileno())
+
+
 def write_preds(path, points, outputs, cum, fold):
     """Per-point outputs, cumulative probabilities, 0.5-rule class and expected score."""
     with open(path, "w", newline="", encoding="utf-8") as f:
@@ -272,9 +279,11 @@ def build_model(args, k, out_dim, logger):
 def train_fold(k, points, args, device, logger, run_dir, aerial_paths=None):
     """Train and evaluate one fold; write predictions and metrics."""
     metrics_path = os.path.join(run_dir, f"fold_{k}_metrics.json")
-    if os.path.exists(metrics_path) and not args.overwrite:
+    if not args.overwrite and fold_complete(run_dir, k, need_weights=args.save_weights):
         logger.info(f"[fold {k}] already done, skipping ({metrics_path})")
         return
+    if os.path.exists(metrics_path) and not args.overwrite:
+        logger.warning(f"[fold {k}] files are incomplete (interrupted run?), training this fold again")
     val_fold = (k + 1) % N_FOLDS
     test = [p for p in points if p["fold"] == k]
     val = [p for p in points if p["fold"] == val_fold]
@@ -395,12 +404,14 @@ def train_fold(k, points, args, device, logger, run_dir, aerial_paths=None):
     model.load_state_dict(best_state)
     if args.save_weights:
         torch.save(best_state, os.path.join(run_dir, f"fold_{k}_best.pt"))
+        sync_to_disk(os.path.join(run_dir, f"fold_{k}_best.pt"))
     # decision thresholds: tuned for QWK on the validation fold with the selected model
     _, vl_out, vl_idx = run_epoch(model, vl_ld, criterion, args.head, device, limit=args.limit_batches,
                                   desc="val (best)")
     val_eval = [val[i] for i in vl_idx]
     vl_cum = cumulative_from_output(vl_out, args.head)
     write_preds(os.path.join(run_dir, f"fold_{k}_val_preds.csv"), val_eval, vl_out, vl_cum, val_fold)
+    sync_to_disk(os.path.join(run_dir, f"fold_{k}_val_preds.csv"))
     thresholds = tune_thresholds(vl_cum, np.array([p["rater_lo"] for p in val_eval]),
                                  np.array([p["rater_hi"] for p in val_eval]))
     logger.info(f"[fold {k}] thresholds tuned on validation: " + " ".join(f"{t:.2f}" for t in thresholds))
@@ -417,8 +428,13 @@ def train_fold(k, points, args, device, logger, run_dir, aerial_paths=None):
                     "test_loss": te_loss, "tuned_thresholds": [float(t) for t in thresholds],
                     "n_train": len(train), "n_val": len(val)})
     write_preds(os.path.join(run_dir, f"fold_{k}_preds.csv"), test_eval, outputs, cum, k)
-    with open(metrics_path, "w", encoding="utf-8") as f:
+    sync_to_disk(os.path.join(run_dir, f"fold_{k}_preds.csv"))
+    # metrics last and atomically: its presence marks the fold as finished
+    with open(metrics_path + ".tmp", "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=2)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(metrics_path + ".tmp", metrics_path)
     logger.info(f"[fold {k}] test " + " ".join(f"{m}={metrics[m]:.4f}" for m in METRIC_KEYS))
 
 

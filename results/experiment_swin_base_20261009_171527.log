@@ -1,0 +1,6 @@
+2026-10-09 17:15:27  experiment start: model=swin_base args: --schedule article
+2026-10-09 17:15:27  [ordinal] start
+2026-10-09 18:11:16  [ordinal] done in 55 min -> results/street_swin_base_ordinal_sched/summary.csv
+2026-10-09 18:11:16  [ce] start
+2026-10-09 19:06:19  [ce] done in 55 min -> results/street_swin_base_ce_sched/summary.csv
+2026-10-09 19:06:19  experiment finished

@@ -1,0 +1,126 @@
+2026-10-11 03:07:38  INFO   street_vit_base_ordinal  run=street_vit_base_ordinal view=street device=cuda points=4410 with images=4410
+2026-10-11 03:07:38  INFO   street_vit_base_ordinal  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-11 03:07:38  INFO   street_vit_base_ordinal  [fold 0] view=street backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 03:07:39  INFO   street_vit_base_ordinal  [fold 0] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 03:08:56  INFO   street_vit_base_ordinal  [fold 0] full epoch 1/20 train_loss=0.4577 val_loss=0.4409 val_qwk=0.4455 lr=5.00e-05 * (77s)
+2026-10-11 03:09:33  INFO   street_vit_base_ordinal  [fold 0] full epoch 2/20 train_loss=0.4198 val_loss=0.4371 val_qwk=0.5018 lr=5.00e-05 * (38s)
+2026-10-11 03:10:11  INFO   street_vit_base_ordinal  [fold 0] full epoch 3/20 train_loss=0.3803 val_loss=0.4615 val_qwk=0.4877 lr=5.00e-05 (37s)
+2026-10-11 03:10:49  INFO   street_vit_base_ordinal  [fold 0] full epoch 4/20 train_loss=0.3397 val_loss=0.4836 val_qwk=0.4915 lr=5.00e-05 (38s)
+2026-10-11 03:11:26  INFO   street_vit_base_ordinal  [fold 0] full epoch 5/20 train_loss=0.3102 val_loss=0.5019 val_qwk=0.5026 lr=5.00e-05 (38s)
+2026-10-11 03:12:04  INFO   street_vit_base_ordinal  [fold 0] full epoch 6/20 train_loss=0.2891 val_loss=0.4832 val_qwk=0.4842 lr=5.00e-05 (38s)
+2026-10-11 03:12:42  INFO   street_vit_base_ordinal  [fold 0] full epoch 7/20 train_loss=0.2674 val_loss=0.5154 val_qwk=0.4826 lr=5.00e-05 (38s)
+2026-10-11 03:12:42  INFO   street_vit_base_ordinal  [fold 0] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4371 val_qwk=0.5018
+2026-10-11 03:12:45  INFO   street_vit_base_ordinal  [fold 0] thresholds tuned on validation: 0.71 0.42 0.52 0.23
+2026-10-11 03:12:49  INFO   street_vit_base_ordinal  [fold 0] test accuracy=0.3731 f1=0.2976 mean_absolute_error=0.7904 one_off_accuracy=0.8562 amae=0.9198 qwk=0.4575 tuned_qwk=0.4709 alpha_ordinal=0.4381 score_mae=0.6379 score_spearman=0.5752 monotonicity_violation_pct=0.0000
+2026-10-11 03:12:49  INFO   street_vit_base_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-11 03:12:50  INFO   street_vit_base_ordinal  [fold 1] view=street backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 03:12:50  INFO   street_vit_base_ordinal  [fold 1] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 03:13:43  INFO   street_vit_base_ordinal  [fold 1] full epoch 1/20 train_loss=0.4510 val_loss=0.4473 val_qwk=0.3727 lr=5.00e-05 * (54s)
+2026-10-11 03:14:22  INFO   street_vit_base_ordinal  [fold 1] full epoch 2/20 train_loss=0.4160 val_loss=0.4256 val_qwk=0.4489 lr=5.00e-05 * (38s)
+2026-10-11 03:15:00  INFO   street_vit_base_ordinal  [fold 1] full epoch 3/20 train_loss=0.3741 val_loss=0.4430 val_qwk=0.4213 lr=5.00e-05 (39s)
+2026-10-11 03:15:38  INFO   street_vit_base_ordinal  [fold 1] full epoch 4/20 train_loss=0.3378 val_loss=0.4695 val_qwk=0.4299 lr=5.00e-05 (38s)
+2026-10-11 03:16:17  INFO   street_vit_base_ordinal  [fold 1] full epoch 5/20 train_loss=0.3095 val_loss=0.4996 val_qwk=0.4037 lr=5.00e-05 (38s)
+2026-10-11 03:16:55  INFO   street_vit_base_ordinal  [fold 1] full epoch 6/20 train_loss=0.2864 val_loss=0.4867 val_qwk=0.4135 lr=5.00e-05 (38s)
+2026-10-11 03:17:33  INFO   street_vit_base_ordinal  [fold 1] full epoch 7/20 train_loss=0.2676 val_loss=0.5049 val_qwk=0.4676 lr=5.00e-05 (38s)
+2026-10-11 03:17:33  INFO   street_vit_base_ordinal  [fold 1] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4256 val_qwk=0.4489
+2026-10-11 03:17:36  INFO   street_vit_base_ordinal  [fold 1] thresholds tuned on validation: 0.79 0.44 0.54 0.21
+2026-10-11 03:17:39  INFO   street_vit_base_ordinal  [fold 1] test accuracy=0.3917 f1=0.3316 mean_absolute_error=0.7893 one_off_accuracy=0.8539 amae=0.8511 qwk=0.5249 tuned_qwk=0.5582 alpha_ordinal=0.5111 score_mae=0.6122 score_spearman=0.6761 monotonicity_violation_pct=0.0000
+2026-10-11 03:17:39  INFO   street_vit_base_ordinal  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-11 03:17:40  INFO   street_vit_base_ordinal  [fold 2] view=street backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 03:17:40  INFO   street_vit_base_ordinal  [fold 2] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 03:18:19  INFO   street_vit_base_ordinal  [fold 2] full epoch 1/20 train_loss=0.4493 val_loss=0.4324 val_qwk=0.4099 lr=5.00e-05 * (39s)
+2026-10-11 03:18:58  INFO   street_vit_base_ordinal  [fold 2] full epoch 2/20 train_loss=0.4150 val_loss=0.4513 val_qwk=0.3877 lr=5.00e-05 (38s)
+2026-10-11 03:19:36  INFO   street_vit_base_ordinal  [fold 2] full epoch 3/20 train_loss=0.3802 val_loss=0.4553 val_qwk=0.3901 lr=5.00e-05 (39s)
+2026-10-11 03:20:15  INFO   street_vit_base_ordinal  [fold 2] full epoch 4/20 train_loss=0.3443 val_loss=0.5241 val_qwk=0.3428 lr=5.00e-05 (38s)
+2026-10-11 03:20:53  INFO   street_vit_base_ordinal  [fold 2] full epoch 5/20 train_loss=0.3131 val_loss=0.5546 val_qwk=0.3563 lr=5.00e-05 (38s)
+2026-10-11 03:21:31  INFO   street_vit_base_ordinal  [fold 2] full epoch 6/20 train_loss=0.2901 val_loss=0.5255 val_qwk=0.3908 lr=5.00e-05 (38s)
+2026-10-11 03:21:31  INFO   street_vit_base_ordinal  [fold 2] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4324 val_qwk=0.4099
+2026-10-11 03:21:34  INFO   street_vit_base_ordinal  [fold 2] thresholds tuned on validation: 0.79 0.54 0.41 0.27
+2026-10-11 03:21:38  INFO   street_vit_base_ordinal  [fold 2] test accuracy=0.3933 f1=0.2766 mean_absolute_error=0.7651 one_off_accuracy=0.8685 amae=0.9414 qwk=0.4298 tuned_qwk=0.4473 alpha_ordinal=0.4327 score_mae=0.6074 score_spearman=0.5515 monotonicity_violation_pct=0.0000
+2026-10-11 03:21:38  INFO   street_vit_base_ordinal  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-11 03:21:39  INFO   street_vit_base_ordinal  [fold 3] view=street backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 03:21:39  INFO   street_vit_base_ordinal  [fold 3] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 03:22:18  INFO   street_vit_base_ordinal  [fold 3] full epoch 1/20 train_loss=0.4566 val_loss=0.4676 val_qwk=0.3677 lr=5.00e-05 * (40s)
+2026-10-11 03:22:57  INFO   street_vit_base_ordinal  [fold 3] full epoch 2/20 train_loss=0.4198 val_loss=0.4605 val_qwk=0.4374 lr=5.00e-05 * (39s)
+2026-10-11 03:23:35  INFO   street_vit_base_ordinal  [fold 3] full epoch 3/20 train_loss=0.3833 val_loss=0.4613 val_qwk=0.4705 lr=5.00e-05 (38s)
+2026-10-11 03:24:14  INFO   street_vit_base_ordinal  [fold 3] full epoch 4/20 train_loss=0.3456 val_loss=0.4662 val_qwk=0.4678 lr=5.00e-05 (39s)
+2026-10-11 03:24:53  INFO   street_vit_base_ordinal  [fold 3] full epoch 5/20 train_loss=0.3172 val_loss=0.4808 val_qwk=0.4346 lr=5.00e-05 (39s)
+2026-10-11 03:25:31  INFO   street_vit_base_ordinal  [fold 3] full epoch 6/20 train_loss=0.2872 val_loss=0.5334 val_qwk=0.4441 lr=5.00e-05 (38s)
+2026-10-11 03:26:09  INFO   street_vit_base_ordinal  [fold 3] full epoch 7/20 train_loss=0.2705 val_loss=0.5256 val_qwk=0.4431 lr=5.00e-05 (38s)
+2026-10-11 03:26:09  INFO   street_vit_base_ordinal  [fold 3] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4605 val_qwk=0.4374
+2026-10-11 03:26:12  INFO   street_vit_base_ordinal  [fold 3] thresholds tuned on validation: 0.52 0.36 0.31 0.17
+2026-10-11 03:26:15  INFO   street_vit_base_ordinal  [fold 3] test accuracy=0.3802 f1=0.3125 mean_absolute_error=0.8337 one_off_accuracy=0.8202 amae=0.9938 qwk=0.3842 tuned_qwk=0.4737 alpha_ordinal=0.3630 score_mae=0.6434 score_spearman=0.5454 monotonicity_violation_pct=1.6529
+2026-10-11 03:26:15  INFO   street_vit_base_ordinal  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-11 03:26:16  INFO   street_vit_base_ordinal  [fold 4] view=street backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 03:26:16  INFO   street_vit_base_ordinal  [fold 4] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 03:26:56  INFO   street_vit_base_ordinal  [fold 4] full epoch 1/20 train_loss=0.4509 val_loss=0.4529 val_qwk=0.4299 lr=5.00e-05 * (40s)
+2026-10-11 03:27:35  INFO   street_vit_base_ordinal  [fold 4] full epoch 2/20 train_loss=0.4123 val_loss=0.4537 val_qwk=0.4406 lr=5.00e-05 (39s)
+2026-10-11 03:28:14  INFO   street_vit_base_ordinal  [fold 4] full epoch 3/20 train_loss=0.3744 val_loss=0.4980 val_qwk=0.4102 lr=5.00e-05 (39s)
+2026-10-11 03:28:53  INFO   street_vit_base_ordinal  [fold 4] full epoch 4/20 train_loss=0.3320 val_loss=0.5030 val_qwk=0.4534 lr=5.00e-05 (39s)
+2026-10-11 03:29:32  INFO   street_vit_base_ordinal  [fold 4] full epoch 5/20 train_loss=0.3012 val_loss=0.5406 val_qwk=0.3696 lr=5.00e-05 (39s)
+2026-10-11 03:30:11  INFO   street_vit_base_ordinal  [fold 4] full epoch 6/20 train_loss=0.2800 val_loss=0.5299 val_qwk=0.4669 lr=5.00e-05 (39s)
+2026-10-11 03:30:11  INFO   street_vit_base_ordinal  [fold 4] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4529 val_qwk=0.4299
+2026-10-11 03:30:14  INFO   street_vit_base_ordinal  [fold 4] thresholds tuned on validation: 0.87 0.84 0.30 0.30
+2026-10-11 03:30:17  INFO   street_vit_base_ordinal  [fold 4] test accuracy=0.3741 f1=0.2459 mean_absolute_error=0.8352 one_off_accuracy=0.8238 amae=0.9630 qwk=0.4337 tuned_qwk=0.5039 alpha_ordinal=0.4051 score_mae=0.6409 score_spearman=0.6298 monotonicity_violation_pct=0.0000
+2026-10-11 03:30:17  INFO   street_vit_base_ordinal  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-11 03:30:18  INFO   street_vit_base_ordinal  [fold 5] view=street backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 03:30:18  INFO   street_vit_base_ordinal  [fold 5] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 03:30:59  INFO   street_vit_base_ordinal  [fold 5] full epoch 1/20 train_loss=0.4510 val_loss=0.4751 val_qwk=0.2933 lr=5.00e-05 * (40s)
+2026-10-11 03:31:38  INFO   street_vit_base_ordinal  [fold 5] full epoch 2/20 train_loss=0.4116 val_loss=0.4451 val_qwk=0.3979 lr=5.00e-05 * (39s)
+2026-10-11 03:32:18  INFO   street_vit_base_ordinal  [fold 5] full epoch 3/20 train_loss=0.3746 val_loss=0.4924 val_qwk=0.3488 lr=5.00e-05 (39s)
+2026-10-11 03:32:57  INFO   street_vit_base_ordinal  [fold 5] full epoch 4/20 train_loss=0.3331 val_loss=0.5191 val_qwk=0.3342 lr=5.00e-05 (39s)
+2026-10-11 03:33:36  INFO   street_vit_base_ordinal  [fold 5] full epoch 5/20 train_loss=0.3014 val_loss=0.5667 val_qwk=0.3175 lr=5.00e-05 (40s)
+2026-10-11 03:34:16  INFO   street_vit_base_ordinal  [fold 5] full epoch 6/20 train_loss=0.2765 val_loss=0.5794 val_qwk=0.3661 lr=5.00e-05 (40s)
+2026-10-11 03:34:55  INFO   street_vit_base_ordinal  [fold 5] full epoch 7/20 train_loss=0.2609 val_loss=0.5506 val_qwk=0.3708 lr=5.00e-05 (39s)
+2026-10-11 03:34:55  INFO   street_vit_base_ordinal  [fold 5] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4451 val_qwk=0.3979
+2026-10-11 03:34:58  INFO   street_vit_base_ordinal  [fold 5] thresholds tuned on validation: 0.78 0.55 0.33 0.50
+2026-10-11 03:35:01  INFO   street_vit_base_ordinal  [fold 5] test accuracy=0.3879 f1=0.3119 mean_absolute_error=0.7909 one_off_accuracy=0.8329 amae=0.9214 qwk=0.4584 tuned_qwk=0.4973 alpha_ordinal=0.4548 score_mae=0.5903 score_spearman=0.6282 monotonicity_violation_pct=0.0000
+2026-10-11 03:35:01  INFO   street_vit_base_ordinal  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-11 03:35:02  INFO   street_vit_base_ordinal  [fold 6] view=street backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 03:35:02  INFO   street_vit_base_ordinal  [fold 6] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 03:35:43  INFO   street_vit_base_ordinal  [fold 6] full epoch 1/20 train_loss=0.4465 val_loss=0.4799 val_qwk=0.3808 lr=5.00e-05 * (42s)
+2026-10-11 03:36:23  INFO   street_vit_base_ordinal  [fold 6] full epoch 2/20 train_loss=0.4090 val_loss=0.4843 val_qwk=0.4103 lr=5.00e-05 (40s)
+2026-10-11 03:37:03  INFO   street_vit_base_ordinal  [fold 6] full epoch 3/20 train_loss=0.3718 val_loss=0.4959 val_qwk=0.3908 lr=5.00e-05 (40s)
+2026-10-11 03:37:43  INFO   street_vit_base_ordinal  [fold 6] full epoch 4/20 train_loss=0.3326 val_loss=0.4920 val_qwk=0.3890 lr=5.00e-05 (40s)
+2026-10-11 03:38:24  INFO   street_vit_base_ordinal  [fold 6] full epoch 5/20 train_loss=0.3057 val_loss=0.5612 val_qwk=0.3776 lr=5.00e-05 (40s)
+2026-10-11 03:39:03  INFO   street_vit_base_ordinal  [fold 6] full epoch 6/20 train_loss=0.2841 val_loss=0.5758 val_qwk=0.3721 lr=5.00e-05 (40s)
+2026-10-11 03:39:03  INFO   street_vit_base_ordinal  [fold 6] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4799 val_qwk=0.3808
+2026-10-11 03:39:06  INFO   street_vit_base_ordinal  [fold 6] thresholds tuned on validation: 0.95 0.49 0.33 0.34
+2026-10-11 03:39:09  INFO   street_vit_base_ordinal  [fold 6] test accuracy=0.3025 f1=0.2446 mean_absolute_error=0.9185 one_off_accuracy=0.7928 amae=1.0238 qwk=0.3647 tuned_qwk=0.3921 alpha_ordinal=0.3193 score_mae=0.7148 score_spearman=0.4979 monotonicity_violation_pct=0.0000
+2026-10-11 03:39:09  INFO   street_vit_base_ordinal  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-11 03:39:10  INFO   street_vit_base_ordinal  [fold 7] view=street backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 03:39:10  INFO   street_vit_base_ordinal  [fold 7] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 03:39:51  INFO   street_vit_base_ordinal  [fold 7] full epoch 1/20 train_loss=0.4536 val_loss=0.4460 val_qwk=0.4738 lr=5.00e-05 * (41s)
+2026-10-11 03:40:30  INFO   street_vit_base_ordinal  [fold 7] full epoch 2/20 train_loss=0.4154 val_loss=0.4591 val_qwk=0.3805 lr=5.00e-05 (40s)
+2026-10-11 03:41:10  INFO   street_vit_base_ordinal  [fold 7] full epoch 3/20 train_loss=0.3794 val_loss=0.4530 val_qwk=0.4481 lr=5.00e-05 (40s)
+2026-10-11 03:41:50  INFO   street_vit_base_ordinal  [fold 7] full epoch 4/20 train_loss=0.3468 val_loss=0.4800 val_qwk=0.3940 lr=5.00e-05 (40s)
+2026-10-11 03:42:30  INFO   street_vit_base_ordinal  [fold 7] full epoch 5/20 train_loss=0.3142 val_loss=0.5092 val_qwk=0.4210 lr=5.00e-05 (40s)
+2026-10-11 03:43:10  INFO   street_vit_base_ordinal  [fold 7] full epoch 6/20 train_loss=0.2919 val_loss=0.5266 val_qwk=0.4412 lr=5.00e-05 (40s)
+2026-10-11 03:43:10  INFO   street_vit_base_ordinal  [fold 7] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4460 val_qwk=0.4738
+2026-10-11 03:43:12  INFO   street_vit_base_ordinal  [fold 7] thresholds tuned on validation: 0.61 0.48 0.54 0.14
+2026-10-11 03:43:15  INFO   street_vit_base_ordinal  [fold 7] test accuracy=0.3458 f1=0.2903 mean_absolute_error=0.8830 one_off_accuracy=0.8085 amae=0.9778 qwk=0.4394 tuned_qwk=0.4304 alpha_ordinal=0.4169 score_mae=0.6534 score_spearman=0.5336 monotonicity_violation_pct=0.0000
+2026-10-11 03:43:15  INFO   street_vit_base_ordinal  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-11 03:43:16  INFO   street_vit_base_ordinal  [fold 8] view=street backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 03:43:16  INFO   street_vit_base_ordinal  [fold 8] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 03:43:57  INFO   street_vit_base_ordinal  [fold 8] full epoch 1/20 train_loss=0.4491 val_loss=0.4697 val_qwk=0.3939 lr=5.00e-05 * (40s)
+2026-10-11 03:44:36  INFO   street_vit_base_ordinal  [fold 8] full epoch 2/20 train_loss=0.4068 val_loss=0.4752 val_qwk=0.4285 lr=5.00e-05 (39s)
+2026-10-11 03:45:16  INFO   street_vit_base_ordinal  [fold 8] full epoch 3/20 train_loss=0.3681 val_loss=0.4822 val_qwk=0.3626 lr=5.00e-05 (40s)
+2026-10-11 03:45:55  INFO   street_vit_base_ordinal  [fold 8] full epoch 4/20 train_loss=0.3276 val_loss=0.5426 val_qwk=0.3524 lr=5.00e-05 (39s)
+2026-10-11 03:46:35  INFO   street_vit_base_ordinal  [fold 8] full epoch 5/20 train_loss=0.2988 val_loss=0.5755 val_qwk=0.3929 lr=5.00e-05 (40s)
+2026-10-11 03:47:14  INFO   street_vit_base_ordinal  [fold 8] full epoch 6/20 train_loss=0.2762 val_loss=0.5675 val_qwk=0.3373 lr=5.00e-05 (39s)
+2026-10-11 03:47:14  INFO   street_vit_base_ordinal  [fold 8] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4697 val_qwk=0.3939
+2026-10-11 03:47:17  INFO   street_vit_base_ordinal  [fold 8] thresholds tuned on validation: 0.93 0.57 0.40 0.35
+2026-10-11 03:47:20  INFO   street_vit_base_ordinal  [fold 8] test accuracy=0.3705 f1=0.2834 mean_absolute_error=0.8018 one_off_accuracy=0.8472 amae=0.9424 qwk=0.4311 tuned_qwk=0.4275 alpha_ordinal=0.4433 score_mae=0.6638 score_spearman=0.5630 monotonicity_violation_pct=0.0000
+2026-10-11 03:47:20  INFO   street_vit_base_ordinal  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-11 03:47:21  INFO   street_vit_base_ordinal  [fold 9] view=street backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 03:47:21  INFO   street_vit_base_ordinal  [fold 9] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 03:48:01  INFO   street_vit_base_ordinal  [fold 9] full epoch 1/20 train_loss=0.4464 val_loss=0.4259 val_qwk=0.4554 lr=5.00e-05 * (40s)
+2026-10-11 03:48:39  INFO   street_vit_base_ordinal  [fold 9] full epoch 2/20 train_loss=0.4084 val_loss=0.4548 val_qwk=0.4016 lr=5.00e-05 (38s)
+2026-10-11 03:49:18  INFO   street_vit_base_ordinal  [fold 9] full epoch 3/20 train_loss=0.3710 val_loss=0.4643 val_qwk=0.4773 lr=5.00e-05 (38s)
+2026-10-11 03:49:56  INFO   street_vit_base_ordinal  [fold 9] full epoch 4/20 train_loss=0.3327 val_loss=0.4771 val_qwk=0.4286 lr=5.00e-05 (39s)
+2026-10-11 03:50:35  INFO   street_vit_base_ordinal  [fold 9] full epoch 5/20 train_loss=0.3047 val_loss=0.5400 val_qwk=0.4057 lr=5.00e-05 (39s)
+2026-10-11 03:51:13  INFO   street_vit_base_ordinal  [fold 9] full epoch 6/20 train_loss=0.2842 val_loss=0.5368 val_qwk=0.4066 lr=5.00e-05 (38s)
+2026-10-11 03:51:13  INFO   street_vit_base_ordinal  [fold 9] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4259 val_qwk=0.4554
+2026-10-11 03:51:17  INFO   street_vit_base_ordinal  [fold 9] thresholds tuned on validation: 0.88 0.33 0.43 0.14
+2026-10-11 03:51:20  INFO   street_vit_base_ordinal  [fold 9] test accuracy=0.3271 f1=0.2724 mean_absolute_error=0.8765 one_off_accuracy=0.8282 amae=0.9880 qwk=0.4021 tuned_qwk=0.4298 alpha_ordinal=0.3969 score_mae=0.6697 score_spearman=0.5106 monotonicity_violation_pct=0.4706
+2026-10-11 03:51:20  INFO   street_vit_base_ordinal  [summary] 10 folds -> results/grid/street_vit_base_ordinal/summary.csv

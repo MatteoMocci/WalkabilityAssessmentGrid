@@ -1,0 +1,18 @@
+{
+  "accuracy": 0.3626943005181347,
+  "f1": 0.28954212869944607,
+  "mean_absolute_error": 0.8095854922279793,
+  "one_off_accuracy": 0.8432642487046632,
+  "score_mae": 0.6122516470803021,
+  "score_spearman": 0.6162861127594064,
+  "monotonicity_violation_pct": 0.0,
+  "n": 386,
+  "fold": 8,
+  "val_fold": 9,
+  "weights": "timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k",
+  "best_epoch": 1,
+  "best_val_loss": 0.45808450902209563,
+  "test_loss": 0.43495049995461893,
+  "n_train": 3599,
+  "n_val": 425
+}

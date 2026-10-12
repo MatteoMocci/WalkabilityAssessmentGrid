@@ -1,0 +1,148 @@
+2026-10-10 12:22:05  INFO   street_swin_base_ordinal_frozen_lr1e-3  run=street_swin_base_ordinal_frozen_lr1e-3 device=cuda points=4410 with street images=4410
+2026-10-10 12:22:05  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-10 12:22:06  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 12:22:06  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] phase=head trainable params=4,100 lr=0.001
+2026-10-10 12:22:43  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] head epoch 1/20 train_loss=0.4420 val_loss=0.4339 val_qwk=0.5034 lr=1.00e-03 * (37s)
+2026-10-10 12:23:08  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] head epoch 2/20 train_loss=0.4288 val_loss=0.4257 val_qwk=0.5110 lr=1.00e-03 * (25s)
+2026-10-10 12:23:34  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] head epoch 3/20 train_loss=0.4256 val_loss=0.4258 val_qwk=0.5263 lr=1.00e-03 (25s)
+2026-10-10 12:23:59  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] head epoch 4/20 train_loss=0.4218 val_loss=0.4250 val_qwk=0.5288 lr=1.00e-03 * (25s)
+2026-10-10 12:24:24  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] head epoch 5/20 train_loss=0.4206 val_loss=0.4297 val_qwk=0.5411 lr=1.00e-03 (26s)
+2026-10-10 12:24:50  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] head epoch 6/20 train_loss=0.4193 val_loss=0.4275 val_qwk=0.5281 lr=1.00e-03 (25s)
+2026-10-10 12:25:15  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] head epoch 7/20 train_loss=0.4184 val_loss=0.4289 val_qwk=0.5151 lr=1.00e-03 (25s)
+2026-10-10 12:25:41  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] head epoch 8/20 train_loss=0.4177 val_loss=0.4391 val_qwk=0.5032 lr=1.00e-03 (25s)
+2026-10-10 12:26:06  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] head epoch 9/20 train_loss=0.4160 val_loss=0.4317 val_qwk=0.5198 lr=1.00e-03 (25s)
+2026-10-10 12:26:06  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] head: early stop after 9 epochs, best so far epoch 4 (head) val_loss=0.4250 val_qwk=0.5288
+2026-10-10 12:26:10  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] thresholds tuned on validation: 0.76 0.53 0.62 0.33
+2026-10-10 12:26:14  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 0] test accuracy=0.3703 f1=0.2935 mean_absolute_error=0.8036 one_off_accuracy=0.8477 amae=0.9424 qwk=0.4478 tuned_qwk=0.4888 alpha_ordinal=0.4319 score_mae=0.6156 score_spearman=0.6140 monotonicity_violation_pct=0.1880
+2026-10-10 12:26:14  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-10 12:26:15  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 1] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 12:26:15  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 1] phase=head trainable params=4,100 lr=0.001
+2026-10-10 12:26:42  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 1] head epoch 1/20 train_loss=0.4447 val_loss=0.4167 val_qwk=0.4511 lr=1.00e-03 * (27s)
+2026-10-10 12:27:07  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 1] head epoch 2/20 train_loss=0.4315 val_loss=0.4200 val_qwk=0.4465 lr=1.00e-03 (26s)
+2026-10-10 12:27:33  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 1] head epoch 3/20 train_loss=0.4243 val_loss=0.4262 val_qwk=0.4533 lr=1.00e-03 (26s)
+2026-10-10 12:27:59  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 1] head epoch 4/20 train_loss=0.4241 val_loss=0.4206 val_qwk=0.3955 lr=1.00e-03 (26s)
+2026-10-10 12:28:25  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 1] head epoch 5/20 train_loss=0.4210 val_loss=0.4171 val_qwk=0.4765 lr=1.00e-03 (26s)
+2026-10-10 12:28:51  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 1] head epoch 6/20 train_loss=0.4213 val_loss=0.4217 val_qwk=0.4991 lr=1.00e-03 (26s)
+2026-10-10 12:28:51  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 1] head: early stop after 6 epochs, best so far epoch 1 (head) val_loss=0.4167 val_qwk=0.4511
+2026-10-10 12:28:54  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 1] thresholds tuned on validation: 0.77 0.60 0.56 0.19
+2026-10-10 12:28:58  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 1] test accuracy=0.3976 f1=0.3275 mean_absolute_error=0.7594 one_off_accuracy=0.8708 amae=0.8395 qwk=0.5397 tuned_qwk=0.5734 alpha_ordinal=0.5242 score_mae=0.5821 score_spearman=0.7022 monotonicity_violation_pct=0.0000
+2026-10-10 12:28:58  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-10 12:28:59  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 12:28:59  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] phase=head trainable params=4,100 lr=0.001
+2026-10-10 12:29:26  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] head epoch 1/20 train_loss=0.4423 val_loss=0.4283 val_qwk=0.3899 lr=1.00e-03 * (27s)
+2026-10-10 12:29:51  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] head epoch 2/20 train_loss=0.4287 val_loss=0.4346 val_qwk=0.4020 lr=1.00e-03 (26s)
+2026-10-10 12:30:17  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] head epoch 3/20 train_loss=0.4252 val_loss=0.4297 val_qwk=0.4048 lr=1.00e-03 (26s)
+2026-10-10 12:30:43  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] head epoch 4/20 train_loss=0.4216 val_loss=0.4298 val_qwk=0.4067 lr=1.00e-03 (26s)
+2026-10-10 12:31:09  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] head epoch 5/20 train_loss=0.4198 val_loss=0.4298 val_qwk=0.4300 lr=1.00e-03 (26s)
+2026-10-10 12:31:35  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] head epoch 6/20 train_loss=0.4204 val_loss=0.4227 val_qwk=0.4239 lr=1.00e-03 * (26s)
+2026-10-10 12:32:01  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] head epoch 7/20 train_loss=0.4181 val_loss=0.4404 val_qwk=0.4149 lr=1.00e-03 (26s)
+2026-10-10 12:32:26  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] head epoch 8/20 train_loss=0.4186 val_loss=0.4341 val_qwk=0.4522 lr=1.00e-03 (26s)
+2026-10-10 12:32:52  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] head epoch 9/20 train_loss=0.4158 val_loss=0.4304 val_qwk=0.4186 lr=1.00e-03 (26s)
+2026-10-10 12:33:18  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] head epoch 10/20 train_loss=0.4154 val_loss=0.4323 val_qwk=0.4047 lr=1.00e-03 (26s)
+2026-10-10 12:33:44  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] head epoch 11/20 train_loss=0.4142 val_loss=0.4285 val_qwk=0.4334 lr=1.00e-03 (26s)
+2026-10-10 12:33:44  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] head: early stop after 11 epochs, best so far epoch 6 (head) val_loss=0.4227 val_qwk=0.4239
+2026-10-10 12:33:48  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] thresholds tuned on validation: 0.76 0.46 0.38 0.27
+2026-10-10 12:33:51  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 2] test accuracy=0.3793 f1=0.2902 mean_absolute_error=0.7780 one_off_accuracy=0.8599 amae=0.9446 qwk=0.4309 tuned_qwk=0.4638 alpha_ordinal=0.4216 score_mae=0.6053 score_spearman=0.5769 monotonicity_violation_pct=0.4310
+2026-10-10 12:33:51  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-10 12:33:52  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 12:33:52  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] phase=head trainable params=4,100 lr=0.001
+2026-10-10 12:34:19  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] head epoch 1/20 train_loss=0.4418 val_loss=0.4275 val_qwk=0.4861 lr=1.00e-03 * (27s)
+2026-10-10 12:34:44  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] head epoch 2/20 train_loss=0.4282 val_loss=0.4323 val_qwk=0.4930 lr=1.00e-03 (26s)
+2026-10-10 12:35:10  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] head epoch 3/20 train_loss=0.4251 val_loss=0.4251 val_qwk=0.5037 lr=1.00e-03 * (26s)
+2026-10-10 12:35:36  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] head epoch 4/20 train_loss=0.4219 val_loss=0.4271 val_qwk=0.4981 lr=1.00e-03 (26s)
+2026-10-10 12:36:02  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] head epoch 5/20 train_loss=0.4196 val_loss=0.4284 val_qwk=0.5010 lr=1.00e-03 (26s)
+2026-10-10 12:36:27  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] head epoch 6/20 train_loss=0.4187 val_loss=0.4315 val_qwk=0.5080 lr=1.00e-03 (26s)
+2026-10-10 12:36:53  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] head epoch 7/20 train_loss=0.4162 val_loss=0.4320 val_qwk=0.5065 lr=1.00e-03 (26s)
+2026-10-10 12:37:19  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] head epoch 8/20 train_loss=0.4186 val_loss=0.4290 val_qwk=0.4988 lr=1.00e-03 (26s)
+2026-10-10 12:37:19  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] head: early stop after 8 epochs, best so far epoch 3 (head) val_loss=0.4251 val_qwk=0.5037
+2026-10-10 12:37:22  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] thresholds tuned on validation: 0.64 0.53 0.52 0.27
+2026-10-10 12:37:25  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 3] test accuracy=0.3957 f1=0.3280 mean_absolute_error=0.7841 one_off_accuracy=0.8481 amae=0.9432 qwk=0.4345 tuned_qwk=0.4391 alpha_ordinal=0.4165 score_mae=0.5910 score_spearman=0.5483 monotonicity_violation_pct=0.0000
+2026-10-10 12:37:26  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-10 12:37:26  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 12:37:26  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] phase=head trainable params=4,100 lr=0.001
+2026-10-10 12:37:54  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] head epoch 1/20 train_loss=0.4418 val_loss=0.4320 val_qwk=0.4782 lr=1.00e-03 * (27s)
+2026-10-10 12:38:20  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] head epoch 2/20 train_loss=0.4282 val_loss=0.4342 val_qwk=0.4981 lr=1.00e-03 (26s)
+2026-10-10 12:38:46  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] head epoch 3/20 train_loss=0.4247 val_loss=0.4302 val_qwk=0.4676 lr=1.00e-03 * (26s)
+2026-10-10 12:39:12  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] head epoch 4/20 train_loss=0.4218 val_loss=0.4317 val_qwk=0.4713 lr=1.00e-03 (26s)
+2026-10-10 12:39:37  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] head epoch 5/20 train_loss=0.4191 val_loss=0.4345 val_qwk=0.4750 lr=1.00e-03 (26s)
+2026-10-10 12:40:03  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] head epoch 6/20 train_loss=0.4194 val_loss=0.4363 val_qwk=0.5121 lr=1.00e-03 (26s)
+2026-10-10 12:40:29  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] head epoch 7/20 train_loss=0.4171 val_loss=0.4316 val_qwk=0.4596 lr=1.00e-03 (26s)
+2026-10-10 12:40:55  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] head epoch 8/20 train_loss=0.4151 val_loss=0.4396 val_qwk=0.4584 lr=1.00e-03 (26s)
+2026-10-10 12:40:55  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] head: early stop after 8 epochs, best so far epoch 3 (head) val_loss=0.4302 val_qwk=0.4676
+2026-10-10 12:40:58  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] thresholds tuned on validation: 0.79 0.58 0.32 0.24
+2026-10-10 12:41:01  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 4] test accuracy=0.3581 f1=0.2894 mean_absolute_error=0.7849 one_off_accuracy=0.8753 amae=0.8891 qwk=0.4832 tuned_qwk=0.5294 alpha_ordinal=0.4907 score_mae=0.6051 score_spearman=0.6696 monotonicity_violation_pct=0.0000
+2026-10-10 12:41:02  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-10 12:41:02  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 5] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 12:41:02  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 5] phase=head trainable params=4,100 lr=0.001
+2026-10-10 12:41:29  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 5] head epoch 1/20 train_loss=0.4392 val_loss=0.4466 val_qwk=0.3634 lr=1.00e-03 * (27s)
+2026-10-10 12:41:56  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 5] head epoch 2/20 train_loss=0.4260 val_loss=0.4486 val_qwk=0.3725 lr=1.00e-03 (26s)
+2026-10-10 12:42:22  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 5] head epoch 3/20 train_loss=0.4221 val_loss=0.4488 val_qwk=0.3845 lr=1.00e-03 (26s)
+2026-10-10 12:42:48  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 5] head epoch 4/20 train_loss=0.4190 val_loss=0.4557 val_qwk=0.4081 lr=1.00e-03 (26s)
+2026-10-10 12:43:14  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 5] head epoch 5/20 train_loss=0.4184 val_loss=0.4524 val_qwk=0.3910 lr=1.00e-03 (26s)
+2026-10-10 12:43:40  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 5] head epoch 6/20 train_loss=0.4162 val_loss=0.4501 val_qwk=0.3646 lr=1.00e-03 (27s)
+2026-10-10 12:43:40  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 5] head: early stop after 6 epochs, best so far epoch 1 (head) val_loss=0.4466 val_qwk=0.3634
+2026-10-10 12:43:43  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 5] thresholds tuned on validation: 0.71 0.62 0.37 0.26
+2026-10-10 12:43:47  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 5] test accuracy=0.3843 f1=0.3177 mean_absolute_error=0.7792 one_off_accuracy=0.8470 amae=0.8935 qwk=0.4780 tuned_qwk=0.5229 alpha_ordinal=0.4673 score_mae=0.5701 score_spearman=0.6488 monotonicity_violation_pct=0.0000
+2026-10-10 12:43:47  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-10 12:43:47  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 6] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 12:43:47  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 6] phase=head trainable params=4,100 lr=0.001
+2026-10-10 12:44:15  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 6] head epoch 1/20 train_loss=0.4375 val_loss=0.4597 val_qwk=0.4562 lr=1.00e-03 * (27s)
+2026-10-10 12:44:42  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 6] head epoch 2/20 train_loss=0.4234 val_loss=0.4555 val_qwk=0.4238 lr=1.00e-03 * (27s)
+2026-10-10 12:45:08  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 6] head epoch 3/20 train_loss=0.4207 val_loss=0.4622 val_qwk=0.4369 lr=1.00e-03 (27s)
+2026-10-10 12:45:35  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 6] head epoch 4/20 train_loss=0.4175 val_loss=0.4640 val_qwk=0.4172 lr=1.00e-03 (26s)
+2026-10-10 12:46:01  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 6] head epoch 5/20 train_loss=0.4147 val_loss=0.4565 val_qwk=0.4170 lr=1.00e-03 (26s)
+2026-10-10 12:46:28  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 6] head epoch 6/20 train_loss=0.4135 val_loss=0.4566 val_qwk=0.4407 lr=1.00e-03 (27s)
+2026-10-10 12:46:54  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 6] head epoch 7/20 train_loss=0.4135 val_loss=0.4640 val_qwk=0.4255 lr=1.00e-03 (27s)
+2026-10-10 12:46:54  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 6] head: early stop after 7 epochs, best so far epoch 2 (head) val_loss=0.4555 val_qwk=0.4238
+2026-10-10 12:46:57  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 6] thresholds tuned on validation: 0.70 0.52 0.41 0.24
+2026-10-10 12:47:00  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 6] test accuracy=0.3508 f1=0.2799 mean_absolute_error=0.8494 one_off_accuracy=0.8204 amae=0.9968 qwk=0.3712 tuned_qwk=0.3941 alpha_ordinal=0.3541 score_mae=0.6417 score_spearman=0.5250 monotonicity_violation_pct=0.2762
+2026-10-10 12:47:00  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-10 12:47:01  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 12:47:01  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] phase=head trainable params=4,100 lr=0.001
+2026-10-10 12:47:28  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] head epoch 1/20 train_loss=0.4384 val_loss=0.4373 val_qwk=0.4489 lr=1.00e-03 * (27s)
+2026-10-10 12:47:55  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] head epoch 2/20 train_loss=0.4254 val_loss=0.4360 val_qwk=0.4286 lr=1.00e-03 * (27s)
+2026-10-10 12:48:21  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] head epoch 3/20 train_loss=0.4207 val_loss=0.4372 val_qwk=0.4302 lr=1.00e-03 (26s)
+2026-10-10 12:48:47  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] head epoch 4/20 train_loss=0.4183 val_loss=0.4399 val_qwk=0.4249 lr=1.00e-03 (26s)
+2026-10-10 12:49:14  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] head epoch 5/20 train_loss=0.4169 val_loss=0.4430 val_qwk=0.4571 lr=1.00e-03 (26s)
+2026-10-10 12:49:40  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] head epoch 6/20 train_loss=0.4154 val_loss=0.4359 val_qwk=0.4381 lr=1.00e-03 * (26s)
+2026-10-10 12:50:06  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] head epoch 7/20 train_loss=0.4137 val_loss=0.4474 val_qwk=0.3981 lr=1.00e-03 (26s)
+2026-10-10 12:50:32  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] head epoch 8/20 train_loss=0.4131 val_loss=0.4438 val_qwk=0.4056 lr=1.00e-03 (26s)
+2026-10-10 12:50:58  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] head epoch 9/20 train_loss=0.4128 val_loss=0.4467 val_qwk=0.4496 lr=1.00e-03 (26s)
+2026-10-10 12:51:25  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] head epoch 10/20 train_loss=0.4117 val_loss=0.4400 val_qwk=0.4533 lr=1.00e-03 (26s)
+2026-10-10 12:51:51  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] head epoch 11/20 train_loss=0.4110 val_loss=0.4427 val_qwk=0.4359 lr=1.00e-03 (26s)
+2026-10-10 12:51:51  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] head: early stop after 11 epochs, best so far epoch 6 (head) val_loss=0.4359 val_qwk=0.4381
+2026-10-10 12:51:54  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] thresholds tuned on validation: 0.71 0.60 0.44 0.24
+2026-10-10 12:51:57  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 7] test accuracy=0.3509 f1=0.2892 mean_absolute_error=0.8496 one_off_accuracy=0.8278 amae=0.9747 qwk=0.4092 tuned_qwk=0.4617 alpha_ordinal=0.4090 score_mae=0.6306 score_spearman=0.5639 monotonicity_violation_pct=0.7712
+2026-10-10 12:51:57  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-10 12:51:58  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 12:51:58  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] phase=head trainable params=4,100 lr=0.001
+2026-10-10 12:52:26  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] head epoch 1/20 train_loss=0.4375 val_loss=0.4605 val_qwk=0.4174 lr=1.00e-03 * (28s)
+2026-10-10 12:52:53  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] head epoch 2/20 train_loss=0.4232 val_loss=0.4591 val_qwk=0.3828 lr=1.00e-03 * (26s)
+2026-10-10 12:53:19  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] head epoch 3/20 train_loss=0.4213 val_loss=0.4533 val_qwk=0.4015 lr=1.00e-03 * (27s)
+2026-10-10 12:53:46  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] head epoch 4/20 train_loss=0.4182 val_loss=0.4553 val_qwk=0.4129 lr=1.00e-03 (27s)
+2026-10-10 12:54:12  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] head epoch 5/20 train_loss=0.4177 val_loss=0.4680 val_qwk=0.3956 lr=1.00e-03 (26s)
+2026-10-10 12:54:39  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] head epoch 6/20 train_loss=0.4151 val_loss=0.4620 val_qwk=0.3910 lr=1.00e-03 (26s)
+2026-10-10 12:55:05  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] head epoch 7/20 train_loss=0.4147 val_loss=0.4556 val_qwk=0.4010 lr=1.00e-03 (26s)
+2026-10-10 12:55:31  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] head epoch 8/20 train_loss=0.4125 val_loss=0.4563 val_qwk=0.4252 lr=1.00e-03 (26s)
+2026-10-10 12:55:31  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] head: early stop after 8 epochs, best so far epoch 3 (head) val_loss=0.4533 val_qwk=0.4015
+2026-10-10 12:55:34  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] thresholds tuned on validation: 0.69 0.61 0.31 0.29
+2026-10-10 12:55:38  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 8] test accuracy=0.3510 f1=0.2757 mean_absolute_error=0.8148 one_off_accuracy=0.8523 amae=0.9677 qwk=0.4106 tuned_qwk=0.4781 alpha_ordinal=0.4245 score_mae=0.6186 score_spearman=0.6068 monotonicity_violation_pct=0.5181
+2026-10-10 12:55:38  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-10 12:55:38  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-10 12:55:38  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] phase=head trainable params=4,100 lr=0.001
+2026-10-10 12:56:06  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] head epoch 1/20 train_loss=0.4374 val_loss=0.4289 val_qwk=0.4910 lr=1.00e-03 * (27s)
+2026-10-10 12:56:32  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] head epoch 2/20 train_loss=0.4246 val_loss=0.4260 val_qwk=0.4784 lr=1.00e-03 * (26s)
+2026-10-10 12:56:58  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] head epoch 3/20 train_loss=0.4220 val_loss=0.4301 val_qwk=0.4759 lr=1.00e-03 (26s)
+2026-10-10 12:57:24  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] head epoch 4/20 train_loss=0.4190 val_loss=0.4272 val_qwk=0.4520 lr=1.00e-03 (26s)
+2026-10-10 12:57:50  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] head epoch 5/20 train_loss=0.4174 val_loss=0.4358 val_qwk=0.4388 lr=1.00e-03 (26s)
+2026-10-10 12:58:16  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] head epoch 6/20 train_loss=0.4173 val_loss=0.4329 val_qwk=0.4442 lr=1.00e-03 (26s)
+2026-10-10 12:58:42  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] head epoch 7/20 train_loss=0.4148 val_loss=0.4256 val_qwk=0.4761 lr=1.00e-03 * (26s)
+2026-10-10 12:59:08  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] head epoch 8/20 train_loss=0.4136 val_loss=0.4380 val_qwk=0.4519 lr=1.00e-03 (26s)
+2026-10-10 12:59:34  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] head epoch 9/20 train_loss=0.4131 val_loss=0.4289 val_qwk=0.4680 lr=1.00e-03 (26s)
+2026-10-10 13:00:00  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] head epoch 10/20 train_loss=0.4121 val_loss=0.4268 val_qwk=0.4675 lr=1.00e-03 (26s)
+2026-10-10 13:00:26  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] head epoch 11/20 train_loss=0.4131 val_loss=0.4319 val_qwk=0.4781 lr=1.00e-03 (26s)
+2026-10-10 13:00:52  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] head epoch 12/20 train_loss=0.4110 val_loss=0.4283 val_qwk=0.4523 lr=1.00e-03 (26s)
+2026-10-10 13:00:52  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] head: early stop after 12 epochs, best so far epoch 7 (head) val_loss=0.4256 val_qwk=0.4761
+2026-10-10 13:00:55  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] thresholds tuned on validation: 0.81 0.69 0.32 0.33
+2026-10-10 13:00:59  INFO   street_swin_base_ordinal_frozen_lr1e-3  [fold 9] test accuracy=0.3459 f1=0.2816 mean_absolute_error=0.8435 one_off_accuracy=0.8306 amae=0.9598 qwk=0.4092 tuned_qwk=0.4269 alpha_ordinal=0.4126 score_mae=0.6502 score_spearman=0.5547 monotonicity_violation_pct=0.0000
+2026-10-10 13:00:59  INFO   street_swin_base_ordinal_frozen_lr1e-3  [summary] 10 folds -> results/finetune/street_swin_base_ordinal_frozen_lr1e-3/summary.csv

@@ -1,0 +1,128 @@
+2026-10-11 07:16:03  INFO   aerial_vit_base_ordinal  run=aerial_vit_base_ordinal view=aerial device=cuda points=4410 with images=4410
+2026-10-11 07:16:03  INFO   aerial_vit_base_ordinal  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-11 07:16:04  INFO   aerial_vit_base_ordinal  [fold 0] view=aerial backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 07:16:05  INFO   aerial_vit_base_ordinal  [fold 0] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:16:57  INFO   aerial_vit_base_ordinal  [fold 0] full epoch 1/20 train_loss=0.4726 val_loss=0.4782 val_qwk=0.2642 lr=5.00e-05 * (52s)
+2026-10-11 07:17:10  INFO   aerial_vit_base_ordinal  [fold 0] full epoch 2/20 train_loss=0.4425 val_loss=0.4717 val_qwk=0.3993 lr=5.00e-05 * (13s)
+2026-10-11 07:17:23  INFO   aerial_vit_base_ordinal  [fold 0] full epoch 3/20 train_loss=0.4092 val_loss=0.4830 val_qwk=0.4077 lr=5.00e-05 (13s)
+2026-10-11 07:17:37  INFO   aerial_vit_base_ordinal  [fold 0] full epoch 4/20 train_loss=0.3730 val_loss=0.4774 val_qwk=0.4045 lr=5.00e-05 (14s)
+2026-10-11 07:17:51  INFO   aerial_vit_base_ordinal  [fold 0] full epoch 5/20 train_loss=0.3386 val_loss=0.4976 val_qwk=0.4346 lr=5.00e-05 (13s)
+2026-10-11 07:18:04  INFO   aerial_vit_base_ordinal  [fold 0] full epoch 6/20 train_loss=0.3178 val_loss=0.5048 val_qwk=0.4035 lr=5.00e-05 (13s)
+2026-10-11 07:18:18  INFO   aerial_vit_base_ordinal  [fold 0] full epoch 7/20 train_loss=0.2949 val_loss=0.5311 val_qwk=0.3806 lr=5.00e-05 (14s)
+2026-10-11 07:18:18  INFO   aerial_vit_base_ordinal  [fold 0] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4717 val_qwk=0.3993
+2026-10-11 07:18:19  INFO   aerial_vit_base_ordinal  [fold 0] thresholds tuned on validation: 0.85 0.47 0.30 0.16
+2026-10-11 07:18:20  INFO   aerial_vit_base_ordinal  [fold 0] test accuracy=0.3496 f1=0.2797 mean_absolute_error=0.8412 one_off_accuracy=0.8261 amae=0.9763 qwk=0.3630 tuned_qwk=0.4314 alpha_ordinal=0.3595 score_mae=0.7005 score_spearman=0.4786 monotonicity_violation_pct=0.0000
+2026-10-11 07:18:20  INFO   aerial_vit_base_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-11 07:18:21  INFO   aerial_vit_base_ordinal  [fold 1] view=aerial backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 07:18:21  INFO   aerial_vit_base_ordinal  [fold 1] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:18:35  INFO   aerial_vit_base_ordinal  [fold 1] full epoch 1/20 train_loss=0.4752 val_loss=0.4913 val_qwk=0.3193 lr=5.00e-05 * (15s)
+2026-10-11 07:18:49  INFO   aerial_vit_base_ordinal  [fold 1] full epoch 2/20 train_loss=0.4506 val_loss=0.4396 val_qwk=0.4260 lr=5.00e-05 * (14s)
+2026-10-11 07:19:03  INFO   aerial_vit_base_ordinal  [fold 1] full epoch 3/20 train_loss=0.4194 val_loss=0.4475 val_qwk=0.3805 lr=5.00e-05 (14s)
+2026-10-11 07:19:17  INFO   aerial_vit_base_ordinal  [fold 1] full epoch 4/20 train_loss=0.3878 val_loss=0.4431 val_qwk=0.3709 lr=5.00e-05 (14s)
+2026-10-11 07:19:30  INFO   aerial_vit_base_ordinal  [fold 1] full epoch 5/20 train_loss=0.3548 val_loss=0.4757 val_qwk=0.4065 lr=5.00e-05 (14s)
+2026-10-11 07:19:44  INFO   aerial_vit_base_ordinal  [fold 1] full epoch 6/20 train_loss=0.3325 val_loss=0.4559 val_qwk=0.3770 lr=5.00e-05 (14s)
+2026-10-11 07:19:58  INFO   aerial_vit_base_ordinal  [fold 1] full epoch 7/20 train_loss=0.3129 val_loss=0.4893 val_qwk=0.3799 lr=5.00e-05 (14s)
+2026-10-11 07:19:58  INFO   aerial_vit_base_ordinal  [fold 1] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4396 val_qwk=0.4260
+2026-10-11 07:19:59  INFO   aerial_vit_base_ordinal  [fold 1] thresholds tuned on validation: 0.69 0.48 0.36 0.15
+2026-10-11 07:20:00  INFO   aerial_vit_base_ordinal  [fold 1] test accuracy=0.3728 f1=0.3244 mean_absolute_error=0.8489 one_off_accuracy=0.8191 amae=0.9218 qwk=0.4378 tuned_qwk=0.4640 alpha_ordinal=0.4201 score_mae=0.7217 score_spearman=0.5386 monotonicity_violation_pct=0.1988
+2026-10-11 07:20:00  INFO   aerial_vit_base_ordinal  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-11 07:20:01  INFO   aerial_vit_base_ordinal  [fold 2] view=aerial backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 07:20:01  INFO   aerial_vit_base_ordinal  [fold 2] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:20:16  INFO   aerial_vit_base_ordinal  [fold 2] full epoch 1/20 train_loss=0.4765 val_loss=0.4384 val_qwk=0.4112 lr=5.00e-05 * (15s)
+2026-10-11 07:20:30  INFO   aerial_vit_base_ordinal  [fold 2] full epoch 2/20 train_loss=0.4387 val_loss=0.4504 val_qwk=0.3654 lr=5.00e-05 (14s)
+2026-10-11 07:20:43  INFO   aerial_vit_base_ordinal  [fold 2] full epoch 3/20 train_loss=0.4049 val_loss=0.4596 val_qwk=0.3568 lr=5.00e-05 (14s)
+2026-10-11 07:20:57  INFO   aerial_vit_base_ordinal  [fold 2] full epoch 4/20 train_loss=0.3724 val_loss=0.4888 val_qwk=0.3376 lr=5.00e-05 (14s)
+2026-10-11 07:21:11  INFO   aerial_vit_base_ordinal  [fold 2] full epoch 5/20 train_loss=0.3434 val_loss=0.5196 val_qwk=0.3549 lr=5.00e-05 (14s)
+2026-10-11 07:21:25  INFO   aerial_vit_base_ordinal  [fold 2] full epoch 6/20 train_loss=0.3220 val_loss=0.5158 val_qwk=0.3387 lr=5.00e-05 (14s)
+2026-10-11 07:21:25  INFO   aerial_vit_base_ordinal  [fold 2] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4384 val_qwk=0.4112
+2026-10-11 07:21:25  INFO   aerial_vit_base_ordinal  [fold 2] thresholds tuned on validation: 0.72 0.50 0.44 0.25
+2026-10-11 07:21:27  INFO   aerial_vit_base_ordinal  [fold 2] test accuracy=0.3739 f1=0.2888 mean_absolute_error=0.8211 one_off_accuracy=0.8319 amae=0.9842 qwk=0.4035 tuned_qwk=0.4415 alpha_ordinal=0.3795 score_mae=0.6332 score_spearman=0.4890 monotonicity_violation_pct=0.0000
+2026-10-11 07:21:27  INFO   aerial_vit_base_ordinal  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-11 07:21:27  INFO   aerial_vit_base_ordinal  [fold 3] view=aerial backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 07:21:27  INFO   aerial_vit_base_ordinal  [fold 3] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:21:42  INFO   aerial_vit_base_ordinal  [fold 3] full epoch 1/20 train_loss=0.4758 val_loss=0.4711 val_qwk=0.2804 lr=5.00e-05 * (15s)
+2026-10-11 07:21:56  INFO   aerial_vit_base_ordinal  [fold 3] full epoch 2/20 train_loss=0.4468 val_loss=0.4679 val_qwk=0.3457 lr=5.00e-05 * (14s)
+2026-10-11 07:22:10  INFO   aerial_vit_base_ordinal  [fold 3] full epoch 3/20 train_loss=0.4175 val_loss=0.4825 val_qwk=0.3376 lr=5.00e-05 (14s)
+2026-10-11 07:22:24  INFO   aerial_vit_base_ordinal  [fold 3] full epoch 4/20 train_loss=0.3810 val_loss=0.4783 val_qwk=0.3724 lr=5.00e-05 (14s)
+2026-10-11 07:22:38  INFO   aerial_vit_base_ordinal  [fold 3] full epoch 5/20 train_loss=0.3492 val_loss=0.4988 val_qwk=0.2847 lr=5.00e-05 (14s)
+2026-10-11 07:22:52  INFO   aerial_vit_base_ordinal  [fold 3] full epoch 6/20 train_loss=0.3248 val_loss=0.5147 val_qwk=0.3645 lr=5.00e-05 (14s)
+2026-10-11 07:23:06  INFO   aerial_vit_base_ordinal  [fold 3] full epoch 7/20 train_loss=0.3038 val_loss=0.5437 val_qwk=0.3682 lr=5.00e-05 (14s)
+2026-10-11 07:23:06  INFO   aerial_vit_base_ordinal  [fold 3] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4679 val_qwk=0.3457
+2026-10-11 07:23:07  INFO   aerial_vit_base_ordinal  [fold 3] thresholds tuned on validation: 0.77 0.48 0.39 0.15
+2026-10-11 07:23:08  INFO   aerial_vit_base_ordinal  [fold 3] test accuracy=0.3368 f1=0.2366 mean_absolute_error=0.8502 one_off_accuracy=0.8316 amae=1.0358 qwk=0.3155 tuned_qwk=0.4118 alpha_ordinal=0.3143 score_mae=0.6744 score_spearman=0.4750 monotonicity_violation_pct=0.0000
+2026-10-11 07:23:08  INFO   aerial_vit_base_ordinal  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-11 07:23:09  INFO   aerial_vit_base_ordinal  [fold 4] view=aerial backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 07:23:09  INFO   aerial_vit_base_ordinal  [fold 4] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:23:24  INFO   aerial_vit_base_ordinal  [fold 4] full epoch 1/20 train_loss=0.4773 val_loss=0.4460 val_qwk=0.4063 lr=5.00e-05 * (15s)
+2026-10-11 07:23:38  INFO   aerial_vit_base_ordinal  [fold 4] full epoch 2/20 train_loss=0.4492 val_loss=0.4519 val_qwk=0.4596 lr=5.00e-05 (14s)
+2026-10-11 07:23:52  INFO   aerial_vit_base_ordinal  [fold 4] full epoch 3/20 train_loss=0.4244 val_loss=0.4605 val_qwk=0.3288 lr=5.00e-05 (14s)
+2026-10-11 07:24:06  INFO   aerial_vit_base_ordinal  [fold 4] full epoch 4/20 train_loss=0.3979 val_loss=0.4652 val_qwk=0.3672 lr=5.00e-05 (14s)
+2026-10-11 07:24:20  INFO   aerial_vit_base_ordinal  [fold 4] full epoch 5/20 train_loss=0.3675 val_loss=0.4738 val_qwk=0.3099 lr=5.00e-05 (14s)
+2026-10-11 07:24:34  INFO   aerial_vit_base_ordinal  [fold 4] full epoch 6/20 train_loss=0.3448 val_loss=0.4925 val_qwk=0.4491 lr=5.00e-05 (14s)
+2026-10-11 07:24:34  INFO   aerial_vit_base_ordinal  [fold 4] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4460 val_qwk=0.4063
+2026-10-11 07:24:35  INFO   aerial_vit_base_ordinal  [fold 4] thresholds tuned on validation: 0.75 0.39 0.58 0.21
+2026-10-11 07:24:36  INFO   aerial_vit_base_ordinal  [fold 4] test accuracy=0.3398 f1=0.2026 mean_absolute_error=0.8947 one_off_accuracy=0.8032 amae=1.0297 qwk=0.3766 tuned_qwk=0.4302 alpha_ordinal=0.3384 score_mae=0.6972 score_spearman=0.5058 monotonicity_violation_pct=0.0000
+2026-10-11 07:24:36  INFO   aerial_vit_base_ordinal  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-11 07:24:37  INFO   aerial_vit_base_ordinal  [fold 5] view=aerial backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 07:24:37  INFO   aerial_vit_base_ordinal  [fold 5] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:24:52  INFO   aerial_vit_base_ordinal  [fold 5] full epoch 1/20 train_loss=0.4745 val_loss=0.4925 val_qwk=0.1829 lr=5.00e-05 * (15s)
+2026-10-11 07:25:06  INFO   aerial_vit_base_ordinal  [fold 5] full epoch 2/20 train_loss=0.4459 val_loss=0.4692 val_qwk=0.2416 lr=5.00e-05 * (14s)
+2026-10-11 07:25:21  INFO   aerial_vit_base_ordinal  [fold 5] full epoch 3/20 train_loss=0.4172 val_loss=0.4822 val_qwk=0.2150 lr=5.00e-05 (14s)
+2026-10-11 07:25:35  INFO   aerial_vit_base_ordinal  [fold 5] full epoch 4/20 train_loss=0.3813 val_loss=0.5246 val_qwk=0.2851 lr=5.00e-05 (14s)
+2026-10-11 07:25:49  INFO   aerial_vit_base_ordinal  [fold 5] full epoch 5/20 train_loss=0.3536 val_loss=0.5102 val_qwk=0.2939 lr=5.00e-05 (14s)
+2026-10-11 07:26:04  INFO   aerial_vit_base_ordinal  [fold 5] full epoch 6/20 train_loss=0.3293 val_loss=0.5126 val_qwk=0.2758 lr=5.00e-05 (14s)
+2026-10-11 07:26:18  INFO   aerial_vit_base_ordinal  [fold 5] full epoch 7/20 train_loss=0.3055 val_loss=0.5120 val_qwk=0.2615 lr=5.00e-05 (14s)
+2026-10-11 07:26:18  INFO   aerial_vit_base_ordinal  [fold 5] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4692 val_qwk=0.2416
+2026-10-11 07:26:19  INFO   aerial_vit_base_ordinal  [fold 5] thresholds tuned on validation: 0.90 0.41 0.41 0.18
+2026-10-11 07:26:20  INFO   aerial_vit_base_ordinal  [fold 5] test accuracy=0.3166 f1=0.2115 mean_absolute_error=0.8610 one_off_accuracy=0.8364 amae=1.0076 qwk=0.3582 tuned_qwk=0.4524 alpha_ordinal=0.3713 score_mae=0.6346 score_spearman=0.5418 monotonicity_violation_pct=0.0000
+2026-10-11 07:26:20  INFO   aerial_vit_base_ordinal  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-11 07:26:21  INFO   aerial_vit_base_ordinal  [fold 6] view=aerial backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 07:26:21  INFO   aerial_vit_base_ordinal  [fold 6] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:26:36  INFO   aerial_vit_base_ordinal  [fold 6] full epoch 1/20 train_loss=0.4704 val_loss=0.4674 val_qwk=0.3595 lr=5.00e-05 * (15s)
+2026-10-11 07:26:50  INFO   aerial_vit_base_ordinal  [fold 6] full epoch 2/20 train_loss=0.4395 val_loss=0.4744 val_qwk=0.3694 lr=5.00e-05 (14s)
+2026-10-11 07:27:05  INFO   aerial_vit_base_ordinal  [fold 6] full epoch 3/20 train_loss=0.4146 val_loss=0.4823 val_qwk=0.3896 lr=5.00e-05 (15s)
+2026-10-11 07:27:19  INFO   aerial_vit_base_ordinal  [fold 6] full epoch 4/20 train_loss=0.3826 val_loss=0.4739 val_qwk=0.3682 lr=5.00e-05 (14s)
+2026-10-11 07:27:34  INFO   aerial_vit_base_ordinal  [fold 6] full epoch 5/20 train_loss=0.3481 val_loss=0.5099 val_qwk=0.3747 lr=5.00e-05 (14s)
+2026-10-11 07:27:48  INFO   aerial_vit_base_ordinal  [fold 6] full epoch 6/20 train_loss=0.3263 val_loss=0.5073 val_qwk=0.4061 lr=5.00e-05 (14s)
+2026-10-11 07:27:48  INFO   aerial_vit_base_ordinal  [fold 6] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4674 val_qwk=0.3595
+2026-10-11 07:27:49  INFO   aerial_vit_base_ordinal  [fold 6] thresholds tuned on validation: 0.77 0.45 0.57 0.20
+2026-10-11 07:27:50  INFO   aerial_vit_base_ordinal  [fold 6] test accuracy=0.3177 f1=0.2669 mean_absolute_error=0.9599 one_off_accuracy=0.7597 amae=1.0707 qwk=0.3048 tuned_qwk=0.3010 alpha_ordinal=0.2460 score_mae=0.7437 score_spearman=0.3500 monotonicity_violation_pct=0.5525
+2026-10-11 07:27:50  INFO   aerial_vit_base_ordinal  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-11 07:27:51  INFO   aerial_vit_base_ordinal  [fold 7] view=aerial backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 07:27:51  INFO   aerial_vit_base_ordinal  [fold 7] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:28:06  INFO   aerial_vit_base_ordinal  [fold 7] full epoch 1/20 train_loss=0.4742 val_loss=0.4634 val_qwk=0.4269 lr=5.00e-05 * (15s)
+2026-10-11 07:28:21  INFO   aerial_vit_base_ordinal  [fold 7] full epoch 2/20 train_loss=0.4437 val_loss=0.4549 val_qwk=0.3832 lr=5.00e-05 * (14s)
+2026-10-11 07:28:35  INFO   aerial_vit_base_ordinal  [fold 7] full epoch 3/20 train_loss=0.4210 val_loss=0.4687 val_qwk=0.4022 lr=5.00e-05 (14s)
+2026-10-11 07:28:49  INFO   aerial_vit_base_ordinal  [fold 7] full epoch 4/20 train_loss=0.3865 val_loss=0.4687 val_qwk=0.3767 lr=5.00e-05 (14s)
+2026-10-11 07:29:04  INFO   aerial_vit_base_ordinal  [fold 7] full epoch 5/20 train_loss=0.3552 val_loss=0.4959 val_qwk=0.4005 lr=5.00e-05 (14s)
+2026-10-11 07:29:18  INFO   aerial_vit_base_ordinal  [fold 7] full epoch 6/20 train_loss=0.3304 val_loss=0.4963 val_qwk=0.3963 lr=5.00e-05 (14s)
+2026-10-11 07:29:32  INFO   aerial_vit_base_ordinal  [fold 7] full epoch 7/20 train_loss=0.3074 val_loss=0.5258 val_qwk=0.3398 lr=5.00e-05 (14s)
+2026-10-11 07:29:32  INFO   aerial_vit_base_ordinal  [fold 7] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4549 val_qwk=0.3832
+2026-10-11 07:29:33  INFO   aerial_vit_base_ordinal  [fold 7] thresholds tuned on validation: 0.74 0.50 0.43 0.12
+2026-10-11 07:29:34  INFO   aerial_vit_base_ordinal  [fold 7] test accuracy=0.3149 f1=0.2427 mean_absolute_error=0.9010 one_off_accuracy=0.8111 amae=1.0315 qwk=0.3347 tuned_qwk=0.3705 alpha_ordinal=0.3328 score_mae=0.6933 score_spearman=0.4624 monotonicity_violation_pct=0.0000
+2026-10-11 07:29:34  INFO   aerial_vit_base_ordinal  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-11 07:29:35  INFO   aerial_vit_base_ordinal  [fold 8] view=aerial backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 07:29:35  INFO   aerial_vit_base_ordinal  [fold 8] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:29:50  INFO   aerial_vit_base_ordinal  [fold 8] full epoch 1/20 train_loss=0.4684 val_loss=0.4745 val_qwk=0.3577 lr=5.00e-05 * (15s)
+2026-10-11 07:30:05  INFO   aerial_vit_base_ordinal  [fold 8] full epoch 2/20 train_loss=0.4359 val_loss=0.4665 val_qwk=0.3238 lr=5.00e-05 * (14s)
+2026-10-11 07:30:19  INFO   aerial_vit_base_ordinal  [fold 8] full epoch 3/20 train_loss=0.4033 val_loss=0.4897 val_qwk=0.3479 lr=5.00e-05 (14s)
+2026-10-11 07:30:33  INFO   aerial_vit_base_ordinal  [fold 8] full epoch 4/20 train_loss=0.3697 val_loss=0.5004 val_qwk=0.3711 lr=5.00e-05 (14s)
+2026-10-11 07:30:47  INFO   aerial_vit_base_ordinal  [fold 8] full epoch 5/20 train_loss=0.3410 val_loss=0.5459 val_qwk=0.3151 lr=5.00e-05 (14s)
+2026-10-11 07:31:02  INFO   aerial_vit_base_ordinal  [fold 8] full epoch 6/20 train_loss=0.3177 val_loss=0.5207 val_qwk=0.3261 lr=5.00e-05 (14s)
+2026-10-11 07:31:16  INFO   aerial_vit_base_ordinal  [fold 8] full epoch 7/20 train_loss=0.2969 val_loss=0.5483 val_qwk=0.2847 lr=5.00e-05 (14s)
+2026-10-11 07:31:16  INFO   aerial_vit_base_ordinal  [fold 8] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4665 val_qwk=0.3238
+2026-10-11 07:31:17  INFO   aerial_vit_base_ordinal  [fold 8] thresholds tuned on validation: 0.67 0.56 0.33 0.27
+2026-10-11 07:31:18  INFO   aerial_vit_base_ordinal  [fold 8] test accuracy=0.3251 f1=0.2308 mean_absolute_error=0.8795 one_off_accuracy=0.8148 amae=1.0576 qwk=0.3228 tuned_qwk=0.3998 alpha_ordinal=0.3308 score_mae=0.6650 score_spearman=0.5199 monotonicity_violation_pct=0.7772
+2026-10-11 07:31:18  INFO   aerial_vit_base_ordinal  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-11 07:31:19  INFO   aerial_vit_base_ordinal  [fold 9] view=aerial backbone=vit_base weights=timm/vit_base_patch16_224.augreg2_in21k_ft_in1k
+2026-10-11 07:31:19  INFO   aerial_vit_base_ordinal  [fold 9] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:31:33  INFO   aerial_vit_base_ordinal  [fold 9] full epoch 1/20 train_loss=0.4710 val_loss=0.4570 val_qwk=0.3917 lr=5.00e-05 * (15s)
+2026-10-11 07:31:47  INFO   aerial_vit_base_ordinal  [fold 9] full epoch 2/20 train_loss=0.4378 val_loss=0.4615 val_qwk=0.3322 lr=5.00e-05 (14s)
+2026-10-11 07:32:01  INFO   aerial_vit_base_ordinal  [fold 9] full epoch 3/20 train_loss=0.4086 val_loss=0.4781 val_qwk=0.3993 lr=5.00e-05 (14s)
+2026-10-11 07:32:15  INFO   aerial_vit_base_ordinal  [fold 9] full epoch 4/20 train_loss=0.3736 val_loss=0.4963 val_qwk=0.3029 lr=5.00e-05 (14s)
+2026-10-11 07:32:29  INFO   aerial_vit_base_ordinal  [fold 9] full epoch 5/20 train_loss=0.3372 val_loss=0.5742 val_qwk=0.3268 lr=5.00e-05 (14s)
+2026-10-11 07:32:43  INFO   aerial_vit_base_ordinal  [fold 9] full epoch 6/20 train_loss=0.3163 val_loss=0.5061 val_qwk=0.3301 lr=5.00e-05 (14s)
+2026-10-11 07:32:43  INFO   aerial_vit_base_ordinal  [fold 9] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4570 val_qwk=0.3917
+2026-10-11 07:32:44  INFO   aerial_vit_base_ordinal  [fold 9] thresholds tuned on validation: 0.84 0.46 0.47 0.14
+2026-10-11 07:32:45  INFO   aerial_vit_base_ordinal  [fold 9] test accuracy=0.3271 f1=0.2590 mean_absolute_error=0.8859 one_off_accuracy=0.8106 amae=1.0231 qwk=0.3574 tuned_qwk=0.4119 alpha_ordinal=0.3553 score_mae=0.6931 score_spearman=0.4809 monotonicity_violation_pct=0.0000
+2026-10-11 07:32:45  INFO   aerial_vit_base_ordinal  [summary] 10 folds -> results/grid/aerial_vit_base_ordinal/summary.csv

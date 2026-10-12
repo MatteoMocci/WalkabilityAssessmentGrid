@@ -1,0 +1,117 @@
+2026-10-09 13:48:19  INFO   street_swin_base_ce_qwk  run=street_swin_base_ce_qwk device=cuda points=4410 with street images=4410
+2026-10-09 13:48:19  INFO   street_swin_base_ce_qwk  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-09 13:48:20  INFO   street_swin_base_ce_qwk  [fold 0] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-09 13:49:21  INFO   street_swin_base_ce_qwk  [fold 0] epoch 1/20 train_loss=1.4062 val_loss=1.3741 val_qwk=0.5412 * (60s)
+2026-10-09 13:50:07  INFO   street_swin_base_ce_qwk  [fold 0] epoch 2/20 train_loss=1.2930 val_loss=1.4141 val_qwk=0.5185 (46s)
+2026-10-09 13:50:53  INFO   street_swin_base_ce_qwk  [fold 0] epoch 3/20 train_loss=1.0753 val_loss=1.5735 val_qwk=0.5009 (46s)
+2026-10-09 13:51:40  INFO   street_swin_base_ce_qwk  [fold 0] epoch 4/20 train_loss=0.8667 val_loss=1.6565 val_qwk=0.4967 (47s)
+2026-10-09 13:52:26  INFO   street_swin_base_ce_qwk  [fold 0] epoch 5/20 train_loss=0.7636 val_loss=1.7786 val_qwk=0.5212 (46s)
+2026-10-09 13:53:12  INFO   street_swin_base_ce_qwk  [fold 0] epoch 6/20 train_loss=0.7268 val_loss=1.7242 val_qwk=0.5077 (46s)
+2026-10-09 13:53:12  INFO   street_swin_base_ce_qwk  [fold 0] early stop, best epoch 1 val_loss=1.3741 val_qwk=0.5412
+2026-10-09 13:53:16  INFO   street_swin_base_ce_qwk  [fold 0] test accuracy=0.3750 f1=0.3171 mean_absolute_error=0.7735 one_off_accuracy=0.8712 amae=0.8848 qwk=0.4777 alpha_ordinal=0.4783 score_mae=0.5934 score_spearman=0.6479 monotonicity_violation_pct=0.0000
+2026-10-09 13:53:16  INFO   street_swin_base_ce_qwk  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-09 13:53:17  INFO   street_swin_base_ce_qwk  [fold 1] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-09 13:54:10  INFO   street_swin_base_ce_qwk  [fold 1] epoch 1/20 train_loss=1.4083 val_loss=1.4161 val_qwk=0.4286 * (52s)
+2026-10-09 13:54:57  INFO   street_swin_base_ce_qwk  [fold 1] epoch 2/20 train_loss=1.3079 val_loss=1.4114 val_qwk=0.4600 * (47s)
+2026-10-09 13:55:44  INFO   street_swin_base_ce_qwk  [fold 1] epoch 3/20 train_loss=1.1234 val_loss=1.5091 val_qwk=0.4545 (48s)
+2026-10-09 13:56:32  INFO   street_swin_base_ce_qwk  [fold 1] epoch 4/20 train_loss=0.9042 val_loss=1.7074 val_qwk=0.4624 * (47s)
+2026-10-09 13:57:19  INFO   street_swin_base_ce_qwk  [fold 1] epoch 5/20 train_loss=0.7901 val_loss=1.6927 val_qwk=0.4037 (47s)
+2026-10-09 13:58:06  INFO   street_swin_base_ce_qwk  [fold 1] epoch 6/20 train_loss=0.7335 val_loss=1.6983 val_qwk=0.4674 * (47s)
+2026-10-09 13:58:53  INFO   street_swin_base_ce_qwk  [fold 1] epoch 7/20 train_loss=0.6926 val_loss=1.7176 val_qwk=0.4853 * (47s)
+2026-10-09 13:59:41  INFO   street_swin_base_ce_qwk  [fold 1] epoch 8/20 train_loss=0.6743 val_loss=1.6775 val_qwk=0.4586 (47s)
+2026-10-09 14:00:28  INFO   street_swin_base_ce_qwk  [fold 1] epoch 9/20 train_loss=0.6591 val_loss=1.7655 val_qwk=0.4259 (47s)
+2026-10-09 14:01:15  INFO   street_swin_base_ce_qwk  [fold 1] epoch 10/20 train_loss=0.6406 val_loss=1.7207 val_qwk=0.4689 (47s)
+2026-10-09 14:02:02  INFO   street_swin_base_ce_qwk  [fold 1] epoch 11/20 train_loss=0.6220 val_loss=1.8298 val_qwk=0.4701 (47s)
+2026-10-09 14:02:49  INFO   street_swin_base_ce_qwk  [fold 1] epoch 12/20 train_loss=0.6137 val_loss=1.7298 val_qwk=0.4395 (47s)
+2026-10-09 14:02:49  INFO   street_swin_base_ce_qwk  [fold 1] early stop, best epoch 7 val_loss=1.7176 val_qwk=0.4853
+2026-10-09 14:02:53  INFO   street_swin_base_ce_qwk  [fold 1] test accuracy=0.3569 f1=0.3443 mean_absolute_error=0.8728 one_off_accuracy=0.8211 amae=0.9124 qwk=0.5241 alpha_ordinal=0.4962 score_mae=0.6550 score_spearman=0.6441 monotonicity_violation_pct=0.0000
+2026-10-09 14:02:53  INFO   street_swin_base_ce_qwk  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-09 14:02:54  INFO   street_swin_base_ce_qwk  [fold 2] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-09 14:03:47  INFO   street_swin_base_ce_qwk  [fold 2] epoch 1/20 train_loss=1.3957 val_loss=1.3917 val_qwk=0.4450 * (53s)
+2026-10-09 14:04:35  INFO   street_swin_base_ce_qwk  [fold 2] epoch 2/20 train_loss=1.2707 val_loss=1.4677 val_qwk=0.4321 (48s)
+2026-10-09 14:05:22  INFO   street_swin_base_ce_qwk  [fold 2] epoch 3/20 train_loss=1.0605 val_loss=1.6204 val_qwk=0.3998 (47s)
+2026-10-09 14:06:09  INFO   street_swin_base_ce_qwk  [fold 2] epoch 4/20 train_loss=0.8657 val_loss=1.7951 val_qwk=0.4016 (47s)
+2026-10-09 14:06:57  INFO   street_swin_base_ce_qwk  [fold 2] epoch 5/20 train_loss=0.7671 val_loss=1.7584 val_qwk=0.3873 (48s)
+2026-10-09 14:07:44  INFO   street_swin_base_ce_qwk  [fold 2] epoch 6/20 train_loss=0.7278 val_loss=1.7815 val_qwk=0.4160 (47s)
+2026-10-09 14:07:44  INFO   street_swin_base_ce_qwk  [fold 2] early stop, best epoch 1 val_loss=1.3917 val_qwk=0.4450
+2026-10-09 14:07:48  INFO   street_swin_base_ce_qwk  [fold 2] test accuracy=0.3858 f1=0.2983 mean_absolute_error=0.7694 one_off_accuracy=0.8631 amae=0.9139 qwk=0.4640 alpha_ordinal=0.4557 score_mae=0.5939 score_spearman=0.5886 monotonicity_violation_pct=0.0000
+2026-10-09 14:07:48  INFO   street_swin_base_ce_qwk  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-09 14:07:49  INFO   street_swin_base_ce_qwk  [fold 3] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-09 14:08:42  INFO   street_swin_base_ce_qwk  [fold 3] epoch 1/20 train_loss=1.4066 val_loss=1.3584 val_qwk=0.4721 * (53s)
+2026-10-09 14:09:29  INFO   street_swin_base_ce_qwk  [fold 3] epoch 2/20 train_loss=1.2902 val_loss=1.4366 val_qwk=0.4983 * (47s)
+2026-10-09 14:10:17  INFO   street_swin_base_ce_qwk  [fold 3] epoch 3/20 train_loss=1.0682 val_loss=1.7179 val_qwk=0.4744 (48s)
+2026-10-09 14:11:04  INFO   street_swin_base_ce_qwk  [fold 3] epoch 4/20 train_loss=0.8529 val_loss=1.6385 val_qwk=0.4785 (48s)
+2026-10-09 14:11:52  INFO   street_swin_base_ce_qwk  [fold 3] epoch 5/20 train_loss=0.7620 val_loss=1.6773 val_qwk=0.4884 (48s)
+2026-10-09 14:12:40  INFO   street_swin_base_ce_qwk  [fold 3] epoch 6/20 train_loss=0.7118 val_loss=1.7239 val_qwk=0.5175 * (48s)
+2026-10-09 14:13:27  INFO   street_swin_base_ce_qwk  [fold 3] epoch 7/20 train_loss=0.6794 val_loss=1.7583 val_qwk=0.4968 (48s)
+2026-10-09 14:14:15  INFO   street_swin_base_ce_qwk  [fold 3] epoch 8/20 train_loss=0.6619 val_loss=1.7710 val_qwk=0.5054 (47s)
+2026-10-09 14:15:02  INFO   street_swin_base_ce_qwk  [fold 3] epoch 9/20 train_loss=0.6394 val_loss=1.8595 val_qwk=0.4915 (48s)
+2026-10-09 14:15:50  INFO   street_swin_base_ce_qwk  [fold 3] epoch 10/20 train_loss=0.6252 val_loss=1.8520 val_qwk=0.5161 (48s)
+2026-10-09 14:16:38  INFO   street_swin_base_ce_qwk  [fold 3] epoch 11/20 train_loss=0.6137 val_loss=1.8072 val_qwk=0.4854 (47s)
+2026-10-09 14:16:38  INFO   street_swin_base_ce_qwk  [fold 3] early stop, best epoch 6 val_loss=1.7239 val_qwk=0.5175
+2026-10-09 14:16:42  INFO   street_swin_base_ce_qwk  [fold 3] test accuracy=0.3750 f1=0.3278 mean_absolute_error=0.8151 one_off_accuracy=0.8419 amae=0.9380 qwk=0.4580 alpha_ordinal=0.4286 score_mae=0.6248 score_spearman=0.5403 monotonicity_violation_pct=0.0000
+2026-10-09 14:16:42  INFO   street_swin_base_ce_qwk  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-09 14:16:43  INFO   street_swin_base_ce_qwk  [fold 4] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-09 14:17:32  INFO   street_swin_base_ce_qwk  [fold 4] epoch 1/20 train_loss=1.3958 val_loss=1.4189 val_qwk=0.4681 * (49s)
+2026-10-09 14:18:21  INFO   street_swin_base_ce_qwk  [fold 4] epoch 2/20 train_loss=1.2855 val_loss=1.4681 val_qwk=0.4653 (48s)
+2026-10-09 14:19:09  INFO   street_swin_base_ce_qwk  [fold 4] epoch 3/20 train_loss=1.0860 val_loss=1.6787 val_qwk=0.4237 (48s)
+2026-10-09 14:19:57  INFO   street_swin_base_ce_qwk  [fold 4] epoch 4/20 train_loss=0.8692 val_loss=1.8420 val_qwk=0.4832 * (48s)
+2026-10-09 14:20:45  INFO   street_swin_base_ce_qwk  [fold 4] epoch 5/20 train_loss=0.7667 val_loss=1.8605 val_qwk=0.4422 (48s)
+2026-10-09 14:21:33  INFO   street_swin_base_ce_qwk  [fold 4] epoch 6/20 train_loss=0.7141 val_loss=1.8519 val_qwk=0.4551 (48s)
+2026-10-09 14:22:21  INFO   street_swin_base_ce_qwk  [fold 4] epoch 7/20 train_loss=0.6813 val_loss=1.9148 val_qwk=0.4564 (48s)
+2026-10-09 14:23:09  INFO   street_swin_base_ce_qwk  [fold 4] epoch 8/20 train_loss=0.6603 val_loss=1.7921 val_qwk=0.4298 (48s)
+2026-10-09 14:23:58  INFO   street_swin_base_ce_qwk  [fold 4] epoch 9/20 train_loss=0.6393 val_loss=1.9713 val_qwk=0.4599 (48s)
+2026-10-09 14:23:58  INFO   street_swin_base_ce_qwk  [fold 4] early stop, best epoch 4 val_loss=1.8420 val_qwk=0.4832
+2026-10-09 14:24:01  INFO   street_swin_base_ce_qwk  [fold 4] test accuracy=0.3902 f1=0.3224 mean_absolute_error=0.8192 one_off_accuracy=0.8307 amae=0.9216 qwk=0.4772 alpha_ordinal=0.4542 score_mae=0.6411 score_spearman=0.6311 monotonicity_violation_pct=0.0000
+2026-10-09 14:24:01  INFO   street_swin_base_ce_qwk  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-09 14:24:02  INFO   street_swin_base_ce_qwk  [fold 5] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-09 14:24:52  INFO   street_swin_base_ce_qwk  [fold 5] epoch 1/20 train_loss=1.3913 val_loss=1.4450 val_qwk=0.3845 * (50s)
+2026-10-09 14:25:41  INFO   street_swin_base_ce_qwk  [fold 5] epoch 2/20 train_loss=1.2729 val_loss=1.5502 val_qwk=0.4039 * (49s)
+2026-10-09 14:26:30  INFO   street_swin_base_ce_qwk  [fold 5] epoch 3/20 train_loss=1.0722 val_loss=1.8151 val_qwk=0.3458 (49s)
+2026-10-09 14:27:19  INFO   street_swin_base_ce_qwk  [fold 5] epoch 4/20 train_loss=0.8609 val_loss=1.8979 val_qwk=0.3431 (49s)
+2026-10-09 14:28:07  INFO   street_swin_base_ce_qwk  [fold 5] epoch 5/20 train_loss=0.7628 val_loss=1.9340 val_qwk=0.3561 (49s)
+2026-10-09 14:28:57  INFO   street_swin_base_ce_qwk  [fold 5] epoch 6/20 train_loss=0.7102 val_loss=1.8394 val_qwk=0.3454 (49s)
+2026-10-09 14:29:45  INFO   street_swin_base_ce_qwk  [fold 5] epoch 7/20 train_loss=0.6820 val_loss=1.9982 val_qwk=0.2958 (49s)
+2026-10-09 14:29:45  INFO   street_swin_base_ce_qwk  [fold 5] early stop, best epoch 2 val_loss=1.5502 val_qwk=0.4039
+2026-10-09 14:29:49  INFO   street_swin_base_ce_qwk  [fold 5] test accuracy=0.3680 f1=0.2581 mean_absolute_error=0.8143 one_off_accuracy=0.8458 amae=0.9520 qwk=0.4497 alpha_ordinal=0.4348 score_mae=0.6144 score_spearman=0.6660 monotonicity_violation_pct=0.0000
+2026-10-09 14:29:49  INFO   street_swin_base_ce_qwk  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-09 14:29:50  INFO   street_swin_base_ce_qwk  [fold 6] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-09 14:30:40  INFO   street_swin_base_ce_qwk  [fold 6] epoch 1/20 train_loss=1.3920 val_loss=1.4409 val_qwk=0.4430 * (51s)
+2026-10-09 14:31:30  INFO   street_swin_base_ce_qwk  [fold 6] epoch 2/20 train_loss=1.2853 val_loss=1.4840 val_qwk=0.4190 (50s)
+2026-10-09 14:32:20  INFO   street_swin_base_ce_qwk  [fold 6] epoch 3/20 train_loss=1.0846 val_loss=1.6854 val_qwk=0.3956 (49s)
+2026-10-09 14:33:09  INFO   street_swin_base_ce_qwk  [fold 6] epoch 4/20 train_loss=0.8690 val_loss=1.8073 val_qwk=0.3823 (49s)
+2026-10-09 14:33:58  INFO   street_swin_base_ce_qwk  [fold 6] epoch 5/20 train_loss=0.7655 val_loss=1.8959 val_qwk=0.3639 (49s)
+2026-10-09 14:34:48  INFO   street_swin_base_ce_qwk  [fold 6] epoch 6/20 train_loss=0.7219 val_loss=1.9205 val_qwk=0.3750 (50s)
+2026-10-09 14:34:48  INFO   street_swin_base_ce_qwk  [fold 6] early stop, best epoch 1 val_loss=1.4409 val_qwk=0.4430
+2026-10-09 14:34:51  INFO   street_swin_base_ce_qwk  [fold 6] test accuracy=0.3315 f1=0.2774 mean_absolute_error=0.8715 one_off_accuracy=0.8135 amae=0.9759 qwk=0.4079 alpha_ordinal=0.3855 score_mae=0.6519 score_spearman=0.5592 monotonicity_violation_pct=0.0000
+2026-10-09 14:34:51  INFO   street_swin_base_ce_qwk  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-09 14:34:52  INFO   street_swin_base_ce_qwk  [fold 7] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-09 14:35:43  INFO   street_swin_base_ce_qwk  [fold 7] epoch 1/20 train_loss=1.3920 val_loss=1.4407 val_qwk=0.4337 * (50s)
+2026-10-09 14:36:31  INFO   street_swin_base_ce_qwk  [fold 7] epoch 2/20 train_loss=1.2757 val_loss=1.4900 val_qwk=0.4166 (49s)
+2026-10-09 14:37:21  INFO   street_swin_base_ce_qwk  [fold 7] epoch 3/20 train_loss=1.0630 val_loss=1.7232 val_qwk=0.4170 (50s)
+2026-10-09 14:38:10  INFO   street_swin_base_ce_qwk  [fold 7] epoch 4/20 train_loss=0.8575 val_loss=1.7743 val_qwk=0.3856 (49s)
+2026-10-09 14:38:59  INFO   street_swin_base_ce_qwk  [fold 7] epoch 5/20 train_loss=0.7685 val_loss=1.8849 val_qwk=0.4323 (49s)
+2026-10-09 14:39:48  INFO   street_swin_base_ce_qwk  [fold 7] epoch 6/20 train_loss=0.7149 val_loss=1.8349 val_qwk=0.3894 (49s)
+2026-10-09 14:39:48  INFO   street_swin_base_ce_qwk  [fold 7] early stop, best epoch 1 val_loss=1.4407 val_qwk=0.4337
+2026-10-09 14:39:52  INFO   street_swin_base_ce_qwk  [fold 7] test accuracy=0.3303 f1=0.2775 mean_absolute_error=0.8959 one_off_accuracy=0.8136 amae=0.9891 qwk=0.4166 alpha_ordinal=0.3883 score_mae=0.6745 score_spearman=0.5577 monotonicity_violation_pct=0.0000
+2026-10-09 14:39:52  INFO   street_swin_base_ce_qwk  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-09 14:39:53  INFO   street_swin_base_ce_qwk  [fold 8] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-09 14:40:43  INFO   street_swin_base_ce_qwk  [fold 8] epoch 1/20 train_loss=1.3825 val_loss=1.4518 val_qwk=0.4055 * (51s)
+2026-10-09 14:41:32  INFO   street_swin_base_ce_qwk  [fold 8] epoch 2/20 train_loss=1.2741 val_loss=1.4829 val_qwk=0.3877 (49s)
+2026-10-09 14:42:21  INFO   street_swin_base_ce_qwk  [fold 8] epoch 3/20 train_loss=1.0917 val_loss=1.5836 val_qwk=0.3719 (49s)
+2026-10-09 14:43:10  INFO   street_swin_base_ce_qwk  [fold 8] epoch 4/20 train_loss=0.8751 val_loss=1.8037 val_qwk=0.3240 (49s)
+2026-10-09 14:43:59  INFO   street_swin_base_ce_qwk  [fold 8] epoch 5/20 train_loss=0.7685 val_loss=1.8277 val_qwk=0.3456 (49s)
+2026-10-09 14:44:48  INFO   street_swin_base_ce_qwk  [fold 8] epoch 6/20 train_loss=0.7169 val_loss=1.9310 val_qwk=0.3409 (49s)
+2026-10-09 14:44:48  INFO   street_swin_base_ce_qwk  [fold 8] early stop, best epoch 1 val_loss=1.4518 val_qwk=0.4055
+2026-10-09 14:44:51  INFO   street_swin_base_ce_qwk  [fold 8] test accuracy=0.3562 f1=0.2749 mean_absolute_error=0.8070 one_off_accuracy=0.8523 amae=0.9587 qwk=0.4213 alpha_ordinal=0.4387 score_mae=0.6186 score_spearman=0.6017 monotonicity_violation_pct=0.0000
+2026-10-09 14:44:51  INFO   street_swin_base_ce_qwk  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-09 14:44:52  INFO   street_swin_base_ce_qwk  [fold 9] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-09 14:45:41  INFO   street_swin_base_ce_qwk  [fold 9] epoch 1/20 train_loss=1.3925 val_loss=1.3760 val_qwk=0.5034 * (49s)
+2026-10-09 14:46:29  INFO   street_swin_base_ce_qwk  [fold 9] epoch 2/20 train_loss=1.2639 val_loss=1.3993 val_qwk=0.4461 (48s)
+2026-10-09 14:47:16  INFO   street_swin_base_ce_qwk  [fold 9] epoch 3/20 train_loss=1.0507 val_loss=1.5666 val_qwk=0.4478 (48s)
+2026-10-09 14:48:04  INFO   street_swin_base_ce_qwk  [fold 9] epoch 4/20 train_loss=0.8564 val_loss=1.7040 val_qwk=0.4143 (47s)
+2026-10-09 14:48:52  INFO   street_swin_base_ce_qwk  [fold 9] epoch 5/20 train_loss=0.7609 val_loss=1.6938 val_qwk=0.4582 (48s)
+2026-10-09 14:49:39  INFO   street_swin_base_ce_qwk  [fold 9] epoch 6/20 train_loss=0.7215 val_loss=1.7688 val_qwk=0.4578 (48s)
+2026-10-09 14:49:39  INFO   street_swin_base_ce_qwk  [fold 9] early stop, best epoch 1 val_loss=1.3760 val_qwk=0.5034
+2026-10-09 14:49:43  INFO   street_swin_base_ce_qwk  [fold 9] test accuracy=0.3318 f1=0.2772 mean_absolute_error=0.8976 one_off_accuracy=0.8153 amae=0.9923 qwk=0.4058 alpha_ordinal=0.4015 score_mae=0.6802 score_spearman=0.5223 monotonicity_violation_pct=0.0000
+2026-10-09 14:49:43  INFO   street_swin_base_ce_qwk  [summary] 10 folds -> results/street_swin_base_ce_qwk/summary.csv

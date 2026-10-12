@@ -1,0 +1,125 @@
+2026-10-11 07:32:49  INFO   aerial_deit_base_ordinal  run=aerial_deit_base_ordinal view=aerial device=cuda points=4410 with images=4410
+2026-10-11 07:32:49  INFO   aerial_deit_base_ordinal  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-11 07:32:49  INFO   aerial_deit_base_ordinal  [fold 0] view=aerial backbone=deit_base weights=timm/deit_base_patch16_224.fb_in1k
+2026-10-11 07:32:50  INFO   aerial_deit_base_ordinal  [fold 0] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:33:08  INFO   aerial_deit_base_ordinal  [fold 0] full epoch 1/20 train_loss=0.4581 val_loss=0.4867 val_qwk=0.3199 lr=5.00e-05 * (18s)
+2026-10-11 07:33:21  INFO   aerial_deit_base_ordinal  [fold 0] full epoch 2/20 train_loss=0.4169 val_loss=0.4724 val_qwk=0.3426 lr=5.00e-05 * (14s)
+2026-10-11 07:33:34  INFO   aerial_deit_base_ordinal  [fold 0] full epoch 3/20 train_loss=0.3628 val_loss=0.5364 val_qwk=0.4070 lr=5.00e-05 (13s)
+2026-10-11 07:33:48  INFO   aerial_deit_base_ordinal  [fold 0] full epoch 4/20 train_loss=0.3145 val_loss=0.5281 val_qwk=0.3588 lr=5.00e-05 (14s)
+2026-10-11 07:34:01  INFO   aerial_deit_base_ordinal  [fold 0] full epoch 5/20 train_loss=0.2864 val_loss=0.5708 val_qwk=0.3605 lr=5.00e-05 (13s)
+2026-10-11 07:34:15  INFO   aerial_deit_base_ordinal  [fold 0] full epoch 6/20 train_loss=0.2688 val_loss=0.5822 val_qwk=0.3476 lr=5.00e-05 (13s)
+2026-10-11 07:34:28  INFO   aerial_deit_base_ordinal  [fold 0] full epoch 7/20 train_loss=0.2580 val_loss=0.5952 val_qwk=0.3966 lr=5.00e-05 (13s)
+2026-10-11 07:34:28  INFO   aerial_deit_base_ordinal  [fold 0] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4724 val_qwk=0.3426
+2026-10-11 07:34:29  INFO   aerial_deit_base_ordinal  [fold 0] thresholds tuned on validation: 0.93 0.39 0.26 0.36
+2026-10-11 07:34:30  INFO   aerial_deit_base_ordinal  [fold 0] test accuracy=0.3449 f1=0.2709 mean_absolute_error=0.8731 one_off_accuracy=0.8026 amae=1.0172 qwk=0.3263 tuned_qwk=0.3991 alpha_ordinal=0.3229 score_mae=0.7039 score_spearman=0.4505 monotonicity_violation_pct=0.0000
+2026-10-11 07:34:31  INFO   aerial_deit_base_ordinal  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-11 07:34:31  INFO   aerial_deit_base_ordinal  [fold 1] view=aerial backbone=deit_base weights=timm/deit_base_patch16_224.fb_in1k
+2026-10-11 07:34:31  INFO   aerial_deit_base_ordinal  [fold 1] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:34:46  INFO   aerial_deit_base_ordinal  [fold 1] full epoch 1/20 train_loss=0.4620 val_loss=0.4472 val_qwk=0.3836 lr=5.00e-05 * (15s)
+2026-10-11 07:35:00  INFO   aerial_deit_base_ordinal  [fold 1] full epoch 2/20 train_loss=0.4231 val_loss=0.4382 val_qwk=0.4124 lr=5.00e-05 * (14s)
+2026-10-11 07:35:13  INFO   aerial_deit_base_ordinal  [fold 1] full epoch 3/20 train_loss=0.3673 val_loss=0.4691 val_qwk=0.4257 lr=5.00e-05 (14s)
+2026-10-11 07:35:27  INFO   aerial_deit_base_ordinal  [fold 1] full epoch 4/20 train_loss=0.3212 val_loss=0.4987 val_qwk=0.3751 lr=5.00e-05 (14s)
+2026-10-11 07:35:41  INFO   aerial_deit_base_ordinal  [fold 1] full epoch 5/20 train_loss=0.2908 val_loss=0.5260 val_qwk=0.4202 lr=5.00e-05 (14s)
+2026-10-11 07:35:54  INFO   aerial_deit_base_ordinal  [fold 1] full epoch 6/20 train_loss=0.2731 val_loss=0.5276 val_qwk=0.4133 lr=5.00e-05 (14s)
+2026-10-11 07:36:08  INFO   aerial_deit_base_ordinal  [fold 1] full epoch 7/20 train_loss=0.2612 val_loss=0.5374 val_qwk=0.3999 lr=5.00e-05 (14s)
+2026-10-11 07:36:08  INFO   aerial_deit_base_ordinal  [fold 1] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4382 val_qwk=0.4124
+2026-10-11 07:36:09  INFO   aerial_deit_base_ordinal  [fold 1] thresholds tuned on validation: 0.74 0.47 0.41 0.23
+2026-10-11 07:36:10  INFO   aerial_deit_base_ordinal  [fold 1] test accuracy=0.3459 f1=0.2822 mean_absolute_error=0.8708 one_off_accuracy=0.8181 amae=0.9725 qwk=0.3935 tuned_qwk=0.4343 alpha_ordinal=0.3810 score_mae=0.7252 score_spearman=0.4920 monotonicity_violation_pct=0.1988
+2026-10-11 07:36:10  INFO   aerial_deit_base_ordinal  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-11 07:36:11  INFO   aerial_deit_base_ordinal  [fold 2] view=aerial backbone=deit_base weights=timm/deit_base_patch16_224.fb_in1k
+2026-10-11 07:36:11  INFO   aerial_deit_base_ordinal  [fold 2] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:36:26  INFO   aerial_deit_base_ordinal  [fold 2] full epoch 1/20 train_loss=0.4615 val_loss=0.4367 val_qwk=0.4131 lr=5.00e-05 * (15s)
+2026-10-11 07:36:39  INFO   aerial_deit_base_ordinal  [fold 2] full epoch 2/20 train_loss=0.4172 val_loss=0.4553 val_qwk=0.3846 lr=5.00e-05 (14s)
+2026-10-11 07:36:53  INFO   aerial_deit_base_ordinal  [fold 2] full epoch 3/20 train_loss=0.3640 val_loss=0.4756 val_qwk=0.4026 lr=5.00e-05 (14s)
+2026-10-11 07:37:07  INFO   aerial_deit_base_ordinal  [fold 2] full epoch 4/20 train_loss=0.3163 val_loss=0.4886 val_qwk=0.3621 lr=5.00e-05 (14s)
+2026-10-11 07:37:21  INFO   aerial_deit_base_ordinal  [fold 2] full epoch 5/20 train_loss=0.2903 val_loss=0.5138 val_qwk=0.3848 lr=5.00e-05 (14s)
+2026-10-11 07:37:34  INFO   aerial_deit_base_ordinal  [fold 2] full epoch 6/20 train_loss=0.2719 val_loss=0.5197 val_qwk=0.3665 lr=5.00e-05 (14s)
+2026-10-11 07:37:34  INFO   aerial_deit_base_ordinal  [fold 2] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4367 val_qwk=0.4131
+2026-10-11 07:37:35  INFO   aerial_deit_base_ordinal  [fold 2] thresholds tuned on validation: 0.84 0.40 0.45 0.27
+2026-10-11 07:37:37  INFO   aerial_deit_base_ordinal  [fold 2] test accuracy=0.3567 f1=0.2686 mean_absolute_error=0.8341 one_off_accuracy=0.8416 amae=0.9853 qwk=0.4058 tuned_qwk=0.4226 alpha_ordinal=0.3626 score_mae=0.6439 score_spearman=0.5030 monotonicity_violation_pct=0.0000
+2026-10-11 07:37:37  INFO   aerial_deit_base_ordinal  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-11 07:37:37  INFO   aerial_deit_base_ordinal  [fold 3] view=aerial backbone=deit_base weights=timm/deit_base_patch16_224.fb_in1k
+2026-10-11 07:37:37  INFO   aerial_deit_base_ordinal  [fold 3] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:37:52  INFO   aerial_deit_base_ordinal  [fold 3] full epoch 1/20 train_loss=0.4574 val_loss=0.4569 val_qwk=0.3550 lr=5.00e-05 * (15s)
+2026-10-11 07:38:06  INFO   aerial_deit_base_ordinal  [fold 3] full epoch 2/20 train_loss=0.4122 val_loss=0.4824 val_qwk=0.4046 lr=5.00e-05 (14s)
+2026-10-11 07:38:20  INFO   aerial_deit_base_ordinal  [fold 3] full epoch 3/20 train_loss=0.3554 val_loss=0.5056 val_qwk=0.3918 lr=5.00e-05 (14s)
+2026-10-11 07:38:34  INFO   aerial_deit_base_ordinal  [fold 3] full epoch 4/20 train_loss=0.3154 val_loss=0.5152 val_qwk=0.4383 lr=5.00e-05 (14s)
+2026-10-11 07:38:47  INFO   aerial_deit_base_ordinal  [fold 3] full epoch 5/20 train_loss=0.2861 val_loss=0.5480 val_qwk=0.3029 lr=5.00e-05 (14s)
+2026-10-11 07:39:01  INFO   aerial_deit_base_ordinal  [fold 3] full epoch 6/20 train_loss=0.2697 val_loss=0.5929 val_qwk=0.3876 lr=5.00e-05 (14s)
+2026-10-11 07:39:01  INFO   aerial_deit_base_ordinal  [fold 3] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4569 val_qwk=0.3550
+2026-10-11 07:39:02  INFO   aerial_deit_base_ordinal  [fold 3] thresholds tuned on validation: 0.85 0.57 0.41 0.16
+2026-10-11 07:39:03  INFO   aerial_deit_base_ordinal  [fold 3] test accuracy=0.3440 f1=0.2555 mean_absolute_error=0.8171 one_off_accuracy=0.8523 amae=1.0054 qwk=0.3443 tuned_qwk=0.4283 alpha_ordinal=0.3388 score_mae=0.6338 score_spearman=0.4985 monotonicity_violation_pct=0.0000
+2026-10-11 07:39:03  INFO   aerial_deit_base_ordinal  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-11 07:39:04  INFO   aerial_deit_base_ordinal  [fold 4] view=aerial backbone=deit_base weights=timm/deit_base_patch16_224.fb_in1k
+2026-10-11 07:39:04  INFO   aerial_deit_base_ordinal  [fold 4] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:39:19  INFO   aerial_deit_base_ordinal  [fold 4] full epoch 1/20 train_loss=0.4562 val_loss=0.4444 val_qwk=0.3966 lr=5.00e-05 * (15s)
+2026-10-11 07:39:33  INFO   aerial_deit_base_ordinal  [fold 4] full epoch 2/20 train_loss=0.4170 val_loss=0.4565 val_qwk=0.4334 lr=5.00e-05 (14s)
+2026-10-11 07:39:47  INFO   aerial_deit_base_ordinal  [fold 4] full epoch 3/20 train_loss=0.3616 val_loss=0.4981 val_qwk=0.3455 lr=5.00e-05 (14s)
+2026-10-11 07:40:01  INFO   aerial_deit_base_ordinal  [fold 4] full epoch 4/20 train_loss=0.3118 val_loss=0.5440 val_qwk=0.3826 lr=5.00e-05 (14s)
+2026-10-11 07:40:15  INFO   aerial_deit_base_ordinal  [fold 4] full epoch 5/20 train_loss=0.2806 val_loss=0.5182 val_qwk=0.3761 lr=5.00e-05 (14s)
+2026-10-11 07:40:29  INFO   aerial_deit_base_ordinal  [fold 4] full epoch 6/20 train_loss=0.2651 val_loss=0.5668 val_qwk=0.3922 lr=5.00e-05 (14s)
+2026-10-11 07:40:29  INFO   aerial_deit_base_ordinal  [fold 4] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4444 val_qwk=0.3966
+2026-10-11 07:40:30  INFO   aerial_deit_base_ordinal  [fold 4] thresholds tuned on validation: 0.88 0.60 0.45 0.23
+2026-10-11 07:40:31  INFO   aerial_deit_base_ordinal  [fold 4] test accuracy=0.3295 f1=0.2223 mean_absolute_error=0.8490 one_off_accuracy=0.8364 amae=0.9732 qwk=0.4007 tuned_qwk=0.4554 alpha_ordinal=0.4037 score_mae=0.6812 score_spearman=0.5310 monotonicity_violation_pct=0.0000
+2026-10-11 07:40:31  INFO   aerial_deit_base_ordinal  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-11 07:40:32  INFO   aerial_deit_base_ordinal  [fold 5] view=aerial backbone=deit_base weights=timm/deit_base_patch16_224.fb_in1k
+2026-10-11 07:40:32  INFO   aerial_deit_base_ordinal  [fold 5] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:40:47  INFO   aerial_deit_base_ordinal  [fold 5] full epoch 1/20 train_loss=0.4575 val_loss=0.4816 val_qwk=0.3342 lr=5.00e-05 * (15s)
+2026-10-11 07:41:01  INFO   aerial_deit_base_ordinal  [fold 5] full epoch 2/20 train_loss=0.4150 val_loss=0.4669 val_qwk=0.3165 lr=5.00e-05 * (14s)
+2026-10-11 07:41:15  INFO   aerial_deit_base_ordinal  [fold 5] full epoch 3/20 train_loss=0.3620 val_loss=0.4941 val_qwk=0.3190 lr=5.00e-05 (14s)
+2026-10-11 07:41:30  INFO   aerial_deit_base_ordinal  [fold 5] full epoch 4/20 train_loss=0.3088 val_loss=0.5179 val_qwk=0.3038 lr=5.00e-05 (14s)
+2026-10-11 07:41:44  INFO   aerial_deit_base_ordinal  [fold 5] full epoch 5/20 train_loss=0.2858 val_loss=0.5575 val_qwk=0.2752 lr=5.00e-05 (14s)
+2026-10-11 07:41:58  INFO   aerial_deit_base_ordinal  [fold 5] full epoch 6/20 train_loss=0.2653 val_loss=0.5720 val_qwk=0.2892 lr=5.00e-05 (14s)
+2026-10-11 07:42:12  INFO   aerial_deit_base_ordinal  [fold 5] full epoch 7/20 train_loss=0.2545 val_loss=0.5752 val_qwk=0.3048 lr=5.00e-05 (14s)
+2026-10-11 07:42:12  INFO   aerial_deit_base_ordinal  [fold 5] full: early stop after 7 epochs, best so far epoch 2 (full) val_loss=0.4669 val_qwk=0.3165
+2026-10-11 07:42:13  INFO   aerial_deit_base_ordinal  [fold 5] thresholds tuned on validation: 0.89 0.54 0.23 0.50
+2026-10-11 07:42:14  INFO   aerial_deit_base_ordinal  [fold 5] test accuracy=0.3283 f1=0.2312 mean_absolute_error=0.8727 one_off_accuracy=0.8224 amae=1.0058 qwk=0.3647 tuned_qwk=0.4383 alpha_ordinal=0.3581 score_mae=0.6458 score_spearman=0.5236 monotonicity_violation_pct=0.0000
+2026-10-11 07:42:14  INFO   aerial_deit_base_ordinal  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-11 07:42:15  INFO   aerial_deit_base_ordinal  [fold 6] view=aerial backbone=deit_base weights=timm/deit_base_patch16_224.fb_in1k
+2026-10-11 07:42:15  INFO   aerial_deit_base_ordinal  [fold 6] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:42:31  INFO   aerial_deit_base_ordinal  [fold 6] full epoch 1/20 train_loss=0.4548 val_loss=0.4634 val_qwk=0.3934 lr=5.00e-05 * (15s)
+2026-10-11 07:42:45  INFO   aerial_deit_base_ordinal  [fold 6] full epoch 2/20 train_loss=0.4161 val_loss=0.4750 val_qwk=0.3998 lr=5.00e-05 (14s)
+2026-10-11 07:42:59  INFO   aerial_deit_base_ordinal  [fold 6] full epoch 3/20 train_loss=0.3645 val_loss=0.5079 val_qwk=0.3835 lr=5.00e-05 (14s)
+2026-10-11 07:43:14  INFO   aerial_deit_base_ordinal  [fold 6] full epoch 4/20 train_loss=0.3156 val_loss=0.5194 val_qwk=0.3702 lr=5.00e-05 (14s)
+2026-10-11 07:43:28  INFO   aerial_deit_base_ordinal  [fold 6] full epoch 5/20 train_loss=0.2867 val_loss=0.5640 val_qwk=0.3725 lr=5.00e-05 (14s)
+2026-10-11 07:43:43  INFO   aerial_deit_base_ordinal  [fold 6] full epoch 6/20 train_loss=0.2706 val_loss=0.5594 val_qwk=0.3739 lr=5.00e-05 (14s)
+2026-10-11 07:43:43  INFO   aerial_deit_base_ordinal  [fold 6] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4634 val_qwk=0.3934
+2026-10-11 07:43:43  INFO   aerial_deit_base_ordinal  [fold 6] thresholds tuned on validation: 0.84 0.28 0.56 0.37
+2026-10-11 07:43:44  INFO   aerial_deit_base_ordinal  [fold 6] test accuracy=0.3301 f1=0.2708 mean_absolute_error=0.9323 one_off_accuracy=0.7652 amae=1.0670 qwk=0.3052 tuned_qwk=0.3110 alpha_ordinal=0.2695 score_mae=0.7325 score_spearman=0.3793 monotonicity_violation_pct=0.0000
+2026-10-11 07:43:44  INFO   aerial_deit_base_ordinal  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-11 07:43:45  INFO   aerial_deit_base_ordinal  [fold 7] view=aerial backbone=deit_base weights=timm/deit_base_patch16_224.fb_in1k
+2026-10-11 07:43:45  INFO   aerial_deit_base_ordinal  [fold 7] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:44:00  INFO   aerial_deit_base_ordinal  [fold 7] full epoch 1/20 train_loss=0.4536 val_loss=0.4607 val_qwk=0.4087 lr=5.00e-05 * (15s)
+2026-10-11 07:44:15  INFO   aerial_deit_base_ordinal  [fold 7] full epoch 2/20 train_loss=0.4124 val_loss=0.4620 val_qwk=0.3830 lr=5.00e-05 (14s)
+2026-10-11 07:44:29  INFO   aerial_deit_base_ordinal  [fold 7] full epoch 3/20 train_loss=0.3602 val_loss=0.4823 val_qwk=0.3740 lr=5.00e-05 (14s)
+2026-10-11 07:44:43  INFO   aerial_deit_base_ordinal  [fold 7] full epoch 4/20 train_loss=0.3141 val_loss=0.5423 val_qwk=0.3260 lr=5.00e-05 (14s)
+2026-10-11 07:44:57  INFO   aerial_deit_base_ordinal  [fold 7] full epoch 5/20 train_loss=0.2840 val_loss=0.5327 val_qwk=0.3762 lr=5.00e-05 (14s)
+2026-10-11 07:45:12  INFO   aerial_deit_base_ordinal  [fold 7] full epoch 6/20 train_loss=0.2699 val_loss=0.5603 val_qwk=0.3031 lr=5.00e-05 (14s)
+2026-10-11 07:45:12  INFO   aerial_deit_base_ordinal  [fold 7] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4607 val_qwk=0.4087
+2026-10-11 07:45:13  INFO   aerial_deit_base_ordinal  [fold 7] thresholds tuned on validation: 0.92 0.37 0.57 0.28
+2026-10-11 07:45:14  INFO   aerial_deit_base_ordinal  [fold 7] test accuracy=0.3162 f1=0.2528 mean_absolute_error=0.9216 one_off_accuracy=0.7943 amae=1.0219 qwk=0.3774 tuned_qwk=0.4083 alpha_ordinal=0.3364 score_mae=0.7058 score_spearman=0.4836 monotonicity_violation_pct=0.5141
+2026-10-11 07:45:14  INFO   aerial_deit_base_ordinal  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-11 07:45:14  INFO   aerial_deit_base_ordinal  [fold 8] view=aerial backbone=deit_base weights=timm/deit_base_patch16_224.fb_in1k
+2026-10-11 07:45:14  INFO   aerial_deit_base_ordinal  [fold 8] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:45:29  INFO   aerial_deit_base_ordinal  [fold 8] full epoch 1/20 train_loss=0.4523 val_loss=0.4698 val_qwk=0.3672 lr=5.00e-05 * (15s)
+2026-10-11 07:45:44  INFO   aerial_deit_base_ordinal  [fold 8] full epoch 2/20 train_loss=0.4077 val_loss=0.4788 val_qwk=0.2951 lr=5.00e-05 (14s)
+2026-10-11 07:45:58  INFO   aerial_deit_base_ordinal  [fold 8] full epoch 3/20 train_loss=0.3516 val_loss=0.5238 val_qwk=0.3613 lr=5.00e-05 (14s)
+2026-10-11 07:46:12  INFO   aerial_deit_base_ordinal  [fold 8] full epoch 4/20 train_loss=0.3123 val_loss=0.5388 val_qwk=0.3794 lr=5.00e-05 (14s)
+2026-10-11 07:46:26  INFO   aerial_deit_base_ordinal  [fold 8] full epoch 5/20 train_loss=0.2827 val_loss=0.5731 val_qwk=0.3665 lr=5.00e-05 (14s)
+2026-10-11 07:46:40  INFO   aerial_deit_base_ordinal  [fold 8] full epoch 6/20 train_loss=0.2673 val_loss=0.5982 val_qwk=0.3520 lr=5.00e-05 (14s)
+2026-10-11 07:46:40  INFO   aerial_deit_base_ordinal  [fold 8] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4698 val_qwk=0.3672
+2026-10-11 07:46:41  INFO   aerial_deit_base_ordinal  [fold 8] thresholds tuned on validation: 0.72 0.54 0.33 0.50
+2026-10-11 07:46:42  INFO   aerial_deit_base_ordinal  [fold 8] test accuracy=0.3433 f1=0.2529 mean_absolute_error=0.8225 one_off_accuracy=0.8484 amae=0.9861 qwk=0.3866 tuned_qwk=0.3963 alpha_ordinal=0.4029 score_mae=0.6562 score_spearman=0.5447 monotonicity_violation_pct=0.0000
+2026-10-11 07:46:42  INFO   aerial_deit_base_ordinal  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-11 07:46:43  INFO   aerial_deit_base_ordinal  [fold 9] view=aerial backbone=deit_base weights=timm/deit_base_patch16_224.fb_in1k
+2026-10-11 07:46:43  INFO   aerial_deit_base_ordinal  [fold 9] phase=full trainable params=86,570,732 lr=5e-05
+2026-10-11 07:46:58  INFO   aerial_deit_base_ordinal  [fold 9] full epoch 1/20 train_loss=0.4569 val_loss=0.4549 val_qwk=0.4065 lr=5.00e-05 * (15s)
+2026-10-11 07:47:12  INFO   aerial_deit_base_ordinal  [fold 9] full epoch 2/20 train_loss=0.4101 val_loss=0.4706 val_qwk=0.3570 lr=5.00e-05 (14s)
+2026-10-11 07:47:25  INFO   aerial_deit_base_ordinal  [fold 9] full epoch 3/20 train_loss=0.3585 val_loss=0.4991 val_qwk=0.3692 lr=5.00e-05 (14s)
+2026-10-11 07:47:39  INFO   aerial_deit_base_ordinal  [fold 9] full epoch 4/20 train_loss=0.3146 val_loss=0.5207 val_qwk=0.3365 lr=5.00e-05 (14s)
+2026-10-11 07:47:53  INFO   aerial_deit_base_ordinal  [fold 9] full epoch 5/20 train_loss=0.2842 val_loss=0.5849 val_qwk=0.3380 lr=5.00e-05 (14s)
+2026-10-11 07:48:07  INFO   aerial_deit_base_ordinal  [fold 9] full epoch 6/20 train_loss=0.2684 val_loss=0.5989 val_qwk=0.3246 lr=5.00e-05 (14s)
+2026-10-11 07:48:07  INFO   aerial_deit_base_ordinal  [fold 9] full: early stop after 6 epochs, best so far epoch 1 (full) val_loss=0.4549 val_qwk=0.4065
+2026-10-11 07:48:08  INFO   aerial_deit_base_ordinal  [fold 9] thresholds tuned on validation: 0.82 0.52 0.48 0.19
+2026-10-11 07:48:09  INFO   aerial_deit_base_ordinal  [fold 9] test accuracy=0.3424 f1=0.2885 mean_absolute_error=0.8788 one_off_accuracy=0.8071 amae=0.9939 qwk=0.3916 tuned_qwk=0.4202 alpha_ordinal=0.3717 score_mae=0.6785 score_spearman=0.4876 monotonicity_violation_pct=0.4706
+2026-10-11 07:48:09  INFO   aerial_deit_base_ordinal  [summary] 10 folds -> results/grid/aerial_deit_base_ordinal/summary.csv

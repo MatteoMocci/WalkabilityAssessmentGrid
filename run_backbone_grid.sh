@@ -9,8 +9,9 @@
 # Recipe: full fine-tuning (transformers AdamW 5e-5, CNNs SGD 1e-3), selection on validation loss,
 # both decoders. Views run in order across all backbones, so complete comparisons appear early.
 #
-# Outputs in results/grid/: one folder per run, grid_<time>.log, overview.txt (backbone x view
-#   matrices), by_view/<view>/comparison.md, by_backbone/<backbone>/comparison.md
+# Outputs in results/grid/: one folder per run, grid_<time>.log, status.txt (completed folds per run,
+#   refreshed after every run; also: python run_status.py), overview.txt (backbone x view matrices),
+#   by_view/<view>/comparison.md, by_backbone/<backbone>/comparison.md
 # Re-running resumes: finished folds are skipped. Extra arguments go to run_ordinal.py.
 #   ./run_backbone_grid.sh
 #   BACKBONES="swin_base vgg16" ./run_backbone_grid.sh
@@ -33,6 +34,7 @@ run() {  # run <label> <run_ordinal args...>
     local t0=$SECONDS
     if "$PY" run_ordinal.py --head ordinal --out-dir "$OUT" "$@"; then
         log "[$label] done in $(( (SECONDS - t0) / 60 )) min"
+        "$PY" run_status.py "$OUT" > /dev/null
     else
         log "[$label] FAILED after $(( (SECONDS - t0) / 60 )) min, see the run's train.log"
         exit 1
@@ -40,6 +42,7 @@ run() {  # run <label> <run_ordinal args...>
 }
 
 log "backbone grid start: backbones=${BB[*]} extra args: $*"
+"$PY" run_status.py "$OUT" | tee -a "$LOG"
 
 for view in street aerial; do
     for b in "${BB[@]}"; do
@@ -50,6 +53,7 @@ for b in "${BB[@]}"; do
     "$PY" fuse_predictions.py --street "$OUT/street_${b}_ordinal" --aerial "$OUT/aerial_${b}_ordinal" \
         --out "$OUT/avg_${b}_ordinal" | tee -a "$LOG"
 done
+"$PY" run_status.py "$OUT" > /dev/null
 for view in late dual; do
     for b in "${BB[@]}"; do
         run "$view $b" --view "$view" --model "$b" "$@"

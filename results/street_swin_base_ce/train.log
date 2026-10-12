@@ -1,0 +1,102 @@
+2026-10-08 21:08:59  INFO   street_swin_base_ce  run=street_swin_base_ce device=cuda points=4410 with street images=4410
+2026-10-08 21:08:59  INFO   street_swin_base_ce  [fold 0] train=3375 val=503 (fold 1) test=532
+2026-10-08 21:09:00  INFO   street_swin_base_ce  [fold 0] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-08 21:10:44  INFO   street_swin_base_ce  [fold 0] epoch 1/20 train_loss=1.4049 val_loss=1.3701 * (104s)
+2026-10-08 21:11:30  INFO   street_swin_base_ce  [fold 0] epoch 2/20 train_loss=1.2910 val_loss=1.4255 (46s)
+2026-10-08 21:12:17  INFO   street_swin_base_ce  [fold 0] epoch 3/20 train_loss=1.0737 val_loss=1.6371 (47s)
+2026-10-08 21:13:03  INFO   street_swin_base_ce  [fold 0] epoch 4/20 train_loss=0.8572 val_loss=1.6932 (46s)
+2026-10-08 21:13:49  INFO   street_swin_base_ce  [fold 0] epoch 5/20 train_loss=0.7623 val_loss=1.7472 (46s)
+2026-10-08 21:14:36  INFO   street_swin_base_ce  [fold 0] epoch 6/20 train_loss=0.7134 val_loss=1.7403 (47s)
+2026-10-08 21:14:36  INFO   street_swin_base_ce  [fold 0] early stop, best epoch 1 val_loss=1.3701
+2026-10-08 21:14:40  INFO   street_swin_base_ce  [fold 0] test accuracy=0.3665 f1=0.2974 mean_absolute_error=0.7961 one_off_accuracy=0.8571 score_mae=0.6138 score_spearman=0.6150 monotonicity_violation_pct=0.0000
+2026-10-08 21:14:40  INFO   street_swin_base_ce  [fold 1] train=3443 val=464 (fold 2) test=503
+2026-10-08 21:14:41  INFO   street_swin_base_ce  [fold 1] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-08 21:16:22  INFO   street_swin_base_ce  [fold 1] epoch 1/20 train_loss=1.4106 val_loss=1.3954 * (100s)
+2026-10-08 21:17:08  INFO   street_swin_base_ce  [fold 1] epoch 2/20 train_loss=1.3216 val_loss=1.4183 (47s)
+2026-10-08 21:17:55  INFO   street_swin_base_ce  [fold 1] epoch 3/20 train_loss=1.1694 val_loss=1.4972 (47s)
+2026-10-08 21:18:42  INFO   street_swin_base_ce  [fold 1] epoch 4/20 train_loss=0.9486 val_loss=1.6421 (47s)
+2026-10-08 21:19:29  INFO   street_swin_base_ce  [fold 1] epoch 5/20 train_loss=0.8017 val_loss=1.7469 (47s)
+2026-10-08 21:20:17  INFO   street_swin_base_ce  [fold 1] epoch 6/20 train_loss=0.7405 val_loss=1.7252 (48s)
+2026-10-08 21:20:17  INFO   street_swin_base_ce  [fold 1] early stop, best epoch 1 val_loss=1.3954
+2026-10-08 21:20:21  INFO   street_swin_base_ce  [fold 1] test accuracy=0.3877 f1=0.3458 mean_absolute_error=0.7952 one_off_accuracy=0.8459 score_mae=0.5878 score_spearman=0.6938 monotonicity_violation_pct=0.0000
+2026-10-08 21:20:21  INFO   street_swin_base_ce  [fold 2] train=3462 val=484 (fold 3) test=464
+2026-10-08 21:20:22  INFO   street_swin_base_ce  [fold 2] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-08 21:21:15  INFO   street_swin_base_ce  [fold 2] epoch 1/20 train_loss=1.3930 val_loss=1.3946 * (53s)
+2026-10-08 21:22:02  INFO   street_swin_base_ce  [fold 2] epoch 2/20 train_loss=1.2774 val_loss=1.4760 (47s)
+2026-10-08 21:22:49  INFO   street_swin_base_ce  [fold 2] epoch 3/20 train_loss=1.0744 val_loss=1.6268 (47s)
+2026-10-08 21:23:37  INFO   street_swin_base_ce  [fold 2] epoch 4/20 train_loss=0.8623 val_loss=1.7851 (48s)
+2026-10-08 21:24:24  INFO   street_swin_base_ce  [fold 2] epoch 5/20 train_loss=0.7646 val_loss=1.7798 (47s)
+2026-10-08 21:25:12  INFO   street_swin_base_ce  [fold 2] epoch 6/20 train_loss=0.7228 val_loss=1.8878 (47s)
+2026-10-08 21:25:12  INFO   street_swin_base_ce  [fold 2] early stop, best epoch 1 val_loss=1.3946
+2026-10-08 21:25:15  INFO   street_swin_base_ce  [fold 2] test accuracy=0.3987 f1=0.3097 mean_absolute_error=0.7543 one_off_accuracy=0.8664 score_mae=0.5860 score_spearman=0.5942 monotonicity_violation_pct=0.0000
+2026-10-08 21:25:15  INFO   street_swin_base_ce  [fold 3] train=3489 val=437 (fold 4) test=484
+2026-10-08 21:25:16  INFO   street_swin_base_ce  [fold 3] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-08 21:26:58  INFO   street_swin_base_ce  [fold 3] epoch 1/20 train_loss=1.4087 val_loss=1.3512 * (102s)
+2026-10-08 21:27:45  INFO   street_swin_base_ce  [fold 3] epoch 2/20 train_loss=1.2944 val_loss=1.4204 (47s)
+2026-10-08 21:28:32  INFO   street_swin_base_ce  [fold 3] epoch 3/20 train_loss=1.0900 val_loss=1.5813 (47s)
+2026-10-08 21:29:20  INFO   street_swin_base_ce  [fold 3] epoch 4/20 train_loss=0.8651 val_loss=1.5894 (47s)
+2026-10-08 21:30:08  INFO   street_swin_base_ce  [fold 3] epoch 5/20 train_loss=0.7690 val_loss=1.7075 (48s)
+2026-10-08 21:30:56  INFO   street_swin_base_ce  [fold 3] epoch 6/20 train_loss=0.7130 val_loss=1.7084 (47s)
+2026-10-08 21:30:56  INFO   street_swin_base_ce  [fold 3] early stop, best epoch 1 val_loss=1.3512
+2026-10-08 21:31:00  INFO   street_swin_base_ce  [fold 3] test accuracy=0.3812 f1=0.2862 mean_absolute_error=0.7696 one_off_accuracy=0.8667 score_mae=0.5948 score_spearman=0.5533 monotonicity_violation_pct=0.0000
+2026-10-08 21:31:00  INFO   street_swin_base_ce  [fold 4] train=3545 val=428 (fold 5) test=437
+2026-10-08 21:31:01  INFO   street_swin_base_ce  [fold 4] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-08 21:31:50  INFO   street_swin_base_ce  [fold 4] epoch 1/20 train_loss=1.3967 val_loss=1.4222 * (49s)
+2026-10-08 21:32:38  INFO   street_swin_base_ce  [fold 4] epoch 2/20 train_loss=1.2794 val_loss=1.4827 (48s)
+2026-10-08 21:33:26  INFO   street_swin_base_ce  [fold 4] epoch 3/20 train_loss=1.0735 val_loss=1.7024 (48s)
+2026-10-08 21:34:14  INFO   street_swin_base_ce  [fold 4] epoch 4/20 train_loss=0.8703 val_loss=1.9032 (48s)
+2026-10-08 21:35:03  INFO   street_swin_base_ce  [fold 4] epoch 5/20 train_loss=0.7655 val_loss=1.7861 (49s)
+2026-10-08 21:35:51  INFO   street_swin_base_ce  [fold 4] epoch 6/20 train_loss=0.7103 val_loss=1.8667 (48s)
+2026-10-08 21:35:51  INFO   street_swin_base_ce  [fold 4] early stop, best epoch 1 val_loss=1.4222
+2026-10-08 21:35:54  INFO   street_swin_base_ce  [fold 4] test accuracy=0.3799 f1=0.2659 mean_absolute_error=0.7826 one_off_accuracy=0.8604 score_mae=0.6183 score_spearman=0.6618 monotonicity_violation_pct=0.0000
+2026-10-08 21:35:55  INFO   street_swin_base_ce  [fold 5] train=3620 val=362 (fold 6) test=428
+2026-10-08 21:35:55  INFO   street_swin_base_ce  [fold 5] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-08 21:36:45  INFO   street_swin_base_ce  [fold 5] epoch 1/20 train_loss=1.3929 val_loss=1.4367 * (50s)
+2026-10-08 21:37:33  INFO   street_swin_base_ce  [fold 5] epoch 2/20 train_loss=1.2734 val_loss=1.5184 (48s)
+2026-10-08 21:38:21  INFO   street_swin_base_ce  [fold 5] epoch 3/20 train_loss=1.0679 val_loss=1.7729 (48s)
+2026-10-08 21:39:10  INFO   street_swin_base_ce  [fold 5] epoch 4/20 train_loss=0.8608 val_loss=1.7400 (49s)
+2026-10-08 21:39:59  INFO   street_swin_base_ce  [fold 5] epoch 5/20 train_loss=0.7605 val_loss=1.8718 (48s)
+2026-10-08 21:40:47  INFO   street_swin_base_ce  [fold 5] epoch 6/20 train_loss=0.7086 val_loss=1.8983 (48s)
+2026-10-08 21:40:47  INFO   street_swin_base_ce  [fold 5] early stop, best epoch 1 val_loss=1.4367
+2026-10-08 21:40:50  INFO   street_swin_base_ce  [fold 5] test accuracy=0.3785 f1=0.3141 mean_absolute_error=0.7886 one_off_accuracy=0.8551 score_mae=0.5645 score_spearman=0.6659 monotonicity_violation_pct=0.0000
+2026-10-08 21:40:50  INFO   street_swin_base_ce  [fold 6] train=3659 val=389 (fold 7) test=362
+2026-10-08 21:40:51  INFO   street_swin_base_ce  [fold 6] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-08 21:41:41  INFO   street_swin_base_ce  [fold 6] epoch 1/20 train_loss=1.3905 val_loss=1.4322 * (50s)
+2026-10-08 21:42:30  INFO   street_swin_base_ce  [fold 6] epoch 2/20 train_loss=1.2864 val_loss=1.4911 (49s)
+2026-10-08 21:43:20  INFO   street_swin_base_ce  [fold 6] epoch 3/20 train_loss=1.1033 val_loss=1.7146 (50s)
+2026-10-08 21:44:08  INFO   street_swin_base_ce  [fold 6] epoch 4/20 train_loss=0.8870 val_loss=1.8305 (49s)
+2026-10-08 21:44:57  INFO   street_swin_base_ce  [fold 6] epoch 5/20 train_loss=0.7784 val_loss=1.8486 (49s)
+2026-10-08 21:45:46  INFO   street_swin_base_ce  [fold 6] epoch 6/20 train_loss=0.7172 val_loss=1.9630 (49s)
+2026-10-08 21:45:46  INFO   street_swin_base_ce  [fold 6] early stop, best epoch 1 val_loss=1.4322
+2026-10-08 21:45:49  INFO   street_swin_base_ce  [fold 6] test accuracy=0.3481 f1=0.2960 mean_absolute_error=0.8467 one_off_accuracy=0.8246 score_mae=0.6377 score_spearman=0.5574 monotonicity_violation_pct=0.0000
+2026-10-08 21:45:50  INFO   street_swin_base_ce  [fold 7] train=3635 val=386 (fold 8) test=389
+2026-10-08 21:45:51  INFO   street_swin_base_ce  [fold 7] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-08 21:46:40  INFO   street_swin_base_ce  [fold 7] epoch 1/20 train_loss=1.3930 val_loss=1.4288 * (50s)
+2026-10-08 21:47:29  INFO   street_swin_base_ce  [fold 7] epoch 2/20 train_loss=1.2811 val_loss=1.4746 (49s)
+2026-10-08 21:48:18  INFO   street_swin_base_ce  [fold 7] epoch 3/20 train_loss=1.0689 val_loss=1.8279 (50s)
+2026-10-08 21:49:07  INFO   street_swin_base_ce  [fold 7] epoch 4/20 train_loss=0.8656 val_loss=1.7775 (49s)
+2026-10-08 21:49:56  INFO   street_swin_base_ce  [fold 7] epoch 5/20 train_loss=0.7681 val_loss=1.8206 (48s)
+2026-10-08 21:50:44  INFO   street_swin_base_ce  [fold 7] epoch 6/20 train_loss=0.7115 val_loss=1.8723 (49s)
+2026-10-08 21:50:44  INFO   street_swin_base_ce  [fold 7] early stop, best epoch 1 val_loss=1.4288
+2026-10-08 21:50:48  INFO   street_swin_base_ce  [fold 7] test accuracy=0.3239 f1=0.2684 mean_absolute_error=0.8985 one_off_accuracy=0.8149 score_mae=0.6714 score_spearman=0.5612 monotonicity_violation_pct=0.0000
+2026-10-08 21:50:48  INFO   street_swin_base_ce  [fold 8] train=3599 val=425 (fold 9) test=386
+2026-10-08 21:50:49  INFO   street_swin_base_ce  [fold 8] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-08 21:51:38  INFO   street_swin_base_ce  [fold 8] epoch 1/20 train_loss=1.3839 val_loss=1.4482 * (50s)
+2026-10-08 21:52:27  INFO   street_swin_base_ce  [fold 8] epoch 2/20 train_loss=1.2879 val_loss=1.4544 (48s)
+2026-10-08 21:53:16  INFO   street_swin_base_ce  [fold 8] epoch 3/20 train_loss=1.1251 val_loss=1.5623 (49s)
+2026-10-08 21:54:05  INFO   street_swin_base_ce  [fold 8] epoch 4/20 train_loss=0.8996 val_loss=1.7152 (48s)
+2026-10-08 21:54:53  INFO   street_swin_base_ce  [fold 8] epoch 5/20 train_loss=0.7814 val_loss=1.8715 (48s)
+2026-10-08 21:55:41  INFO   street_swin_base_ce  [fold 8] epoch 6/20 train_loss=0.7300 val_loss=1.8618 (48s)
+2026-10-08 21:55:41  INFO   street_swin_base_ce  [fold 8] early stop, best epoch 1 val_loss=1.4482
+2026-10-08 21:55:45  INFO   street_swin_base_ce  [fold 8] test accuracy=0.3692 f1=0.2782 mean_absolute_error=0.7940 one_off_accuracy=0.8523 score_mae=0.6168 score_spearman=0.6060 monotonicity_violation_pct=0.0000
+2026-10-08 21:55:45  INFO   street_swin_base_ce  [fold 9] train=3453 val=532 (fold 0) test=425
+2026-10-08 21:55:46  INFO   street_swin_base_ce  [fold 9] backbone=swin_base weights=timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k
+2026-10-08 21:56:34  INFO   street_swin_base_ce  [fold 9] epoch 1/20 train_loss=1.3930 val_loss=1.3684 * (48s)
+2026-10-08 21:57:21  INFO   street_swin_base_ce  [fold 9] epoch 2/20 train_loss=1.2679 val_loss=1.3953 (47s)
+2026-10-08 21:58:09  INFO   street_swin_base_ce  [fold 9] epoch 3/20 train_loss=1.0568 val_loss=1.5836 (48s)
+2026-10-08 21:58:56  INFO   street_swin_base_ce  [fold 9] epoch 4/20 train_loss=0.8509 val_loss=1.7514 (47s)
+2026-10-08 21:59:44  INFO   street_swin_base_ce  [fold 9] epoch 5/20 train_loss=0.7628 val_loss=1.7009 (47s)
+2026-10-08 22:00:31  INFO   street_swin_base_ce  [fold 9] epoch 6/20 train_loss=0.7192 val_loss=1.8355 (47s)
+2026-10-08 22:00:31  INFO   street_swin_base_ce  [fold 9] early stop, best epoch 1 val_loss=1.3684
+2026-10-08 22:00:34  INFO   street_swin_base_ce  [fold 9] test accuracy=0.3224 f1=0.2755 mean_absolute_error=0.8976 one_off_accuracy=0.8224 score_mae=0.6690 score_spearman=0.5303 monotonicity_violation_pct=0.0000
+2026-10-08 22:00:34  INFO   street_swin_base_ce  [summary] 10 folds -> results/street_swin_base_ce/summary.csv

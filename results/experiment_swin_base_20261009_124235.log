@@ -1,0 +1,6 @@
+2026-10-09 12:42:35  experiment start: model=swin_base args: --monitor qwk
+2026-10-09 12:42:35  [ordinal] start
+2026-10-09 13:48:14  [ordinal] done in 65 min -> results/street_swin_base_ordinal_qwk/summary.csv
+2026-10-09 13:48:14  [ce] start
+2026-10-09 14:49:45  [ce] done in 61 min -> results/street_swin_base_ce_qwk/summary.csv
+2026-10-09 14:49:45  experiment finished

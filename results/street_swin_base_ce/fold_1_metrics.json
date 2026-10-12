@@ -1,0 +1,22 @@
+{
+  "accuracy": 0.38767395626242546,
+  "f1": 0.3458484966662042,
+  "mean_absolute_error": 0.7952286282306164,
+  "one_off_accuracy": 0.8459244532803181,
+  "score_mae": 0.5877650354837862,
+  "score_spearman": 0.6937538549725991,
+  "monotonicity_violation_pct": 0.0,
+  "n": 503,
+  "argmax_accuracy": 0.37077534791252487,
+  "argmax_f1": 0.31789119093509244,
+  "argmax_mean_absolute_error": 0.856858846918489,
+  "argmax_one_off_accuracy": 0.8180914512922465,
+  "fold": 1,
+  "val_fold": 2,
+  "weights": "timm/swin_base_patch4_window7_224.ms_in22k_ft_in1k",
+  "best_epoch": 1,
+  "best_val_loss": 1.395398000190998,
+  "test_loss": 1.3748297710304942,
+  "n_train": 3443,
+  "n_val": 464
+}
